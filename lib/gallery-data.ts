@@ -329,3 +329,7 @@ export function getGallery(slug: string): GalleryData | undefined {
 export function getAllSlugs(): string[] {
   return galleries.map((g) => g.slug)
 }
+
+export function getAllGalleries(): GalleryData[] {
+  return galleries
+}

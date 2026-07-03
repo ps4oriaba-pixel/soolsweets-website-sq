@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
+import HeroSearch from '@/components/hero-search'
 
 const categories = [
   {
@@ -62,6 +63,11 @@ export default function HomePage() {
             <p className="text-background/80 text-lg md:text-xl leading-relaxed max-w-lg mb-10">
               יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע ורגע מיוחד.
             </p>
+            {/* AI Search bar */}
+            <div className="mb-8 w-full">
+              <HeroSearch />
+            </div>
+
             <div className="flex flex-wrap gap-4">
               <WhatsAppButton message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
               <Link
