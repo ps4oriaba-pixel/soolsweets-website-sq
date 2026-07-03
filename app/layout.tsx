@@ -1,5 +1,5 @@
 import type { Metadata, Viewport } from 'next'
-import { Heebo, Playfair_Display } from 'next/font/google'
+import { Heebo, Cormorant_Garamond } from 'next/font/google'
 import './globals.css'
 
 const heebo = Heebo({
@@ -8,9 +8,11 @@ const heebo = Heebo({
   display: 'swap',
 })
 
-const playfair = Playfair_Display({
+const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  variable: '--font-playfair',
+  weight: ['400', '500', '600', '700'],
+  style: ['normal', 'italic'],
+  variable: '--font-cormorant',
   display: 'swap',
 })
 
@@ -23,7 +25,7 @@ export const metadata: Metadata = {
 
 export const viewport: Viewport = {
   colorScheme: 'light',
-  themeColor: '#F5E7E1',
+  themeColor: '#FBDAD4',
   width: 'device-width',
   initialScale: 1,
 }
@@ -34,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="he" dir="rtl" className={`${heebo.variable} ${playfair.variable} bg-background`}>
+    <html lang="he" dir="rtl" className={`${heebo.variable} ${cormorant.variable} bg-background`}>
       <body className="antialiased font-sans">{children}</body>
     </html>
   )

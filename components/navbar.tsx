@@ -17,16 +17,22 @@ export default function Navbar() {
   const [open, setOpen] = useState(false)
 
   return (
-    <header className="fixed top-0 right-0 left-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
+    <header className="fixed top-0 right-0 left-0 z-50 backdrop-blur-sm border-b border-border" style={{ backgroundColor: 'rgba(251,218,212,0.96)' }}>
       {/* Use flex-row-reverse so logo sits on left visually while RTL nav is on right */}
       <div className="max-w-6xl mx-auto px-4 py-3 flex flex-row-reverse items-center justify-between">
-        {/* Logo – placed last in DOM so flex-row-reverse puts it on the left */}
-        <Link href="/" className="flex flex-col gap-0.5 shrink-0">
-          <span className="text-xl font-serif font-bold tracking-wide whitespace-nowrap" style={{ direction: 'ltr', unicodeBidi: 'embed' }}>
-            <span style={{ color: '#3A0E1B' }}>Sool</span><span style={{ color: '#F18669' }}>Sweets</span>
+        {/* Logo */}
+        <Link href="/" className="flex flex-col items-start gap-0 shrink-0" style={{ direction: 'ltr' }}>
+          <span
+            className="font-serif italic font-bold leading-none whitespace-nowrap"
+            style={{ fontSize: '2rem', color: '#E8857A', letterSpacing: '0.01em' }}
+          >
+            Sool
           </span>
-          <span className="text-[10px] text-muted-foreground tracking-wider font-sans text-left">
-            קינוחים ועיצובים מיוחדים
+          <span
+            className="font-sans font-semibold tracking-widest uppercase leading-none whitespace-nowrap"
+            style={{ fontSize: '0.6rem', color: '#6B3A34', letterSpacing: '0.25em', marginTop: '1px' }}
+          >
+            Sweets
           </span>
         </Link>
 

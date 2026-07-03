@@ -37,42 +37,46 @@
   --radius-xl: calc(var(--radius) * 1.4);
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
-  --font-sans: 'Heebo', 'Arial Hebrew', Arial, sans-serif;
-  --font-serif: 'Playfair Display', Georgia, serif;
+  --font-sans: var(--font-heebo), 'Arial Hebrew', Arial, sans-serif;
+  --font-serif: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
+  --font-logo: var(--font-cormorant), 'Cormorant Garamond', Georgia, serif;
 }
 
 :root {
   color-scheme: light;
 
-  /* SoolSweets Brand Colors */
-  --background: #F5E7E1;
-  --foreground: #3A0E1B;
-  --card: #FFFFFF;
-  --card-foreground: #3A0E1B;
-  --popover: #FFFFFF;
-  --popover-foreground: #3A0E1B;
-  --primary: #F18669;
+  /* SoolSweets Brand Colors — matched to canva site */
+  --background: #FBDAD4;
+  --foreground: #1A1A1A;
+  --card: #FFF0ED;
+  --card-foreground: #1A1A1A;
+  --popover: #FFF0ED;
+  --popover-foreground: #1A1A1A;
+  --primary: #E8857A;
   --primary-foreground: #FFFFFF;
   --secondary: #F5A89A;
-  --secondary-foreground: #3A0E1B;
-  --muted: #F5E7E1;
-  --muted-foreground: #7A4050;
-  --accent: #3A0E1B;
-  --accent-foreground: #F5E7E1;
+  --secondary-foreground: #1A1A1A;
+  --muted: #F9CEC7;
+  --muted-foreground: #6B3A34;
+  --accent: #E8857A;
+  --accent-foreground: #FFFFFF;
   --destructive: #e53e3e;
-  --border: #F5A89A;
-  --input: #F5A89A;
-  --ring: #F18669;
+  --border: #EBA59D;
+  --input: #F5C5BE;
+  --ring: #E8857A;
   --radius: 0.75rem;
 
-  --sidebar: #FFFFFF;
-  --sidebar-foreground: #3A0E1B;
-  --sidebar-primary: #F18669;
+  /* logo color token */
+  --logo-color: #E8857A;
+
+  --sidebar: #FFF0ED;
+  --sidebar-foreground: #1A1A1A;
+  --sidebar-primary: #E8857A;
   --sidebar-primary-foreground: #FFFFFF;
-  --sidebar-accent: #F5E7E1;
-  --sidebar-accent-foreground: #3A0E1B;
-  --sidebar-border: #F5A89A;
-  --sidebar-ring: #F18669;
+  --sidebar-accent: #FBDAD4;
+  --sidebar-accent-foreground: #1A1A1A;
+  --sidebar-border: #EBA59D;
+  --sidebar-ring: #E8857A;
 }
 
 @layer base {
@@ -83,5 +87,8 @@
     @apply bg-background text-foreground;
     direction: rtl;
     font-family: 'Heebo', 'Arial Hebrew', Arial, sans-serif;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='520' height='520' viewBox='0 0 520 520'%3E%3Cg fill='none' stroke='%23E8857A' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' opacity='0.18'%3E%3C!-- Cupcake top-left --%3E%3Cellipse cx='60' cy='55' rx='22' ry='14'/%3E%3Crect x='42' y='55' width='36' height='26' rx='4'/%3E%3Cline x1='50' y1='55' x2='48' y2='81'/%3E%3Cline x1='60' y1='55' x2='60' y2='81'/%3E%3Cline x1='70' y1='55' x2='72' y2='81'/%3E%3Ccircle cx='60' cy='44' r='6'/%3E%3Cline x1='60' y1='38' x2='60' y2='30'/%3E%3C!-- Cake slice top-right --%3E%3Cpath d='M440 40 L480 40 L490 90 L430 90 Z'/%3E%3Cline x1='440' y1='40' x2='430' y2='90'/%3E%3Cline x1='460' y1='40' x2='458' y2='90'/%3E%3Cline x1='480' y1='40' x2='490' y2='90'/%3E%3Cellipse cx='460' cy='40' rx='20' ry='8'/%3E%3C!-- Gift box bottom-left --%3E%3Crect x='30' y='420' width='60' height='50' rx='4'/%3E%3Cline x1='60' y1='420' x2='60' y2='470'/%3E%3Cpath d='M35 420 Q60 400 85 420'/%3E%3Cline x1='30' y1='435' x2='90' y2='435'/%3E%3C!-- Star bottom-center --%3E%3Cpath d='M260 460 L264 472 L277 472 L267 480 L271 492 L260 484 L249 492 L253 480 L243 472 L256 472 Z'/%3E%3C!-- Ribbon/bow center-right --%3E%3Cpath d='M420 250 Q435 235 450 250 Q435 265 420 250'/%3E%3Cpath d='M480 250 Q465 235 450 250 Q465 265 480 250'/%3E%3Ccircle cx='450' cy='250' r='5'/%3E%3C!-- Small cake tier center-left --%3E%3Crect x='65' y='230' width='50' height='18' rx='3'/%3E%3Crect x='55' y='248' width='70' height='22' rx='3'/%3E%3Cellipse cx='90' cy='230' rx='25' ry='7'/%3E%3Ccircle cx='90' cy='222' r='4'/%3E%3C!-- Dessert cup bottom-right --%3E%3Cpath d='M450 400 L470 400 L465 445 L455 445 Z'/%3E%3Cellipse cx='460' cy='400' rx='15' ry='6'/%3E%3Cpath d='M452 415 Q460 420 468 415'/%3E%3Cpath d='M453 425 Q460 430 467 425'/%3E%3C!-- Small flower top-center --%3E%3Ccircle cx='260' cy='55' r='6'/%3E%3Ccircle cx='250' cy='48' r='4'/%3E%3Ccircle cx='270' cy='48' r='4'/%3E%3Ccircle cx='245' cy='58' r='4'/%3E%3Ccircle cx='275' cy='58' r='4'/%3E%3Ccircle cx='250' cy='68' r='4'/%3E%3Ccircle cx='270' cy='68' r='4'/%3E%3C/g%3E%3C/svg%3E");
+    background-repeat: repeat;
+    background-size: 520px 520px;
   }
 }
