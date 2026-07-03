@@ -7,40 +7,47 @@ export const metadata = {
 
 const products = [
   {
-    title: 'עוגות וינטאג׳',
+    title: 'עוגות וינטאג\'',
     description: 'עיצוב רומנטי ועדין עם פרחים, ריפלס ואווירה של פעם. מושלם לכל אירוע מיוחד.',
-    image: '/images/cake-vintage.png',
+    image: '/images/gallery/vintage-1.png',
+    slug: 'vintage-cakes',
   },
   {
     title: 'עוגות מוס',
     description: 'שכבות מוס קרמי ועדין בציפוי מושלם – שילוב של טעם ועיצוב.',
     image: '/images/category-cakes.png',
+    slug: 'mousse-cakes',
   },
   {
     title: 'עוגות בנטו',
     description: 'עוגה אישית קטנה וחמודה – מושלמת כמתנה או כחגיגה אישית.',
-    image: '/images/cake-bento.png',
+    image: '/images/gallery/bento-1.png',
+    slug: 'bento-cakes',
   },
   {
     title: 'עוגה מלבנית מעוצבת',
     description: 'עיצוב מודרני ונקי בפורמט מלבני – אלגנטי ומרשים לכל שולחן.',
     image: '/images/category-cakes.png',
+    slug: 'rectangular-cakes',
   },
   {
     title: 'עוגות בעיצוב אישי',
     description: 'העלו כל רעיון – ואני אגשים אותו. עוגה שמספרת את הסיפור שלכם.',
     image: '/images/hero.png',
+    slug: 'custom-cakes',
   },
   {
     title: 'עוגות מספרים',
     description: 'עוגה בצורת מספר מעוטרת במקרון, פרחים ופירות – לכל יום הולדת מיוחד.',
     image: '/images/cake-numbers.png',
+    slug: 'number-cakes',
   },
   {
     title: 'עוגות ספל',
     description: 'עוגה בהתראה קצרה – טעימה, מרשימה ומוכנה מהר יותר ממה שחשבתם.',
-    image: '/images/cake-bento.png',
+    image: '/images/gallery/bento-2.png',
     note: 'בהתראה קצרה',
+    slug: 'mug-cakes',
   },
 ]
 

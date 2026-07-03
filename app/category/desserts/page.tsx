@@ -10,13 +10,15 @@ const products = [
     title: 'מארזי כוסות',
     description:
       'קינוחים בכוסות זכוכית עם שכבות קרם, ביסקוויט ותוספות – קינוח אישי מרשים לכל שולחן.',
-    image: '/images/category-desserts.png',
+    image: '/images/gallery/cups-1.png',
+    slug: 'cup-desserts',
   },
   {
     title: 'מארזי קרמבל',
     description:
       'שכבות פריכות של קרמבל, קרם וממרח – שילוב מושלם של מרקמים וטעמים שמתמוגג בפה.',
-    image: '/images/category-desserts.png',
+    image: '/images/gallery/cups-3.png',
+    slug: 'crumble-desserts',
   },
 ]
 

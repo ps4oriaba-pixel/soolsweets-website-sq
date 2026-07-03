@@ -9,33 +9,39 @@ const products = [
   {
     title: 'מארזים לאירועים',
     description: 'ימי הולדת, תודה למישהו שאוהבים – מארז מעוצב שמרגיש יוקרתי ואישי.',
-    image: '/images/box-birthday.png',
+    image: '/images/gallery/boxes-events-1.png',
+    slug: 'boxes-events',
   },
   {
     title: 'מארזי גילוי מין העובר',
     description: 'רגע מיוחד ובלתי נשכח – מארז מפתיע בצבעי ורוד או כחול.',
-    image: '/images/category-boxes.png',
+    image: '/images/gallery/gender-reveal-1.png',
+    slug: 'gender-reveal',
   },
   {
     title: 'Sweet 16',
     description: 'מארז מיוחד לחגיגת שש-עשרה – מתוק, צבעוני ומושלם לגיל המיוחד.',
     image: '/images/box-birthday.png',
     note: 'Sweet 16',
+    slug: 'sweet-sixteen',
   },
   {
     title: 'בר ובת מצווה',
     description: 'מארז מפואר ומרהיב לאחד האירועים החשובים בחיים.',
     image: '/images/category-boxes.png',
+    slug: 'bar-bat-mitzvah',
   },
   {
     title: 'מארזים ממותגים לחברות',
     description: 'מיתוג ייחודי לעסק שלכם – מארז שמייצג את המותג בצורה הטובה ביותר.',
-    image: '/images/box-birthday.png',
+    image: '/images/gallery/boxes-events-2.png',
+    slug: 'branded-boxes',
   },
   {
     title: 'מארזי חג',
     description: 'פורים, ראש השנה, פסח, שבועות – ממותקים לחג בעיצוב מסורתי ומודרני.',
-    image: '/images/category-boxes.png',
+    image: '/images/gallery/boxes-events-3.png',
+    slug: 'holiday-boxes',
   },
 ]
 

@@ -10,24 +10,28 @@ const products = [
     title: 'כדור שוקולד מתנפץ',
     description:
       'כדור שוקולד דרמטי שנשפך עליו רוטב חם וחושף הפתעה בפנים – מופע קסמים על הצלחת.',
-    image: '/images/chocolate-ball.png',
+    image: '/images/gallery/choc-ball-1.png',
     note: 'הכי מבוקש!',
+    slug: 'chocolate-ball',
   },
   {
     title: 'סוכריה מתנפצת',
     description: 'סוכריית שוקולד ענקית שמתפצחת לחשוף ממתקים וקינוחים – הפתעה אמיתית!',
     image: '/images/category-special.png',
+    slug: 'exploding-candy',
   },
   {
     title: 'ביצה מתנפצת',
     description: 'ביצת שוקולד מפתיעה שמסתירה בפנים מתנה מתוקה – מושלמת לפסחא ולהפתעות.',
     image: '/images/category-special.png',
+    slug: 'exploding-egg',
   },
   {
     title: 'עוגות קומות',
     description:
       'עוגות מרשימות בשתיים, שלוש קומות ומעלה – נוכחות מלכותית בכל שולחן אירועים.',
     image: '/images/cake-tiered.png',
+    slug: 'tiered-cakes',
   },
   {
     title: 'עוגות דף נשרף',
@@ -35,6 +39,7 @@ const products = [
       'עוגה עם דף אכיל שנשרף בלהבה לחשוף תמונה מתחתיו – חוויה שתשאיר את כולם פעורי פה.',
     image: '/images/category-special.png',
     note: 'וואו-אפקט',
+    slug: 'burnt-paper-cakes',
   },
 ]
 
