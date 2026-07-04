@@ -322,6 +322,20 @@ const galleries: GalleryData[] = [
   },
 ]
 
+// Only these items show the recommended-size table:
+// designed cakes (except bento, rectangular, numbers, mug) + tiered & burnt-paper in special designs.
+export const SIZE_GUIDE_SLUGS = [
+  'vintage-cakes',
+  'mousse-cakes',
+  'custom-cakes',
+  'tiered-cakes',
+  'burnt-paper-cakes',
+]
+
+export function hasSizeGuide(slug: string): boolean {
+  return SIZE_GUIDE_SLUGS.includes(slug)
+}
+
 export function getGallery(slug: string): GalleryData | undefined {
   return galleries.find((g) => g.slug === slug)
 }

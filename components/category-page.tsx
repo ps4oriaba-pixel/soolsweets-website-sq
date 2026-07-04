@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
+import { hasSizeGuide } from '@/lib/gallery-data'
 
 export interface Product {
   title: string
@@ -45,7 +46,9 @@ export default function CategoryPage({
             priority
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-accent/55" />
+          {/* Neutral dark scrim so the photo keeps its own colors and stands out
+              from the pink page background (matches the home hero) */}
+          <div className="absolute inset-0 bg-foreground/45" />
           <div className="absolute inset-0 flex items-center justify-center flex-col gap-3 px-4">
             <p className="text-secondary text-sm font-medium tracking-widest uppercase">
               SoolSweets
@@ -107,16 +110,18 @@ export default function CategoryPage({
                   <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
                     {product.description}
                   </p>
-                  {/* Recommended-size table link (from the sizes guide) */}
-                  <Link
-                    href="/size-guide"
-                    className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-primary transition-colors mb-4"
-                  >
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
-                    </svg>
-                    טבלת גדלים מומלצת
-                  </Link>
+                  {/* Recommended-size table link – only for the whitelisted items */}
+                  {hasSizeGuide(product.slug) && (
+                    <Link
+                      href="/size-guide"
+                      className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-primary transition-colors mb-4"
+                    >
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+                      </svg>
+                      טבלת גדלים מומלצת
+                    </Link>
+                  )}
                   <div className="flex items-center gap-4">
                     <Link
                       href={`/gallery/${product.slug}`}

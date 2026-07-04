@@ -6,7 +6,7 @@ import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import GalleryGrid from '@/components/gallery-grid'
-import { getGallery, getAllSlugs } from '@/lib/gallery-data'
+import { getGallery, getAllSlugs, hasSizeGuide } from '@/lib/gallery-data'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -45,7 +45,8 @@ export default async function GalleryPage({ params }: PageProps) {
             priority
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-accent/60" />
+          {/* Neutral dark scrim so the photo keeps its own colors */}
+          <div className="absolute inset-0 bg-foreground/45" />
           <div className="absolute inset-0 flex items-center justify-center flex-col gap-3 px-4">
             <p className="text-secondary text-xs font-medium tracking-widest uppercase">
               SoolSweets
@@ -81,15 +82,17 @@ export default async function GalleryPage({ params }: PageProps) {
         {/* Description */}
         <section className="max-w-2xl mx-auto px-6 pb-8 text-center">
           <p className="text-foreground/70 leading-relaxed">{gallery.description}</p>
-          <Link
-            href="/size-guide"
-            className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-primary hover:text-foreground transition-colors"
-          >
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4" aria-hidden="true">
-              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3M9 11.25v1.5M12 9v3.75m3-6v6" />
-            </svg>
-            טבלת גדלים מומלצת לפי כמות אורחים
-          </Link>
+          {hasSizeGuide(slug) && (
+            <Link
+              href="/size-guide"
+              className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-primary hover:text-foreground transition-colors"
+            >
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3M9 11.25v1.5M12 9v3.75m3-6v6" />
+              </svg>
+              טבלת גדלים מומלצת לפי כמות אורחים
+            </Link>
+          )}
           <div className="w-10 h-0.5 bg-primary mx-auto mt-6 rounded-full" />
         </section>
 
