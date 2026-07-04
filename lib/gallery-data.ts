@@ -322,18 +322,34 @@ const galleries: GalleryData[] = [
   },
 ]
 
-// Only these items show the recommended-size table:
-// designed cakes (except bento, rectangular, numbers, mug) + tiered & burnt-paper in special designs.
+// Items that link to their own specific size guides
 export const SIZE_GUIDE_SLUGS = [
   'vintage-cakes',
   'mousse-cakes',
   'custom-cakes',
   'tiered-cakes',
   'burnt-paper-cakes',
+  'bento-cakes',       // has its own dedicated size guide
+  'number-cakes',      // has its own dedicated size guide
+  'rectangular-cakes', // has its own dedicated size guide
 ]
 
 export function hasSizeGuide(slug: string): boolean {
   return SIZE_GUIDE_SLUGS.includes(slug)
+}
+
+// Map each item to its specific size guide page
+export function getSizeGuideUrl(slug: string): string {
+  switch (slug) {
+    case 'bento-cakes':
+      return '/bento-size-guide'
+    case 'number-cakes':
+      return '/number-size-guide'
+    case 'rectangular-cakes':
+      return '/rectangular-size-guide'
+    default:
+      return '/size-guide' // Falls back to the main size guide for other items
+  }
 }
 
 export function getGallery(slug: string): GalleryData | undefined {

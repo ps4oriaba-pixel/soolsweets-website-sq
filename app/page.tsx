@@ -82,6 +82,26 @@ export default function HomePage() {
           </div>
         </section>
 
+        {/* Dedicated AI Search Section */}
+        <section className="bg-secondary py-16 px-6">
+          <div className="max-w-2xl mx-auto text-center">
+            <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">
+              חיפוש חכם
+            </p>
+            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
+              אל תבחרו בעצמכם — נעזור לכם למצוא את הדבר המושלם
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              ספרו לנו מה אתם מחפשים: כמה אנשים, איזה סוג אירוע וסגנון מועדף. אנחנו נתאים לכם את הבחירה הטובה ביותר.
+            </p>
+            <div className="flex justify-center">
+              <div className="w-full max-w-xl">
+                <HeroSearch />
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Categories */}
         <section className="max-w-6xl mx-auto px-6 py-20" aria-labelledby="categories-heading">
           <div className="text-center mb-14">

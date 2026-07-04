@@ -21,17 +21,17 @@ export default function Navbar() {
     <header className="fixed top-0 right-0 left-0 z-50 backdrop-blur-sm border-b border-border" style={{ backgroundColor: 'rgba(251,218,212,0.96)' }}>
       {/* Use flex-row-reverse so logo sits on left visually while RTL nav is on right */}
       <div className="max-w-6xl mx-auto px-4 py-3 flex flex-row-reverse items-center justify-between">
-        {/* Logo */}
-        <Link href="/" className="flex flex-col items-start gap-0 shrink-0" style={{ direction: 'ltr' }}>
+        {/* Logo – both words on same line with matching size and color */}
+        <Link href="/" className="flex items-center gap-1 shrink-0" style={{ direction: 'ltr' }}>
           <span
-            className="font-serif italic font-bold leading-none whitespace-nowrap"
-            style={{ fontSize: '2rem', color: '#E8857A', letterSpacing: '0.01em' }}
+            className="font-serif italic font-bold leading-tight whitespace-nowrap"
+            style={{ fontSize: '1.75rem', color: '#E8857A', letterSpacing: '0.02em' }}
           >
             Sool
           </span>
           <span
-            className="font-sans font-semibold tracking-widest uppercase leading-none whitespace-nowrap"
-            style={{ fontSize: '0.6rem', color: '#6B3A34', letterSpacing: '0.25em', marginTop: '1px' }}
+            className="font-serif italic font-bold leading-tight whitespace-nowrap"
+            style={{ fontSize: '1.75rem', color: '#E8857A', letterSpacing: '0.02em' }}
           >
             Sweets
           </span>
