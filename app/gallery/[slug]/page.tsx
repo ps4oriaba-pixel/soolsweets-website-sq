@@ -6,7 +6,7 @@ import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import GalleryGrid from '@/components/gallery-grid'
-import { getGallery, getAllSlugs, getSizeGuideType } from '@/lib/gallery-data'
+import { getGallery, getAllSlugs, hasSizeGuide } from '@/lib/gallery-data'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -82,9 +82,9 @@ export default async function GalleryPage({ params }: PageProps) {
         {/* Description */}
         <section className="max-w-2xl mx-auto px-6 pb-8 text-center">
           <p className="text-foreground/70 leading-relaxed">{gallery.description}</p>
-          {getSizeGuideType(slug) && (
+          {hasSizeGuide(slug) && (
             <Link
-              href={`/size-guide?type=${getSizeGuideType(slug)}`}
+              href="/size-guide"
               className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-primary hover:text-foreground transition-colors"
             >
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4" aria-hidden="true">

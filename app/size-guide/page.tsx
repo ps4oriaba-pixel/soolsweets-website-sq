@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
-import { SIZE_GUIDES, type SizeGuideType } from '@/lib/gallery-data'
 
 export const metadata = {
   title: 'טבלת גדלי עוגות | SoolSweets',
@@ -10,16 +9,51 @@ export const metadata = {
     'טבלת גדלי עוגות מומלצת לפי כמות אורחים – בחרו את הגודל המושלם לאירוע שלכם.',
 }
 
-export default async function SizeGuidePage({
-  searchParams,
-}: {
-  searchParams: Promise<{ type?: string }>
-}) {
-  const { type } = await searchParams
-  const guideType: SizeGuideType =
-    type === 'flat' || type === 'bento' ? type : 'standard'
-  const guide = SIZE_GUIDES[guideType]
+interface SizeRow {
+  guests: string
+  size: string
+  note: string
+}
 
+const rows: SizeRow[] = [
+  {
+    guests: '5-8 אנשים',
+    size: '2 / 12 או 3 / 12',
+    note: 'אירוע אינטימי, זוג פלוס ילדים, פינוק למשרד או יום הולדת משפחתי מצומצם',
+  },
+  {
+    guests: '10-14 אנשים',
+    size: '2 / 14 או 3 / 14',
+    note: 'מפגש חברים קטן או ארוחת שישי משפחתית',
+  },
+  {
+    guests: '16-20 אנשים',
+    size: '4 / 14 או 3 / 16',
+    note: 'יום הולדת שמח עם המשפחה המורחבת, מסיבה קטנה או הרמת כוסית',
+  },
+  {
+    guests: '20-25 אנשים',
+    size: '2 / 18 או 4 / 16 או 3 / 18',
+    note: 'עוגה רחבה ונמוכה לפרוסות קלאסיות, עוגה גבוהה ומרשימה או אירוע בינוני',
+  },
+  {
+    guests: '26-28 אנשים',
+    size: '4 / 18',
+    note: 'חגיגה גדולה',
+  },
+  {
+    guests: 'כ-35 אנשים',
+    size: '5 / 18 או 4 / 20',
+    note: 'אירוע רב משתתפים, עוגה בעלת נוכחות מטורפת',
+  },
+  {
+    guests: '45-50 אנשים',
+    size: '5 / 20 או 6 / 20',
+    note: 'אירועים גדולים, מסיבות חברה או חגיגה ענקית שגונבת את ההצגה',
+  },
+]
+
+export default function SizeGuidePage() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -29,12 +63,15 @@ export default async function SizeGuidePage({
         <section className="bg-secondary py-14 px-6">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">
-              {guide.eyebrow}
+              מדריך גדלים
             </p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground text-balance mb-4">
-              {guide.title}
+              טבלת גדלי עוגות לפי כמות אורחים
             </h1>
-            <p className="text-foreground/70 leading-relaxed">{guide.intro}</p>
+            <p className="text-foreground/70 leading-relaxed">
+              לא בטוחים איזה גודל להזמין? הטבלה הבאה תעזור לכם לבחור את העוגה המושלמת
+              בהתאם למספר האורחים ולסוג האירוע.
+            </p>
           </div>
         </section>
 
@@ -44,33 +81,32 @@ export default async function SizeGuidePage({
             <table className="w-full text-right border-collapse bg-card">
               <thead>
                 <tr className="bg-primary text-primary-foreground">
-                  {guide.headers.map((header) => (
-                    <th
-                      key={header}
-                      className="px-5 py-4 font-semibold text-sm whitespace-nowrap"
-                    >
-                      {header}
-                    </th>
-                  ))}
+                  <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
+                    כמות אנשים
+                  </th>
+                  <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
+                    גודל עוגה מומלץ (שכבות / קוטר)
+                  </th>
+                  <th className="px-5 py-4 font-semibold text-sm">
+                    סוג האירוע / הערות
+                  </th>
                 </tr>
               </thead>
               <tbody>
-                {guide.rows.map((row, i) => (
-                  <tr key={i} className={i % 2 === 0 ? 'bg-card' : 'bg-muted/40'}>
-                    {row.map((cell, col) => (
-                      <td
-                        key={col}
-                        className={`px-5 py-4 align-top border-t border-border ${
-                          col === guide.highlightCol
-                            ? 'font-semibold text-primary whitespace-nowrap'
-                            : col === 0
-                              ? 'font-bold text-foreground whitespace-nowrap'
-                              : 'text-sm text-muted-foreground leading-relaxed'
-                        }`}
-                      >
-                        {cell}
-                      </td>
-                    ))}
+                {rows.map((row, i) => (
+                  <tr
+                    key={row.guests}
+                    className={i % 2 === 0 ? 'bg-card' : 'bg-muted/40'}
+                  >
+                    <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
+                      {row.guests}
+                    </td>
+                    <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
+                      {row.size}
+                    </td>
+                    <td className="px-5 py-4 text-sm text-muted-foreground leading-relaxed align-top border-t border-border">
+                      {row.note}
+                    </td>
                   </tr>
                 ))}
               </tbody>
