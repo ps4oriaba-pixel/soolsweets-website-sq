@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
+import CategoryBar from '@/components/category-bar'
 
 const navLinks = [
   { href: '/', label: 'בית' },
@@ -66,6 +67,9 @@ export default function Navbar() {
           {open ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
+
+      {/* Category bar – shows all categories with the active one highlighted */}
+      <CategoryBar />
 
       {/* Mobile menu */}
       {open && (

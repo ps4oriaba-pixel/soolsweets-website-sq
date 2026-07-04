@@ -37,7 +37,7 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-28">
         {/* Hero */}
         <section className="relative min-h-[90vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">
@@ -48,7 +48,9 @@ export default function HomePage() {
               priority
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-accent/55" />
+            {/* Neutral dark scrim (instead of the pink accent) so the photo keeps its
+                own colors and stands out from the pink page background */}
+            <div className="absolute inset-0 bg-foreground/45" />
           </div>
 
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">

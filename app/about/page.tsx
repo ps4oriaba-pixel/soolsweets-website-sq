@@ -14,7 +14,7 @@ export default function AboutPage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-28">
         {/* Page Header */}
         <section className="relative h-72 md:h-96 overflow-hidden">
           <Image

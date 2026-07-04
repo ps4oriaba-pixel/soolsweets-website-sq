@@ -35,7 +35,7 @@ export default async function GalleryPage({ params }: PageProps) {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 pt-16">
+      <main className="flex-1 pt-28">
         {/* Hero */}
         <section className="relative h-64 md:h-80 overflow-hidden">
           <Image
@@ -81,6 +81,15 @@ export default async function GalleryPage({ params }: PageProps) {
         {/* Description */}
         <section className="max-w-2xl mx-auto px-6 pb-8 text-center">
           <p className="text-foreground/70 leading-relaxed">{gallery.description}</p>
+          <Link
+            href="/size-guide"
+            className="inline-flex items-center gap-1.5 mt-5 text-sm font-semibold text-primary hover:text-foreground transition-colors"
+          >
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4" aria-hidden="true">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3M9 11.25v1.5M12 9v3.75m3-6v6" />
+            </svg>
+            טבלת גדלים מומלצת לפי כמות אורחים
+          </Link>
           <div className="w-10 h-0.5 bg-primary mx-auto mt-6 rounded-full" />
         </section>
 
