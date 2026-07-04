@@ -127,8 +127,8 @@ export default function AboutPage() {
                   <div className="w-12 h-12 rounded-full bg-secondary mx-auto mb-4 flex items-center justify-center">
                     <div className="w-5 h-5 rounded-full bg-primary" />
                   </div>
-                  <h3 className="font-serif text-xl font-bold text-foreground mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">{item.body}</p>
+                  <h3 className="font-serif text-2xl font-bold text-foreground mb-3">{item.title}</h3>
+                  <p className="text-muted-foreground text-lg leading-relaxed">{item.body}</p>
                 </div>
               ))}
             </div>
