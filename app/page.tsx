@@ -48,8 +48,8 @@ export default function HomePage() {
               priority
               className="object-cover object-center"
             />
-            {/* Neutral dark scrim (instead of the pink accent) so the photo keeps its
-                own colors and stands out from the pink page background */}
+            {/* Neutral dark scrim so the photo keeps its own colors and stands out
+                from the pink page background */}
             <div className="absolute inset-0 bg-foreground/45" />
           </div>
 
@@ -65,8 +65,8 @@ export default function HomePage() {
             <p className="text-background/80 text-lg md:text-xl leading-relaxed max-w-lg mb-10">
               יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע ורגע מיוחד.
             </p>
-            {/* AI Search bar */}
-            <div className="mb-8 w-full">
+            {/* Search bar */}
+            <div className="mb-8 w-full max-w-md">
               <HeroSearch />
             </div>
 
@@ -78,26 +78,6 @@ export default function HomePage() {
               >
                 קצת עליי
               </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Dedicated AI Search Section */}
-        <section className="bg-secondary py-16 px-6">
-          <div className="max-w-2xl mx-auto text-center">
-            <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">
-              חיפוש חכם
-            </p>
-            <h2 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-4 text-balance">
-              אל תבחרו בעצמכם — נעזור לכם למצוא את הדבר המושלם
-            </h2>
-            <p className="text-muted-foreground leading-relaxed mb-8">
-              ספרו לנו מה אתם מחפשים: כמה אנשים, איזה סוג אירוע וסגנון מועדף. אנחנו נתאים לכם את הבחירה הטובה ביותר.
-            </p>
-            <div className="flex justify-center">
-              <div className="w-full max-w-xl">
-                <HeroSearch />
-              </div>
             </div>
           </div>
         </section>
