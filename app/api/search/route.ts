@@ -13,11 +13,11 @@ export async function POST(req: Request) {
 
   const allGalleries = getAllGalleries()
 
-  // Build a compact catalog for the prompt
+  // Build a rich catalog with category and features for better matching
   const catalog = allGalleries
     .map(
       (g) =>
-        `slug: "${g.slug}" | כותרת: "${g.title}" | תיאור: "${g.description}"`
+        `slug: "${g.slug}" | כותרת: "${g.title}" | קטגוריה: ${g.category} | תיאור: "${g.description}"`
     )
     .join('\n')
 
