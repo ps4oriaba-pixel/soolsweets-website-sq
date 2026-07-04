@@ -38,10 +38,9 @@ export default function HomePage() {
       <Navbar />
 
       <main className="flex-1 pt-28">
-        {/* Centered AI Search Hero */}
-        <section className="relative min-h-screen flex items-center justify-center px-6 py-20">
-          {/* Background image with overlay */}
-          <div className="absolute inset-0 -z-10 overflow-hidden">
+        {/* Hero */}
+        <section className="relative min-h-[90vh] flex items-center overflow-hidden">
+          <div className="absolute inset-0 z-0">
             <Image
               src="/images/hero.png"
               alt="עוגות ומארזים מעוצבים של SoolSweets"
@@ -49,22 +48,36 @@ export default function HomePage() {
               priority
               className="object-cover object-center"
             />
-            <div className="absolute inset-0 bg-foreground/55" />
+            {/* Neutral dark scrim so the photo keeps its own colors and stands out
+                from the pink page background */}
+            <div className="absolute inset-0 bg-foreground/45" />
           </div>
 
-          {/* Centered search content */}
-          <div className="w-full max-w-2xl text-center">
-            <p className="text-white font-medium tracking-widest uppercase text-sm mb-3">
-              חיפוש חכם
+          <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
+            <p className="text-secondary font-medium tracking-widest uppercase text-sm mb-4">
+              קונדיטוריה ביתית בוטיק
             </p>
-            <h1 className="font-serif text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-3 text-balance leading-tight">
-              מצאו את העוגה המושלמת שלכם
+            <h1 className="font-serif text-5xl md:text-7xl font-bold text-background leading-tight text-balance mb-6">
+              טעם ואסתטיקה
+              <br />
+              נפגשים
             </h1>
-            <p className="text-white/90 text-lg md:text-xl leading-relaxed mb-10">
-              ספרו לנו כמה אנשים, איזה סוג אירוע וסגנון — אנחנו נתאים לכם את הבחירה הטובה ביותר
+            <p className="text-background/80 text-lg md:text-xl leading-relaxed max-w-lg mb-10">
+              יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע ורגע מיוחד.
             </p>
-            <div className="w-full">
+            {/* Search bar */}
+            <div className="mb-8 w-full max-w-md">
               <HeroSearch />
+            </div>
+
+            <div className="flex flex-wrap gap-4">
+              <WhatsAppButton message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
+              <Link
+                href="/about"
+                className="inline-flex items-center gap-2 border border-background text-background px-8 py-3 rounded-full text-base font-semibold hover:bg-background hover:text-foreground transition-colors duration-200"
+              >
+                קצת עליי
+              </Link>
             </div>
           </div>
         </section>

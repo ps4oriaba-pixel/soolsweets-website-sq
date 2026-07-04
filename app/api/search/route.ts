@@ -1,63 +1,61 @@
-import { generateText, Output } from 'ai'
-import { z } from 'zod'
 import { getAllGalleries } from '@/lib/gallery-data'
 
-export const runtime = 'edge'
-
 export async function POST(req: Request) {
-  const { query } = await req.json()
+  try {
+    const { query } = await req.json()
 
-  if (!query || typeof query !== 'string' || query.trim().length < 2) {
-    return Response.json({ error: 'שאלה קצרה מדי' }, { status: 400 })
-  }
+    if (!query || typeof query !== 'string' || query.trim().length === 0) {
+      return Response.json({ error: 'Invalid query' }, { status: 400 })
+    }
 
-  const allGalleries = getAllGalleries()
+    const allGalleries = getAllGalleries()
 
-  // Build a rich catalog with category and features for better matching
-  const catalog = allGalleries
-    .map(
-      (g) =>
-        `slug: "${g.slug}" | כותרת: "${g.title}" | קטגוריה: ${g.category} | תיאור: "${g.description}"`
+    // Simple keyword-based search: find products that match the query
+    const queryWords = query.toLowerCase().split(/\s+/).filter(Boolean)
+
+    const results = allGalleries
+      .map((gallery) => {
+        const titleLower = gallery.title.toLowerCase()
+        const descLower = gallery.description.toLowerCase()
+        const categoryLower = gallery.category.toLowerCase()
+
+        // Count keyword matches - title matches score higher
+        let score = 0
+        queryWords.forEach((word) => {
+          if (titleLower.includes(word)) score += 3
+          if (descLower.includes(word)) score += 1
+          if (categoryLower.includes(word)) score += 2
+        })
+
+        return {
+          slug: gallery.slug,
+          title: gallery.title,
+          description: gallery.description,
+          category: gallery.category,
+          image: gallery.heroImage,
+          score,
+        }
+      })
+      .filter((item) => item.score > 0)
+      .sort((a, b) => b.score - a.score)
+      .slice(0, 6) // Return top 6 results
+
+    if (results.length === 0) {
+      return Response.json(
+        { error: 'No products found matching your search' },
+        { status: 404 }
+      )
+    }
+
+    return Response.json({
+      results: results.map(({ score, ...rest }) => rest),
+      total: results.length,
+    })
+  } catch (error) {
+    console.error('[v0] Search error:', error)
+    return Response.json(
+      { error: 'Search failed' },
+      { status: 500 }
     )
-    .join('\n')
-
-  const { output } = await generateText({
-    model: 'anthropic/claude-3.5-haiku',
-    output: Output.object({
-      schema: z.object({
-        results: z
-          .array(
-            z.object({
-              slug: z.string().describe('slug of the matching product'),
-              reason: z.string().describe('very short explanation in Hebrew why it matches'),
-              score: z.number().min(0).max(100).describe('match score 0-100'),
-            })
-          )
-          .max(6)
-          .describe('best matching products, sorted by relevance descending'),
-        tip: z
-          .string()
-          .optional()
-          .describe(
-            'optional short tip in Hebrew suggesting to contact Slalit for custom requests'
-          ),
-      }),
-    }),
-    system: `אתה עוזר מקצועי לאתר קונדיטוריה ביתית בוטיק בשם SoolSweets של סלעית.
-המוצרים שיש באתר:
-${catalog}
-
-תפקידך: לקבל בקשה מלקוח ולהחזיר את המוצרים הכי מתאימים מתוך הרשימה הזו בלבד.
-כללים:
-- החזר לכל היותר 6 תוצאות
-- מיין מהכי מתאים לפחות מתאים
-- אם הבקשה כוללת מספר אנשים – התאם בהתאם: בנטו/ספל לאירוע קטן (1-4), עוגה רגילה לבינוני (5-20), קומות/מארז גדול לגדול (20+)
-- אם הבקשה כוללת סגנון (וינטאג', שוקולד, פשוט, מפתיע) – התאם
-- אם הבקשה כוללת אירוע (חתונה, יום הולדת, גילוי מין, חג) – התאם
-- החזר רק slugs מהרשימה הנתונה, בדיוק כפי שהם
-- ה-reason צריך להיות קצר (1-2 משפטים בעברית)`,
-    prompt: `בקשת הלקוח: "${query.trim()}"`,
-  })
-
-  return Response.json(output)
+  }
 }
