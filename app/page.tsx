@@ -53,25 +53,24 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-foreground/45" />
           </div>
 
-          <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full flex flex-col items-center text-center">
+          <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
             <p className="text-secondary font-medium tracking-widest uppercase text-sm mb-4">
               קונדיטוריה ביתית בוטיק
             </p>
-            <h1 className="font-serif text-5xl md:text-7xl font-bold text-background leading-tight text-balance mb-10">
+            <h1 className="font-serif text-5xl md:text-7xl font-bold text-background leading-tight text-balance mb-6">
               טעם ואסתטיקה
               <br />
               נפגשים
             </h1>
-            <p className="text-background/80 text-lg md:text-xl leading-relaxed max-w-lg mb-16">
+            <p className="text-background/80 text-lg md:text-xl leading-relaxed max-w-lg mb-10">
               יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע ורגע מיוחד.
             </p>
-            
-            {/* AI Search bar – centered and prominent */}
-            <div className="mb-16 w-full flex justify-center">
+            {/* AI Search bar */}
+            <div className="mb-8 w-full">
               <HeroSearch />
             </div>
 
-            <div className="flex flex-wrap gap-4 justify-center">
+            <div className="flex flex-wrap gap-4">
               <WhatsAppButton message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
               <Link
                 href="/about"
