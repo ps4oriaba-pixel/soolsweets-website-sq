@@ -6,19 +6,17 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
-
+import { getGallery, type GalleryData } from '@/lib/gallery-data'
 
 interface SearchResult {
   slug: string
-  title: string
-  description: string
-  category: string
-  image: string
+  reason: string
+  score: number
 }
 
 interface ApiResponse {
   results: SearchResult[]
-  total: number
+  tip?: string
 }
 
 function SearchResults() {
@@ -27,13 +25,15 @@ function SearchResults() {
   const query = searchParams.get('q') ?? ''
 
   const [status, setStatus] = useState<'idle' | 'loading' | 'done' | 'error'>('idle')
-  const [results, setResults] = useState<SearchResult[]>([])
+  const [results, setResults] = useState<{ data: GalleryData; reason: string }[]>([])
+  const [tip, setTip] = useState<string | undefined>()
   const [inputValue, setInputValue] = useState(query)
 
   useEffect(() => {
     if (!query.trim()) return
     setStatus('loading')
     setResults([])
+    setTip(undefined)
 
     fetch('/api/search', {
       method: 'POST',
@@ -42,7 +42,14 @@ function SearchResults() {
     })
       .then((r) => r.json())
       .then((data: ApiResponse) => {
-        setResults(data.results ?? [])
+        const matched = (data.results ?? [])
+          .map((r) => {
+            const gallery = getGallery(r.slug)
+            return gallery ? { data: gallery, reason: r.reason } : null
+          })
+          .filter(Boolean) as { data: GalleryData; reason: string }[]
+        setResults(matched)
+        setTip(data.tip)
         setStatus('done')
       })
       .catch(() => setStatus('error'))
@@ -138,16 +145,16 @@ function SearchResults() {
               </div>
 
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                {results.map((result) => (
+                {results.map(({ data, reason }) => (
                   <Link
-                    key={result.slug}
-                    href={`/gallery/${result.slug}`}
+                    key={data.slug}
+                    href={`/gallery/${data.slug}`}
                     className="group bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col"
                   >
                     <div className="relative h-56 overflow-hidden">
                       <Image
-                        src={result.image}
-                        alt={result.title}
+                        src={data.heroImage}
+                        alt={data.title}
                         fill
                         className="object-cover group-hover:scale-105 transition-transform duration-500"
                       />
@@ -155,17 +162,17 @@ function SearchResults() {
                     </div>
                     <div className="p-6 flex flex-col flex-1">
                       <h3 className="font-serif text-xl font-bold text-foreground mb-1 group-hover:text-primary transition-colors">
-                        {result.title}
+                        {data.title}
                       </h3>
                       <p className="text-xs text-muted-foreground mb-3 leading-relaxed">
-                        {result.description}
+                        {reason}
                       </p>
                       <div className="mt-auto flex items-center justify-between">
                         <span className="text-xs font-semibold text-primary uppercase tracking-wider">
                           לגלריה &larr;
                         </span>
                         <a
-                          href={`https://wa.me/972545629058?text=${encodeURIComponent('שלום סלעית, מעוניין ב: ' + result.title)}`}
+                          href={`https://wa.me/972545629058?text=${encodeURIComponent(data.whatsappMessage)}`}
                           target="_blank"
                           rel="noopener noreferrer"
                           onClick={(e) => e.stopPropagation()}
