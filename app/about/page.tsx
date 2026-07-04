@@ -124,8 +124,8 @@ export default function AboutPage() {
                   key={item.title}
                   className="bg-card rounded-2xl p-8 text-center shadow-sm"
                 >
-                  <div className="w-12 h-12 rounded-full bg-secondary mx-auto mb-4 flex items-center justify-center">
-                    <div className="w-5 h-5 rounded-full bg-primary" />
+                  <div className="w-12 h-12 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center">
+                    <div className="w-5 h-5 rounded-full bg-accent" />
                   </div>
                   <h3 className="font-serif text-2xl font-bold text-foreground mb-3">{item.title}</h3>
                   <p className="text-muted-foreground text-lg leading-relaxed">{item.body}</p>

@@ -107,7 +107,7 @@ export default function CategoryPage({
                       {product.title}
                     </h2>
                   </Link>
-                  <p className="text-sm text-muted-foreground leading-relaxed mb-4 flex-1">
+                  <p className="text-base text-muted-foreground leading-relaxed mb-4 flex-1">
                     {product.description}
                   </p>
                   {/* Recommended-size table link – only for the whitelisted items */}

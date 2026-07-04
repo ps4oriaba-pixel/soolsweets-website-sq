@@ -17,12 +17,12 @@ interface SizeRow {
 
 const rows: SizeRow[] = [
   {
-    size: '25 × 35 ס"מ',
+    size: '25 ס"מ × 35 ס"מ קוטר',
     servings: '30 אנשים',
     note: 'אירוע בינוני, יום הולדת או חגיגה משפחתית',
   },
   {
-    size: '30 × 43 ס"מ',
+    size: '30 ס"מ × 43 ס"מ קוטר',
     servings: '40 אנשים',
     note: 'אירוע גדול, מסיבה או חגיגה רחבה',
   },
@@ -43,7 +43,7 @@ export default function RectangularSizeGuidePage() {
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground text-balance mb-4">
               טבלת גדלי עוגות מלבניות מעוצבות
             </h1>
-            <p className="text-foreground/70 leading-relaxed">
+            <p className="text-lg text-foreground/70 leading-relaxed">
               עוגות מלבניות עם עיצובים מרהיבים. בחרו את הגודל המתאים לאירוע שלכם.
             </p>
           </div>
@@ -87,7 +87,7 @@ export default function RectangularSizeGuidePage() {
             </table>
           </div>
 
-          <p className="text-center text-sm text-muted-foreground mt-6 leading-relaxed">
+          <p className="text-center text-base text-muted-foreground mt-6 leading-relaxed">
             הגדלים הם המלצה כללית. לא מצאתם בדיוק את מה שחיפשתם? כתבו לי ונתאים יחד את הגודל המושלם.
           </p>
         </section>

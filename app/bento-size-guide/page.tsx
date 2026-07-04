@@ -43,7 +43,7 @@ export default function BentoSizeGuidePage() {
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground text-balance mb-4">
               טבלת גדלי עוגות בנטו
             </h1>
-            <p className="text-foreground/70 leading-relaxed">
+            <p className="text-lg text-foreground/70 leading-relaxed">
               עוגות בנטו מלאות בעוד 40 טעמים בתוך כל כוס. בחרו את הגודל המושלם לאירוע האינטימי שלכם.
             </p>
           </div>
@@ -87,7 +87,7 @@ export default function BentoSizeGuidePage() {
             </table>
           </div>
 
-          <p className="text-center text-sm text-muted-foreground mt-6 leading-relaxed">
+          <p className="text-center text-base text-muted-foreground mt-6 leading-relaxed">
             הגדלים הם המלצה כללית. כל עוגה בנטו מעוצבת אישית בהתאם לטעם שלכם.
           </p>
         </section>

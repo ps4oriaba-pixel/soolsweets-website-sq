@@ -18,37 +18,37 @@ interface SizeRow {
 const rows: SizeRow[] = [
   {
     guests: '5-8 אנשים',
-    size: '2 / 12 או 3 / 12',
+    size: '2 שכבות / 12 ס"מ קוטר או 3 שכבות / 12 ס"מ קוטר',
     note: 'אירוע אינטימי, זוג פלוס ילדים, פינוק למשרד או יום הולדת משפחתי מצומצם',
   },
   {
     guests: '10-14 אנשים',
-    size: '2 / 14 או 3 / 14',
+    size: '2 שכבות / 14 ס"מ קוטר או 3 שכבות / 14 ס"מ קוטר',
     note: 'מפגש חברים קטן או ארוחת שישי משפחתית',
   },
   {
     guests: '16-20 אנשים',
-    size: '4 / 14 או 3 / 16',
+    size: '4 שכבות / 14 ס"מ קוטר או 3 שכבות / 16 ס"מ קוטר',
     note: 'יום הולדת שמח עם המשפחה המורחבת, מסיבה קטנה או הרמת כוסית',
   },
   {
     guests: '20-25 אנשים',
-    size: '2 / 18 או 4 / 16 או 3 / 18',
+    size: '2 שכבות / 18 ס"מ קוטר או 4 שכבות / 16 ס"מ קוטר או 3 שכבות / 18 ס"מ קוטר',
     note: 'עוגה רחבה ונמוכה לפרוסות קלאסיות, עוגה גבוהה ומרשימה או אירוע בינוני',
   },
   {
     guests: '26-28 אנשים',
-    size: '4 / 18',
+    size: '4 שכבות / 18 ס"מ קוטר',
     note: 'חגיגה גדולה',
   },
   {
     guests: 'כ-35 אנשים',
-    size: '5 / 18 או 4 / 20',
+    size: '5 שכבות / 18 ס"מ קוטר או 4 שכבות / 20 ס"מ קוטר',
     note: 'אירוע רב משתתפים, עוגה בעלת נוכחות מטורפת',
   },
   {
     guests: '45-50 אנשים',
-    size: '5 / 20 או 6 / 20',
+    size: '5 שכבות / 20 ס"מ קוטר או 6 שכבות / 20 ס"מ קוטר',
     note: 'אירועים גדולים, מסיבות חברה או חגיגה ענקית שגונבת את ההצגה',
   },
 ]
@@ -68,7 +68,7 @@ export default function SizeGuidePage() {
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground text-balance mb-4">
               טבלת גדלי עוגות לפי כמות אורחים
             </h1>
-            <p className="text-foreground/70 leading-relaxed">
+            <p className="text-lg text-foreground/70 leading-relaxed">
               לא בטוחים איזה גודל להזמין? הטבלה הבאה תעזור לכם לבחור את העוגה המושלמת
               בהתאם למספר האורחים ולסוג האירוע.
             </p>
@@ -113,7 +113,7 @@ export default function SizeGuidePage() {
             </table>
           </div>
 
-          <p className="text-center text-sm text-muted-foreground mt-6 leading-relaxed">
+          <p className="text-center text-base text-muted-foreground mt-6 leading-relaxed">
             הגדלים הם המלצה כללית. לא מצאתם בדיוק את מה שחיפשתם? כתבו לי ונתאים יחד את
             הגודל המושלם עבורכם.
           </p>
