@@ -3,7 +3,7 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
-import { hasSizeGuide } from '@/lib/gallery-data'
+import { getSizeGuideType } from '@/lib/gallery-data'
 
 export interface Product {
   title: string
@@ -111,9 +111,9 @@ export default function CategoryPage({
                     {product.description}
                   </p>
                   {/* Recommended-size table link – only for the whitelisted items */}
-                  {hasSizeGuide(product.slug) && (
+                  {getSizeGuideType(product.slug) && (
                     <Link
-                      href="/size-guide"
+                      href={`/size-guide?type=${getSizeGuideType(product.slug)}`}
                       className="inline-flex items-center gap-1.5 text-xs font-semibold text-muted-foreground hover:text-primary transition-colors mb-4"
                     >
                       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.5} className="w-4 h-4" aria-hidden="true">

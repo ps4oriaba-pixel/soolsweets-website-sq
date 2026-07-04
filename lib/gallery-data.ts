@@ -322,18 +322,83 @@ const galleries: GalleryData[] = [
   },
 ]
 
-// Only these items show the recommended-size table:
-// designed cakes (except bento, rectangular, numbers, mug) + tiered & burnt-paper in special designs.
-export const SIZE_GUIDE_SLUGS = [
-  'vintage-cakes',
-  'mousse-cakes',
-  'custom-cakes',
-  'tiered-cakes',
-  'burnt-paper-cakes',
-]
+// ── Size guides ──────────────────────────────────────────
+// Different products use different recommended-size tables.
+export type SizeGuideType = 'standard' | 'flat' | 'bento'
+
+export interface SizeGuide {
+  eyebrow: string
+  title: string
+  intro: string
+  headers: string[]
+  // each row is an array of cell strings, aligned to `headers`
+  rows: string[][]
+  // index of the column to highlight in the primary color
+  highlightCol: number
+}
+
+export const SIZE_GUIDES: Record<SizeGuideType, SizeGuide> = {
+  standard: {
+    eyebrow: 'מדריך גדלים',
+    title: 'טבלת גדלי עוגות לפי כמות אורחים',
+    intro:
+      'לא בטוחים איזה גודל להזמין? הטבלה הבאה תעזור לכם לבחור את העוגה המושלמת בהתאם למספר האורחים ולסוג האירוע.',
+    headers: ['כמות אנשים', 'גודל עוגה מומלץ (שכבות / קוטר)', 'סוג האירוע / הערות'],
+    highlightCol: 1,
+    rows: [
+      ['5-8 אנשים', '2 / 12 או 3 / 12', 'אירוע אינטימי, זוג פלוס ילדים, פינוק למשרד או יום הולדת משפחתי מצומצם'],
+      ['10-14 אנשים', '2 / 14 או 3 / 14', 'מפגש חברים קטן או ארוחת שישי משפחתית'],
+      ['16-20 אנשים', '4 / 14 או 3 / 16', 'יום הולדת שמח עם המשפחה המורחבת, מסיבה קטנה או הרמת כוסית'],
+      ['20-25 אנשים', '2 / 18 או 4 / 16 או 3 / 18', 'עוגה רחבה ונמוכה לפרוסות קלאסיות, עוגה גבוהה ומרשימה או אירוע בינוני'],
+      ['26-28 אנשים', '4 / 18', 'חגיגה גדולה'],
+      ['כ-35 אנשים', '5 / 18 או 4 / 20', 'אירוע רב משתתפים, עוגה בעלת נוכחות מטורפת'],
+      ['45-50 אנשים', '5 / 20 או 6 / 20', 'אירועים גדולים, מסיבות חברה או חגיגה ענקית שגונבת את ההצגה'],
+    ],
+  },
+  flat: {
+    eyebrow: 'מדריך גדלים',
+    title: 'טבלת גדלים – עוגות מספרים ועוגה מלבנית מעוצבת',
+    intro:
+      'שני גדלים קבועים לבחירה, בהתאם לכמות האורחים באירוע שלכם.',
+    headers: ['גודל העוגה', 'כמות אנשים'],
+    highlightCol: 0,
+    rows: [
+      ['25X35 ס"מ', '30 אנשים'],
+      ['30X43 ס"מ', '40 אנשים'],
+    ],
+  },
+  bento: {
+    eyebrow: 'מדריך גדלים',
+    title: 'טבלת גדלים – עוגות בנטו',
+    intro:
+      'עוגת בנטו אישית וחמודה, בשני גבהים לבחירה – שניהם מתאימים ל-2-3 אנשים.',
+    headers: ['גודל העוגה', 'כמות אנשים'],
+    highlightCol: 0,
+    rows: [
+      ['קוטר 10 ס"מ, גובה 7 ס"מ', '2-3 אנשים'],
+      ['קוטר 10 ס"מ, גובה 10 ס"מ', '2-3 אנשים'],
+    ],
+  },
+}
+
+// Maps a product slug to the size guide it should show (or null if none).
+const SIZE_GUIDE_BY_SLUG: Record<string, SizeGuideType> = {
+  'vintage-cakes': 'standard',
+  'mousse-cakes': 'standard',
+  'custom-cakes': 'standard',
+  'tiered-cakes': 'standard',
+  'burnt-paper-cakes': 'standard',
+  'number-cakes': 'flat',
+  'rectangular-cakes': 'flat',
+  'bento-cakes': 'bento',
+}
+
+export function getSizeGuideType(slug: string): SizeGuideType | null {
+  return SIZE_GUIDE_BY_SLUG[slug] ?? null
+}
 
 export function hasSizeGuide(slug: string): boolean {
-  return SIZE_GUIDE_SLUGS.includes(slug)
+  return slug in SIZE_GUIDE_BY_SLUG
 }
 
 export function getGallery(slug: string): GalleryData | undefined {
