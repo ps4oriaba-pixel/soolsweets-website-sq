@@ -322,8 +322,8 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'tiered-cakes',
-    title: '',
-    subtitle: 'נוכחות מלכותית בכל שולחן',
+    title: 'עוגת קומות',
+    subtitle: '',
     description:
       'עוגות קומות מרשימות לחתונות, אירועים גדולים וכל מי שמחפש את ה-WOW האמיתי.',
     heroImage: '/images/cake-tiered.png',
