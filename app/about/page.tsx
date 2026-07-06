@@ -96,44 +96,7 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Values */}
-        <section className="bg-secondary/40 py-16 px-6">
-          <div className="max-w-5xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="font-serif text-3xl font-bold text-foreground text-balance">
-                למה לבחור בי?
-              </h2>
-              <div className="w-12 h-1 bg-primary mx-auto mt-4 rounded-full" />
-            </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              {[
-                {
-                  title: 'אפייה ביתית מאהבה',
-                  body: 'כל מוצר נאפה בבית עם לב ואהבה, ללא פשרות על איכות.',
-                },
-                {
-                  title: 'חומרי גלם איכותיים',
-                  body: 'אנחנו בוחרים רק את הטוב ביותר – טעם שמרשים כמו המראה.',
-                },
-                {
-                  title: 'התאמה אישית מלאה',
-                  body: 'כל רעיון יתקבל בחיוך ויוגשם בצורה המרהיבה ביותר.',
-                },
-              ].map((item) => (
-                <div
-                  key={item.title}
-                  className="bg-card rounded-2xl p-8 text-center shadow-sm"
-                >
-                  <div className="w-12 h-12 rounded-full bg-primary mx-auto mb-4 flex items-center justify-center">
-                    <div className="w-5 h-5 rounded-full bg-accent" />
-                  </div>
-                  <h3 className="font-serif text-2xl font-bold text-foreground mb-3">{item.title}</h3>
-                  <p className="text-muted-foreground text-lg leading-relaxed">{item.body}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-        </section>
+
       </main>
 
       <Footer />
