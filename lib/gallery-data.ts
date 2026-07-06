@@ -280,7 +280,7 @@ const galleries: GalleryData[] = [
     title: 'כדורגל שוקולד',
     subtitle: '',
     description:
-      'כדור שוקולד דרמטי שנשפך עליו רוטב חם וחושף הפתעה בפנים. חוויה שכולם ידברו עליה.',
+      'קינוח מושלם לחובבי הכדורגל, שבפנים מסתתר אוצר של ממתקים.',
     heroImage: '/images/gallery/choc-ball-1.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין כדורי שוקולד מתנפצים!',
     images: [
