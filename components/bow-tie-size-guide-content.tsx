@@ -114,10 +114,8 @@ export default function BowTieSizeGuideContent() {
         <p className="text-center text-sm text-muted-foreground mt-4 leading-relaxed">
           <span className="text-primary font-semibold">*</span> כל הגדלים המוצעים מתאימים לעוגה עגולה. עבור עוגת לב&nbsp;
           <Dialog>
-            <DialogTrigger asChild>
-              <button className="text-primary font-semibold hover:underline">
-                לחצו כאן
-              </button>
+            <DialogTrigger className="text-primary font-semibold hover:underline">
+              לחצו כאן
             </DialogTrigger>
             <DialogContent className="max-w-2xl">
               <DialogHeader>

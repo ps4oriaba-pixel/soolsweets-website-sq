@@ -20,10 +20,8 @@ const heartSizes = [
 export default function HeartSizeModal() {
   return (
     <Dialog>
-      <DialogTrigger asChild>
-        <button className="text-primary font-semibold hover:underline">
-          לחצו כאן
-        </button>
+      <DialogTrigger className="text-primary font-semibold hover:underline">
+        לחצו כאן
       </DialogTrigger>
       <DialogContent className="max-w-2xl">
         <DialogHeader>
