@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import {
   Dialog,
   DialogContent,
@@ -57,8 +56,6 @@ const heartSizes = [
 ]
 
 export default function BowTieSizeGuideContent() {
-  const [openHeart, setOpenHeart] = useState(false)
-
   return (
     <>
       {/* Header */}
@@ -116,7 +113,7 @@ export default function BowTieSizeGuideContent() {
 
         <p className="text-center text-sm text-muted-foreground mt-4 leading-relaxed">
           <span className="text-primary font-semibold">*</span> כל הגדלים המוצעים מתאימים לעוגה עגולה. עבור עוגת לב&nbsp;
-          <Dialog open={openHeart} onOpenChange={setOpenHeart}>
+          <Dialog>
             <DialogTrigger asChild>
               <button className="text-primary font-semibold hover:underline">
                 לחצו כאן
