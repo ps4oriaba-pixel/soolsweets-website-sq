@@ -13,18 +13,18 @@ interface SizeRow {
 
 const rows: SizeRow[] = [
   {
-    servings: 'אדם אחד',
-    dimensions: 'קוטר 8 ס״מ',
+    servings: '2 אנשים',
+    dimensions: 'קוטר 8 ס״מ, תכולה 340 מ״ל',
     size: 'ספל יחיד',
   },
   {
-    servings: 'שניים',
-    dimensions: 'קוטר 10 ס״מ',
+    servings: '3-4 אנשים',
+    dimensions: 'קוטר 10 ס״מ, תכולה 500 מ״ל',
     size: 'ספל זוגי',
   },
   {
-    servings: 'משפחה',
-    dimensions: '3 שכבות',
+    servings: '10-12 אנשים',
+    dimensions: 'קוטר 16 ס״מ, 3 שכבות',
     size: 'עוגת כפיות',
   },
 ]
