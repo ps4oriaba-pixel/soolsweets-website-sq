@@ -27,7 +27,7 @@ const categories = [
   {
     href: '/category/special',
     title: 'עיצובים מיוחדים',
-    description: 'כדורים מתנפצים, עוגות קומות ועוגות דף נשרף',
+    description: 'כדורגל שוקולד, סוכריה גדולה ומתוקה, ביצת שוקולד ענקית ועוגות קומות',
     image: '/images/category-special.png',
   },
 ]
