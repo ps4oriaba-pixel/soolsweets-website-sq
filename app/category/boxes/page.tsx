@@ -8,7 +8,7 @@ export const metadata = {
 const products = [
   {
     title: 'רגעים ששווה לחגוג',
-    description: 'ימי הולדת, תודה למישהו שאוהבים – מארז מעוצב שמרגיש יוקרתי ואישי.',
+    description: 'ימי הולדת, Sweet 16, בר/בת מצווה, גילוי מין העובר, ברית ובריתה, לידה, חתונה ואירוסין, הצעת נישואין, יום נישואין.',
     image: '/images/gallery/boxes-events-1.png',
     slug: 'boxes-events',
   },
