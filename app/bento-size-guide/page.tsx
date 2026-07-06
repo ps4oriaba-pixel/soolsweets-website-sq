@@ -16,7 +16,7 @@ interface SizeRow {
 
 const rows: SizeRow[] = [
   {
-    size: 'קוטר 10 / גובה 7 (קופסת טייק אווי)',
+    size: 'קוטר 10 / גובה 7 (קופסת T.A)',
     servings: '2 אנשים',
   },
   {
