@@ -7,23 +7,9 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Brand */}
           <div className="flex flex-col gap-2">
-            <div className="relative inline-block">
-              <span dir="ltr" className="font-serif italic font-bold whitespace-nowrap block" style={{ fontSize: '2.8rem', color: '#E8857A', letterSpacing: '0.02em' }}>
-                SoolSweets
-              </span>
-              {/* Bite effect on O in Sool */}
-              <div
-                className="absolute rounded-full"
-                style={{
-                  width: '1.5rem',
-                  height: '1.5rem',
-                  backgroundColor: 'rgba(251,218,212,0.8)',
-                  top: '0.4rem',
-                  right: '2.2rem',
-                  zIndex: 10,
-                }}
-              />
-            </div>
+            <span dir="ltr" className="font-serif italic font-bold whitespace-nowrap block" style={{ fontSize: '3.2rem', color: '#E8857A', letterSpacing: '0.02em' }}>
+              SoolSweets
+            </span>
             <p className="text-sm text-accent-foreground/70 leading-relaxed max-w-xs">
               קינוחים ועיצובים מיוחדים בהתאמה אישית – מתוך אהבה לאפייה ביתית.
             </p>
