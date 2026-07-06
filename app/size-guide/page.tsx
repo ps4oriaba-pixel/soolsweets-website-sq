@@ -7,30 +7,30 @@ import HeartSizeModal from '@/components/heart-size-modal'
 
 
 interface SizeRow {
-  size: string
   guests: string
+  size: string
 }
 
 const rows: SizeRow[] = [
   {
-    size: 'קוטר 12, 2-3 שכבות ',
     guests: '5-8 אנשים',
+    size: 'קוטר 12, 2-3 שכבות ',
   },
   {
-    size: 'קוטר 14, 2-3 שכבות ',
     guests: '8-14 אנשים',
+    size: 'קוטר 14, 2-3 שכבות ',
   },
   {
-    size: 'קוטר 16, 2-3 שכבות',
     guests: '14-20 אנשים',
+    size: 'קוטר 16, 2-3 שכבות',
   },
   {
-    size: 'קוטר 18, 2-3 שכבות\n',
     guests: '18-22 אנשים',
+    size: 'קוטר 18, 2-3 שכבות\n',
   },
   {
-    size: 'קוטר 20 , 2-3 שכבות',
     guests: '24-28 אנשים',
+    size: 'קוטר 20 , 2-3 שכבות',
   },
 ]
 
@@ -63,24 +63,24 @@ export default function SizeGuidePage() {
               <thead>
                 <tr className="bg-primary text-primary-foreground">
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
-                    גודל עוגה מומלץ (קוטר / שכבות)
+                    כמות אנשים
                   </th>
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
-                    כמות אנשים
+                    גודל עוגה מומלץ (קוטר / שכבות)
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((row, i) => (
                   <tr
-                    key={row.size}
+                    key={row.guests}
                     className={i % 2 === 0 ? 'bg-card' : 'bg-muted/40'}
                   >
-                    <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
-                      {row.size}
-                    </td>
                     <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
                       {row.guests}
+                    </td>
+                    <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
+                      {row.size}
                     </td>
                   </tr>
                 ))}

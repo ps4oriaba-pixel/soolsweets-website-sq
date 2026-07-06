@@ -5,21 +5,21 @@ import WhatsAppButton from '@/components/whatsapp-button'
 import HeartSizeModal from '@/components/heart-size-modal'
 
 interface SizeRow {
-  size: string
-  dimensions: string
   servings: string
+  dimensions: string
+  size: string
 }
 
 const rows: SizeRow[] = [
   {
-    size: 'עוגה ספרה אחת',
-    dimensions: 'אורך 35 / רוחב 25 ',
     servings: 'כ- 15 אנשים',
+    dimensions: 'אורך 35 / רוחב 25 ',
+    size: 'עוגה ספרה אחת',
   },
   {
-    size: 'עוגת שתי ספרות',
-    dimensions: 'רוחב 35 / אורך 25 ',
     servings: 'כ-25 אנשים',
+    dimensions: 'רוחב 35 / אורך 25 ',
+    size: 'עוגת שתי ספרות',
   },
 ]
 
@@ -51,30 +51,30 @@ export default function NumberSizeGuidePage() {
               <thead>
                 <tr className="bg-primary text-primary-foreground">
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
-                    גודל עוגה
+                    כמות אנשים
                   </th>
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
                     מידות  ס״מ
                   </th>
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
-                    כמות אנשים
+                    גודל עוגה
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((row, i) => (
                   <tr
-                    key={row.size}
+                    key={row.servings}
                     className={i % 2 === 0 ? 'bg-card' : 'bg-muted/40'}
                   >
-                    <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
-                      {row.size}
+                    <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
+                      {row.servings}
                     </td>
                     <td className="px-5 py-4 font-semibold text-foreground whitespace-nowrap align-top border-t border-border">
                       {row.dimensions}
                     </td>
-                    <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
-                      {row.servings}
+                    <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
+                      {row.size}
                     </td>
                   </tr>
                 ))}

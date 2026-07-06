@@ -10,18 +10,18 @@ export const metadata = {
 }
 
 interface SizeRow {
-  size: string
   servings: string
+  size: string
 }
 
 const rows: SizeRow[] = [
   {
-    size: 'קוטר 10 / גובה 7 (קופסת T.A)',
     servings: '2 אנשים',
+    size: 'קוטר 10 / גובה 7 (קופסת T.A)',
   },
   {
-    size: 'קוטר 10 / גובה 8-10 (קופסא שקופה)',
     servings: '2-3 אנשים',
+    size: 'קוטר 10 / גובה 8-10 (קופסא שקופה)',
   },
 ]
 
@@ -53,24 +53,24 @@ export default function BentoSizeGuidePage() {
               <thead>
                 <tr className="bg-primary text-primary-foreground">
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
-                    גודל עוגה
+                    כמות אנשים
                   </th>
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
-                    כמות אנשים
+                    גודל עוגה
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((row, i) => (
                   <tr
-                    key={row.size}
+                    key={row.servings}
                     className={i % 2 === 0 ? 'bg-card' : 'bg-muted/40'}
                   >
-                    <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
-                      {row.size}
-                    </td>
                     <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
                       {row.servings}
+                    </td>
+                    <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
+                      {row.size}
                     </td>
                   </tr>
                 ))}
