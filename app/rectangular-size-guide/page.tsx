@@ -17,7 +17,7 @@ const rows: SizeRow[] = [
     servings: '25-30 אנשים',
   },
   {
-    size: 'גדולה',
+    size: 'גדולה (A3)',
     dimensions: 'אורך 43 / רוחב 30',
     servings: '35-40 אנשים',
   },
