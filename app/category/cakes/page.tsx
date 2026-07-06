@@ -31,6 +31,12 @@ const products = [
     slug: 'rectangular-cakes',
   },
   {
+    title: 'עוגת פפיון',
+    description: 'עוגת שוקולד/וניל עם גנאש שוקולד חלב ומטבעות שוקולד בעיטוף קרם חמאה שוויצרי משגע.',
+    image: '/images/cake-bow-tie.png',
+    slug: 'bow-tie-cakes',
+  },
+  {
     title: 'עוגות בעיצוב אישי',
     description: 'העלו כל רעיון – ואני אגשים אותו. עוגה שמספרת את הסיפור שלכם.',
     image: '/images/hero.png',
