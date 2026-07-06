@@ -9,7 +9,7 @@ import {
 } from '@/components/ui/dialog'
 
 const heartSizes = [
-  { size: 'קוטר 12, 2-3 שכבות', servings: '5-8 אנשים' },
+  { size: 'קוטר 12, 2-3 שכבות', servings: '4-6 אנשים' },
   { size: 'קוטר 14, 2-3 שכבות', servings: '8-10 אנשים' },
   { size: 'קוטר 16, 2-3 שכבות', servings: '12-15 אנשים' },
   { size: 'קוטר 18, 2-3 שכבות', servings: '18-22 אנשים' },
