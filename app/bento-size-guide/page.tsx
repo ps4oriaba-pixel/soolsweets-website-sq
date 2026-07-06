@@ -17,12 +17,12 @@ interface SizeRow {
 
 const rows: SizeRow[] = [
   {
-    size: 'קוטר 10 ס"מ, גובה 7 ס"מ',
+    size: 'קוטר 10 / גובה 7',
     servings: '2-3 אנשים',
     note: 'אירוע אינטימי, זוג או משפחה קטנה, פינוק אישי',
   },
   {
-    size: 'קוטר 10 ס"מ, גובה 10 ס"מ',
+    size: 'קוטר 10 / גובה 10',
     servings: '2-3 אנשים',
     note: 'אירוע אינטימי עם עוגה גבוהה יותר, מרשימה יותר',
   },
@@ -33,7 +33,7 @@ export default function BentoSizeGuidePage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 pt-28">
+      <main className="flex-1 pt-20">
         {/* Header */}
         <section className="bg-secondary py-14 px-6">
           <div className="max-w-3xl mx-auto text-center">

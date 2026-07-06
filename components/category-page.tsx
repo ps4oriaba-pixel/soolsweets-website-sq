@@ -36,7 +36,7 @@ export default function CategoryPage({
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 pt-28">
+      <main className="flex-1 pt-20">
         {/* Hero */}
         <section className="relative h-72 md:h-96 overflow-hidden">
           <Image

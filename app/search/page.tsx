@@ -57,7 +57,7 @@ function SearchResults() {
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
-      <main className="flex-1 pt-28">
+      <main className="flex-1 pt-20">
         {/* Search header */}
         <section className="bg-secondary py-14 px-6">
           <div className="max-w-3xl mx-auto text-center">

@@ -37,7 +37,7 @@ export default function HomePage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 pt-28">
+      <main className="flex-1 pt-20">
         {/* Hero */}
         <section className="relative min-h-[90vh] flex items-center overflow-hidden">
           <div className="absolute inset-0 z-0">

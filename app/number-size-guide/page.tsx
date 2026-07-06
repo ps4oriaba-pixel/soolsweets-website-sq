@@ -17,12 +17,12 @@ interface SizeRow {
 
 const rows: SizeRow[] = [
   {
-    size: '25 ס"מ × 35 ס"מ קוטר',
+    size: 'קוטר 25×35 / 1 שכבות',
     servings: '30 אנשים',
     note: 'אירוע בינוני, יום הולדת או חגיגה משפחתית',
   },
   {
-    size: '30 ס"מ × 43 ס"מ קוטר',
+    size: 'קוטר 30×43 / 1 שכבות',
     servings: '40 אנשים',
     note: 'אירוע גדול, מסיבה או חגיגה רחבה',
   },
@@ -33,7 +33,7 @@ export default function NumberSizeGuidePage() {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 pt-28">
+      <main className="flex-1 pt-20">
         {/* Header */}
         <section className="bg-secondary py-14 px-6">
           <div className="max-w-3xl mx-auto text-center">

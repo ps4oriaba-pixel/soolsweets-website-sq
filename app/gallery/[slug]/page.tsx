@@ -35,7 +35,7 @@ export default async function GalleryPage({ params }: PageProps) {
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
-      <main className="flex-1 pt-28">
+      <main className="flex-1 pt-20">
         {/* Hero */}
         <section className="relative h-64 md:h-80 overflow-hidden">
           <Image
