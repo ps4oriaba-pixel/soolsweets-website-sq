@@ -1,4 +1,14 @@
-import { getAllGalleries } from '@/lib/gallery-data'
+import { generateObject } from 'ai'
+import { z } from 'zod'
+import { buildCatalog, resultsForSlugs, keywordSearch } from '@/lib/search'
+
+export const maxDuration = 20
+
+const schema = z.object({
+  slugs: z
+    .array(z.string())
+    .describe('Slugs of the most relevant products, ordered from most to least relevant.'),
+})
 
 export async function POST(req: Request) {
   try {
@@ -8,54 +18,41 @@ export async function POST(req: Request) {
       return Response.json({ error: 'Invalid query' }, { status: 400 })
     }
 
-    const allGalleries = getAllGalleries()
+    // 1) Try smart AI ranking over the catalog.
+    try {
+      const catalog = buildCatalog()
 
-    // Simple keyword-based search: find products that match the query
-    const queryWords = query.toLowerCase().split(/\s+/).filter(Boolean)
-
-    const results = allGalleries
-      .map((gallery) => {
-        const titleLower = gallery.title.toLowerCase()
-        const descLower = gallery.description.toLowerCase()
-        const categoryLower = gallery.category.toLowerCase()
-
-        // Count keyword matches - title matches score higher
-        let score = 0
-        queryWords.forEach((word) => {
-          if (titleLower.includes(word)) score += 3
-          if (descLower.includes(word)) score += 1
-          if (categoryLower.includes(word)) score += 2
-        })
-
-        return {
-          slug: gallery.slug,
-          title: gallery.title,
-          description: gallery.description,
-          category: gallery.category,
-          image: gallery.heroImage,
-          score,
-        }
+      const { object } = await generateObject({
+        model: 'openai/gpt-4o-mini',
+        schema,
+        system:
+          'את/ה עוזר/ת חיפוש חכם/ה לאתר קונדיטוריה ביתית בעברית. ' +
+          'בהינתן בקשה חופשית של לקוח (לדוגמה סוג אירוע, כמות אנשים, סגנון, טעם), ' +
+          'החזר/י את ה-slugs של המוצרים הרלוונטיים ביותר מתוך הקטלוג בלבד, ' +
+          'מסודרים מהרלוונטי ביותר לפחות. החזר/י בין 1 ל-6 תוצאות. ' +
+          'אל תמציא/י slugs שלא קיימים בקטלוג. אם אין התאמה טובה, החזר/י מערך ריק.',
+        prompt:
+          `בקשת הלקוח: "${query}"\n\n` +
+          `קטלוג המוצרים (JSON):\n${JSON.stringify(catalog)}`,
       })
-      .filter((item) => item.score > 0)
-      .sort((a, b) => b.score - a.score)
-      .slice(0, 6) // Return top 6 results
 
-    if (results.length === 0) {
-      return Response.json(
-        { error: 'No products found matching your search' },
-        { status: 404 }
-      )
+      const validSlugs = new Set(catalog.map((c) => c.slug))
+      const slugs = (object.slugs ?? []).filter((s) => validSlugs.has(s))
+      const results = resultsForSlugs(slugs)
+
+      if (results.length > 0) {
+        return Response.json({ results, total: results.length, mode: 'ai' })
+      }
+      // AI returned nothing useful — fall through to keyword search.
+    } catch (aiError) {
+      console.log('[v0] AI search unavailable, falling back to keyword search:', aiError)
     }
 
-    return Response.json({
-      results: results.map(({ score, ...rest }) => rest),
-      total: results.length,
-    })
+    // 2) Deterministic keyword fallback.
+    const results = keywordSearch(query)
+    return Response.json({ results, total: results.length, mode: 'keyword' })
   } catch (error) {
-    console.error('[v0] Search error:', error)
-    return Response.json(
-      { error: 'Search failed' },
-      { status: 500 }
-    )
+    console.log('[v0] Search error:', error)
+    return Response.json({ error: 'Search failed' }, { status: 500 })
   }
 }

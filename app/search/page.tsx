@@ -182,11 +182,9 @@ function SearchResults() {
                 ))}
               </div>
 
-              {tip && (
-                <p className="text-center text-sm text-muted-foreground mt-10 max-w-lg mx-auto leading-relaxed">
-                  {tip}
-                </p>
-              )}
+              <p className="text-center text-sm text-muted-foreground mt-10 max-w-lg mx-auto leading-relaxed">
+                לא מצאתם בדיוק את מה שחיפשתם? כתבו לסלעית בוואטסאפ ונתאים יחד את ההזמנה המושלמת עבורכם.
+              </p>
             </>
           )}
         </section>
