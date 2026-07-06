@@ -12,13 +12,13 @@ interface SizeRow {
 
 const rows: SizeRow[] = [
   {
-    size: 'עוגת מספר',
+    size: 'עוגה ספרה אחת',
     dimensions: 'אורך 35 / רוחב 25 ',
     servings: '30 אנשים',
   },
   {
     size: 'עוגת שתי ספרות',
-    dimensions: 'אורך 35 / רוחב 25 ',
+    dimensions: 'רוחב 35 / אורך 25 ',
     servings: '30 אנשים',
   },
 ]
