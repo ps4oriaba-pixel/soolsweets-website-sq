@@ -16,11 +16,17 @@ export function BackButton() {
   const handleBack = () => {
     if (canGoBack) {
       router.back()
+      // Scroll to top after navigating back so the page change is clear
+      // and the user isn't left mid-page due to scroll restoration.
+      setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 120)
+    } else {
+      router.push('/')
     }
   }
 
   return (
     <button
+      type="button"
       onClick={handleBack}
       className="inline-flex items-center gap-2 text-primary hover:text-primary/80 font-medium transition-colors"
       aria-label="חזור לעמוד הקודם"

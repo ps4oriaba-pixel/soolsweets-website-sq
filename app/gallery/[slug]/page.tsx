@@ -71,7 +71,7 @@ export default async function GalleryPage({ params }: PageProps) {
             </li>
             <li aria-hidden="true" className="text-muted-foreground/50">/</li>
             <li>
-              <Link href="/category/boxes" className="hover:text-foreground transition-colors">
+              <Link href="/#categories" className="hover:text-foreground transition-colors">
                 קטגוריות
               </Link>
             </li>
