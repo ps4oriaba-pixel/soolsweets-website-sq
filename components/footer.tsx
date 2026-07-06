@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import Link from 'next/link'
 
 export default function Footer() {
@@ -7,9 +8,13 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Brand */}
           <div className="flex flex-col gap-2">
-            <span dir="ltr" className="font-serif italic font-bold whitespace-nowrap block" style={{ fontSize: '2.1rem', color: '#E8857A', letterSpacing: '0.02em' }}>
-              SoolSweets
-            </span>
+            <Image
+              src="/logo.png"
+              alt="SoolSweets"
+              width={200}
+              height={60}
+              className="h-12 w-auto"
+            />
             <p className="text-sm text-accent-foreground/70 leading-relaxed max-w-xs">
               קינוחים ועיצובים מיוחדים בהתאמה אישית – מתוך אהבה לאפייה ביתית.
             </p>

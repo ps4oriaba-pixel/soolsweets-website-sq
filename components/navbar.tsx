@@ -1,5 +1,6 @@
 'use client'
 
+import Image from 'next/image'
 import Link from 'next/link'
 import { useState } from 'react'
 import { Menu, X } from 'lucide-react'
@@ -20,14 +21,16 @@ export default function Navbar() {
     <header className="fixed top-0 right-0 left-0 z-50 backdrop-blur-sm border-b border-border" style={{ backgroundColor: 'rgba(251,218,212,0.96)' }}>
       {/* Use flex-row-reverse so logo sits on left visually while RTL nav is on right */}
       <div className="max-w-6xl mx-auto px-4 py-3 flex flex-row-reverse items-center justify-between">
-        {/* Logo – single word, no space between Sool and Sweets */}
-        <Link href="/" className="shrink-0" style={{ direction: 'ltr' }}>
-          <span
-            className="font-serif italic font-bold leading-tight whitespace-nowrap"
-            style={{ fontSize: '2.1rem', color: '#E8857A', letterSpacing: '0.02em' }}
-          >
-            SoolSweets
-          </span>
+        {/* Logo */}
+        <Link href="/" className="shrink-0">
+          <Image
+            src="/logo.png"
+            alt="SoolSweets"
+            width={200}
+            height={60}
+            priority
+            className="h-12 w-auto"
+          />
         </Link>
 
         {/* Desktop nav – RTL order, appears on right */}
