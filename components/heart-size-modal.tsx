@@ -1,6 +1,5 @@
 'use client'
 
-import { useState } from 'react'
 import {
   Dialog,
   DialogContent,
@@ -18,21 +17,13 @@ const heartSizes = [
   { size: 'קוטר 20 / 2-3 שכבות', servings: 'כ-22-26 אנשים' },
 ]
 
-export function HeartSizeButton() {
-  return (
-    <button className="text-primary font-semibold hover:underline">
-      לחצו כאן
-    </button>
-  )
-}
-
 export default function HeartSizeModal() {
-  const [isOpen, setIsOpen] = useState(false)
-
   return (
-    <Dialog open={isOpen} onOpenChange={setIsOpen}>
+    <Dialog>
       <DialogTrigger asChild>
-        <HeartSizeButton />
+        <button className="text-primary font-semibold hover:underline">
+          לחצו כאן
+        </button>
       </DialogTrigger>
       <DialogContent className="max-w-2xl">
         <DialogHeader>
