@@ -22,7 +22,6 @@ const products = [
     title: 'עסקים',
     description: 'מתנות לעובדים, מתנות ללקוחות, השקות, כנסים, מיתוג עסקים',
     image: '/images/box-birthday.png',
-    note: 'Sweet 16',
     slug: 'sweet-sixteen',
   },
   {

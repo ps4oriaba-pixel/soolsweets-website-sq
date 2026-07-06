@@ -48,9 +48,9 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'sweet-sixteen',
-    title: 'Sweet 16',
-    subtitle: 'חגיגת שש-עשרה – מתוקה, צבעונית ובלתי נשכחת',
-    description: 'מארז מיוחד שמציין את הגיל הנפלא הזה בסגנון אישי ומרהיב.',
+    title: 'עסקים',
+    subtitle: '',
+    description: 'מתנות לעובדים, מתנות ללקוחות, השקות, כנסים, מיתוג עסקים',
     heroImage: '/images/box-birthday.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז Sweet 16!',
     images: [
