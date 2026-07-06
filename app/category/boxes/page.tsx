@@ -7,7 +7,7 @@ export const metadata = {
 
 const products = [
   {
-    title: 'מארזים לאירועים',
+    title: 'רגעים ששווה לחגוג',
     description: 'ימי הולדת, תודה למישהו שאוהבים – מארז מעוצב שמרגיש יוקרתי ואישי.',
     image: '/images/gallery/boxes-events-1.png',
     slug: 'boxes-events',
