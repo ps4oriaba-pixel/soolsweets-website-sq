@@ -166,6 +166,21 @@ const galleries: GalleryData[] = [
     ],
   },
   {
+    slug: 'bow-tie-cakes',
+    title: 'עוגת פפיון',
+    subtitle: 'עוגה שוקולדית עם קרם חמאה שוויצרי',
+    description:
+      'עוגת שוקולד/וניל המורכבת משכבות שביניהן גנאש שוקולד חלב ומטבעות שוקולד/אצבעות קינדר. העוגה בעיטוף קרם חמאה שוויצרי משגע.',
+    heroImage: '/images/cake-bow-tie.png',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת פפיון!',
+    images: [
+      { src: '/images/cake-bow-tie.png', alt: 'עוגת פפיון' },
+      { src: '/images/cake-vintage.png', alt: 'עוגה שוקולדית' },
+      { src: '/images/gallery/vintage-1.png', alt: 'קרם חמאה שוויצרי' },
+      { src: '/images/gallery/vintage-2.png', alt: 'עוגה מעוצבת' },
+    ],
+  },
+  {
     slug: 'custom-cakes',
     title: 'עוגות בעיצוב אישי',
     subtitle: 'העלו כל רעיון – ואני אגשים אותו',
@@ -332,6 +347,7 @@ export const SIZE_GUIDE_SLUGS = [
   'bento-cakes',       // has its own dedicated size guide
   'number-cakes',      // has its own dedicated size guide
   'rectangular-cakes', // has its own dedicated size guide
+  'bow-tie-cakes',     // has its own dedicated size guide
 ]
 
 export function hasSizeGuide(slug: string): boolean {
@@ -347,6 +363,8 @@ export function getSizeGuideUrl(slug: string): string {
       return '/number-size-guide'
     case 'rectangular-cakes':
       return '/rectangular-size-guide'
+    case 'bow-tie-cakes':
+      return '/bow-tie-size-guide'
     default:
       return '/size-guide' // Falls back to the main size guide for other items
   }

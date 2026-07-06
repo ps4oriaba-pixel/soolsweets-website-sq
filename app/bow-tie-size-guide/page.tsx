@@ -1,0 +1,184 @@
+'use client'
+
+import Link from 'next/link'
+import { useState } from 'react'
+import Navbar from '@/components/navbar'
+import Footer from '@/components/footer'
+import WhatsAppButton from '@/components/whatsapp-button'
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from '@/components/ui/dialog'
+
+export const metadata = {
+  title: 'טבלת גדלי עוגת פפיון | SoolSweets',
+  description:
+    'טבלת גדלי עוגת פפיון – בחרו את הגודל המושלם לאירוע שלכם.',
+}
+
+interface SizeRow {
+  guests: string
+  size: string
+}
+
+const rows: SizeRow[] = [
+  {
+    guests: '12-14 אנשים',
+    size: 'קוטר 14 / 3 שכבות',
+  },
+  {
+    guests: '18-20 אנשים',
+    size: 'קוטר 16 / 3 שכבות',
+  },
+  {
+    guests: '22-24 אנשים',
+    size: 'קוטר 18 / 3 שכבות',
+  },
+]
+
+const heartSizes = [
+  {
+    size: 'קוטר 12 / 3 שכבות',
+    servings: '6-8 אנשים',
+  },
+  {
+    size: 'קוטר 14 / 3 שכבות',
+    servings: '10-12 אנשים',
+  },
+  {
+    size: 'קוטר 16 / 3 שכבות',
+    servings: 'כ-15 אנשים',
+  },
+  {
+    size: 'קוטר 18 / 3 שכבות',
+    servings: 'כ-18-22 אנשים',
+  },
+  {
+    size: 'קוטר 18 / 2-3 שכבות',
+    servings: 'כ-18-22 אנשים',
+  },
+  {
+    size: 'קוטר 20 / 2-3 שכבות',
+    servings: 'כ-22-26 אנשים',
+  },
+]
+
+function BowTieSizeGuidePage() {
+  const [openHeart, setOpenHeart] = useState(false)
+
+  return (
+    <div className="min-h-screen flex flex-col">
+      <Navbar />
+
+      <main className="flex-1 pt-20">
+        {/* Header */}
+        <section className="bg-secondary py-14 px-6">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">
+              מדריך גדלים
+            </p>
+            <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground text-balance mb-4">
+              טבלת גדלי עוגת פפיון
+            </h1>
+            <p className="text-lg text-foreground/70 leading-relaxed">
+              לא בטוחים איזה גודל להזמין? הטבלה הבאה תעזור לכם לבחור את העוגה המושלמת
+              בהתאם למספר האורחים.
+            </p>
+          </div>
+        </section>
+
+        {/* Table */}
+        <section className="max-w-4xl mx-auto px-6 py-14">
+          <div className="overflow-x-auto rounded-2xl border border-border shadow-sm">
+            <table className="w-full text-right border-collapse bg-card">
+              <thead>
+                <tr className="bg-primary text-primary-foreground">
+                  <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
+                    כמות אנשים
+                  </th>
+                  <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
+                    גודל עוגה מומלץ (קוטר / שכבות)
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((row, i) => (
+                  <tr
+                    key={row.guests}
+                    className={i % 2 === 0 ? 'bg-card' : 'bg-muted/40'}
+                  >
+                    <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
+                      {row.guests}
+                    </td>
+                    <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
+                      {row.size}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+
+          <p className="text-center text-base text-muted-foreground mt-6 leading-relaxed">
+            הגדלים הם המלצה כללית. לא מצאתם בדיוק את מה שחיפשתם? כתבו לי ונתאים יחד את
+            הגודל המושלם עבורכם.
+          </p>
+
+          <p className="text-center text-sm text-muted-foreground mt-4 leading-relaxed">
+            <span className="text-primary font-semibold">*</span> כל הגדלים המוצעים מתאימים לעוגה עגולה. עבור עוגת לב&nbsp;
+            <Dialog open={openHeart} onOpenChange={setOpenHeart}>
+              <DialogTrigger asChild>
+                <button className="text-primary font-semibold hover:underline">
+                  לחצו כאן
+                </button>
+              </DialogTrigger>
+              <DialogContent className="max-w-2xl">
+                <DialogHeader>
+                  <DialogTitle>גדלים לעוגת לב</DialogTitle>
+                </DialogHeader>
+                <div className="overflow-x-auto rounded-lg border border-border">
+                  <table className="w-full text-right border-collapse bg-card text-sm">
+                    <thead>
+                      <tr className="bg-primary text-primary-foreground">
+                        <th className="px-4 py-3 font-semibold whitespace-nowrap">
+                          גודל
+                        </th>
+                        <th className="px-4 py-3 font-semibold whitespace-nowrap">
+                          כמות אנשים
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {heartSizes.map((row, i) => (
+                        <tr
+                          key={row.size}
+                          className={i % 2 === 0 ? 'bg-card' : 'bg-muted/40'}
+                        >
+                          <td className="px-4 py-3 font-semibold text-primary whitespace-nowrap border-t border-border">
+                            {row.size}
+                          </td>
+                          <td className="px-4 py-3 font-bold text-foreground whitespace-nowrap border-t border-border">
+                            {row.servings}
+                          </td>
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                </div>
+              </DialogContent>
+            </Dialog>
+            &nbsp;יש להוריד 2-4 פרוסות מהגודל המומלץ.
+          </p>
+        </section>
+      </main>
+
+      <Footer />
+      <WhatsAppButton />
+    </div>
+  )
+}
+
+export default BowTieSizeGuidePage
