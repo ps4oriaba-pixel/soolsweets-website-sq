@@ -1,16 +1,8 @@
-'use client'
-
 import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
-import {
-  Dialog,
-  DialogContent,
-  DialogHeader,
-  DialogTitle,
-  DialogTrigger,
-} from '@/components/ui/dialog'
+import HeartSizeModal from '@/components/heart-size-modal'
 
 interface SizeRow {
   size: string
@@ -22,15 +14,6 @@ const rows: SizeRow[] = [
     size: 'קוטר 25×35 / 1 שכבות',
     servings: '30 אנשים',
   },
-]
-
-const heartSizes = [
-  { size: 'קוטר 12 / 3 שכבות', servings: '6-8 אנשים' },
-  { size: 'קוטר 14 / 3 שכבות', servings: '10-12 אנשים' },
-  { size: 'קוטר 16 / 3 שכבות', servings: 'כ-15 אנשים' },
-  { size: 'קוטר 18 / 3 שכבות', servings: 'כ-18-22 אנשים' },
-  { size: 'קוטר 18 / 2-3 שכבות', servings: 'כ-18-22 אנשים' },
-  { size: 'קוטר 20 / 2-3 שכבות', servings: 'כ-22-26 אנשים' },
 ]
 
 export default function NumberSizeGuidePage() {
@@ -92,47 +75,7 @@ export default function NumberSizeGuidePage() {
 
           <p className="text-center text-sm text-muted-foreground mt-4 leading-relaxed">
             <span className="text-primary font-semibold">*</span> כל הגדלים המוצעים מתאימים לעוגה עגולה. עבור עוגת לב&nbsp;
-            <Dialog>
-              <DialogTrigger asChild>
-                <button className="text-primary font-semibold hover:underline">
-                  לחצו כאן
-                </button>
-              </DialogTrigger>
-              <DialogContent className="max-w-2xl">
-                <DialogHeader>
-                  <DialogTitle>גדלים לעוגת לב</DialogTitle>
-                </DialogHeader>
-                <div className="overflow-x-auto rounded-lg border border-border">
-                  <table className="w-full text-right border-collapse bg-card text-sm">
-                    <thead>
-                      <tr className="bg-primary text-primary-foreground">
-                        <th className="px-4 py-3 font-semibold whitespace-nowrap">
-                          גודל
-                        </th>
-                        <th className="px-4 py-3 font-semibold whitespace-nowrap">
-                          כמות אנשים
-                        </th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      {heartSizes.map((row, i) => (
-                        <tr
-                          key={row.size}
-                          className={i % 2 === 0 ? 'bg-card' : 'bg-muted/40'}
-                        >
-                          <td className="px-4 py-3 font-semibold text-primary whitespace-nowrap border-t border-border">
-                            {row.size}
-                          </td>
-                          <td className="px-4 py-3 font-bold text-foreground whitespace-nowrap border-t border-border">
-                            {row.servings}
-                          </td>
-                        </tr>
-                      ))}
-                    </tbody>
-                  </table>
-                </div>
-              </DialogContent>
-            </Dialog>
+            <HeartSizeModal />
             &nbsp;יש להוריד 2-4 פרוסות מהגודל המומלץ.
           </p>
         </section>
