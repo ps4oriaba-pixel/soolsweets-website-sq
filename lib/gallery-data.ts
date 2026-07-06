@@ -33,10 +33,10 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'gender-reveal',
-    title: 'מארזי גילוי מין העובר',
-    subtitle: 'הרגע המיוחד שלכם – בצבעי ורוד או כחול',
+    title: 'חגים',
+    subtitle: '',
     description:
-      'מארז מפתיע ובלתי נשכח שיגרום לכולם לגעות. עיצוב אישי לפי המין, עם ממתקים וקינוחים שמסגירים את הסוד.',
+      'ראש השנה, פורים, פסח, חנוכה, שבועות, ולנטיין, יום המשפחה',
     heroImage: '/images/gallery/gender-reveal-1.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז גילוי מין!',
     images: [
