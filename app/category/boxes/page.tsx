@@ -2,7 +2,7 @@ import CategoryPage from '@/components/category-page'
 
 export const metadata = {
   title: 'מארזים מעוצבים | SoolSweets',
-  description: 'מארזים לאירועים, ימי הולדת, גילוי מין, בר ובת מצווה, חגים ומיתוג עסקי.',
+  description: 'מארזים לאירועים, ימי הולדת, גילוי מין ובר ובת מצווה.',
 }
 
 const products = [
@@ -30,18 +30,6 @@ const products = [
     description: 'מארז מפואר ומרהיב לאחד האירועים החשובים בחיים.',
     image: '/images/category-boxes.png',
     slug: 'bar-bat-mitzvah',
-  },
-  {
-    title: 'מארזים ממותגים לחברות',
-    description: 'מיתוג ייחודי לעסק שלכם – מארז שמייצג את המותג בצורה הטובה ביותר.',
-    image: '/images/gallery/boxes-events-2.png',
-    slug: 'branded-boxes',
-  },
-  {
-    title: 'מארזי חג',
-    description: 'פורים, ראש השנה, פסח, שבועות – ממותקים לחג בעיצוב מסורתי ומודרני.',
-    image: '/images/gallery/boxes-events-3.png',
-    slug: 'holiday-boxes',
   },
 ]
 
