@@ -66,7 +66,7 @@ const galleries: GalleryData[] = [
     subtitle: '',
     description: 'בחרו את הקינוחים, בחרו את הצבעים, בחרו את הכיתוב, בחרו את האריזה',
     heroImage: '/images/category-boxes.png',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לבר/בת מצווה!',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז בהתאמה אישית!',
     images: [
       { src: '/images/category-boxes.png', alt: 'מארז בר מצווה' },
       { src: '/images/box-birthday.png', alt: 'מארז בת מצווה' },
