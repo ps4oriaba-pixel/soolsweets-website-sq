@@ -14,12 +14,12 @@ const rows: SizeRow[] = [
   {
     size: 'עוגה ספרה אחת',
     dimensions: 'אורך 35 / רוחב 25 ',
-    servings: '30 אנשים',
+    servings: 'כ- 15 אנשים',
   },
   {
     size: 'עוגת שתי ספרות',
     dimensions: 'רוחב 35 / אורך 25 ',
-    servings: '30 אנשים',
+    servings: 'כ-25 אנשים',
   },
 ]
 
