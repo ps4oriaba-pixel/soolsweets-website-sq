@@ -50,10 +50,10 @@ const products = [
   },
   {
     title: 'עוגות ספל',
-    description: 'עוגה בהתראה קצרה – טעימה, מרשימה ומוכנה מהר יותר ממה שחשבתם.',
+    description: 'כל ספל מגיע מוכן להפתעה עם כפית משוקולד, נר צבעוני וארוז בקופסה שקופה ומרשימה.',
     image: '/images/gallery/bento-2.png',
     note: 'בהתראה קצרה',
-    slug: 'mug-cakes',
+    slug: 'mug-cakes-size-guide',
   },
 ]
 
