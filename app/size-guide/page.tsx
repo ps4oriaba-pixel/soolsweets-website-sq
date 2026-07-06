@@ -62,10 +62,10 @@ export default function SizeGuidePage() {
             <table className="w-full text-right border-collapse bg-card">
               <thead>
                 <tr className="bg-primary text-primary-foreground">
-                  <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
+                  <th className="px-3 py-3 font-semibold text-sm whitespace-nowrap">
                     כמות אנשים
                   </th>
-                  <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
+                  <th className="px-3 py-3 font-semibold text-sm whitespace-nowrap">
                     גודל עוגה מומלץ (קוטר / שכבות)
                   </th>
                 </tr>
@@ -76,10 +76,10 @@ export default function SizeGuidePage() {
                     key={row.guests}
                     className={i % 2 === 0 ? 'bg-card' : 'bg-muted/40'}
                   >
-                    <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
+                    <td className="px-3 py-3 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
                       {row.guests}
                     </td>
-                    <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
+                    <td className="px-3 py-3 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
                       {row.size}
                     </td>
                   </tr>
