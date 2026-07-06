@@ -96,6 +96,24 @@ export default async function GalleryPage({ params }: PageProps) {
           <div className="w-10 h-0.5 bg-primary mx-auto mt-6 rounded-full" />
         </section>
 
+        {/* Whats included – mug cakes only */}
+        {slug === 'mug-cakes' && (
+          <section className="max-w-xl mx-auto px-6 pb-8">
+            <div className="bg-accent/40 rounded-2xl border border-border p-6 text-center">
+              <p className="text-sm font-medium tracking-widest uppercase text-primary mb-3">
+                כל ספל מגיע מוכן להפתעה עם
+              </p>
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-foreground font-semibold">
+                <span>כפית משוקולד</span>
+                <span className="hidden sm:inline text-primary">|</span>
+                <span>נר צבעוני</span>
+                <span className="hidden sm:inline text-primary">|</span>
+                <span>ארוז בקופסה שקופה ומרשימה</span>
+              </div>
+            </div>
+          </section>
+        )}
+
         {/* Gallery Grid */}
         <section className="max-w-5xl mx-auto px-6 pb-20">
           <GalleryGrid images={gallery.images} title={gallery.title} />
