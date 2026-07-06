@@ -9,7 +9,7 @@ const products = [
   {
     title: 'כדורגל שוקולד',
     description:
-      'כדור שוקולד דרמטי שנשפך עליו רוטב חם וחושף הפתעה בפנים – מופע קסמים על הצלחת.',
+      'קינוח מושלם לחובבי הכדורגל, שבפנים מסתתר אוצר של ממתקים.',
     image: '/images/gallery/choc-ball-1.png',
     note: 'הכי מבוקש!',
     slug: 'chocolate-ball',
