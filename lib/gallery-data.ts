@@ -348,6 +348,7 @@ export const SIZE_GUIDE_SLUGS = [
   'number-cakes',      // has its own dedicated size guide
   'rectangular-cakes', // has its own dedicated size guide
   'bow-tie-cakes',     // has its own dedicated size guide
+  'mug-cakes',         // has its own dedicated size guide
 ]
 
 export function hasSizeGuide(slug: string): boolean {
@@ -365,6 +366,8 @@ export function getSizeGuideUrl(slug: string): string {
       return '/rectangular-size-guide'
     case 'bow-tie-cakes':
       return '/bow-tie-size-guide'
+    case 'mug-cakes':
+      return '/mug-cakes-size-guide'
     default:
       return '/size-guide' // Falls back to the main size guide for other items
   }
