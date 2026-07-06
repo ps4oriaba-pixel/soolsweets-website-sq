@@ -16,8 +16,12 @@ interface SizeRow {
 
 const rows: SizeRow[] = [
   {
-    size: 'קוטר 25×35 / 1 שכבות',
-    servings: '30 אנשים',
+    size: 'בינונית (בגודל 25/35)',
+    servings: '25-30 אנשים',
+  },
+  {
+    size: 'גדולה, 30×43, בגודל A3',
+    servings: '35-40 אנשים',
   },
 ]
 
