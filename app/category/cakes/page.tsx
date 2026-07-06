@@ -55,6 +55,13 @@ const products = [
     note: 'בהתראה קצרה',
     slug: 'mug-cakes',
   },
+  {
+    title: 'עוגות דף נשרף',
+    description: 'עוגה עם דף אכיל שנשרף בלהבה לחשוף תמונה מתחתיו – חוויה שתשאיר את כולם פעורי פה.',
+    image: '/images/category-special.png',
+    note: 'וואו-אפקט',
+    slug: 'burnt-paper-cakes',
+  },
 ]
 
 export default function CakesPage() {
