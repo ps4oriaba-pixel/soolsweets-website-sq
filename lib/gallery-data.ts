@@ -146,7 +146,7 @@ const galleries: GalleryData[] = [
     images: [
       { src: '/images/gallery/bento-1.png', alt: 'עוגת בנטו ורוד' },
       { src: '/images/gallery/bento-2.png', alt: 'קולקציית בנטו' },
-      { src: '/images/gallery/bento-3.png', alt: 'בנטו אישי עם הקדשה' },
+      { src: '/images/gallery/bento-3.png', alt: 'בנ��ו אישי עם הקדשה' },
       { src: '/images/cake-bento.png', alt: 'עוגת בנטו קלאסית' },
     ],
   },
@@ -342,7 +342,6 @@ export const SIZE_GUIDE_SLUGS = [
   'vintage-cakes',
   'mousse-cakes',
   'custom-cakes',
-  'tiered-cakes',
   'burnt-paper-cakes',
   'bento-cakes',       // has its own dedicated size guide
   'number-cakes',      // has its own dedicated size guide
