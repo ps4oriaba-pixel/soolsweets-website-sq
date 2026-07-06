@@ -278,7 +278,7 @@ const galleries: GalleryData[] = [
   {
     slug: 'chocolate-ball',
     title: 'כדורגל שוקולד',
-    subtitle: 'מופע קסמים על הצלחת',
+    subtitle: '',
     description:
       'כדור שוקולד דרמטי שנשפך עליו רוטב חם וחושף הפתעה בפנים. חוויה שכולם ידברו עליה.',
     heroImage: '/images/gallery/choc-ball-1.png',
@@ -293,7 +293,7 @@ const galleries: GalleryData[] = [
   {
     slug: 'exploding-candy',
     title: 'סוכריה מתנפצת',
-    subtitle: 'הפתעה אמיתית בכל נגיסה',
+    subtitle: '',
     description:
       'סוכריית שוקולד ענקית שמתפצחת לחשוף ממתקים וקינוחים – הפתעה שתגרום לכולם לצחוק ולחייך.',
     heroImage: '/images/category-special.png',
@@ -307,7 +307,7 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'exploding-egg',
-    title: 'ביצה מתנפצת',
+    title: '',
     subtitle: 'הסוד הכי מתוק – נחשף!',
     description:
       'ביצת שוקולד מפתיעה שמסתירה בפנים מתנה מתוקה. מושלמת לפסחא, הפתעות וימי הולדת.',
@@ -322,7 +322,7 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'tiered-cakes',
-    title: 'עוגות קומות',
+    title: '',
     subtitle: 'נוכחות מלכותית בכל שולחן',
     description:
       'עוגות קומות מרשימות לחתונות, אירועים גדולים וכל מי שמחפש את ה-WOW האמיתי.',
