@@ -95,6 +95,10 @@ export default function SizeGuidePage() {
             הגדלים הם המלצה כללית. לא מצאתם בדיוק את מה שחיפשתם? כתבו לי ונתאים יחד את
             הגודל המושלם עבורכם.
           </p>
+          
+          <p className="text-center text-sm text-muted-foreground mt-4 leading-relaxed">
+            <span className="text-primary font-semibold">*</span> כל הגדלים המוצעים מתאימים לעוגה עגולה. עבור עוגת לב יש להוריד 2-4 פרוסות מהגודל המומלץ.
+          </p>
         </section>
 
         {/* CTA */}
