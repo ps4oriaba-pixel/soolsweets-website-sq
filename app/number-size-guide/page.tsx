@@ -45,7 +45,7 @@ export default function NumberSizeGuidePage() {
         </section>
 
         {/* Table */}
-        <section className="max-w-4xl mx-auto px-6 py-14">
+        <section className="max-w-xl mx-auto px-6 py-14">
           <div className="overflow-x-auto rounded-2xl border border-border shadow-sm">
             <table className="w-full text-right border-collapse bg-card">
               <thead>
