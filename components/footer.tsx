@@ -8,18 +8,18 @@ export default function Footer() {
           {/* Brand */}
           <div className="flex flex-col gap-2">
             <div className="relative inline-block">
-              <span dir="ltr" className="font-serif italic font-bold whitespace-nowrap block" style={{ fontSize: '2.1rem', color: '#E8857A', letterSpacing: '0.02em' }}>
+              <span dir="ltr" className="font-serif italic font-bold whitespace-nowrap block" style={{ fontSize: '2.8rem', color: '#E8857A', letterSpacing: '0.02em' }}>
                 SoolSweets
               </span>
-              {/* Bite effect on first S */}
+              {/* Bite effect on O in Sool */}
               <div
                 className="absolute rounded-full"
                 style={{
-                  width: '1.2rem',
-                  height: '1.2rem',
+                  width: '1.5rem',
+                  height: '1.5rem',
                   backgroundColor: 'rgba(251,218,212,0.8)',
-                  top: '0.3rem',
-                  right: '0.9rem',
+                  top: '0.4rem',
+                  right: '2.2rem',
                   zIndex: 10,
                 }}
               />
