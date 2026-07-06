@@ -8,26 +8,26 @@ export const metadata = {
 const products = [
   {
     title: 'רגעים ששווה לחגוג',
-    description: 'ימי הולדת, Sweet 16, בר/בת מצווה, גילוי מין העובר, ברית ובריתה, לידה, חתונה ואירוסין, הצעת נישואין, יום נישואין.',
+    description: 'ימי הולדת, Sweet 16, בר/בת מצווה, גילוי מין העובר, ברית ובריתה, לידה, חתונה ואירוסין, הצעת נישואין, יום נישואין, גיוס ועוד..',
     image: '/images/gallery/boxes-events-1.png',
     slug: 'boxes-events',
   },
   {
     title: 'חגים',
-    description: 'רגע מיוחד ובלתי נשכח – מארז מפתיע בצבעי ורוד או כחול.',
+    description: 'ראש השנה, פורים, פסח, חנוכה, שבועות, ולנטיין, יום המשפחה',
     image: '/images/gallery/gender-reveal-1.png',
     slug: 'holidays',
   },
   {
     title: 'עסקים',
-    description: 'מארז מיוחד לחגיגת שש-עשרה – מתוק, צבעוני ומושלם לגיל המיוחד.',
+    description: 'מתנות לעובדים, מתנות ללקוחות, השקות, כנסים, מיתוג עסקים',
     image: '/images/box-birthday.png',
     note: 'Sweet 16',
     slug: 'business',
   },
   {
     title: 'בהתאמה אישית',
-    description: 'מארז מפואר ומרהיב לאחד האירועים החשובים בחיים.',
+    description: 'בחרו את הקינוחים, בחרו את הצבעים, בחרו את הכיתוב, בחרו את האריזה',
     image: '/images/category-boxes.png',
     slug: 'Custom made',
   },
