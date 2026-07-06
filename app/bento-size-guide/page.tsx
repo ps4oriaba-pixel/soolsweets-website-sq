@@ -12,19 +12,16 @@ export const metadata = {
 interface SizeRow {
   size: string
   servings: string
-  note: string
 }
 
 const rows: SizeRow[] = [
   {
-    size: 'קוטר 10 / גובה 7',
-    servings: '2-3 אנשים',
-    note: 'אירוע אינטימי, זוג או משפחה קטנה, פינוק אישי',
+    size: 'קוטר 10 / גובה 7 (קופסת טייק אווי)',
+    servings: '2 אנשים',
   },
   {
-    size: 'קוטר 10 / גובה 10',
+    size: 'קוטר 10 / גובה 8-10 (קופסא שקופה)',
     servings: '2-3 אנשים',
-    note: 'אירוע אינטימי עם עוגה גבוהה יותר, מרשימה יותר',
   },
 ]
 
@@ -61,9 +58,6 @@ export default function BentoSizeGuidePage() {
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
                     כמות אנשים
                   </th>
-                  <th className="px-5 py-4 font-semibold text-sm">
-                    הערה
-                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -77,9 +71,6 @@ export default function BentoSizeGuidePage() {
                     </td>
                     <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
                       {row.servings}
-                    </td>
-                    <td className="px-5 py-4 text-sm text-muted-foreground leading-relaxed align-top border-t border-border">
-                      {row.note}
                     </td>
                   </tr>
                 ))}

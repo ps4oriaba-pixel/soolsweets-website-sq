@@ -12,19 +12,12 @@ export const metadata = {
 interface SizeRow {
   size: string
   servings: string
-  note: string
 }
 
 const rows: SizeRow[] = [
   {
     size: 'קוטר 25×35 / 1 שכבות',
     servings: '30 אנשים',
-    note: 'אירוע בינוני, יום הולדת או חגיגה משפחתית',
-  },
-  {
-    size: 'קוטר 30×43 / 1 שכבות',
-    servings: '40 אנשים',
-    note: 'אירוע גדול, מסיבה או חגיגה רחבה',
   },
 ]
 
@@ -61,9 +54,6 @@ export default function NumberSizeGuidePage() {
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
                     כמות אנשים
                   </th>
-                  <th className="px-5 py-4 font-semibold text-sm">
-                    הערה
-                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -77,9 +67,6 @@ export default function NumberSizeGuidePage() {
                     </td>
                     <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
                       {row.servings}
-                    </td>
-                    <td className="px-5 py-4 text-sm text-muted-foreground leading-relaxed align-top border-t border-border">
-                      {row.note}
                     </td>
                   </tr>
                 ))}

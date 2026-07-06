@@ -12,44 +12,28 @@ export const metadata = {
 interface SizeRow {
   guests: string
   size: string
-  note: string
 }
 
 const rows: SizeRow[] = [
   {
     guests: '5-8 אנשים',
     size: 'קוטר 12 / 2 שכבות  או  קוטר 12 / 3 שכבות',
-    note: 'אירוע אינטימי, זוג פלוס ילדים, פינוק למשרד או יום הולדת משפחתי מצומצם',
   },
   {
     guests: '10-14 אנשים',
     size: 'קוטר 14 / 2 שכבות  או  קוטר 14 / 3 שכבות',
-    note: 'מפגש חברים קטן או ארוחת שישי משפחתית',
   },
   {
     guests: '16-20 אנשים',
     size: 'קוטר 14 / 4 שכבות  או  קוטר 16 / 3 שכבות',
-    note: 'יום הולדת שמח עם המשפחה המורחבת, מסיבה קטנה או הרמת כוסית',
   },
   {
     guests: '20-25 אנשים',
     size: 'קוטר 18 / 2 שכבות  או  קוטר 16 / 4 שכבות  או  קוטר 18 / 3 שכבות',
-    note: 'עוגה רחבה ונמוכה לפרוסות קלאסיות, עוגה גבוהה ומרשימה או אירוע בינוני',
   },
   {
-    guests: '26-28 אנשים',
+    guests: '26-30 אנשים',
     size: 'קוטר 18 / 4 שכבות',
-    note: 'חגיגה גדולה',
-  },
-  {
-    guests: 'כ-35 אנשים',
-    size: 'קוטר 18 / 5 שכבות  או  קוטר 20 / 4 שכבות',
-    note: 'אירוע רב משתתפים, עוגה בעלת נוכחות מטורפת',
-  },
-  {
-    guests: '45-50 אנשים',
-    size: 'קוטר 20 / 5 שכבות  או  קוטר 20 / 6 שכבות',
-    note: 'אירועים גדולים, מסיבות חברה או חגיגה ענקית שגונבת את ההצגה',
   },
 ]
 
@@ -85,10 +69,7 @@ export default function SizeGuidePage() {
                     כמות אנשים
                   </th>
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
-                    גודל עוגה מומלץ (שכבות / קוטר)
-                  </th>
-                  <th className="px-5 py-4 font-semibold text-sm">
-                    סוג האירוע / הערות
+                    גודל עוגה מומלץ (קוטר / שכבות)
                   </th>
                 </tr>
               </thead>
@@ -103,9 +84,6 @@ export default function SizeGuidePage() {
                     </td>
                     <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
                       {row.size}
-                    </td>
-                    <td className="px-5 py-4 text-sm text-muted-foreground leading-relaxed align-top border-t border-border">
-                      {row.note}
                     </td>
                   </tr>
                 ))}

@@ -24,7 +24,7 @@ export default function AboutPage() {
             priority
             className="object-cover object-center"
           />
-          <div className="absolute inset-0 bg-accent/60" />
+          <div className="absolute inset-0 bg-foreground/45" />
           <div className="absolute inset-0 flex items-center justify-center flex-col gap-3 px-4">
             <p className="text-secondary text-sm font-medium tracking-widest uppercase">
               SoolSweets

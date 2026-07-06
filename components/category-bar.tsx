@@ -72,10 +72,13 @@ export default function CategoryBar() {
                   aria-current={isActive ? 'page' : undefined}
                   className={
                     isActive
-                      ? 'inline-block rounded-full bg-primary text-primary-foreground px-4 py-1.5 text-sm font-semibold whitespace-nowrap shadow-sm'
+                      ? 'inline-flex items-center gap-1.5 rounded-full bg-primary text-primary-foreground px-4 py-1.5 text-sm font-semibold whitespace-nowrap shadow-sm'
                       : 'inline-block rounded-full px-4 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground hover:bg-background/70 transition-colors whitespace-nowrap'
                   }
                 >
+                  {isActive && (
+                    <span className="w-1.5 h-1.5 rounded-full bg-primary-foreground shrink-0" aria-hidden="true" />
+                  )}
                   {cat.label}
                 </Link>
               </li>
