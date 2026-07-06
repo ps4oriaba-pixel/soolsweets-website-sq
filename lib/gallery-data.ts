@@ -192,7 +192,7 @@ const galleries: GalleryData[] = [
       { src: '/images/hero.png', alt: 'עוגות בעיצוב אישי' },
       { src: '/images/cake-vintage.png', alt: 'עוגה אישית' },
       { src: '/images/gallery/vintage-1.png', alt: 'עיצוב מיוחד' },
-      { src: '/images/gallery/bento-3.png', alt: 'עוגה עם הקדשה' },
+      { src: '/images/gallery/bento-3.png', alt: 'עוגה ��ם הקדשה' },
       { src: '/images/category-cakes.png', alt: 'מגוון עוגות' },
     ],
   },
@@ -224,6 +224,21 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/bento-1.png', alt: 'עוגה אישית' },
       { src: '/images/gallery/bento-2.png', alt: 'קולקציית עוגות' },
       { src: '/images/category-cakes.png', alt: 'עוגות מגוונות' },
+    ],
+  },
+  {
+    slug: 'burnt-paper-cakes',
+    title: 'עוגות דף נשרף',
+    subtitle: 'אפקט שישאיר את כולם פעורי פה',
+    description:
+      'עוגה עם דף אכיל שנשרף בלהבה כדי לחשוף תמונה או הפתעה מתחתיו. הוואו-אפקט שחיפשתם.',
+    heroImage: '/images/category-special.png',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת דף נשרף!',
+    images: [
+      { src: '/images/category-special.png', alt: 'עוגת דף נשרף' },
+      { src: '/images/cake-tiered.png', alt: 'עוגה מיוחדת' },
+      { src: '/images/gallery/choc-ball-2.png', alt: 'דרמה וטעם' },
+      { src: '/images/chocolate-ball.png', alt: 'עיצוב מיוחד' },
     ],
   },
 
@@ -318,21 +333,6 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/vintage-1.png', alt: 'עוגת חתונה' },
       { src: '/images/gallery/vintage-2.png', alt: 'עוגת קומות וינטאג\'' },
       { src: '/images/category-cakes.png', alt: 'עוגות חגיגיות' },
-    ],
-  },
-  {
-    slug: 'burnt-paper-cakes',
-    title: 'עוגות דף נשרף',
-    subtitle: 'אפקט שישאיר את כולם פעורי פה',
-    description:
-      'עוגה עם דף אכיל שנשרף בלהבה כדי לחשוף תמונה או הפתעה מתחתיו. הוואו-אפקט שחיפשתם.',
-    heroImage: '/images/category-special.png',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת דף נשרף!',
-    images: [
-      { src: '/images/category-special.png', alt: 'עוגת דף נשרף' },
-      { src: '/images/cake-tiered.png', alt: 'עוגה מיוחדת' },
-      { src: '/images/gallery/choc-ball-2.png', alt: 'דרמה וטעם' },
-      { src: '/images/chocolate-ball.png', alt: 'עיצוב מיוחד' },
     ],
   },
 ]
