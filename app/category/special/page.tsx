@@ -7,7 +7,7 @@ export const metadata = {
 
 const products = [
   {
-    title: 'כדור שוקולד מתנפץ',
+    title: 'כדורגל שוקולד',
     description:
       'כדור שוקולד דרמטי שנשפך עליו רוטב חם וחושף הפתעה בפנים – מופע קסמים על הצלחת.',
     image: '/images/gallery/choc-ball-1.png',
