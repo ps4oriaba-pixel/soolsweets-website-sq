@@ -64,7 +64,7 @@ const galleries: GalleryData[] = [
     slug: 'bar-bat-mitzvah',
     title: 'בהתאמה אישית',
     subtitle: 'אירוע חיים – מארז שראוי לו',
-    description: 'מארז מפואר ומרהיב לאחד האירועים החשובים בחיים, עם עיצוב אישי ומלכותי.',
+    description: 'בחרו את הקינוחים, בחרו את הצבעים, בחרו את הכיתוב, בחרו את האריזה',
     heroImage: '/images/category-boxes.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לבר/בת מצווה!',
     images: [
