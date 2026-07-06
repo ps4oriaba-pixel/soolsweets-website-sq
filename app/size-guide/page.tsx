@@ -1,7 +1,6 @@
 'use client'
 
 import Link from 'next/link'
-import { useState } from 'react'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
@@ -53,8 +52,6 @@ const heartSizes = [
 ]
 
 export default function SizeGuidePage() {
-  const [openHeart, setOpenHeart] = useState(false)
-  
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -115,7 +112,7 @@ export default function SizeGuidePage() {
           
           <p className="text-center text-sm text-muted-foreground mt-4 leading-relaxed">
             <span className="text-primary font-semibold">*</span> כל הגדלים המוצעים מתאימים לעוגה עגולה. עבור עוגת לב&nbsp;
-            <Dialog open={openHeart} onOpenChange={setOpenHeart}>
+            <Dialog>
               <DialogTrigger asChild>
                 <button className="text-primary font-semibold hover:underline">
                   לחצו כאן
