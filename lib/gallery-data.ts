@@ -18,7 +18,7 @@ const galleries: GalleryData[] = [
   {
     slug: 'boxes-events',
     title: 'רגעים ששווה לחגוג',
-    subtitle: 'מארזים מעוצבים שמרגישים כמו מתנה אמיתית',
+    subtitle: '',
     description:
       'כל מארז מעוצב ביד, עם חומרי גלם מהמשובחים ביותר. מושלם לימי הולדת, תודה, חגיגות ומתנות אישיות.',
     heroImage: '/images/gallery/boxes-events-1.png',
