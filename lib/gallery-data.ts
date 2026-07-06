@@ -292,10 +292,10 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'exploding-candy',
-    title: 'סוכריה מתנפצת',
+    title: 'סוכריה גדולה ומתוקה',
     subtitle: '',
     description:
-      'סוכריית שוקולד ענקית שמתפצחת לחשוף ממתקים וקינוחים – הפתעה שתגרום לכולם לצחוק ולחייך.',
+      'תבנית שוקולד במראה של סוכריה ענקית שמסתירה בתוכה מגוון הפתעות וממתקים.',
     heroImage: '/images/category-special.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין סוכריות מתנפצות!',
     images: [

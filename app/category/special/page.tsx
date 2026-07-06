@@ -15,8 +15,8 @@ const products = [
     slug: 'chocolate-ball',
   },
   {
-    title: 'סוכריה מתנפצת',
-    description: 'סוכריית שוקולד ענקית שמתפצחת לחשוף ממתקים וקינוחים – הפתעה אמיתית!',
+    title: 'סוכריה גדולה ומתוקה',
+    description: 'תבנית שוקולד במראה של סוכריה ענקית שמסתירה בתוכה מגוון הפתעות וממתקים.',
     image: '/images/category-special.png',
     slug: 'exploding-candy',
   },
