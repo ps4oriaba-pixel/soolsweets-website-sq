@@ -1,6 +1,7 @@
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
+import { BackButton } from '@/components/back-button'
 
 export const metadata = {
   title: 'טבלת גדלי עוגות ספל | SoolSweets',
@@ -47,6 +48,11 @@ export default function MugCakesSizeGuidePage() {
               כל ספל מגיע מוכן להפתעה עם כפית משוקולד, נר צבעוני וארוז בקופסה שקופה ומרשימה.
             </p>
           </div>
+        </section>
+
+        {/* Back Button */}
+        <section className="max-w-xl mx-auto px-6 pt-14 pb-4">
+          <BackButton />
         </section>
 
         {/* Table */}

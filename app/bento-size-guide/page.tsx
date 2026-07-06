@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
+import { BackButton } from '@/components/back-button'
 
 export const metadata = {
   title: 'טבלת גדלי עוגות בנטו | SoolSweets',
@@ -47,6 +48,10 @@ export default function BentoSizeGuidePage() {
         </section>
 
         {/* Table */}
+        <section className="max-w-lg mx-auto px-6 pt-14 pb-4">
+          <BackButton />
+        </section>
+
         <section className="max-w-lg mx-auto px-6 py-14">
           <div className="overflow-x-auto rounded-2xl border border-border shadow-sm">
             <table className="w-full text-right border-collapse bg-card">
