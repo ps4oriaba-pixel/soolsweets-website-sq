@@ -7,30 +7,30 @@ import HeartSizeModal from '@/components/heart-size-modal'
 
 
 interface SizeRow {
-  guests: string
   size: string
+  guests: string
 }
 
 const rows: SizeRow[] = [
   {
-    guests: '5-8 אנשים',
-    size: 'קוטר 12 / 2 שכבות  או  קוטר 12 / 3 שכבות',
+    size: 'קוטר 12 / 2 שכבות  או  קוטר 10 / 3 שכבות',
+    guests: '1-6 אנשים',
   },
   {
-    guests: '10-14 אנשים',
-    size: 'קוטר 14 / 2 שכבות  או  קוטר 14 / 3 שכבות',
+    size: 'קוטר 14 / 2 שכבות  או  קוטר 12 / 3 שכבות',
+    guests: '7-12 אנשים',
   },
   {
-    guests: '16-20 אנשים',
-    size: 'קוטר 14 / 4 שכבות  או  קוטר 16 / 3 שכבות',
+    size: 'קוטר 16 / 2 שכבות  או  קוטר 14 / 3 שכבות  או  קוטר 14 / 4 שכבות',
+    guests: '13-19 אנשים',
   },
   {
-    guests: '20-25 אנשים',
     size: 'קוטר 18 / 2 שכבות  או  קוטר 16 / 4 שכבות  או  קוטר 18 / 3 שכבות',
+    guests: '20-25 אנשים',
   },
   {
-    guests: '26-30 אנשים',
     size: 'קוטר 18 / 4 שכבות',
+    guests: '26-30 אנשים',
   },
 ]
 
@@ -63,24 +63,24 @@ export default function SizeGuidePage() {
               <thead>
                 <tr className="bg-primary text-primary-foreground">
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
-                    כמות אנשים
+                    גודל עוגה מומלץ (קוטר / שכבות)
                   </th>
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
-                    גודל עוגה מומלץ (קוטר / שכבות)
+                    כמות אנשים
                   </th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((row, i) => (
                   <tr
-                    key={row.guests}
+                    key={row.size}
                     className={i % 2 === 0 ? 'bg-card' : 'bg-muted/40'}
                   >
-                    <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
-                      {row.guests}
-                    </td>
                     <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
                       {row.size}
+                    </td>
+                    <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
+                      {row.guests}
                     </td>
                   </tr>
                 ))}
