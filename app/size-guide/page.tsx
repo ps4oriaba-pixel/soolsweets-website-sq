@@ -2,7 +2,21 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
+import HeartSizeModal from '@/components/heart-size-modal'
 import { BackButton } from '@/components/back-button'
+
+interface SizeRow {
+  guests: string
+  size: string
+}
+
+const rows: SizeRow[] = [
+  { guests: '5-8 אנשים',   size: 'קוטר 12, 2-3 שכבות' },
+  { guests: '8-14 אנשים',  size: 'קוטר 14, 2-3 שכבות' },
+  { guests: '14-20 אנשים', size: 'קוטר 16, 2-3 שכבות' },
+  { guests: '18-22 אנשים', size: 'קוטר 18, 2-3 שכבות' },
+  { guests: '24-28 אנשים', size: 'קוטר 20, 2-3 שכבות' },
+]
 
 export default function SizeGuidePage() {
   return (
@@ -31,7 +45,41 @@ export default function SizeGuidePage() {
           <BackButton />
         </section>
 
+        {/* Table */}
+        <section className="max-w-2xl mx-auto px-6 py-14">
+          <div className="overflow-x-auto rounded-2xl border border-border shadow-sm">
+            <table className="w-full text-right border-collapse bg-card">
+              <thead>
+                <tr className="bg-primary text-primary-foreground">
+                  <th className="px-5 py-3 font-semibold text-sm whitespace-nowrap">כמות אנשים</th>
+                  <th className="px-5 py-3 font-semibold text-sm whitespace-nowrap">גודל עוגה מומלץ</th>
+                </tr>
+              </thead>
+              <tbody>
+                {rows.map((row, i) => (
+                  <tr key={row.guests} className={i % 2 === 0 ? 'bg-card' : 'bg-muted/40'}>
+                    <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
+                      {row.guests}
+                    </td>
+                    <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
+                      {row.size}
+                    </td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
 
+          <p className="text-center text-base text-muted-foreground mt-6 leading-relaxed">
+            הגדלים הם המלצה כללית. לא מצאתם בדיוק את מה שחיפשתם? כתבו לי ונתאים יחד את הגודל המושלם עבורכם.
+          </p>
+
+          <p className="text-center text-sm text-muted-foreground mt-4 leading-relaxed">
+            <span className="text-primary font-semibold">*</span> כל הגדלים המוצעים מתאימים לעוגה עגולה. עבור עוגת לב&nbsp;
+            <HeartSizeModal />
+            &nbsp;יש להוריד 2-4 פרוסות מהגודל המומלץ.
+          </p>
+        </section>
 
         {/* CTA */}
         <section className="bg-accent py-14 px-6">
