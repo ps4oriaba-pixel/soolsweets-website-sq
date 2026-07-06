@@ -6,16 +6,19 @@ import HeartSizeModal from '@/components/heart-size-modal'
 
 interface SizeRow {
   size: string
+  dimensions: string
   servings: string
 }
 
 const rows: SizeRow[] = [
   {
-    size: 'עוגת מספר בתבנית 35×25',
+    size: 'עוגת מספר',
+    dimensions: 'תבנית 35×25',
     servings: '30 אנשים',
   },
   {
-    size: 'עוגת שתי ספרות בתבנית 35×25',
+    size: 'עוגת שתי ספרות',
+    dimensions: 'תבנית 35×25',
     servings: '30 אנשים',
   },
 ]
@@ -51,6 +54,9 @@ export default function NumberSizeGuidePage() {
                     גודל עוגה
                   </th>
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
+                    מידות
+                  </th>
+                  <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
                     כמות אנשים
                   </th>
                 </tr>
@@ -63,6 +69,9 @@ export default function NumberSizeGuidePage() {
                   >
                     <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
                       {row.size}
+                    </td>
+                    <td className="px-5 py-4 font-semibold text-foreground whitespace-nowrap align-top border-t border-border">
+                      {row.dimensions}
                     </td>
                     <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
                       {row.servings}
