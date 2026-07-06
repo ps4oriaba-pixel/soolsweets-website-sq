@@ -13,12 +13,12 @@ interface SizeRow {
 const rows: SizeRow[] = [
   {
     size: 'עוגת מספר',
-    dimensions: 'אורך 35 × רוחב 25 סמ״ק',
+    dimensions: 'אורך 35 / רוחב 25 ',
     servings: '30 אנשים',
   },
   {
     size: 'עוגת שתי ספרות',
-    dimensions: 'אורך 35 × רוחב 25 סמ״ק',
+    dimensions: 'אורך 35 / רוחב 25 ',
     servings: '30 אנשים',
   },
 ]
@@ -54,7 +54,7 @@ export default function NumberSizeGuidePage() {
                     גודל עוגה
                   </th>
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
-                    מידות (סמ״ק)
+                    מידות  ס״מ
                   </th>
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
                     כמות אנשים
