@@ -11,16 +11,19 @@ export const metadata = {
 
 interface SizeRow {
   size: string
+  dimensions: string
   servings: string
 }
 
 const rows: SizeRow[] = [
   {
-    size: 'בינונית (בגודל 25/35)',
+    size: 'בינונית',
+    dimensions: 'אורך 35 / רוחב 25',
     servings: '25-30 אנשים',
   },
   {
-    size: 'גדולה, 30×43, בגודל A3',
+    size: 'גדולה',
+    dimensions: 'אורך 43 / רוחב 30',
     servings: '35-40 אנשים',
   },
 ]
@@ -56,6 +59,9 @@ export default function RectangularSizeGuidePage() {
                     גודל עוגה
                   </th>
                   <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
+                    מידות (ס"מ)
+                  </th>
+                  <th className="px-5 py-4 font-semibold text-sm whitespace-nowrap">
                     כמות אנשים
                   </th>
                 </tr>
@@ -68,6 +74,9 @@ export default function RectangularSizeGuidePage() {
                   >
                     <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
                       {row.size}
+                    </td>
+                    <td className="px-5 py-4 font-semibold text-foreground whitespace-nowrap align-top border-t border-border">
+                      {row.dimensions}
                     </td>
                     <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
                       {row.servings}
