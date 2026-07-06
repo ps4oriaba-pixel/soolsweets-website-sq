@@ -21,8 +21,8 @@ const products = [
     slug: 'exploding-candy',
   },
   {
-    title: 'ביצה מתנפצת',
-    description: 'ביצת שוקולד מפתיעה שמסתירה בפנים מתנה מתוקה – מושלמת לפסחא ולהפתעות.',
+    title: 'ביצת שוקולד ענקית',
+    description: 'תבנית שוקולד בצורת ביצה מגניבה.',
     image: '/images/category-special.png',
     slug: 'exploding-egg',
   },

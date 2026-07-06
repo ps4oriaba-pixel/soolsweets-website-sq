@@ -307,10 +307,10 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'exploding-egg',
-    title: '',
-    subtitle: 'הסוד הכי מתוק – נחשף!',
+    title: 'ביצת שוקולד ענקית',
+    subtitle: '',
     description:
-      'ביצת שוקולד מפתיעה שמסתירה בפנים מתנה מתוקה. מושלמת לפסחא, הפתעות וימי הולדת.',
+      'תבנית שוקולד בצורת ביצה מגניבה.',
     heroImage: '/images/category-special.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין ביצים מתנפצות!',
     images: [
