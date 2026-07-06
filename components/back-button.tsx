@@ -6,21 +6,30 @@ import { ChevronLeft } from 'lucide-react'
 
 export function BackButton() {
   const router = useRouter()
-  const [canGoBack, setCanGoBack] = useState(true)
+  const [previousUrl, setPreviousUrl] = useState<string | null>(null)
 
   useEffect(() => {
-    // Check if there's a history to go back to
-    setCanGoBack(typeof window !== 'undefined' && window.history.length > 1)
+    // Get the previously stored URL from sessionStorage
+    // NavigationTracker stores the previous page path in 'previousUrl'
+    if (typeof window !== 'undefined') {
+      const prev = window.sessionStorage.getItem('previousUrl')
+      if (prev) {
+        setPreviousUrl(prev)
+      }
+    }
   }, [])
 
   const handleBack = () => {
-    if (canGoBack) {
-      router.back()
-      // Scroll to top after navigating back so the page change is clear
-      // and the user isn't left mid-page due to scroll restoration.
-      setTimeout(() => window.scrollTo({ top: 0, behavior: 'instant' }), 120)
+    if (previousUrl) {
+      // Use router.push with a small delay to ensure proper navigation
+      setTimeout(() => {
+        router.push(previousUrl)
+      }, 100)
     } else {
-      router.push('/')
+      // Fallback to home if no previous URL
+      setTimeout(() => {
+        router.push('/')
+      }, 100)
     }
   }
 
