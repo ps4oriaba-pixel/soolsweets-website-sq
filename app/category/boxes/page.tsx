@@ -16,20 +16,20 @@ const products = [
     title: 'חגים',
     description: 'ראש השנה, פורים, פסח, חנוכה, שבועות, ולנטיין, יום המשפחה',
     image: '/images/gallery/gender-reveal-1.png',
-    slug: 'holidays',
+    slug: 'gender-reveal',
   },
   {
     title: 'עסקים',
     description: 'מתנות לעובדים, מתנות ללקוחות, השקות, כנסים, מיתוג עסקים',
     image: '/images/box-birthday.png',
     note: 'Sweet 16',
-    slug: 'business',
+    slug: 'sweet-sixteen',
   },
   {
     title: 'בהתאמה אישית',
     description: 'בחרו את הקינוחים, בחרו את הצבעים, בחרו את הכיתוב, בחרו את האריזה',
     image: '/images/category-boxes.png',
-    slug: 'Custom made',
+    slug: 'bar-bat-mitzvah',
   },
 ]
 
