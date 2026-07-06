@@ -13,23 +13,23 @@ const products = [
     slug: 'boxes-events',
   },
   {
-    title: 'מארזי גילוי מין העובר',
+    title: 'חגים',
     description: 'רגע מיוחד ובלתי נשכח – מארז מפתיע בצבעי ורוד או כחול.',
     image: '/images/gallery/gender-reveal-1.png',
-    slug: 'gender-reveal',
+    slug: 'holidays',
   },
   {
-    title: 'Sweet 16',
+    title: 'עסקים',
     description: 'מארז מיוחד לחגיגת שש-עשרה – מתוק, צבעוני ומושלם לגיל המיוחד.',
     image: '/images/box-birthday.png',
     note: 'Sweet 16',
-    slug: 'sweet-sixteen',
+    slug: 'business',
   },
   {
-    title: 'בר ובת מצווה',
+    title: 'בהתאמה אישית',
     description: 'מארז מפואר ומרהיב לאחד האירועים החשובים בחיים.',
     image: '/images/category-boxes.png',
-    slug: 'bar-bat-mitzvah',
+    slug: 'Custom made',
   },
 ]
 
