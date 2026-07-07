@@ -2,14 +2,17 @@ export default function BakingBackground() {
   return (
     <div
       aria-hidden="true"
-      className="fixed inset-0 w-full h-full pointer-events-none"
-      style={{ zIndex: 0 }}
+      className="absolute top-0 left-0 w-full pointer-events-none"
+      style={{ 
+        zIndex: 0,
+        minHeight: '300vh',
+      }}
     >
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="100%"
         height="100%"
-        style={{ position: 'absolute', inset: 0 }}
+        style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
       >
         <defs>
           <pattern id="baking-pattern" x="0" y="0" width="500" height="500" patternUnits="userSpaceOnUse">
