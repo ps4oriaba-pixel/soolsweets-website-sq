@@ -140,7 +140,10 @@ export default function HomePage() {
 
         {/* Workshop Promo */}
         <section className="max-w-6xl mx-auto px-6 py-20">
-          <div className="bg-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-stretch shadow-md">
+          <div className="bg-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-stretch shadow-md relative">
+            <div className="absolute top-4 right-4 z-10 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
+              בקרוב
+            </div>
             <div className="relative h-72 md:h-auto md:w-1/2">
               <Image
                 src="/images/about-hero.png"
