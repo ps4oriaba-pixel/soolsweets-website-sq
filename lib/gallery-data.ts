@@ -22,7 +22,7 @@ const galleries: GalleryData[] = [
     description:
       'ימי הולדת, Sweet 16, בר/בת מצווה, גילוי מין העובר, ברית ובריתה, לידה, חתונה ואירוסין, הצעת נישואין, יום נישואין, גיוס ועוד..',
     heroImage: '/images/gallery/boxes-events-1.png',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לאירוע!',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לאירוע מיוחד שיש לי בקרוב',
     images: [
       { src: '/images/gallery/boxes-events-1.png', alt: 'מארז יום הולדת עם מקרון' },
       { src: '/images/gallery/boxes-events-2.png', alt: 'מארז תודה עם קשת' },
