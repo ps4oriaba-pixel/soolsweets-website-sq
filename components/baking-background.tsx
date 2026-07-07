@@ -93,11 +93,13 @@ export default function BakingBackground() {
               <path d="M420 282 Q416 290 422 292 Q428 290 426 282" />
               <ellipse cx="387" cy="217" rx="16" ry="7" transform="rotate(45 387 217)" />
 
-              {/* WHISK — center-bottom */}
+              {/* MIXING SPOON — center-bottom */}
+              {/* handle */}
               <line x1="250" y1="378" x2="250" y2="470" />
-              {/* whisk loops */}
-              <path d="M250 378 Q234 360 236 340 Q238 320 250 318 Q262 320 264 340 Q266 360 250 378" />
-              <path d="M234 356 Q226 368 230 378 Q234 388 250 388 Q266 388 270 378 Q274 368 266 356" />
+              {/* spoon bowl */}
+              <ellipse cx="250" cy="370" rx="22" ry="16" />
+              {/* spoon bowl inner detail */}
+              <path d="M230 365 Q240 375 250 378 Q260 375 270 365" />
 
             </g>
           </pattern>
