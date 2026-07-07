@@ -52,7 +52,7 @@ const galleries: GalleryData[] = [
     subtitle: '',
     description: 'מתנות לעובדים, מתנות ללקוחות, השקות, כנסים, מיתוג עסקים',
     heroImage: '/images/box-birthday.png',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז Sweet 16!',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז עסקי ',
     images: [
       { src: '/images/box-birthday.png', alt: 'מארז Sweet 16' },
       { src: '/images/gallery/boxes-events-1.png', alt: 'מארז חגיגי' },
