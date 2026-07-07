@@ -93,13 +93,16 @@ export default function BakingBackground() {
               <path d="M420 282 Q416 290 422 292 Q428 290 426 282" />
               <ellipse cx="387" cy="217" rx="16" ry="7" transform="rotate(45 387 217)" />
 
-              {/* MIXING SPOON — center-bottom */}
-              {/* handle */}
-              <line x1="250" y1="378" x2="250" y2="470" />
-              {/* spoon bowl */}
-              <ellipse cx="250" cy="370" rx="22" ry="16" />
-              {/* spoon bowl inner detail */}
-              <path d="M230 365 Q240 375 250 378 Q260 375 270 365" />
+              {/* BAKING OVEN — center-bottom */}
+              {/* oven body */}
+              <rect x="224" y="350" width="52" height="50" rx="2" />
+              {/* oven door */}
+              <rect x="230" y="360" width="40" height="35" rx="1" fill="none" />
+              {/* oven window */}
+              <rect x="234" y="364" width="32" height="27" rx="1" />
+              {/* oven handle */}
+              <line x1="278" y1="375" x2="294" y2="375" />
+              <circle cx="294" cy="375" r="3" />
 
             </g>
           </pattern>
