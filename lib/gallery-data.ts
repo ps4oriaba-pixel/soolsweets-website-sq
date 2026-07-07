@@ -38,7 +38,7 @@ const galleries: GalleryData[] = [
     description:
       'ראש השנה, פורים, פסח, חנוכה, שבועות, ולנטיין, יום המשפחה',
     heroImage: '/images/gallery/gender-reveal-1.png',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז גילוי מין!',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לחג  ',
     images: [
       { src: '/images/gallery/gender-reveal-1.png', alt: 'מארז גילוי מין ורוד' },
       { src: '/images/gallery/gender-reveal-2.png', alt: 'שולחן ממתקים לבת' },
