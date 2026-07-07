@@ -187,7 +187,7 @@ const galleries: GalleryData[] = [
     description:
       'עוגה שמספרת את הסיפור שלכם. הביאו רעיון, תמונה, צבע, וביחד ניצור משהו שלא קיים עדיין.',
     heroImage: '/images/hero.png',
-    whatsappMessage: 'שלום סלעית, אשמח לשמוע על עוגה בעיצוב אישי!',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגה בעיצוב אישי!',
     images: [
       { src: '/images/hero.png', alt: 'עוגות בעיצוב אישי' },
       { src: '/images/cake-vintage.png', alt: 'עוגה אישית' },
