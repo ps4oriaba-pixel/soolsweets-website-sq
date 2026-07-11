@@ -26,7 +26,7 @@ const categories = [
   },
   {
     href: '/category/special',
-    title: 'עיצובים מיוחדים',
+    title: 'קולקציית ה-WOW',
     description: 'כדורגל שוקולד, סוכריה גדולה ומתוקה, ביצת שוקולד ענקית ועוגות קומות',
     image: '/images/category-special.png',
   },

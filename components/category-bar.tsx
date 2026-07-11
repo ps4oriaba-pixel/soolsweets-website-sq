@@ -8,7 +8,7 @@ const categories = [
   { href: '/category/cakes', label: 'עוגות מעוצבות', key: 'cakes' },
   { href: '/category/boxes', label: 'מארזים מעוצבים', key: 'boxes' },
   { href: '/category/desserts', label: 'קינוחים אישיים', key: 'desserts' },
-  { href: '/category/special', label: 'עיצובים מיוחדים', key: 'special' },
+  { href: '/category/special', label: 'קולקציית ה-WOW', key: 'special' },
 ]
 
 // Maps every gallery slug to its parent category so the bar highlights

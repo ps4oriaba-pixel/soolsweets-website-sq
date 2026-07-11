@@ -1,7 +1,7 @@
 import CategoryPage from '@/components/category-page'
 
 export const metadata = {
-  title: 'עיצובים מיוחדים | SoolSweets',
+  title: 'קולקציית ה-WOW | SoolSweets',
   description: 'כדור מתנפץ, סוכריה מתנפצת, ביצה מתנפצת, עוגות קומות ועוגות דף נשרף.',
 }
 
@@ -38,16 +38,16 @@ const products = [
 export default function SpecialPage() {
   return (
     <CategoryPage
-      title="עיצובים מיוחדים"
+      title="קולקציית ה-WOW"
       subtitle="חוויות שוקולד שלא תשכחו לעולם"
       heroImage="/images/category-special.png"
-      heroAlt="עיצובים מיוחדים של SoolSweets"
+      heroAlt="קולקציית ה-WOW של SoolSweets"
       description="כל קינוח מותאם אישית בהתאם לבקשות שלכם – ניתן לבחור את סוג תבנית השוקולד, סוג ההפתעות שמחכות בפנים, ולעצב לפי נושא או אירוע. 
 גודל התבניות 19-21 ס״מ. 
 לכדורגל יש תבנית קטנה יותר, בגודל 14 ס״מ.
 הקינוחים מגיעים עם פטיש מעץ לניפוץ מושלם וארוזים בקופסה שקופה, להשלמת הנראות."
       products={products}
-      whatsappMessage="שלום סלעית, אשמח לשמוע על העיצובים המיוחדים שלך!"
+      whatsappMessage="שלום סלעית, אשמח לשמוע על קולקציית ה-WOW שלך!"
     />
   )
 }

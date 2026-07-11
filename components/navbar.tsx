@@ -10,7 +10,7 @@ const navLinks = [
   { href: '/category/cakes', label: 'עוגות מעוצבות' },
   { href: '/category/boxes', label: 'מארזים מעוצבים' },
   { href: '/category/desserts', label: 'קינוחים אישיים' },
-  { href: '/category/special', label: 'עיצובים מיוחדים' },
+  { href: '/category/special', label: 'קולקציית ה-WOW' },
 ]
 
 export default function Navbar() {
