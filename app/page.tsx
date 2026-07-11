@@ -58,7 +58,7 @@ export default function HomePage() {
               קונדיטוריה ביתית בוטיק
             </p>
             <h1 className="font-serif text-5xl md:text-7xl font-bold text-background leading-tight text-balance mb-6">
-              טעם ואסתטיקה
+              כשטעם ואסתטיקה
               <br />
               נפגשים
             </h1>
