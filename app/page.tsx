@@ -63,7 +63,7 @@ export default function HomePage() {
               נפגשים
             </h1>
             <p className="text-background/80 text-lg md:text-xl leading-relaxed max-w-lg mb-10">
-              יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע ורגע מיוחד.
+              יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע .
             </p>
             {/* Search bar */}
             <div className="mb-8 w-full max-w-md">
