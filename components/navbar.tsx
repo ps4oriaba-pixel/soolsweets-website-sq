@@ -9,7 +9,7 @@ const navLinks = [
   { href: '/about', label: 'קצת עליי' },
   { href: '/category/cakes', label: 'עוגות מעוצבות' },
   { href: '/category/boxes', label: 'מארזים מעוצבים' },
-  { href: '/category/desserts', label: 'קינוחים' },
+  { href: '/category/desserts', label: 'קינוחים אישיים' },
   { href: '/category/special', label: 'עיצובים מיוחדים' },
 ]
 

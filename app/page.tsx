@@ -20,8 +20,8 @@ const categories = [
   },
   {
     href: '/category/desserts',
-    title: 'קינוחים',
-    description: 'מארזי כוסות וקרמבל – קינוחים עדינים ומרהיבים',
+    title: 'קינוחים אישיים',
+    description: 'פינוקים קטנים עם נוכחות גדולה – קינוחי כוסות, קראמבל קוקיז, קאפקייקס ועוד',
     image: '/images/category-desserts.png',
   },
   {
