@@ -1,8 +1,8 @@
 import CategoryPage from '@/components/category-page'
 
 export const metadata = {
-  title: 'קינוחים | SoolSweets',
-  description: 'מארזי כוסות וקרמבל – קינוחים עדינים, טעימים ומרהיבים להגשה.',
+  title: 'קינוחים אישיים | SoolSweets',
+  description: 'קינוחים אישיים – פינוקים קטנים עם נוכחות גדולה, מעוצבים בקפידה.',
 }
 
 const products = [
@@ -25,13 +25,13 @@ const products = [
 export default function DessertsPage() {
   return (
     <CategoryPage
-      title="קינוחים"
-      subtitle="קינוחים עדינים ומרהיבים – להגשה בכל אירוע"
+      title="קינוחים אישיים"
+      subtitle="פינוקים קטנים עם נוכחות גדולה"
       heroImage="/images/category-desserts.png"
-      heroAlt="קינוחים של SoolSweets"
-      description="מארזי כוסות וקרמבל – קינוחים אישיים שמרשימים הן בעיניים והן בחיך. מושלמים לאירועים, שולחנות ממתקים, או סתם כי מגיע לכם משהו מתוק ומיוחד."
+      heroAlt="קינוחים אישיים של SoolSweets"
+      description="פינוקים קטנים עם נוכחות גדולה שנעשים בעבודת יד ומעוצבים בקפידה, עם שילוב מושלם של טעם, איכות ואסתטיקה – לאירוח, לחגיגות ולכל רגע שמתחשק להתפנק. קינוחי כוסות, קראמבל קוקיז, קאפקייקס, דונאטס, קרם ברולה, מגנום, קייקפופ ועוד, לכל אירוע ולכל חשק מתוק."
       products={products}
-      whatsappMessage="שלום סלעית, אשמח להזמין קינוחים!"
+      whatsappMessage="שלום סלעית, אשמח להזמין קינוחים אישיים!"
     />
   )
 }
