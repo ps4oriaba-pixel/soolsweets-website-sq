@@ -4,6 +4,7 @@ import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import { hasSizeGuide, getSizeGuideUrl } from '@/lib/gallery-data'
+import { BackButton } from '@/components/back-button'
 
 export interface Product {
   title: string
@@ -62,8 +63,13 @@ export default function CategoryPage({
           </div>
         </section>
 
+        {/* Back Button */}
+        <section className="max-w-6xl mx-auto px-6 pt-8">
+          <BackButton />
+        </section>
+
         {/* Intro */}
-        <section className="max-w-3xl mx-auto px-6 py-12 text-center">
+        <section className="max-w-3xl mx-auto px-6 py-8 text-center">
           <p className="text-foreground/70 leading-relaxed text-lg">{description}</p>
           <div className="w-12 h-1 bg-primary mx-auto mt-8 rounded-full" />
         </section>
