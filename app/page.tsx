@@ -55,7 +55,7 @@ export default function HomePage() {
 
           <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
             <p className="text-secondary font-medium tracking-widest uppercase text-sm mb-4">
-              קונדיטוריה ביתית בוטיק
+              קונדיטורית בוטיק ביתית
             </p>
             <h1 className="font-serif text-5xl md:text-7xl font-bold text-background leading-tight text-balance mb-6">
               כשטעם ואסתטיקה
