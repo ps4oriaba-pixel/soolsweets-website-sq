@@ -1,27 +1,41 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 import { usePathname } from 'next/navigation'
+
+const STORAGE_KEY = 'navHistory'
 
 export function NavigationTracker() {
   const pathname = usePathname()
+  const prevPathname = useRef<string | null>(null)
 
   useEffect(() => {
-    // When we land on a new page, read the stored "previous" URL if it exists
-    // Then store THIS page as the new "previous" for when we leave
-    if (typeof window !== 'undefined') {
-      const currentPath = pathname
-      
-      // If there's no previousUrl set yet (first page), just store current
-      // Otherwise, update previousUrl to what was previously stored (which is from before this navigation)
-      const existing = window.sessionStorage.getItem('currentUrl')
-      if (existing) {
-        // Update previous to the current from last time
-        window.sessionStorage.setItem('previousUrl', existing)
-      }
-      // Always update current to be the new pathname
-      window.sessionStorage.setItem('currentUrl', currentPath)
+    if (typeof window === 'undefined') return
+
+    // Skip if same path (e.g. re-renders)
+    if (prevPathname.current === pathname) return
+    prevPathname.current = pathname
+
+    const raw = window.sessionStorage.getItem(STORAGE_KEY)
+    const stack: string[] = raw ? JSON.parse(raw) : []
+
+    const last = stack[stack.length - 1]
+
+    // If navigating back (current page is second-to-last), pop the stack
+    if (stack.length >= 2 && stack[stack.length - 2] === pathname) {
+      stack.pop()
+    } else if (last !== pathname) {
+      // Normal forward navigation — push current page
+      stack.push(pathname)
+      // Keep stack size reasonable
+      if (stack.length > 30) stack.shift()
     }
+
+    window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(stack))
+
+    // previousUrl is always the second-to-last entry
+    const prev = stack.length >= 2 ? stack[stack.length - 2] : '/'
+    window.sessionStorage.setItem('previousUrl', prev)
   }, [pathname])
 
   return null
