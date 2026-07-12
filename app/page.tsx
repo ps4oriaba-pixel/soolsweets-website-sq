@@ -15,7 +15,7 @@ const categories = [
   {
     href: '/category/boxes',
     title: 'מארזים מעוצבים',
-    description: 'מארזים לרגעים ששוה לחגוג, חגים, עסקים ובעיצוב אישי',
+    description: " המתנה שתגרום למי שמקבל אותה להתרגש כבר מהרגע הראשון",
     image: '/images/category-boxes.png',
   },
   {
