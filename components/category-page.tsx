@@ -162,7 +162,7 @@ export default function CategoryPage({
               מוכנים להזמין?
             </h2>
             <p className="text-background/75 leading-relaxed">
-              צרו קשר בווא��סאפ ואני אגשים לכם את הרעיון הכי מרהיב שיש!
+              צרו קשר בוואטסאפ ואני אגשים לכם את הרעיון הכי מרהיב שיש!
             </p>
             <WhatsAppButton message={whatsappMessage} />
           </div>
