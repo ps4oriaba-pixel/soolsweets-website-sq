@@ -36,7 +36,7 @@ const galleries: GalleryData[] = [
     title: 'חגים',
     subtitle: '',
     description:
-      'ראש השנה, פורים, פסח, חנוכה, שבועות, ולנטיין, יום המשפחה',
+      'כי לכל חג מגיע מארז מיוחד. מתוקים מעוצבים לחגים ולאירועים לאורך כל השנה',
     heroImage: '/images/gallery/gender-reveal-1.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לחג  ',
     images: [
