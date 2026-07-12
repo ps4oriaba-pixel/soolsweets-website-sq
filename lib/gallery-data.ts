@@ -153,7 +153,7 @@ const galleries: GalleryData[] = [
     title: 'עוגה מלבנית מעוצבת',
     subtitle: 'עיצוב מודרני ונקי – אלגנטי לכל שולחן',
     description:
-      'מושלמת לאירועים גדולים ולחגיגות משפחתיות – בעיצוב מוקפד ובהתאמה אישית לכל סגנון',
+      'מושלמת לאירועים גדולים ולחגיגות משפחתיות – בעיצו�� מוקפד ובהתאמה אישית לכל סגנון',
     heroImage: '/images/category-cakes.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגה מלבנית!',
     images: [
@@ -207,6 +207,21 @@ const galleries: GalleryData[] = [
       { src: '/images/category-cakes.png', alt: 'עוגת מספרים עם קישוטים' },
       { src: '/images/hero.png', alt: 'עוגות לאירועים' },
       { src: '/images/gallery/vintage-1.png', alt: 'עיצוב עדין' },
+    ],
+  },
+  {
+    slug: 'crown-cakes',
+    title: 'עוגות כתר',
+    subtitle: 'עיצוב מלכותי שכולם ידברו עליו',
+    description:
+      'עיצוב מלכותי עם כתר נוצץ, פפיונים ונצנצים שמתפזרים באפקט מרהיב – לחגיגה שכולה זוהר.',
+    heroImage: '/images/gallery/vintage-1.png',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת כתר!',
+    images: [
+      { src: '/images/gallery/vintage-1.png', alt: 'עוגת כתר מלכותית' },
+      { src: '/images/gallery/vintage-2.png', alt: 'עוגת כתר עם נצנצים' },
+      { src: '/images/cake-bow-tie.png', alt: 'עוגת כתר עם פפיונים' },
+      { src: '/images/cake-vintage.png', alt: 'עוגת כתר אלגנטית' },
     ],
   },
   {
@@ -346,6 +361,7 @@ export const SIZE_GUIDE_SLUGS = [
   'rectangular-cakes', // has its own dedicated size guide
   'bow-tie-cakes',     // has its own dedicated size guide
   'mug-cakes',         // has its own dedicated size guide
+  'crown-cakes',       // has its own dedicated size guide
 ]
 
 export function hasSizeGuide(slug: string): boolean {
@@ -365,6 +381,8 @@ export function getSizeGuideUrl(slug: string): string {
       return '/bow-tie-size-guide'
     case 'mug-cakes':
       return '/mug-cakes-size-guide'
+    case 'crown-cakes':
+      return '/crown-cakes-size-guide'
     default:
       return '/size-guide' // Falls back to the main size guide for other items
   }

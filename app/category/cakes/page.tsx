@@ -7,6 +7,12 @@ export const metadata = {
 
 const products = [
   {
+    title: 'עוגות כתר',
+    description: 'עיצוב מלכותי עם כתר נוצץ, פפיונים ונצנצים שמתפזרים באפקט מרהיב – לחגיגה שכולה זוהר.',
+    image: '/images/gallery/vintage-1.png',
+    slug: 'crown-cakes',
+  },
+  {
     title: 'עוגות וינטאג\'',
     description: 'עיצוב רומנטי ועדין עם פרחים, ריפלס ואווירה של פעם. מושלם לכל אירוע מיוחד.',
     image: '/images/gallery/vintage-1.png',
