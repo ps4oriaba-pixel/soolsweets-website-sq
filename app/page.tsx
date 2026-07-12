@@ -59,8 +59,9 @@ export default function HomePage() {
             </p>
             <h1 className="font-serif text-5xl md:text-7xl font-bold text-background leading-tight text-balance mb-6">
               כשטעם ואסתטיקה
-              <br />
+              
               נפגשים
+              <br />
             </h1>
             <p className="text-background/80 text-lg md:text-xl leading-relaxed max-w-lg mb-10">
               יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע .
