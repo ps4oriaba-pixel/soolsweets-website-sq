@@ -64,7 +64,7 @@ const galleries: GalleryData[] = [
     slug: 'bar-bat-mitzvah',
     title: 'מארז בהתאמה אישית',
     subtitle: '',
-    description: 'בחרו את הקינוחים, בחרו את הצבעים, בחרו את הכיתוב, בחרו את האריזה',
+    description: 'בחרו את הקינוחים, הצבעים והכיתוב – ואנחנו ניצור עבורכם מארז ייחודי בדיוק כמו שדמיינתם.',
     heroImage: '/images/category-boxes.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז בהתאמה אישית!',
     images: [
