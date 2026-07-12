@@ -25,7 +25,7 @@ const products = [
     slug: 'sweet-sixteen',
   },
   {
-    title: 'בהתאמה אישית',
+    title: 'מארז בהתאמה אישית',
     description: 'בחרו את הקינוחים, בחרו את הצבעים, בחרו את הכיתוב, בחרו את האריזה',
     image: '/images/category-boxes.png',
     slug: 'bar-bat-mitzvah',
