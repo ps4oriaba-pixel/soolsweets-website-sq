@@ -118,7 +118,8 @@ export default function HomePage() {
                   </h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">{cat.description}</p>
                   <span className="inline-block mt-3 text-xs font-semibold text-primary uppercase tracking-wider">
-                    לפרטים נוספים &larr;
+                    לקולקציה
+                     &larr;
                   </span>
                 </div>
               </Link>
