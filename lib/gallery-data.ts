@@ -211,14 +211,14 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'mug-cakes',
-    title: 'עוגות ספל',
+    title: 'ספל שכולו אושר',
     subtitle: 'טעימה, מרשימה – ומוכנה מהר',
     description:
-      'עוגות ספל להתראה קצרה – כי לפעמים ההזדמנות לא מחכה. טעימות כמו תמיד, מהירות להפתיע.',
+      'ספל שכולו אושר להתראה קצרה – כי לפעמים ההזדמנות לא מחכה. טעימות כמו תמיד, מהירות להפתיע.',
     heroImage: '/images/cake-bento.png',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת ספל!',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין ספל שכולו אושר!',
     images: [
-      { src: '/images/cake-bento.png', alt: 'עוגת ספל' },
+      { src: '/images/cake-bento.png', alt: 'ספל שכולו אושר' },
       { src: '/images/gallery/bento-1.png', alt: 'עוגה אישית' },
       { src: '/images/gallery/bento-2.png', alt: 'קולקציית עוגות' },
       { src: '/images/category-cakes.png', alt: 'עוגות מגוונות' },
@@ -305,7 +305,7 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'exploding-egg',
-    title: 'ביצת שוקולד ענקית',
+    title: 'ביצת שוקול�� ענקית',
     subtitle: '',
     description:
       'תבנית שוקולד בצורת ביצה מגניבה.',
