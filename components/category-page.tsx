@@ -159,10 +159,10 @@ export default function CategoryPage({
         <section className="bg-accent py-16 px-6">
           <div className="max-w-2xl mx-auto text-center flex flex-col items-center gap-6">
             <h2 className="font-serif text-3xl font-bold text-background text-balance">
-              מוכנים להזמין?
+              אהבתם? בואו נדבר!
             </h2>
             <p className="text-background/75 leading-relaxed">
-              צרו קשר בוואטסאפ ואני אגשים לכם את הרעיון הכי מרהיב שיש!
+              אשמח לעזור לכם לעצב את עוגת החלומות שלכם בדיוק כמו שדמיינתם.
             </p>
             <WhatsAppButton message={whatsappMessage} />
           </div>

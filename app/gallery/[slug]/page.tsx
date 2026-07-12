@@ -132,7 +132,7 @@ export default async function GalleryPage({ params }: PageProps) {
               אהבתם? בואו נדבר!
             </h2>
             <p className="text-background/75 leading-relaxed text-sm md:text-base">
-              שלחו לי הודעה בוואטסאפ ואני אשמח לעזור לכם לעצב את החלום שלכם.
+              אשמח לעזור לכם לעצב את עוגת החלומות שלכם בדיוק כמו שדמיינתם.
             </p>
             <WhatsAppButton message={gallery.whatsappMessage} />
           </div>
