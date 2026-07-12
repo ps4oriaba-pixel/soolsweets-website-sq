@@ -86,7 +86,7 @@ export default function HomePage() {
         <section id="categories" className="scroll-mt-24 max-w-6xl mx-auto px-6 py-20" aria-labelledby="categories-heading">
           <div className="text-center mb-14">
             <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
-              המוצרים שלנו
+              הקולקציה שלנו
             </p>
             <h2
               id="categories-heading"
