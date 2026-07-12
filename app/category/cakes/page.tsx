@@ -49,7 +49,7 @@ const products = [
     slug: 'number-cakes',
   },
   {
-    title: 'עוגות ספל',
+    title: 'ספל שכולו אושר',
     description: 'כל ספל מגיע מוכן להפתעה עם כפית משוקולד, נר צבעוני וארוז בקופסה שקופה ומרשימה.',
     image: '/images/gallery/bento-2.png',
     note: 'בהתראה קצרה',

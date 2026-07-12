@@ -64,7 +64,7 @@ const SEARCH_META: Record<string, SearchMeta> = {
   },
   'mug-cakes': {
     category: 'עוגות',
-    keywords: ['עוגה', 'עוגות', 'ספל', 'מהיר', 'קטנה', 'מתנה', 'מהירה'],
+    keywords: ['ספל שכולו אושר', 'ספל', 'אושר', 'עוגה', 'עוגות', 'מהיר', 'קטנה', 'מתנה', 'מהירה', 'עוגת ספל'],
   },
   'burnt-paper-cakes': {
     category: 'עוגות',

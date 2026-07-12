@@ -4,9 +4,9 @@ import WhatsAppButton from '@/components/whatsapp-button'
 import { BackButton } from '@/components/back-button'
 
 export const metadata = {
-  title: 'טבלת גדלי עוגות ספל | SoolSweets',
+  title: 'טבלת גדלי ספל שכולו אושר | SoolSweets',
   description:
-    'עוגות ספל מעוצבות - כל ספל מגיע מוכן להפתעה עם כפית משוקולד, נר צבעוני וארוז בקופסה שקופה ומרשימה.',
+    'ספל שכולו אושר מעוצב - כל ספל מגיע מוכן להפתעה עם כפית משוקולד, נר צבעוני וארוז בקופסה שקופה ומרשימה.',
 }
 
 interface SizeRow {
@@ -42,7 +42,7 @@ export default function MugCakesSizeGuidePage() {
               טבלת גדלים
             </p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground text-balance mb-4">
-              עוגות ספל
+              ספל שכולו אושר
             </h1>
             <p className="text-lg text-foreground/70 leading-relaxed">
               כל ספל מגיע מוכן להפתעה עם כפית משוקולד, נר צבעוני וארוז בקופסה שקופה ומרשימה.
@@ -88,7 +88,7 @@ export default function MugCakesSizeGuidePage() {
           </div>
 
           <div className="flex justify-center mt-10">
-            <WhatsAppButton message="שלום סלעית, אשמח להזמין עוגת ספל!" />
+            <WhatsAppButton message="שלום סלעית, אשמח להזמין ספל שכולו אושר!" />
           </div>
         </section>
       </main>
