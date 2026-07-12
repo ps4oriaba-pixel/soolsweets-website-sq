@@ -123,7 +123,7 @@ const galleries: GalleryData[] = [
     slug: 'mousse-cakes',
     title: 'עוגות מוס',
     subtitle: 'שכבות קרמי ועדין בציפוי מושלם',
-    description: " שכבות מוס עשירות במגוון טעמים, במרקם קטיפתי ובמראה אלגנטי – חוויה מושלמת בכל ביס" ,
+    description: " שכבות מוס עשירות במגוון טעמים, במרקם קטיפתי ובמראה אלגנטי – חוויה מושלמת בכל ביס",
     heroImage: '/images/category-cakes.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת מוס!',
     images: [
@@ -138,7 +138,7 @@ const galleries: GalleryData[] = [
     title: 'עוגות בנטו',
     subtitle: 'עוגה אישית קטנה וחמודה',
     description:
-      'עוגות בנטו אישיות – מושלמות כמתנה, לחגיגה אישית, או סתם כי מגיע לכם.',
+      'קטנות בגודל, גדולות ברושם. עוגות אישיות בעיצוב מוקפד – מושלמות למתנה, הפתעה או חגיגה קטנה',
     heroImage: '/images/gallery/bento-1.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת בנטו!',
     images: [
