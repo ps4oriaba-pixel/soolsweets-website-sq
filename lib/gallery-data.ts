@@ -123,8 +123,7 @@ const galleries: GalleryData[] = [
     slug: 'mousse-cakes',
     title: 'עוגות מוס',
     subtitle: 'שכבות קרמי ועדין בציפוי מושלם',
-    description:
-      'עוגות מוס בעיצוב מינימליסטי ומרשים. כל שכבה מדוקדקת, כל ציפוי מושלם.',
+    description: " שכבות מוס עשירות במגוון טעמים, במרקם קטיפתי ובמראה אלגנטי – חוויה מושלמת בכל ביס" ,
     heroImage: '/images/category-cakes.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת מוס!',
     images: [
