@@ -59,12 +59,12 @@ export default function HomePage() {
             </p>
             <h1 className="font-serif text-5xl md:text-7xl font-bold text-background leading-tight text-balance mb-6">
               כשטעם ואסתטיקה
-              
+
               נפגשים
               <br />
             </h1>
             <p className="text-background/80 text-lg md:text-xl leading-relaxed max-w-lg mb-10">
-             יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע 
+              יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
             </p>
             {/* Search bar */}
             <div className="mb-8 w-full max-w-md">
@@ -87,7 +87,7 @@ export default function HomePage() {
         <section id="categories" className="scroll-mt-24 max-w-6xl mx-auto px-6 py-20" aria-labelledby="categories-heading">
           <div className="text-center mb-14">
             <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
-              הקולקציה שלנו
+              הקולקציות שלנו
             </p>
             <h2
               id="categories-heading"
@@ -119,7 +119,7 @@ export default function HomePage() {
                   <p className="text-sm text-muted-foreground leading-relaxed">{cat.description}</p>
                   <span className="inline-block mt-3 text-xs font-semibold text-primary uppercase tracking-wider">
                     לקולקציה
-                     &larr;
+                    &larr;
                   </span>
                 </div>
               </Link>

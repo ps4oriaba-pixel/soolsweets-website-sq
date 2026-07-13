@@ -8,13 +8,13 @@ export const metadata = {
 const products = [
   {
     title: 'עוגות כתר',
-    description: 'עיצוב מלכותי עם כתר נוצץ, פפיונים ונצנצים שמתפזרים באפקט מרהיב – לחגיגה שכולה זוהר.',
+    description: 'עוגה בעיצוב מלכותי עם כתר נוצץ, פפיונים ונצנצים שמתפזרים באפקט מרהיב – לחגיגה שכולה זוהר.',
     image: '/images/gallery/vintage-1.png',
     slug: 'crown-cakes',
   },
   {
     title: 'עוגות וינטאג\'',
-    description: 'עיצוב רומנטי ועדין עם פרחים, ריפלס ואווירה של פעם. מושלם לכל אירוע מיוחד.',
+    description: 'עיצוב רומנטי ועדין עם זילופי וינטאג’, פפיונים, פרחים וגימורים אלגנטיים. מושלם לכל אירוע מיוחד.',
     image: '/images/gallery/vintage-1.png',
     slug: 'vintage-cakes',
   },
@@ -74,7 +74,7 @@ export default function CakesPage() {
   return (
     <CategoryPage
       title="עוגות מעוצבות"
-      subtitle="כל עוגה היא יצירת אמנות – מעוצבת במיוחד עבורכם"
+      subtitle="כל עוגה היא יצירת אומנות שמעוצבת במיוחד עבורכם"
       heroImage="/images/category-cakes.png"
       heroAlt="עוגות מעוצבות של SoolSweets"
       description=" העוגה שתהפוך את החגיגה לבלתי נשכחת.
