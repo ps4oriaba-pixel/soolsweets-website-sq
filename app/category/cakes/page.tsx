@@ -20,7 +20,7 @@ const products = [
   },
   {
     title: 'עוגות מוס',
-    description: 'שכבות מוס קרמי ועדין בציפוי מושלם – שילוב של טעם ועיצוב.',
+    description: 'שכבות מוס עשירות במגוון טעמים, במרקם קטיפתי ובמראה אלגנטי – חוויה מושלמת בכל ביס',
     image: '/images/category-cakes.png',
     slug: 'mousse-cakes',
   },
