@@ -49,7 +49,7 @@ const galleries: GalleryData[] = [
     slug: 'sweet-sixteen',
     title: 'עסקים',
     subtitle: '',
-    description: 'מארזים מעוצבים בהתאמה אישית לעובדים, לקוחות ושותפים, עם אפשרות למיתוג והתאמה אישית – הדרך המתוקה להוקיר, להפתיע ולהשאיר רושם',
+    description:  הדרך המתוקה להוקיר, להפתיע ולהשאיר רושם',
     heroImage: '/images/box-birthday.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז עסקי ',
     images: [
