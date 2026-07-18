@@ -183,7 +183,7 @@ const galleries: GalleryData[] = [
   {
     slug: 'bow-tie-cakes',
     title: 'עוגת פפיון',
-    subtitle: 'עוגה שוקולדית עם קרם חמאה שוויצרי',
+    subtitle: "",
     description:
       'עוגות בעיצוב אלגנטי עם פפיונים מרשימים  מבצק סוכר – שילוב מושלם של יוקרה, עדינות וסטייל.',
     heroImage: '/images/cake-bow-tie.png',
