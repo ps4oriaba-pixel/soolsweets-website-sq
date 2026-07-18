@@ -294,7 +294,7 @@ const galleries: GalleryData[] = [
     title: 'מארזי קינוח ייעודיים',
     subtitle: 'כשאוהבים קינוח אחד, מזמינים מארז שלם ממנו',
     description:
-      'אוהבים קינוח מסוים? לפעמים אין צורך בשילוב. תוכלו להזמין מארז שלם של קרם ברולה, דונאטס, קאפקייקס, קייק פופ, מגנומים ועוד.',
+      'אוהבים קינוח מסוים? לפעמים אין צורך בשילוב. תוכלו להזמין מארז שלם של קרם ברו��ה, דונאטס, קאפקייקס, קייק פופ, מגנומים ועוד.',
     heroImage: '/images/category-desserts.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז קינוח ייעודי!',
     images: [
@@ -416,4 +416,18 @@ export function getAllSlugs(): string[] {
 
 export function getAllGalleries(): GalleryData[] {
   return galleries
+}
+
+// Returns the parent category label + href for breadcrumb navigation
+export function getCategoryForSlug(slug: string): { label: string; href: string } {
+  const boxesSlugs = ['boxes-events', 'gender-reveal', 'sweet-sixteen', 'bar-bat-mitzvah', 'branded-boxes', 'holiday-boxes']
+  const cakesSlugs = ['custom-cakes', 'vintage-cakes', 'mousse-cakes', 'bento-cakes', 'rectangular-cakes', 'bow-tie-cakes', 'number-cakes', 'crown-cakes', 'mug-cakes', 'burnt-paper-cakes']
+  const dessertsSlugs = ['cup-desserts', 'crumble-desserts', 'dedicated-dessert-boxes']
+  const specialSlugs = ['choc-ball', 'candy-pop', 'broken-egg', 'tiered-cakes', 'burnt-paper-cakes']
+
+  if (boxesSlugs.includes(slug)) return { label: 'מארזים מעוצבים', href: '/category/boxes' }
+  if (cakesSlugs.includes(slug)) return { label: 'עוגות מעוצבות', href: '/category/cakes' }
+  if (dessertsSlugs.includes(slug)) return { label: 'קינוחים אישיים', href: '/category/desserts' }
+  if (specialSlugs.includes(slug)) return { label: 'קולקציית ה-WOW', href: '/category/special' }
+  return { label: 'קטגוריות', href: '/#categories' }
 }

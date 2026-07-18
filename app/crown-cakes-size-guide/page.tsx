@@ -29,7 +29,7 @@ export default function CrownCakesSizeGuidePage() {
 
       <main className="flex-1 pt-20">
         {/* Breadcrumb */}
-        <Breadcrumb items={[{ label: 'קטגוריות', href: '/#categories' }, { label: 'עוגות כתר', href: '/gallery/crown-cakes' }, { label: 'מדריך גדלים' }]} />
+        <Breadcrumb items={[{ label: 'עוגות מעוצבות', href: '/category/cakes' }, { label: 'עוגות כתר', href: '/gallery/crown-cakes' }, { label: 'מדריך גדלים' }]} />
 
         {/* Header */}
         <section className="bg-secondary py-14 px-6">

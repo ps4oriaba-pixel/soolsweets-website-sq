@@ -7,7 +7,7 @@ import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import GalleryGrid from '@/components/gallery-grid'
 import Breadcrumb from '@/components/breadcrumb'
-import { getGallery, getAllSlugs, hasSizeGuide, getSizeGuideUrl } from '@/lib/gallery-data'
+import { getGallery, getAllSlugs, hasSizeGuide, getSizeGuideUrl, getCategoryForSlug } from '@/lib/gallery-data'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -62,7 +62,7 @@ export default async function GalleryPage({ params }: PageProps) {
         </section>
 
         {/* Breadcrumb */}
-        <Breadcrumb items={[{ label: 'קטגוריות', href: '/#categories' }, { label: gallery.title }]} />
+        <Breadcrumb items={[getCategoryForSlug(slug), { label: gallery.title }]} />
 
         {/* Description */}
         <section className="max-w-2xl mx-auto px-6 pb-8 text-center">

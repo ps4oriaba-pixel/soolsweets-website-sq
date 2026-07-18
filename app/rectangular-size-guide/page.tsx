@@ -31,7 +31,7 @@ export default function RectangularSizeGuidePage() {
 
       <main className="flex-1 pt-20">
         {/* Breadcrumb */}
-        <Breadcrumb items={[{ label: 'קטגוריות', href: '/#categories' }, { label: 'עוגה מלבנית מעוצבת', href: '/gallery/rectangular-cakes' }, { label: 'מדריך גדלים' }]} />
+        <Breadcrumb items={[{ label: 'עוגות מעוצבות', href: '/category/cakes' }, { label: 'עוגה מלבנית מעוצבת', href: '/gallery/rectangular-cakes' }, { label: 'מדריך גדלים' }]} />
 
         {/* Header */}
         <section className="bg-secondary py-14 px-6">

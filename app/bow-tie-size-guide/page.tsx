@@ -17,7 +17,7 @@ export default function BowTieSizeGuidePage() {
 
       <main className="flex-1 pt-20">
         {/* Breadcrumb */}
-        <Breadcrumb items={[{ label: 'קטגוריות', href: '/#categories' }, { label: 'עוגת פפיון', href: '/gallery/bow-tie-cakes' }, { label: 'מדריך גדלים' }]} />
+        <Breadcrumb items={[{ label: 'עוגות מעוצבות', href: '/category/cakes' }, { label: 'עוגת פפיון', href: '/gallery/bow-tie-cakes' }, { label: 'מדריך גדלים' }]} />
         <BowTieSizeGuideContent />
       </main>
 
