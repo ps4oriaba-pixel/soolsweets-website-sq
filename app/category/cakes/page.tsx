@@ -13,8 +13,8 @@ const products = [
     slug: 'custom-cakes',
   },
   {
-    title: 'עוגות וינטאג\'',
-    description: 'עיצוב רומנטי ועדין עם זילופי וינטאג', פפיונים, פרחים וגימורים אלגנטיים. מושלם לכל אירוע .',
+    title: "עוגות וינטאג'",
+    description: "עיצוב רומנטי ועדין עם זילופי וינטאג', פפיונים, פרחים וגימורים אלגנטיים. מושלם לכל אירוע.",
     image: '/images/gallery/vintage-1.png',
     slug: 'vintage-cakes',
   },
