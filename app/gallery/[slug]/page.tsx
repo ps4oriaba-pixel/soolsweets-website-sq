@@ -85,7 +85,7 @@ export default async function GalleryPage({ params }: PageProps) {
         {slug === 'mug-cakes' && (
           <section className="max-w-xl mx-auto px-6 pb-8">
             <div className="bg-accent/40 rounded-2xl border border-border p-6 text-center">
-              <p className="text-sm font-medium tracking-widest uppercase text-primary mb-3">
+              <p className="text-sm font-medium tracking-widest uppercase text-foreground mb-3">
                 כל ספל מגיע מוכן להפתעה עם
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-foreground font-semibold">
