@@ -336,10 +336,10 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'exploding-egg',
-    title: 'ביצת שוקול�� ענקית',
+    title: 'ביצת שוקולד ענקית',
     subtitle: '',
     description:
-      'תבנית שוקולד בצורת ביצה מגניבה.',
+      'חוויה מתוקה וייחודית - שוברים את ביצת השוקולד וחושפים שלל ממתקים ושוקולדים.',
     heroImage: '/images/category-special.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין ביצים מתנפצות!',
     images: [
