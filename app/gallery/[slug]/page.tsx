@@ -7,6 +7,7 @@ import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import GalleryGrid from '@/components/gallery-grid'
 import { BackButton } from '@/components/back-button'
+import Breadcrumb from '@/components/breadcrumb'
 import { getGallery, getAllSlugs, hasSizeGuide, getSizeGuideUrl } from '@/lib/gallery-data'
 
 interface PageProps {
@@ -62,23 +63,7 @@ export default async function GalleryPage({ params }: PageProps) {
         </section>
 
         {/* Breadcrumb */}
-        <nav className="max-w-6xl mx-auto px-6 py-4" aria-label="ניווט ארכיב">
-          <ol className="flex items-center gap-2 text-sm text-muted-foreground flex-wrap">
-            <li>
-              <Link href="/" className="hover:text-foreground transition-colors">
-                בית
-              </Link>
-            </li>
-            <li aria-hidden="true" className="text-muted-foreground/50">/</li>
-            <li>
-              <Link href="/#categories" className="hover:text-foreground transition-colors">
-                קטגוריות
-              </Link>
-            </li>
-            <li aria-hidden="true" className="text-muted-foreground/50">/</li>
-            <li className="text-foreground font-medium">{gallery.title}</li>
-          </ol>
-        </nav>
+        <Breadcrumb items={[{ label: 'קטגוריות', href: '/#categories' }, { label: gallery.title }]} />
 
         {/* Back Button */}
         <section className="max-w-2xl mx-auto px-6 pb-4">

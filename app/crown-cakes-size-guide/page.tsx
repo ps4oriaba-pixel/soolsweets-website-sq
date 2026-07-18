@@ -4,6 +4,7 @@ import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import HeartSizeModal from '@/components/heart-size-modal'
 import { BackButton } from '@/components/back-button'
+import Breadcrumb from '@/components/breadcrumb'
 
 export const metadata = {
   title: 'טבלת גדלי עוגות כתר | SoolSweets',
@@ -29,11 +30,7 @@ export default function CrownCakesSizeGuidePage() {
 
       <main className="flex-1 pt-20">
         {/* Breadcrumb */}
-        <section className="max-w-3xl mx-auto px-6 pt-6 pb-2">
-          <Link href="/gallery/crown-cakes" className="text-primary hover:text-primary/80 text-sm font-medium">
-            ← עוגות כתר
-          </Link>
-        </section>
+        <Breadcrumb items={[{ label: 'קטגוריות', href: '/#categories' }, { label: 'עוגות כתר', href: '/gallery/crown-cakes' }, { label: 'מדריך גדלים' }]} />
 
         {/* Header */}
         <section className="bg-secondary py-14 px-6">

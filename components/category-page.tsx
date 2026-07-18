@@ -5,6 +5,7 @@ import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import { hasSizeGuide, getSizeGuideUrl } from '@/lib/gallery-data'
 import { BackButton } from '@/components/back-button'
+import Breadcrumb from '@/components/breadcrumb'
 
 export interface Product {
   title: string
@@ -22,6 +23,7 @@ interface CategoryPageProps {
   description: string
   products: Product[]
   whatsappMessage: string
+  categoryLabel?: string
 }
 
 export default function CategoryPage({
@@ -32,6 +34,7 @@ export default function CategoryPage({
   description,
   products,
   whatsappMessage,
+  categoryLabel,
 }: CategoryPageProps) {
   return (
     <div className="min-h-screen flex flex-col">
@@ -63,10 +66,8 @@ export default function CategoryPage({
           </div>
         </section>
 
-        {/* Back Button */}
-        <section className="max-w-6xl mx-auto px-6 pt-8">
-          <BackButton />
-        </section>
+        {/* Breadcrumb */}
+        <Breadcrumb items={[{ label: categoryLabel ?? title }]} />
 
         {/* Intro */}
         <section className="max-w-3xl mx-auto px-6 py-8 text-center">

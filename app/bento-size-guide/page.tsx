@@ -3,6 +3,7 @@ import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import { BackButton } from '@/components/back-button'
+import Breadcrumb from '@/components/breadcrumb'
 
 export const metadata = {
   title: 'טבלת גדלי עוגות בנטו | SoolSweets',
@@ -33,11 +34,7 @@ export default function BentoSizeGuidePage() {
 
       <main className="flex-1 pt-20">
         {/* Breadcrumb */}
-        <section className="max-w-lg mx-auto px-6 pt-6 pb-2">
-          <Link href="/gallery/bento-cakes" className="text-primary hover:text-primary/80 text-sm font-medium">
-            ← עוגות בנטו
-          </Link>
-        </section>
+        <Breadcrumb items={[{ label: 'קטגוריות', href: '/#categories' }, { label: 'עוגות בנטו', href: '/gallery/bento-cakes' }, { label: 'מדריך גדלים' }]} />
 
         {/* Header */}
         <section className="bg-secondary py-14 px-6">

@@ -4,6 +4,7 @@ import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import { BackButton } from '@/components/back-button'
 import HeartSizeModal from '@/components/heart-size-modal'
+import Breadcrumb from '@/components/breadcrumb'
 
 interface SizeRow {
   servings: string
@@ -31,11 +32,7 @@ export default function RectangularSizeGuidePage() {
 
       <main className="flex-1 pt-20">
         {/* Breadcrumb */}
-        <section className="max-w-xl mx-auto px-6 pt-6 pb-2">
-          <Link href="/gallery/rectangular-cakes" className="text-primary hover:text-primary/80 text-sm font-medium">
-            ← עוגה מלבנית מעוצבת
-          </Link>
-        </section>
+        <Breadcrumb items={[{ label: 'קטגוריות', href: '/#categories' }, { label: 'עוגה מלבנית מעוצבת', href: '/gallery/rectangular-cakes' }, { label: 'מדריך גדלים' }]} />
 
         {/* Header */}
         <section className="bg-secondary py-14 px-6">

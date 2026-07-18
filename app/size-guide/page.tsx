@@ -4,6 +4,7 @@ import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import HeartSizeModal from '@/components/heart-size-modal'
 import { BackButton } from '@/components/back-button'
+import Breadcrumb from '@/components/breadcrumb'
 
 interface SizeRow {
   guests: string
@@ -25,11 +26,7 @@ export default function SizeGuidePage() {
 
       <main className="flex-1 pt-20">
         {/* Breadcrumb */}
-        <section className="max-w-3xl mx-auto px-6 pt-6 pb-2">
-          <Link href="/gallery/vintage-cakes" className="text-primary hover:text-primary/80 text-sm font-medium">
-            ← עוגות וינטאג'
-          </Link>
-        </section>
+        <Breadcrumb items={[{ label: 'קטגוריות', href: '/#categories' }, { label: "עוגות וינטאג'", href: '/gallery/vintage-cakes' }, { label: 'מדריך גדלים' }]} />
 
         {/* Header */}
         <section className="bg-secondary py-14 px-6">
