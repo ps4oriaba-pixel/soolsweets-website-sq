@@ -49,7 +49,7 @@ const galleries: GalleryData[] = [
     slug: 'sweet-sixteen',
     title: 'עסקים',
     subtitle: '',
-    description:  הדרך המתוקה להוקיר, להפתיע ולהשאיר רושם',
+    description: ' הדרך המתוקה להוקיר, להפתיע ולהשאיר רושם',
     heroImage: '/images/box-birthday.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז עסקי ',
     images: [
@@ -63,7 +63,7 @@ const galleries: GalleryData[] = [
     slug: 'bar-bat-mitzvah',
     title: 'מארז בהתאמה אישית',
     subtitle: '',
-    description: 'בחרו את הקינוחים, הצבעים והכיתוב – ואנחנו ניצור עבורכם מארז ייחודי בדיוק כמו שדמיינתם.',
+    description: "",
     heroImage: '/images/category-boxes.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז בהתאמה אישית!',
     images: [
