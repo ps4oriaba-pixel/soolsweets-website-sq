@@ -85,9 +85,7 @@ export default function CrownCakesSizeGuidePage() {
           </p>
 
           <p className="text-center text-sm text-muted-foreground mt-4 leading-relaxed">
-            <span className="text-primary font-semibold">*</span> כל הגדלים המוצעים מתאימים לעוגה עגולה. עבור עוגת לב&nbsp;
-            <HeartSizeModal />
-            &nbsp;יש להוריד 2-4 פרוסות מהגודל המומלץ.
+            <span className="text-primary font-semibold">*</span> עגולה
           </p>
         </section>
 
