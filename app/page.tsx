@@ -132,7 +132,7 @@ export default function HomePage() {
         <section className="bg-secondary py-16 px-6">
           <div className="max-w-3xl mx-auto text-center">
             <p className="font-serif text-2xl md:text-3xl font-bold text-foreground leading-relaxed text-balance mb-6">
-              ״כל יצירה נעשית מתוך אהבה גדולה למקצוע, בדגש על חומרי גלם איכותיים – לא רק יופי, אלא גם טעם בלתי נשכח - הטעמים שעושים את ההבדל, עם העיצובים שכולם ידברו עליהם״.
+              ״כל יצירה נעשית מתוך אהבה גדולה למקצוע, בדגש על חומרי גלם איכותיים. לא רק יופי, אלא גם טעם בלתי נשכח - הטעמים שעושים את ההבדל, עם העיצובים שכולם ידברו עליהם״.
             </p>
             <p className="text-foreground/60 font-medium mb-8">— סלעית, SoolSweets</p>
             <WhatsAppButton message="היי סלעית, אשמח לשמוע עוד!" />
