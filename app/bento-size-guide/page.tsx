@@ -48,7 +48,6 @@ export default function BentoSizeGuidePage() {
               מדריך לבחירת גודל העוגה
             </h1>
             <p className="text-lg text-foreground/70 leading-relaxed">
-              עוגות בנטו מלאות בעוד 40 טעמים בתוך כל כוס. בחרו את הגודל המושלם לאירוע האינטימי שלכם.
             </p>
           </div>
         </section>
