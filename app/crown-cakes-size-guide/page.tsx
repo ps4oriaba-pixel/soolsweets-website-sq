@@ -39,7 +39,6 @@ export default function CrownCakesSizeGuidePage() {
         <section className="bg-secondary py-14 px-6">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">
-              מדריך גדלים
             </p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground text-balance mb-4">
               עוגות כתר
