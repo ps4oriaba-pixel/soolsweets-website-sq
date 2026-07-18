@@ -33,6 +33,13 @@ const products = [
     image: '/images/cake-tiered.png',
     slug: 'tiered-cakes',
   },
+  {
+    title: 'עוגות דף נשרף',
+    description: 'הטרנד שכולם מדברים עליו – שורפים את הדף וחושפים הקדשה, תמונה או הפתעה מרגשת.',
+    image: '/images/category-special.png',
+    note: 'וואו-אפקט',
+    slug: 'burnt-paper-cakes',
+  },
 ]
 
 export default function SpecialPage() {
