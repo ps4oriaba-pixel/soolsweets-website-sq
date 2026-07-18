@@ -95,7 +95,7 @@ export default function BentoSizeGuidePage() {
           </p>
 
           <p className="text-center text-sm text-muted-foreground mt-4 leading-relaxed">
-            <span className="text-primary font-semibold">*</span> עגולה
+            <span className="text-primary font-semibold">*</span> כל הגדלים המוצעים מתאימים לעוגה עגולה.
           </p>
         </section>
 
