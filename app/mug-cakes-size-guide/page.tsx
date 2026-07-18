@@ -6,7 +6,7 @@ import { BackButton } from '@/components/back-button'
 export const metadata = {
   title: 'טבלת גדלי ספל שכולו אושר | SoolSweets',
   description:
-    'ספל שכולו אושר מעוצב - כל ספל מגיע מוכן להפתעה עם כפית משוקולד, נר צבעוני וארוז בקופסה שקופה ומרשימה.',
+    'ספל שכולו אושר מעוצב - עוגת שוקולד/וניל בכוס אישית, עם קצפת, תוספות מתוקות וקישוט לבחירה – הפתעה מושלמת לרגעים ספונטניים.',
 }
 
 interface SizeRow {
@@ -45,7 +45,7 @@ export default function MugCakesSizeGuidePage() {
               ספל שכולו אושר
             </h1>
             <p className="text-lg text-foreground/70 leading-relaxed">
-              כל ספל מגיע מוכן להפתעה עם כפית משוקולד, נר צבעוני וארוז בקופסה שקופה ומרשימה.
+              עוגת שוקולד/וניל בכוס אישית, עם קצפת, תוספות מתוקות וקישוט לבחירה – הפתעה מושלמת לרגעים ספונטניים.
             </p>
           </div>
         </section>
