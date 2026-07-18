@@ -63,7 +63,7 @@ const products = [
   },
   {
     title: 'עוגות דף נשרף',
-    description: 'עוגה עם דף אכיל שנשרף בלהבה לחשוף תמונה מתחתיו – חוויה שתשאיר את כולם פעורי פה.',
+    description: 'הטרנד שכולם מדברים עליו – שורפים את הדף וחושפים הקדשה, תמונה או הפתעה מרגשת',
     image: '/images/category-special.png',
     note: 'וואו-אפקט',
     slug: 'burnt-paper-cakes',
