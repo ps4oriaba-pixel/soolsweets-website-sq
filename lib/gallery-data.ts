@@ -122,9 +122,6 @@ const galleries: GalleryData[] = [
     ],
   },
 
-
-
-
   {
     slug: 'vintage-cakes',
     title: 'עוגות וינטאג\'',

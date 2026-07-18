@@ -7,22 +7,16 @@ export const metadata = {
 
 const products = [
   {
-    title: 'עוגות כתר',
-    description: 'עוגה בעיצוב מלכותי עם כתר נוצץ, פפיונים ונצנצים שמתפזרים באפקט מרהיב – לחגיגה שכולה זוהר.',
-    image: '/images/gallery/vintage-1.png',
-    slug: 'crown-cakes',
+    title: 'עוגות בעיצוב אישי',
+    description: 'העלו כל רעיון – ואני אגשים אותו. עוגה שמספרת את הסיפור שלכם.',
+    image: '/images/hero.png',
+    slug: 'custom-cakes',
   },
   {
     title: 'עוגות וינטאג\'',
-    description: 'עיצוב רומנטי ועדין עם זילופי וינטאג’, פפיונים, פרחים וגימורים אלגנטיים. מושלם לכל אירוע .',
+    description: 'עיצוב רומנטי ועדין עם זילופי וינטאג', פפיונים, פרחים וגימורים אלגנטיים. מושלם לכל אירוע .',
     image: '/images/gallery/vintage-1.png',
     slug: 'vintage-cakes',
-  },
-  {
-    title: 'עוגות מוס',
-    description: 'שכבות מוס עשירות במגוון טעמים, במרקם קטיפתי ובמראה אלגנטי – חוויה מושלמת בכל ביס',
-    image: '/images/category-cakes.png',
-    slug: 'mousse-cakes',
   },
   {
     title: 'עוגות בנטו',
@@ -37,29 +31,28 @@ const products = [
     slug: 'rectangular-cakes',
   },
   {
-    title: 'עוגת פפיון',
-    description: 'עוגות בעיצוב אלגנטי עם פפיונים מרשימים  מבצק סוכר – שילוב מושלם של יוקרה, עדינות וסטייל.',
-    image: '/images/cake-bow-tie.png',
-    slug: 'bow-tie-cakes',
-  },
-  {
-    title: 'עוגות בעיצוב אישי',
-    description: 'העלו כל רעיון – ואני אגשים אותו. עוגה שמספרת את הסיפור שלכם.',
-    image: '/images/hero.png',
-    slug: 'custom-cakes',
-  },
-  {
     title: 'עוגות מספרים',
     description: 'עוגות מספר או אות מבצק שקדים או עוגת שוקולד אפויה, המעוטרות בקרם מסקרפונה עשיר, שוקולדים ואלמנטים מעוצבים בהתאמה אישית.',
     image: '/images/cake-numbers.png',
     slug: 'number-cakes',
   },
   {
-    title: 'ספל שכולו אושר',
-    description: 'עוגת שוקולד/וניל בכוס אישית, עם קצפת, תוספות מתוקות וקישוט לבחירה – הפתעה מושלמת לרגעים ספונטניים.',
-    image: '/images/gallery/bento-2.png',
-    note: 'בהתראה קצרה',
-    slug: 'mug-cakes',
+    title: 'עוגת פפיון',
+    description: 'עוגות בעיצוב אלגנטי עם פפיונים מרשימים  מבצק סוכר – שילוב מושלם של יוקרה, עדינות וסטייל.',
+    image: '/images/cake-bow-tie.png',
+    slug: 'bow-tie-cakes',
+  },
+  {
+    title: 'עוגות כתר',
+    description: 'עוגה בעיצוב מלכותי עם כתר נוצץ, פפיונים ונצנצים שמתפזרים באפקט מרהיב – לחגיגה שכולה זוהר.',
+    image: '/images/gallery/vintage-1.png',
+    slug: 'crown-cakes',
+  },
+  {
+    title: 'עוגות מוס',
+    description: 'שכבות מוס עשירות במגוון טעמים, במרקם קטיפתי ובמראה אלגנטי – חוויה מושלמת בכל ביס',
+    image: '/images/category-cakes.png',
+    slug: 'mousse-cakes',
   },
   {
     title: 'עוגות דף נשרף',
@@ -67,6 +60,13 @@ const products = [
     image: '/images/category-special.png',
     note: 'וואו-אפקט',
     slug: 'burnt-paper-cakes',
+  },
+  {
+    title: 'ספל שכולו אושר',
+    description: 'עוגת שוקולד/וניל בכוס אישית, עם קצפת, תוספות מתוקות וקישוט לבחירה – הפתעה מושלמת לרגעים ספונטניים.',
+    image: '/images/gallery/bento-2.png',
+    note: 'בהתראה קצרה',
+    slug: 'mug-cakes',
   },
 ]
 
