@@ -147,7 +147,7 @@ export default function BowTieSizeGuideContent() {
               </div>
             </DialogContent>
           </Dialog>
-          &nbsp;יש להוריד 2-4 פרוסות מהגודל המומלץ.
+          &nbsp;
         </p>
       </section>
     </>
