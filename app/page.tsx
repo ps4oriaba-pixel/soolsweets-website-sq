@@ -9,8 +9,9 @@ const categories = [
   {
     href: '/category/cakes',
     title: 'עוגות מעוצבות',
-    description: 'העוגה שתהפוך את החגיגה לבלתי נשכחת. עוגות וינטאג׳, מוס, בנטו, מספרים ועיצוב אישי לכל אירוע',
-    image: '/images/category-cakes.png',
+description: `העוגה שתהפוך את החגיגה לבלתי נשכחת.
+עוגות וינטאג׳, מוס, בנטו, מספרים ועיצוב אישי לכל אירוע`,  
+  image: '/images/category-cakes.png',
   },
   {
     href: '/category/boxes',
