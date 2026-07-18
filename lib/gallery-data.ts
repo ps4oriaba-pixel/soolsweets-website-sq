@@ -311,7 +311,7 @@ const galleries: GalleryData[] = [
     title: 'כדורגל שוקולד',
     subtitle: '',
     description:
-      'קינוח מושלם לחובבי הכדורגל, שבפנים מ��תתר אוצר של ממתקים.',
+      'קינוח מושלם לחובבי הכדורגל, שבפנים מסתתר אוצר של ממתקים.',
     heroImage: '/images/gallery/choc-ball-1.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין כדורי שוקולד מתנפצים!',
     images: [
