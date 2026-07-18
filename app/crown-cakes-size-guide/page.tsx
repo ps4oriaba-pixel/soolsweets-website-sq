@@ -16,11 +16,10 @@ interface SizeRow {
 }
 
 const rows: SizeRow[] = [
-  { guests: '5-8 אנשים',   size: 'קוטר 12, 2-3 שכבות' },
-  { guests: '8-14 אנשים',  size: 'קוטר 14, 2-3 שכבות' },
-  { guests: '14-20 אנשים', size: 'קוטר 16, 2-3 שכבות' },
-  { guests: '18-22 אנשים', size: 'קוטר 18, 2-3 שכבות' },
-  { guests: '24-28 אנשים', size: 'קוטר 20, 2-3 שכבות' },
+  { guests: '12-14 אנשים', size: 'קוטר 14, 3 שכבות' },
+  { guests: '18-20 אנשים', size: 'קוטר 16, 3 שכבות' },
+  { guests: '22-24 אנשים', size: 'קוטר 18, 3 שכבות' },
+  { guests: '26-28 אנשים', size: 'קוטר 20, 3 שכבות' },
 ]
 
 export default function CrownCakesSizeGuidePage() {
