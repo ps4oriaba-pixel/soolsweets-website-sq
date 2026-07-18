@@ -19,8 +19,7 @@ const galleries: GalleryData[] = [
     slug: 'boxes-events',
     title: 'רגעים ששווה לחגוג',
     subtitle: '',
-    description:
-      'ימי הולדת, Sweet 16, בר/בת מצווה, גילוי מין העובר, ברית ובריתה, לידה, חתונה ואירוסין, הצעת נישואין, יום נישואין, גיוס ועוד..',
+    description:"",
     heroImage: '/images/gallery/boxes-events-1.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לאירוע מיוחד שיש לי בקרוב',
     images: [
@@ -36,7 +35,7 @@ const galleries: GalleryData[] = [
     title: 'חגים',
     subtitle: '',
     description:
-      'כי לכל חג מגיע מארז מיוחד. מתוקים מעוצבים לחגים ולאירועים לאורך כל השנה',
+      'כי לכל חג מגיע מארז מיוחד. ',
     heroImage: '/images/gallery/gender-reveal-1.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לחג  ',
     images: [
