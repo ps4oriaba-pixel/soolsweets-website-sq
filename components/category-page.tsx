@@ -4,7 +4,6 @@ import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import { hasSizeGuide, getSizeGuideUrl } from '@/lib/gallery-data'
-import { BackButton } from '@/components/back-button'
 import Breadcrumb from '@/components/breadcrumb'
 
 export interface Product {

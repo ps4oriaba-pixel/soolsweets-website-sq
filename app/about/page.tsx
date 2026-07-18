@@ -2,7 +2,6 @@ import Image from 'next/image'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
-import { BackButton } from '@/components/back-button'
 
 export const metadata = {
   title: 'קצת עליי | SoolSweets',
@@ -34,11 +33,6 @@ export default function AboutPage() {
               קצת עליי
             </h1>
           </div>
-        </section>
-
-        {/* Back Button */}
-        <section className="max-w-5xl mx-auto px-6 pt-8">
-          <BackButton />
         </section>
 
         {/* About Content */}

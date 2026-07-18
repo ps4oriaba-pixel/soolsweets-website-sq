@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
-import { BackButton } from '@/components/back-button'
 import Breadcrumb from '@/components/breadcrumb'
 
 export const metadata = {
@@ -47,11 +46,6 @@ export default function BentoSizeGuidePage() {
             <p className="text-lg text-foreground/70 leading-relaxed">
             </p>
           </div>
-        </section>
-
-        {/* Table */}
-        <section className="max-w-lg mx-auto px-6 pt-14 pb-4">
-          <BackButton />
         </section>
 
         <section className="max-w-lg mx-auto px-6 py-14">

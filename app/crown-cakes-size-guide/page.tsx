@@ -3,7 +3,6 @@ import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import HeartSizeModal from '@/components/heart-size-modal'
-import { BackButton } from '@/components/back-button'
 import Breadcrumb from '@/components/breadcrumb'
 
 export const metadata = {
@@ -45,11 +44,6 @@ export default function CrownCakesSizeGuidePage() {
               בהתאם למספר האורחים ולסוג האירוע.
             </p>
           </div>
-        </section>
-
-        {/* Back Button */}
-        <section className="max-w-2xl mx-auto px-6 pt-14 pb-4">
-          <BackButton />
         </section>
 
         {/* Table */}

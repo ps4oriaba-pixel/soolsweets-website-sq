@@ -2,7 +2,6 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
-import { BackButton } from '@/components/back-button'
 import Breadcrumb from '@/components/breadcrumb'
 
 export const metadata = {
@@ -52,11 +51,6 @@ export default function MugCakesSizeGuidePage() {
               עוגת שוקולד/וניל בכוס אישית, עם קצפת, תוספות מתוקות וקישוט לבחירה – הפתעה מושלמת לרגעים ספונטניים.
             </p>
           </div>
-        </section>
-
-        {/* Back Button */}
-        <section className="max-w-xl mx-auto px-6 pt-14 pb-4">
-          <BackButton />
         </section>
 
         {/* Table */}

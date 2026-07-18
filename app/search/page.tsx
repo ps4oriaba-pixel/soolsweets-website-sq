@@ -6,7 +6,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
-import { BackButton } from '@/components/back-button'
 
 
 interface SearchResult {
@@ -85,11 +84,6 @@ function SearchResults() {
               </button>
             </form>
           </div>
-        </section>
-
-        {/* Back Button */}
-        <section className="max-w-6xl mx-auto px-6 pt-8 pb-0">
-          <BackButton />
         </section>
 
         {/* Results */}

@@ -6,7 +6,6 @@ import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import GalleryGrid from '@/components/gallery-grid'
-import { BackButton } from '@/components/back-button'
 import Breadcrumb from '@/components/breadcrumb'
 import { getGallery, getAllSlugs, hasSizeGuide, getSizeGuideUrl } from '@/lib/gallery-data'
 
@@ -64,11 +63,6 @@ export default async function GalleryPage({ params }: PageProps) {
 
         {/* Breadcrumb */}
         <Breadcrumb items={[{ label: 'קטגוריות', href: '/#categories' }, { label: gallery.title }]} />
-
-        {/* Back Button */}
-        <section className="max-w-2xl mx-auto px-6 pb-4">
-          <BackButton />
-        </section>
 
         {/* Description */}
         <section className="max-w-2xl mx-auto px-6 pb-8 text-center">
