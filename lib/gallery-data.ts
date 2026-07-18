@@ -105,6 +105,26 @@ const galleries: GalleryData[] = [
   },
 
   // ── עוגות ────────────────────────────────────────────────
+{
+    slug: 'custom-cakes',
+    title: 'עוגות בעיצוב אישי',
+    subtitle: 'העלו כל רעיון – ואני אגשים אותו',
+    description:
+      'עוגה שמספרת את הסיפור שלכם. העלו רעיון או תמונה וביחד ניצור משהו שלא קיים עדיין.',
+    heroImage: '/images/hero.png',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגה בעיצוב אישי!',
+    images: [
+      { src: '/images/hero.png', alt: 'עוגות בעיצוב אישי' },
+      { src: '/images/cake-vintage.png', alt: 'עוגה אישית' },
+      { src: '/images/gallery/vintage-1.png', alt: 'עיצוב מיוחד' },
+      { src: '/images/gallery/bento-3.png', alt: 'עוגה ��ם הקדשה' },
+      { src: '/images/category-cakes.png', alt: 'מגוון עוגות' },
+    ],
+  },
+
+
+
+
   {
     slug: 'vintage-cakes',
     title: 'עוגות וינטאג\'',
@@ -178,22 +198,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/vintage-2.png', alt: 'עוגה מעוצבת' },
     ],
   },
-  {
-    slug: 'custom-cakes',
-    title: 'עוגות בעיצוב אישי',
-    subtitle: 'העלו כל רעיון – ואני אגשים אותו',
-    description:
-      'עוגה שמספרת את הסיפור שלכם. העלו רעיון או תמונה וביחד ניצור משהו שלא קיים עדיין.',
-    heroImage: '/images/hero.png',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגה בעיצוב אישי!',
-    images: [
-      { src: '/images/hero.png', alt: 'עוגות בעיצוב אישי' },
-      { src: '/images/cake-vintage.png', alt: 'עוגה אישית' },
-      { src: '/images/gallery/vintage-1.png', alt: 'עיצוב מיוחד' },
-      { src: '/images/gallery/bento-3.png', alt: 'עוגה ��ם הקדשה' },
-      { src: '/images/category-cakes.png', alt: 'מגוון עוגות' },
-    ],
-  },
+  
   {
     slug: 'number-cakes',
     title: 'עוגות מספרים',
