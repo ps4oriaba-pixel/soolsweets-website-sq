@@ -13,7 +13,7 @@ const products = [
     slug: 'cup-desserts',
   },
   {
-    title: 'מארזי קרמבל',
+    title: 'מארזי קראמבל',
     description: "מארזי עוגיות קראמבל, במגוון טעמים מטורף שיגרום לכם להתמכר מהביס הראשון . קינדר, לוטוס, ריבת חלב, פיסטוק, בייגלה, נוטלה, סוכריות צבעוניות, מרשמלו ועוד.",
     image: '/images/gallery/cups-3.png',
     slug: 'crumble-desserts',

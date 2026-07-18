@@ -19,7 +19,7 @@ const galleries: GalleryData[] = [
     slug: 'boxes-events',
     title: 'רגעים ששווה לחגוג',
     subtitle: '',
-    description:"",
+    description: "",
     heroImage: '/images/gallery/boxes-events-1.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לאירוע מיוחד שיש לי בקרוב',
     images: [
@@ -104,7 +104,7 @@ const galleries: GalleryData[] = [
   },
 
   // ── עוגות ────────────────────────────────────────────────
-{
+  {
     slug: 'custom-cakes',
     title: 'עוגות בעיצוב אישי',
     subtitle: 'העלו כל רעיון – ואני אגשים אותו',
@@ -194,7 +194,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/vintage-2.png', alt: 'עוגה מעוצבת' },
     ],
   },
-  
+
   {
     slug: 'number-cakes',
     title: 'עוגות מספרים',
@@ -268,20 +268,20 @@ const galleries: GalleryData[] = [
     images: [
       { src: '/images/gallery/cups-1.png', alt: 'מארז כוסות קינוח' },
       { src: '/images/gallery/cups-2.png', alt: 'כוס קינוח אישית' },
-      { src: '/images/gallery/cups-3.png', alt: 'קרמבל בכוס' },
+      { src: '/images/gallery/cups-3.png', alt: 'קראמבל בכוס' },
       { src: '/images/category-desserts.png', alt: 'קינוחים' },
     ],
   },
   {
     slug: 'crumble-desserts',
-    title: 'מארזי קרמבל',
-    subtitle: 'פריכות, קרמי, ממכר',
-   description: "מארזי עוגיות קראמבל, במגוון טעמים מטורף שיגרום לכם להתמכר מהביס הראשון . קינדר, לוטוס, ריבת חלב, פיסטוק, בייגלה, נוטלה, סוכריות צבעוניות, מרשמלו ועוד.",
+    title: 'מארזי קראמבל',
+    subtitle: "",
+    description: "מארזי עוגיות קראמבל, במגוון טעמים מטורף שיגרום לכם להתמכר מהביס הראשון . קינדר, לוטוס, ריבת חלב, פיסטוק, בייגלה, נוטלה, סוכריות צבעוניות, מרשמלו ועוד.",
     heroImage: '/images/gallery/cups-3.png',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין מארזי קרמבל!',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין מארזי קראמבל!',
     images: [
-      { src: '/images/gallery/cups-3.png', alt: 'קרמבל בכוס' },
-      { src: '/images/gallery/cups-2.png', alt: 'קינוח קרמבל' },
+      { src: '/images/gallery/cups-3.png', alt: 'קראמבל בכוס' },
+      { src: '/images/gallery/cups-2.png', alt: 'קינוח קראמבל' },
       { src: '/images/gallery/cups-1.png', alt: 'מארז קינוחים' },
       { src: '/images/category-desserts.png', alt: 'קינוחים מעוצבים' },
     ],
