@@ -109,7 +109,7 @@ const galleries: GalleryData[] = [
     slug: 'vintage-cakes',
     title: 'עוגות וינטאג\'',
     subtitle: 'רומנטיקה, עדינות ואווירה של פעם',
-    description: " עיצוב רומנטי ועדין עם זילופי וינטאג’, פפיונים, פרחים וגימורים אלגנטיים. מושלם לכל אירוע מיוחד.",
+    description: " עיצוב רומנטי ועדין עם זילופי וינטאג’, פפיונים, פרחים וגימורים אלגנטיים. מושלם לכל אירוע .",
     heroImage: '/images/gallery/vintage-1.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת וינטאג\'!',
     images: [
