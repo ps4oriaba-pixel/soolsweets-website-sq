@@ -30,6 +30,13 @@ export default function NumberSizeGuidePage() {
       <Navbar />
 
       <main className="flex-1 pt-20">
+        {/* Breadcrumb */}
+        <section className="max-w-xl mx-auto px-6 pt-6 pb-2">
+          <Link href="/gallery/number-cakes" className="text-primary hover:text-primary/80 text-sm font-medium">
+            ← עוגות מספרים
+          </Link>
+        </section>
+
         {/* Header */}
         <section className="bg-secondary py-14 px-6">
           <div className="max-w-3xl mx-auto text-center">

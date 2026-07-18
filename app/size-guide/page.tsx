@@ -24,13 +24,21 @@ export default function SizeGuidePage() {
       <Navbar />
 
       <main className="flex-1 pt-20">
+        {/* Breadcrumb */}
+        <section className="max-w-3xl mx-auto px-6 pt-6 pb-2">
+          <Link href="/gallery/vintage-cakes" className="text-primary hover:text-primary/80 text-sm font-medium">
+            ← עוגות וינטאג'
+          </Link>
+        </section>
+
         {/* Header */}
         <section className="bg-secondary py-14 px-6">
           <div className="max-w-3xl mx-auto text-center">
             <p className="text-primary font-medium tracking-widest uppercase text-sm mb-3">
+              מדריך גדלים
             </p>
             <h1 className="font-serif text-4xl md:text-5xl font-bold text-foreground text-balance mb-4">
-            מדריך לבחירת גודל העוגה
+              טבלת גדלי עוגות וינטאג'
             </h1>
             <p className="text-lg text-foreground/70 leading-relaxed">
               לא בטוחים איזה גודל להזמין? הטבלה הבאה תעזור לכם לבחור את העוגה המושלמת
