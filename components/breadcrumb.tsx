@@ -15,8 +15,8 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
       aria-label="breadcrumb"
       className="w-full bg-secondary/50 border-b border-border/20"
     >
-      <div className="max-w-6xl mx-auto px-6 py-3 flex justify-end" dir="rtl">
-        <ol className="flex items-center gap-2 text-sm flex-wrap">
+      <div className="max-w-6xl mx-auto px-6 py-3 flex justify-start" dir="rtl">
+        <ol className="flex items-center gap-3 text-base flex-wrap">
           <li>
             <Link href="/" className="text-foreground/70 hover:text-foreground transition-colors">
               בית
