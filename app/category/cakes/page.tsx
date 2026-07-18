@@ -32,7 +32,7 @@ const products = [
   },
   {
     title: 'עוגה מלבנית מעוצבת',
-    description: 'עיצוב מודרני ונקי בפורמט מלבני – אלגנטי ומרשים לכל שולחן.',
+    description: 'מושלמת לאירועים גדולים ולחגיגות משפחתיות – בעיצו�� מוקפד ובהתאמה אישית לכל סגנון',
     image: '/images/category-cakes.png',
     slug: 'rectangular-cakes',
   },
