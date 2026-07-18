@@ -36,7 +36,7 @@ export default function BoxesPage() {
   return (
     <CategoryPage
       title="מארזים מעוצבים"
-      subtitle="מתנה שנזכרים בה – מארזים בהתאמה אישית לכל אירוע"
+      subtitle="מארזים בהתאמה אישית לכל אירוע"
       heroImage="/images/category-boxes.png"
       heroAlt="מארזים מעוצבים של SoolSweets"
       description=" מארזים מעוצבים - המתנה שתגרום למי שמקבל אותה להתרגש כבר מהרגע הראשון.
