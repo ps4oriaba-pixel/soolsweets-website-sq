@@ -229,7 +229,7 @@ const galleries: GalleryData[] = [
   {
     slug: 'mug-cakes',
     title: 'ספל שכולו אושר',
-    subtitle: 'טעימה, מרשימה – ומוכנה מהר',
+    subtitle: "",
     description:
       'עוגת שוקולד/וניל בכוס אישית, עם קצפת, תוספות מתוקות וקישוט לבחירה – הפתעה מושלמת לרגעים ספונטניים.',
     heroImage: '/images/cake-bento.png',
