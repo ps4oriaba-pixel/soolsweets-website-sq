@@ -287,13 +287,29 @@ const galleries: GalleryData[] = [
     ],
   },
 
+  {
+    slug: 'dedicated-dessert-boxes',
+    title: 'מארזי קינוח ייעודיים',
+    subtitle: 'כשאוהבים קינוח אחד, מזמינים מארז שלם ממנו',
+    description:
+      'אוהבים קינוח מסוים? לפעמים אין צורך בשילוב. תוכלו להזמין מארז שלם של קרם ברולה, דונאטס, קאפקייקס, קייק פופ, מגנומים ועוד.',
+    heroImage: '/images/category-desserts.png',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז קינוח ייעודי!',
+    images: [
+      { src: '/images/category-desserts.png', alt: 'מארז קינוח ייעודי' },
+      { src: '/images/gallery/cups-1.png', alt: 'קינוחים אישיים' },
+      { src: '/images/gallery/cups-2.png', alt: 'מארז קינוחים' },
+      { src: '/images/gallery/cups-3.png', alt: 'קינוחי כוסות' },
+    ],
+  },
+
   // ── עיצובים מיוחדים ──────────────────────────────────────
   {
     slug: 'chocolate-ball',
     title: 'כדורגל שוקולד',
     subtitle: '',
     description:
-      'קינוח מושלם לחובבי הכדורגל, שבפנים מסתתר אוצר של ממתקים.',
+      'קינוח מושלם לחובבי הכדורגל, שבפנים מ��תתר אוצר של ממתקים.',
     heroImage: '/images/gallery/choc-ball-1.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין כדורי שוקולד מתנפצים!',
     images: [

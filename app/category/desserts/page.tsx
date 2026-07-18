@@ -18,6 +18,12 @@ const products = [
     image: '/images/gallery/cups-3.png',
     slug: 'crumble-desserts',
   },
+  {
+    title: 'מארזי קינוח ייעודיים',
+    description: 'אוהבים קינוח מסוים? לפעמים אין צורך בשילוב. תוכלו להזמין מארז שלם של קרם ברולה, דונאטס, קאפקייקס, קייק פופ, מגנומים ועוד.',
+    image: '/images/category-desserts.png',
+    slug: 'dedicated-dessert-boxes',
+  },
 ]
 
 export default function DessertsPage() {
