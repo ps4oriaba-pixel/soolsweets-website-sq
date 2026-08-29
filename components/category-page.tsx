@@ -84,8 +84,8 @@ export default function CategoryPage({
               >
                 {/* Clickable image → gallery page. Fixed aspect-[4/5] frame keeps
                     every card the same size regardless of the photo's own
-                    dimensions; object-contain ensures the full photo is always
-                    visible with no cropping. */}
+                    dimensions; object-cover fills the whole frame edge-to-edge
+                    with no empty margins. */}
                 <Link
                   href={`/gallery/${product.slug}`}
                   className="relative aspect-[4/5] overflow-hidden block group bg-card"
@@ -95,7 +95,7 @@ export default function CategoryPage({
                     src={product.image}
                     alt={product.title}
                     fill
-                    className="object-contain object-center group-hover:scale-105 transition-transform duration-500"
+                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
                   {product.note && (
                     <span className="absolute top-3 right-3 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full z-10">
