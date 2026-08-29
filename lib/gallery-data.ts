@@ -200,7 +200,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/custom-design/IMG_7820.webp', alt: 'עוגה בעיצוב אישי - תמונה 85' },
       { src: '/images/gallery/custom-design/IMG_7856.webp', alt: 'עוגה בעיצוב אישי - תמונה 86' },
       { src: '/images/gallery/custom-design/IMG_7890.webp', alt: 'עוגה בעיצוב אישי - תמונה 87' },
-      { src: '/images/gallery/custom-design/IMG_7998.webp', alt: 'עוגה בעיצוב אישי - ת������������������ונה 88' },
+      { src: '/images/gallery/custom-design/IMG_7998.webp', alt: 'עוגה בעיצוב אישי - ת��������������������ונה 88' },
       { src: '/images/gallery/custom-design/IMG_8103.webp', alt: 'עוגה בעיצוב אישי - תמונה 89' },
       { src: '/images/gallery/custom-design/IMG_8343.webp', alt: 'עוגה בעיצוב אישי - תמונה 90' },
       { src: '/images/gallery/custom-design/IMG_8393.webp', alt: 'עוגה בעיצו�� אישי - תמונה 91' },
@@ -369,7 +369,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/bento-cakes/IMG_4247.webp', alt: 'עו��ת בנטו - תמונה 30' },
       { src: '/images/gallery/bento-cakes/IMG_4282.webp', alt: 'עוגת בנטו - תמונה 31' },
       { src: '/images/gallery/bento-cakes/IMG_4617.webp', alt: 'עוגת בנטו - תמונה 32' },
-      { src: '/images/gallery/bento-cakes/IMG_4624.webp', alt: 'עוגת בנטו - תמונה 33' },
+      { src: '/images/gallery/bento-cakes/IMG_4624.webp', alt: 'עוגת בנט�� - תמונה 33' },
       { src: '/images/gallery/bento-cakes/IMG_4636.webp', alt: 'עוגת בנטו - תמונה 34' },
       { src: '/images/gallery/bento-cakes/IMG_5385.webp', alt: 'עוגת בנטו - תמונה 35' },
       { src: '/images/gallery/bento-cakes/IMG_5605.webp', alt: 'עוגת בנטו - תמונה 36' },
@@ -693,7 +693,7 @@ export function getCategoryForSlug(slug: string): { label: string; href: string 
   const boxesSlugs = ['boxes-events', 'gender-reveal', 'sweet-sixteen', 'bar-bat-mitzvah', 'branded-boxes', 'holiday-boxes']
   const cakesSlugs = ['custom-cakes', 'vintage-cakes', 'mousse-cakes', 'bento-cakes', 'rectangular-cakes', 'bow-tie-cakes', 'number-cakes', 'crown-cakes', 'mug-cakes', 'burnt-paper-cakes']
   const dessertsSlugs = ['cup-desserts', 'crumble-desserts', 'dedicated-dessert-boxes']
-  const specialSlugs = ['choc-ball', 'candy-pop', 'broken-egg', 'tiered-cakes', 'burnt-paper-cakes']
+  const specialSlugs = ['chocolate-ball', 'exploding-candy', 'exploding-egg', 'tiered-cakes', 'burnt-paper-cakes']
 
   if (boxesSlugs.includes(slug)) return { label: 'מארזים מעוצבים', href: '/category/boxes' }
   if (cakesSlugs.includes(slug)) return { label: 'עוגות מעוצבות', href: '/category/cakes' }
