@@ -17,7 +17,7 @@ const products = [
   {
     title: 'סוכריה גדולה ומתוקה',
     description: 'תבנית שוקולד במראה של סוכריה ענקית שמסתירה בתוכה מגוון הפתעות וממתקים.',
-    image: '/images/category-special.png',
+    image: '/images/gallery/exploding-candy/20240303_001606.webp',
     slug: 'exploding-candy',
   },
   {
