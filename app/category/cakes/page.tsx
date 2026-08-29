@@ -27,7 +27,7 @@ const products = [
   {
     title: 'עוגה מלבנית מעוצבת',
     description: 'מושלמת לאירועים גדולים ולחגיגות משפחתיות – בעיצוב מוקפד ובהתאמה אישית לכל סגנון.',
-    image: '/images/category-cakes.png',
+    image: '/images/gallery/rectangular-cakes/20240119_085307.webp',
     slug: 'rectangular-cakes',
   },
   {
