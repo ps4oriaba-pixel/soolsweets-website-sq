@@ -10,7 +10,7 @@ const products = [
     title: 'כדורגל שוקולד',
     description:
       'קינוח מושלם לחובבי הכדורגל, שבפנים מסתתר אוצר של ממתקים.',
-    image: '/images/gallery/choc-ball-1.png',
+    image: '/images/gallery/exploding-football/IMG_3463.webp',
     note: 'הכי מבוקש!',
     slug: 'chocolate-ball',
   },
