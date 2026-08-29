@@ -36,7 +36,7 @@ const products = [
   {
     title: 'עוגות דף נשרף',
     description: 'הטרנד שכולם מדברים עליו – שורפים את הדף וחושפים הקדשה, תמונה או הפתעה מרגשת.',
-    image: '/images/category-special.png',
+    image: '/images/gallery/burn-away-cakes/IMG_0455.webp',
     note: 'וואו-אפקט',
     slug: 'burnt-paper-cakes',
   },
