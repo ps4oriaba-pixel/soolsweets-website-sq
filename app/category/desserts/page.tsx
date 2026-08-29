@@ -21,7 +21,7 @@ const products = [
   {
     title: 'מארזי קינוח ייעודיים',
     description: 'אוהבים קינוח מסוים? לפעמים אין צורך בשילוב. תוכלו להזמין מארז שלם של קרם ברולה, דונאטס, קאפקייקס, קייק פופ, מגנומים ועוד.',
-    image: '/images/category-desserts.png',
+    image: '/images/gallery/custom-boxes/IMG_3197.webp',
     slug: 'dedicated-dessert-boxes',
   },
 ]

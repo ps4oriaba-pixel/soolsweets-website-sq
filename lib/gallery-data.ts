@@ -573,17 +573,21 @@ const galleries: GalleryData[] = [
 
   {
     slug: 'dedicated-dessert-boxes',
-    title: 'מארזי קינוח ייעו��יים',
+    title: 'מארזי קינוח ייעודיים',
     subtitle: 'כשאוהבים קינוח אחד, מזמינים מארז שלם ממנו',
     description:
       'אוהבים קינוח מסוים? לפעמים אין צורך בשילוב. תוכלו להזמין מארז שלם של קרם ברולה, דונאטס, קאפקייקס, קייק פופ, מגנומים ועוד.',
-    heroImage: '/images/category-desserts.png',
+    heroImage: '/images/gallery/custom-boxes/IMG_3197.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז קינוח ייעודי!',
     images: [
-      { src: '/images/category-desserts.png', alt: 'מארז קינוח ייעודי' },
-      { src: '/images/gallery/cups-1.png', alt: 'קינוחים אישיים' },
-      { src: '/images/gallery/cups-2.png', alt: 'מארז קינוחים' },
-      { src: '/images/gallery/cups-3.png', alt: 'קינוחי ��וסות' },
+      { src: '/images/gallery/custom-boxes/IMG_3197.webp', alt: 'מארז קינוח ייעודי - תמונה 1' },
+      { src: '/images/gallery/custom-boxes/IMG_3198.webp', alt: 'מארז קינוח ייעודי - תמונה 2' },
+      { src: '/images/gallery/custom-boxes/IMG_3769.webp', alt: 'מארז קינוח ייעודי - תמונה 3' },
+      { src: '/images/gallery/custom-boxes/IMG_7611.webp', alt: 'מארז קינוח ייעודי - תמונה 4' },
+      { src: '/images/gallery/custom-boxes/IMG_7804.webp', alt: 'מארז קינוח ייעודי - תמונה 5' },
+      { src: '/images/gallery/custom-boxes/IMG_7859.webp', alt: 'מארז קינוח ייעודי - תמונה 6' },
+      { src: '/images/gallery/custom-boxes/IMG_8701.webp', alt: 'מארז קינוח ייעודי - תמונה 7' },
+      { src: '/images/gallery/custom-boxes/IMG_9597.webp', alt: 'מארז קינוח ייעודי - תמונה 8' },
     ],
   },
 
