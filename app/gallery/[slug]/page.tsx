@@ -38,14 +38,35 @@ export default async function GalleryPage({ params }: PageProps) {
 
       <main className="flex-1 pt-20">
         {/* Hero */}
-        <section className="relative h-64 md:h-80 overflow-hidden">
-          <Image
-            src={gallery.heroImage}
-            alt={gallery.title}
-            fill
-            priority
-            className="object-cover object-center"
-          />
+        <section className="relative h-64 md:h-80 overflow-hidden bg-foreground">
+          {slug === 'chocolate-ball' ? (
+            <>
+              {/* Blurred backdrop fills the banner so no empty bars show */}
+              <Image
+                src={gallery.heroImage}
+                alt=""
+                fill
+                aria-hidden="true"
+                className="object-cover object-center scale-110 blur-2xl opacity-50"
+              />
+              {/* Full photo, never cropped, so the whole cake is visible */}
+              <Image
+                src={gallery.heroImage}
+                alt={gallery.title}
+                fill
+                priority
+                className="object-contain object-center"
+              />
+            </>
+          ) : (
+            <Image
+              src={gallery.heroImage}
+              alt={gallery.title}
+              fill
+              priority
+              className="object-cover object-center"
+            />
+          )}
           {/* Neutral dark scrim so the photo keeps its own colors */}
           <div className="absolute inset-0 bg-foreground/45" />
           <div className="absolute inset-0 flex items-center justify-center flex-col gap-3 px-4">
