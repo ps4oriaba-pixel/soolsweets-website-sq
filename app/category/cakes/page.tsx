@@ -33,7 +33,7 @@ const products = [
   {
     title: 'עוגות מספרים',
     description: 'עוגות מספר או אות מבצק שקדים או עוגת שוקולד אפויה, המעוטרות בקרם מסקרפונה עשיר, שוקולדים ואלמנטים מעוצבים בהתאמה אישית.',
-    image: '/images/cake-numbers.png',
+    image: '/images/gallery/number-cakes/20230420_153709.webp',
     slug: 'number-cakes',
   },
   {

@@ -200,7 +200,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/custom-design/IMG_7820.webp', alt: 'עוגה בעיצוב אישי - תמונה 85' },
       { src: '/images/gallery/custom-design/IMG_7856.webp', alt: 'עוגה בעיצוב אישי - תמונה 86' },
       { src: '/images/gallery/custom-design/IMG_7890.webp', alt: 'עוגה בעיצוב אישי - תמונה 87' },
-      { src: '/images/gallery/custom-design/IMG_7998.webp', alt: 'עוגה בעיצוב אישי - ת������ונה 88' },
+      { src: '/images/gallery/custom-design/IMG_7998.webp', alt: 'עוגה בעיצוב אישי - ת��������ונה 88' },
       { src: '/images/gallery/custom-design/IMG_8103.webp', alt: 'עוגה בעיצוב אישי - תמונה 89' },
       { src: '/images/gallery/custom-design/IMG_8343.webp', alt: 'עוגה בעיצוב אישי - תמונה 90' },
       { src: '/images/gallery/custom-design/IMG_8393.webp', alt: 'עוגה בעיצו�� אישי - תמונה 91' },
@@ -368,7 +368,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/bento-cakes/IMG_6776.webp', alt: 'עוגת בנטו - תמונה 39' },
       { src: '/images/gallery/bento-cakes/IMG_6981.webp', alt: 'עוגת בנטו - תמונה 40' },
       { src: '/images/gallery/bento-cakes/IMG_7019.webp', alt: 'עוגת בנטו - תמונה 41' },
-      { src: '/images/gallery/bento-cakes/IMG_8147.webp', alt: 'עוגת בנטו - תמונה 42' },
+      { src: '/images/gallery/bento-cakes/IMG_8147.webp', alt: 'עוגת ב��טו - תמונה 42' },
       { src: '/images/gallery/bento-cakes/IMG_8241.webp', alt: 'עוגת בנטו - תמונה 43' },
       { src: '/images/gallery/bento-cakes/IMG_8943.webp', alt: 'עוגת בנטו - תמונה 44' },
       { src: '/images/gallery/bento-cakes/IMG_9677.webp', alt: 'עוגת בנטו - תמונה 45' },
@@ -453,13 +453,16 @@ const galleries: GalleryData[] = [
     subtitle: 'לכל יום הולדת מיוחד – במספר שלו',
     description:
       'עוגות מספר או אות מבצק שקדים או עוגת שוקולד אפויה, המעוטרות בקרם מסקרפונה עשיר, שוקולדים ואלמנטים מעוצבים בהתאמה אישית.',
-    heroImage: '/images/cake-numbers.png',
+    heroImage: '/images/gallery/number-cakes/20230420_153709.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת מספרים!',
     images: [
-      { src: '/images/cake-numbers.png', alt: 'עוגת מספרים' },
-      { src: '/images/category-cakes.png', alt: 'עוגת מספרים עם קישוטים' },
-      { src: '/images/hero.png', alt: 'עוגות לאירועים' },
-      { src: '/images/gallery/vintage-1.png', alt: 'עיצוב עדין' },
+      { src: '/images/gallery/number-cakes/20230420_153709.webp', alt: 'עוגת מספרים - תמונה 1' },
+      { src: '/images/gallery/number-cakes/20230727_115756.webp', alt: 'עוגת מספרים - תמונה 2' },
+      { src: '/images/gallery/number-cakes/20240418_165922.webp', alt: 'עוגת מספרים - תמונה 3' },
+      { src: '/images/gallery/number-cakes/IMG_2169.webp', alt: 'עוגת מספרים - תמונה 4' },
+      { src: '/images/gallery/number-cakes/IMG_2341.webp', alt: 'עוגת מספרים - תמונה 5' },
+      { src: '/images/gallery/number-cakes/IMG_4725.webp', alt: 'עוגת מספרים - תמונה 6' },
+      { src: '/images/gallery/number-cakes/IMG_6917.webp', alt: 'עוגת מספרים - תמונה 7' },
     ],
   },
   {
@@ -606,7 +609,7 @@ const galleries: GalleryData[] = [
     title: 'עוגת קומות',
     subtitle: '',
     description:
-      'עוגות קומות מרשימות לחתונות, אירועים גדולים וכל מי שמחפש את ה-WOW האמיתי.',
+      'עוגות קומות מרשימות לחתונות, אירועים גדולים וכ�� מי שמחפש את ה-WOW האמיתי.',
     heroImage: '/images/cake-tiered.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת קומות!',
     images: [
