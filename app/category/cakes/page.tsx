@@ -39,7 +39,7 @@ const products = [
   {
     title: 'עוגת פפיון',
     description: 'עוגות בעיצוב אלגנטי עם פפיונים מרשימים  מבצק סוכר – שילוב מושלם של יוקרה, עדינות וסטייל.',
-    image: '/images/cake-bow-tie.png',
+    image: '/images/gallery/bow-cakes/IMG_4151.webp',
     slug: 'bow-tie-cakes',
   },
   {
