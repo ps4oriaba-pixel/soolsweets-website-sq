@@ -140,7 +140,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/custom-design/IMG_0734.webp', alt: 'עוגה בעיצוב אישי - תמונה 25' },
       { src: '/images/gallery/custom-design/IMG_0807.webp', alt: 'עוגה בעיצוב אישי - תמונה 26' },
       { src: '/images/gallery/custom-design/IMG_0838.webp', alt: 'עוגה בעיצוב אישי - תמונה 27' },
-      { src: '/images/gallery/custom-design/IMG_0916.webp', alt: 'עוגה בעיצוב אישי ��ם כתר וברווז' },
+      { src: '/images/gallery/custom-design/IMG_0916.webp', alt: 'עוגה בעיצוב אישי ����ם כתר וברווז' },
       { src: '/images/gallery/custom-design/IMG_0922.webp', alt: 'עוגה בעיצוב אישי - תמונה 29' },
       { src: '/images/gallery/custom-design/IMG_0950.webp', alt: 'עוגה בעיצוב אישי - תמונה 30' },
       { src: '/images/gallery/custom-design/IMG_0954.webp', alt: 'עוגה בעיצוב אישי - תמונה 31' },
@@ -450,7 +450,7 @@ const galleries: GalleryData[] = [
     heroImage: '/images/gallery/bow-cakes/IMG_4151.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת פפיון!',
     images: [
-      { src: '/images/gallery/bow-cakes/IMG_4151.webp', alt: 'עוגת פפיון - תמונה 1' },
+      { src: '/images/gallery/bow-cakes/IMG_4151.webp', alt: 'עוגת פפי��ן - תמונה 1' },
       { src: '/images/gallery/bow-cakes/IMG_6029.webp', alt: 'עוגת פפיון - תמונה 2' },
       { src: '/images/gallery/bow-cakes/IMG_6037.webp', alt: 'עוגת פפיון - תמונה 3' },
       { src: '/images/gallery/bow-cakes/IMG_6137.webp', alt: 'עוגת פפיון - תמונה 4' },
@@ -611,13 +611,11 @@ const galleries: GalleryData[] = [
     subtitle: '',
     description:
       'חוויה מתוקה וייחודית - שוברים את ביצת השוקולד וחושפים שלל ממתקים ושוקולדים.',
-    heroImage: '/images/category-special.png',
+    heroImage: '/images/gallery/chocolate-egg/20240304_194842.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין ביצים מתנפצות!',
     images: [
-      { src: '/images/category-special.png', alt: 'ביצה מתנפצת' },
-      { src: '/images/chocolate-ball.png', alt: 'שוקולד מפתיע' },
-      { src: '/images/gallery/choc-ball-1.png', alt: 'כדור שוקולד' },
-      { src: '/images/gallery/choc-ball-3.png', alt: 'עיצובי שוקולד' },
+      { src: '/images/gallery/chocolate-egg/20240304_194842.webp', alt: 'ביצת שוקולד ענקית - תמונה 1' },
+      { src: '/images/gallery/chocolate-egg/Screenshot_20240303_212619_Instagram.webp', alt: 'ביצת שוקולד ענקית - תמונה 2' },
     ],
   },
   {

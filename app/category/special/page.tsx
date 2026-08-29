@@ -23,7 +23,7 @@ const products = [
   {
     title: 'ביצת שוקולד ענקית',
     description: 'חוויה מתוקה וייחודית - שוברים את ביצת השוקולד וחושפים שלל ממתקים ושוקולדים.',
-    image: '/images/category-special.png',
+    image: '/images/gallery/chocolate-egg/20240304_194842.webp',
     slug: 'exploding-egg',
   },
   {
