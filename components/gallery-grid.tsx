@@ -9,18 +9,29 @@ interface GalleryGridProps {
   title: string
 }
 
+const INITIAL_VISIBLE_COUNT = 10
+const LOAD_MORE_COUNT = 10
+
 export default function GalleryGrid({ images, title }: GalleryGridProps) {
+  const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT)
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
+
+  const visibleImages = images.slice(0, visibleCount)
+  const hasMore = visibleCount < images.length
+
+  const handleLoadMore = useCallback(() => {
+    setVisibleCount((prev) => Math.min(prev + LOAD_MORE_COUNT, images.length))
+  }, [images.length])
 
   const closeLightbox = useCallback(() => setLightboxIndex(null), [])
 
   const showPrev = useCallback(() => {
-    setLightboxIndex((prev) => (prev === null ? null : (prev - 1 + images.length) % images.length))
-  }, [images.length])
+    setLightboxIndex((prev) => (prev === null ? null : (prev - 1 + visibleImages.length) % visibleImages.length))
+  }, [visibleImages.length])
 
   const showNext = useCallback(() => {
-    setLightboxIndex((prev) => (prev === null ? null : (prev + 1) % images.length))
-  }, [images.length])
+    setLightboxIndex((prev) => (prev === null ? null : (prev + 1) % visibleImages.length))
+  }, [visibleImages.length])
 
   useEffect(() => {
     if (lightboxIndex === null) return
@@ -47,7 +58,7 @@ export default function GalleryGrid({ images, title }: GalleryGridProps) {
     <>
       {/* Grid */}
       <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-        {images.map((img, i) => (
+        {visibleImages.map((img, i) => (
           <button
             key={i}
             onClick={() => setLightboxIndex(i)}
@@ -82,12 +93,27 @@ export default function GalleryGrid({ images, title }: GalleryGridProps) {
         ))}
       </div>
 
+      {/* Load more */}
+      {hasMore && (
+        <div className="flex flex-col items-center gap-2 mt-8">
+          <button
+            onClick={handleLoadMore}
+            className="px-8 py-3 rounded-full bg-primary text-primary-foreground font-semibold text-sm tracking-wide hover:bg-primary/90 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2"
+          >
+            טען עוד תמונות
+          </button>
+          <span className="text-foreground/50 text-xs">
+            {visibleImages.length} מתוך {images.length} תמונות
+          </span>
+        </div>
+      )}
+
       {/* Lightbox */}
       {lightboxIndex !== null && (
         <div
           role="dialog"
           aria-modal="true"
-          aria-label={`תמונה ${lightboxIndex + 1} מתוך ${images.length}: ${images[lightboxIndex].alt}`}
+          aria-label={`תמונה ${lightboxIndex + 1} מתוך ${visibleImages.length}: ${visibleImages[lightboxIndex].alt}`}
           className="fixed inset-0 z-50 flex items-center justify-center bg-accent/90 backdrop-blur-sm px-4"
           onClick={closeLightbox}
         >
@@ -98,8 +124,8 @@ export default function GalleryGrid({ images, title }: GalleryGridProps) {
           >
             <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
               <Image
-                src={images[lightboxIndex].src}
-                alt={images[lightboxIndex].alt}
+                src={visibleImages[lightboxIndex].src}
+                alt={visibleImages[lightboxIndex].alt}
                 fill
                 className="object-cover"
                 sizes="(max-width: 768px) 95vw, 800px"
@@ -108,7 +134,7 @@ export default function GalleryGrid({ images, title }: GalleryGridProps) {
             </div>
 
             {/* Caption */}
-            <p className="sr-only">{images[lightboxIndex].alt}</p>
+            <p className="sr-only">{visibleImages[lightboxIndex].alt}</p>
 
             {/* Close */}
             <button
@@ -123,11 +149,11 @@ export default function GalleryGrid({ images, title }: GalleryGridProps) {
 
             {/* Counter */}
             <span className="absolute -top-12 right-0 text-background/70 text-sm font-medium">
-              {lightboxIndex + 1} / {images.length}
+              {lightboxIndex + 1} / {visibleImages.length}
             </span>
 
             {/* Prev */}
-            {images.length > 1 && (
+            {visibleImages.length > 1 && (
               <button
                 onClick={(e) => { e.stopPropagation(); showPrev() }}
                 className="absolute right-0 translate-x-14 text-background/80 hover:text-background transition-colors hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-accent/60 hover:bg-accent"
@@ -140,7 +166,7 @@ export default function GalleryGrid({ images, title }: GalleryGridProps) {
             )}
 
             {/* Next */}
-            {images.length > 1 && (
+            {visibleImages.length > 1 && (
               <button
                 onClick={(e) => { e.stopPropagation(); showNext() }}
                 className="absolute left-0 -translate-x-14 text-background/80 hover:text-background transition-colors hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-accent/60 hover:bg-accent"
@@ -153,9 +179,9 @@ export default function GalleryGrid({ images, title }: GalleryGridProps) {
             )}
 
             {/* Mobile swipe dots */}
-            {images.length > 1 && (
+            {visibleImages.length > 1 && (
               <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 flex gap-1.5 md:hidden">
-                {images.map((_, i) => (
+                {visibleImages.map((_, i) => (
                   <button
                     key={i}
                     onClick={(e) => { e.stopPropagation(); setLightboxIndex(i) }}
