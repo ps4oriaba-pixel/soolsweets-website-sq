@@ -85,7 +85,9 @@ export default function CategoryPage({
                 {/* Clickable image → gallery page */}
                 <Link
                   href={`/gallery/${product.slug}`}
-                  className="relative h-60 overflow-hidden block group"
+                  className={`relative overflow-hidden block group ${
+                    product.slug === 'vintage-cakes' ? 'aspect-[1920/3410]' : 'h-60'
+                  }`}
                   aria-label={`צפו בגלריה: ${product.title}`}
                 >
                   <Image

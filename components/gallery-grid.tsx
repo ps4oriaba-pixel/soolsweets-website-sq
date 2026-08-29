@@ -12,6 +12,13 @@ interface GalleryGridProps {
 const INITIAL_VISIBLE_COUNT = 10
 const LOAD_MORE_COUNT = 10
 
+// Photos whose real proportions are much taller than the default square/4:3
+// frames. For these, the frame is switched to the photo's own ratio so the
+// entire shot is visible with no cropping and no added filler space.
+const FULL_PHOTO_ASPECT: Record<string, string> = {
+  '/images/gallery/mousse-cakes/20231028_165036.webp': 'aspect-[1089/2357]',
+}
+
 export default function GalleryGrid({ images, title }: GalleryGridProps) {
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT)
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
@@ -62,7 +69,7 @@ export default function GalleryGrid({ images, title }: GalleryGridProps) {
           <button
             key={i}
             onClick={() => setLightboxIndex(i)}
-            className="group relative aspect-square overflow-hidden rounded-xl bg-card focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className={`group relative overflow-hidden rounded-xl bg-card focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${FULL_PHOTO_ASPECT[img.src] ?? 'aspect-square'}`}
             aria-label={`פתח תמונה: ${img.alt}`}
           >
             <Image
@@ -122,7 +129,13 @@ export default function GalleryGrid({ images, title }: GalleryGridProps) {
             className="relative w-full max-w-3xl max-h-[85vh] flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
+            <div
+              className={`relative rounded-2xl overflow-hidden shadow-2xl ${
+                FULL_PHOTO_ASPECT[visibleImages[lightboxIndex].src]
+                  ? `h-[70vh] md:h-[80vh] w-auto max-w-full ${FULL_PHOTO_ASPECT[visibleImages[lightboxIndex].src]}`
+                  : 'w-full aspect-[4/3]'
+              }`}
+            >
               <Image
                 src={visibleImages[lightboxIndex].src}
                 alt={visibleImages[lightboxIndex].alt}
