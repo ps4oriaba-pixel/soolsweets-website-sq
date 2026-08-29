@@ -623,7 +623,7 @@ const galleries: GalleryData[] = [
     title: 'עוגת קומות',
     subtitle: '',
     description:
-      'עוגות קומות מרשימות לחתונות, אירועים גדולים וכ�� מי שמחפש את ה-WOW האמיתי.',
+      'עוגות קומות מרשימות לחתונות, אירועים גדולים וכל מי שמחפש את ה-WOW האמיתי.',
     heroImage: '/images/cake-tiered.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת קומות!',
     images: [
