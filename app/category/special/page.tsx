@@ -30,7 +30,7 @@ const products = [
     title: 'עוגות קומות',
     description:
       'עוגות קומות מרשימות לחתונות, אירועים גדולים וכל מי שמחפש את ה-WOW האמיתי.',
-    image: '/images/cake-tiered.png',
+    image: '/images/gallery/levels-cakes/20230917_161334.webp',
     slug: 'tiered-cakes',
   },
   {

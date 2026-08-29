@@ -640,13 +640,12 @@ const galleries: GalleryData[] = [
     subtitle: '',
     description:
       'עוגות קומות מרשימות לחתונות, אירועים גדולים וכל מי שמחפש את ה-WOW האמיתי.',
-    heroImage: '/images/cake-tiered.png',
+    heroImage: '/images/gallery/levels-cakes/20230917_161334.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת קומות!',
     images: [
-      { src: '/images/cake-tiered.png', alt: 'עוגת קומות' },
-      { src: '/images/gallery/vintage-1.png', alt: 'עוגת חתונה' },
-      { src: '/images/gallery/vintage-2.png', alt: 'עוגת קומות וינטאג\'' },
-      { src: '/images/category-cakes.png', alt: 'עוגות חגיגיות' },
+      { src: '/images/gallery/levels-cakes/20230917_161334.webp', alt: 'עוגת קומות - תמונה 1' },
+      { src: '/images/gallery/levels-cakes/20230917_191150.webp', alt: 'עוגת קומות - תמונה 2' },
+      { src: '/images/gallery/levels-cakes/20230918_200516.webp', alt: 'עוגת קומות - תמונה 3' },
     ],
   },
 ]
