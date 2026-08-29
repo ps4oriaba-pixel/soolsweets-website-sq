@@ -122,16 +122,16 @@ export default function GalleryGrid({ images, title }: GalleryGridProps) {
             className="relative w-full max-w-3xl max-h-[85vh] flex items-center justify-center"
             onClick={(e) => e.stopPropagation()}
           >
-            <div className="relative w-full aspect-[4/3] rounded-2xl overflow-hidden shadow-2xl">
-              <Image
-                src={visibleImages[lightboxIndex].src}
-                alt={visibleImages[lightboxIndex].alt}
-                fill
-                className="object-cover"
-                sizes="(max-width: 768px) 95vw, 800px"
-                priority
-              />
-            </div>
+            {/* Plain <img> renders at the photo's real aspect ratio and
+                resolution, so max-w-full/max-h-[85vh] only ever scale it
+                down (never up) and it's always shown in full, never
+                cropped or distorted. */}
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img
+              src={visibleImages[lightboxIndex].src || '/placeholder.svg'}
+              alt={visibleImages[lightboxIndex].alt}
+              className="max-w-full max-h-[85vh] w-auto h-auto object-contain rounded-2xl shadow-2xl"
+            />
 
             {/* Caption */}
             <p className="sr-only">{visibleImages[lightboxIndex].alt}</p>
