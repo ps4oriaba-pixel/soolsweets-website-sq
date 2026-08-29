@@ -82,17 +82,20 @@ export default function CategoryPage({
                 key={product.title}
                 className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col"
               >
-                {/* Clickable image → gallery page */}
+                {/* Clickable image → gallery page. Fixed aspect-[4/5] frame keeps
+                    every card the same size regardless of the photo's own
+                    dimensions; object-contain ensures the full photo is always
+                    visible with no cropping. */}
                 <Link
                   href={`/gallery/${product.slug}`}
-                  className="relative h-60 overflow-hidden block group"
+                  className="relative aspect-[4/5] overflow-hidden block group bg-card"
                   aria-label={`צפו בגלריה: ${product.title}`}
                 >
                   <Image
                     src={product.image}
                     alt={product.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    className="object-contain object-center group-hover:scale-105 transition-transform duration-500"
                   />
                   {product.note && (
                     <span className="absolute top-3 right-3 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full z-10">
