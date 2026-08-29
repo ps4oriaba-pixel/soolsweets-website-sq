@@ -21,7 +21,7 @@ const products = [
   {
     title: 'עוגות בנטו',
     description: 'קטנות בגודל, גדולות ברושם. עוגות אישיות בעיצוב מוקפד – מושלמות למתנה, הפתעה או חגיגה קטנה.',
-    image: '/images/gallery/bento-1.png',
+    image: '/images/gallery/bento-cakes/20231222_102551.webp',
     slug: 'bento-cakes',
   },
   {
