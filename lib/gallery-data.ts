@@ -499,13 +499,13 @@ const galleries: GalleryData[] = [
     subtitle: "",
     description:
       'עוגת שוקולד/וניל בכוס אישית, עם קצפת, תוספות מתוקות וקישוט לבחירה – הפתעה מושלמת לרגעים ספונטניים.',
-    heroImage: '/images/cake-bento.png',
+    heroImage: '/images/gallery/cup-cakes/F7580070-3AA8-4BD3-8C5B-8FFE6627552B.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין ספל שכולו אושר!',
     images: [
-      { src: '/images/cake-bento.png', alt: 'ספל שכולו אושר' },
-      { src: '/images/gallery/bento-1.png', alt: 'עוגה אישית' },
-      { src: '/images/gallery/bento-2.png', alt: 'קולקציית עוגות' },
-      { src: '/images/category-cakes.png', alt: 'עוגות מגוונות' },
+      { src: '/images/gallery/cup-cakes/F7580070-3AA8-4BD3-8C5B-8FFE6627552B.webp', alt: 'ספל שכולו אושר - תמונה 1' },
+      { src: '/images/gallery/cup-cakes/IMG_3847.webp', alt: 'ספל שכולו אושר - תמונה 2' },
+      { src: '/images/gallery/cup-cakes/IMG_3854.webp', alt: 'ספל שכולו אושר - תמונה 3' },
+      { src: '/images/gallery/cup-cakes/IMG_3887.webp', alt: 'ספל שכולו אושר - תמונה 4' },
     ],
   },
   {

@@ -64,7 +64,7 @@ const products = [
   {
     title: 'ספל שכולו אושר',
     description: 'עוגת שוקולד/וניל בכוס אישית, עם קצפת, תוספות מתוקות וקישוט לבחירה – הפתעה מושלמת לרגעים ספונטניים.',
-    image: '/images/gallery/bento-2.png',
+    image: '/images/gallery/cup-cakes/F7580070-3AA8-4BD3-8C5B-8FFE6627552B.webp',
     note: 'בהתראה קצרה',
     slug: 'mug-cakes',
   },
