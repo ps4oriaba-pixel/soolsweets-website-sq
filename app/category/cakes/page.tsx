@@ -45,7 +45,7 @@ const products = [
   {
     title: 'עוגות כתר',
     description: 'עוגה בעיצוב מלכותי עם כתר נוצץ, פפיונים ונצנצים שמתפזרים באפקט מרהיב – לחגיגה שכולה זוהר.',
-    image: '/images/gallery/vintage-1.png',
+    image: '/images/gallery/crown-cakes/IMG_1199.webp',
     slug: 'crown-cakes',
   },
   {
