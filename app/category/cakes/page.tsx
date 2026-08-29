@@ -15,7 +15,7 @@ const products = [
   {
     title: "עוגות וינטאג'",
     description: "עיצוב רומנטי ועדין עם זילופי וינטאג', פפיונים, פרחים וגימורים אלגנטיים. מושלם לכל אירוע.",
-    image: '/images/gallery/vintage-1.png',
+    image: '/images/gallery/vintage-cakes/20231226_113642.webp',
     slug: 'vintage-cakes',
   },
   {
