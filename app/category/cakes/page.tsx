@@ -9,7 +9,7 @@ const products = [
   {
     title: 'עוגות בעיצוב אישי',
     description: 'העלו כל רעיון – ואני אגשים אותו. עוגה שמספרת את הסיפור שלכם.',
-    image: '/images/hero.png',
+    image: '/images/gallery/custom-design/IMG_0136.webp',
     slug: 'custom-cakes',
   },
   {

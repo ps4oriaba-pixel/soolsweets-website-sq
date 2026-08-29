@@ -110,14 +110,17 @@ const galleries: GalleryData[] = [
     subtitle: 'העלו כל רעיון – ואני אגשים אותו',
     description:
       'עוגה שמספרת את הסיפור שלכם. העלו רעיון או תמונה וביחד ניצור משהו שלא קיים עדיין.',
-    heroImage: '/images/hero.png',
+    heroImage: '/images/gallery/custom-design/IMG_0136.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגה בעיצוב אישי!',
     images: [
-      { src: '/images/hero.png', alt: 'עוגות בעיצוב אישי' },
-      { src: '/images/cake-vintage.png', alt: 'עוגה אישית' },
-      { src: '/images/gallery/vintage-1.png', alt: 'עיצוב מיוחד' },
-      { src: '/images/gallery/bento-3.png', alt: 'עוגה ��ם הקדשה' },
-      { src: '/images/category-cakes.png', alt: 'מגוון עוגות' },
+      { src: '/images/gallery/custom-design/IMG_0136.webp', alt: 'עוגת יום הולדת בעיצוב אישי בשחור וזהב' },
+      { src: '/images/gallery/custom-design/IMG_0450.webp', alt: 'עוגה בעיצוב אישי בנושא טריאתלון' },
+      { src: '/images/gallery/custom-design/IMG_0916.webp', alt: 'עוגה בעיצוב אישי עם כתר וברווז' },
+      { src: '/images/gallery/custom-design/IMG_1433.webp', alt: 'עוגת דובי בעיצוב אישי' },
+      { src: '/images/gallery/custom-design/IMG_2306.webp', alt: 'עוגה בעיצוב אישי בנושא נסיעות וחוף' },
+      { src: '/images/gallery/custom-design/IMG_3415.webp', alt: 'עוגת רובלוקס בעיצוב אישי' },
+      { src: '/images/gallery/custom-design/IMG_4841.webp', alt: 'עוגת פרחים בעיצוב אישי' },
+      { src: '/images/gallery/custom-design/IMG_6105.webp', alt: 'עוגה בעיצוב אישי בנושא ים' },
     ],
   },
 
