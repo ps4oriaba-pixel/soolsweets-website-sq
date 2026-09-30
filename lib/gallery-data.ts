@@ -294,8 +294,8 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/vintage-cakes/IMG_9003.webp', alt: "עוגת וינטאג' - תמונה 67" },
       { src: '/images/gallery/vintage-cakes/IMG_9427.webp', alt: "עוגת וינטאג' - תמונה 68" },
       { src: '/images/gallery/vintage-cakes/IMG_9757.webp', alt: "עוגת וינטאג' - תמונה 69" },
-      { src: '/images/gallery/vintage-cakes/IMG_9806.webp', alt: "עוגת וינטאג' - תמ����נה 70" },
-      { src: '/images/gallery/vintage-cakes/IMG_9973.webp', alt: "עוגת וי��טאג' - תמונה 71" },
+      { src: '/images/gallery/vintage-cakes/IMG_9806.webp', alt: "עוגת וינטאג' - תמונה 70" },
+      { src: '/images/gallery/vintage-cakes/IMG_9973.webp', alt: "עוגת וינטאג' - תמונה 71" },
     ],
   },
   {
