@@ -375,7 +375,7 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'rectangular-cakes',
-    title: 'עוגה מלבנית מעוצבת',
+    title: 'עוגה מלבנית ��עוצבת',
     subtitle: 'עיצוב מודרני ונקי – אלגנטי לכל שולחן',
     description:
       'מושלמת לאירועים גדולים ולחגיגות משפחתיות – בעיצוב מוקפד ובהתאמה אישית לכל סגנון.',
@@ -434,7 +434,7 @@ const galleries: GalleryData[] = [
     description:
       'עוגות בעיצוב אלגנטי עם פפיונים מרשימים  מבצק סוכר – שילוב מושלם של יוקרה, עדינות וסטייל.',
     heroImage: '/images/gallery/bow-cakes/IMG_4151.webp',
-    whatsappMessage: 'שלום סלעית, ��שמח להזמין ע��גת פפיון!',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת פפיון!',
     images: [
  { src: '/images/gallery/bow-cakes/IMG_4151.webp', alt: 'עוגת פפיון - תמונה 1' },
   { src: '/images/gallery/bow-cakes/IMG_6029.webp', alt: 'עוגת פפיון - תמונה 2' },
@@ -455,10 +455,10 @@ const galleries: GalleryData[] = [
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת מספרים!',
     images: [
       { src: '/images/gallery/number-cakes/20230420_153709.webp', alt: 'עוגת מספרים - תמונה 1' },
-      { src: '/images/gallery/number-cakes/20230727_115756.webp', alt: 'עו��ת מספרים - תמונה 2' },
+      { src: '/images/gallery/number-cakes/20230727_115756.webp', alt: 'עוגת מספרים - תמונה 2' },
       { src: '/images/gallery/number-cakes/20240418_165922.webp', alt: 'עוגת מספרים - תמונה 3' },
       { src: '/images/gallery/number-cakes/IMG_2169.webp', alt: 'עוגת מספרים - תמונה 4' },
-      { src: '/images/gallery/number-cakes/IMG_2341.webp', alt: 'עוגת ��ספרים - תמונה 5' },
+      { src: '/images/gallery/number-cakes/IMG_2341.webp', alt: 'עוגת מספרים - תמונה 5' },
       { src: '/images/gallery/number-cakes/IMG_4725.webp', alt: 'עוגת מספרים - תמונה 6' },
       { src: '/images/gallery/number-cakes/IMG_6917.webp', alt: 'עוגת מספרים - תמונה 7' },
     ],
@@ -544,7 +544,7 @@ const galleries: GalleryData[] = [
     heroImage: '/images/gallery/crumble-cookies/IMG_0579.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארזי קראמבל!',
     images: [
-      { src: '/images/gallery/crumble-cookies/IMG_0579.webp', alt: 'מארז קר��מבל - תמונה 1' },
+      { src: '/images/gallery/crumble-cookies/IMG_0579.webp', alt: 'מארז קראמבל - תמונה 1' },
       { src: '/images/gallery/crumble-cookies/IMG_0582.webp', alt: 'מארז קראמבל - תמונה 2' },
       { src: '/images/gallery/crumble-cookies/IMG_0585.webp', alt: 'מארז קראמבל - תמונה 3' },
       { src: '/images/gallery/crumble-cookies/IMG_0588.webp', alt: 'מארז קראמבל - תמונה 4' },
@@ -565,7 +565,7 @@ const galleries: GalleryData[] = [
     heroImage: '/images/gallery/custom-boxes/IMG_3197.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז קינוח ייעודי!',
     images: [
-      { src: '/images/gallery/custom-boxes/IMG_3197.webp', alt: 'מאר�� קינוח ייעודי - תמונה 1' },
+      { src: '/images/gallery/custom-boxes/IMG_3197.webp', alt: 'מארז קינוח ייעודי - תמונה 1' },
       { src: '/images/gallery/custom-boxes/IMG_3198.webp', alt: 'מארז קינוח ייעודי - תמונה 2' },
       { src: '/images/gallery/custom-boxes/IMG_3769.webp', alt: 'מארז קינוח ייעודי - תמונה 3' },
       { src: '/images/gallery/custom-boxes/IMG_7611.webp', alt: 'מארז קינוח ייעודי - תמונה 4' },
@@ -576,7 +576,7 @@ const galleries: GalleryData[] = [
     ],
   },
 
-  // ── עיצובים מיוחדים ────────────────────────────────���─────
+  // ── עיצובים מיוחדים ─────────────────────────────────────
   {
     slug: 'chocolate-ball',
     title: 'כדורגל שוקולד',
@@ -615,7 +615,7 @@ const galleries: GalleryData[] = [
     heroImage: '/images/gallery/chocolate-egg/20240304_194842.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין ביצים מתנפצות!',
     images: [
-      { src: '/images/gallery/chocolate-egg/20240304_194842.webp', alt: 'ביצת ��וקולד ענקית - תמונה 1' },
+      { src: '/images/gallery/chocolate-egg/20240304_194842.webp', alt: 'ביצת שוקולד ענקית - תמונה 1' },},
       { src: '/images/gallery/chocolate-egg/Screenshot_20240303_212619_Instagram.webp', alt: 'ביצת שוקולד ענקית - תמונה 2' },
     ],
   },
@@ -692,7 +692,7 @@ export function getCategoryForSlug(slug: string): { label: string; href: string 
   const dessertsSlugs = ['cup-desserts', 'crumble-desserts', 'dedicated-dessert-boxes']
   const specialSlugs = ['chocolate-ball', 'exploding-candy', 'exploding-egg', 'tiered-cakes', 'burnt-paper-cakes']
 
-  if (boxesSlugs.includes(slug)) return { label: 'מארזים מעו��בים', href: '/category/boxes' }
+  if (boxesSlugs.includes(slug)) return { label: 'מארזים מעוצבים', href: '/category/boxes' }
   if (cakesSlugs.includes(slug)) return { label: 'עוגות מעוצבות', href: '/category/cakes' }
   if (dessertsSlugs.includes(slug)) return { label: 'קינוחים אישיים', href: '/category/desserts' }
   if (specialSlugs.includes(slug)) return { label: 'קולקציית ה-WOW', href: '/category/special' }
