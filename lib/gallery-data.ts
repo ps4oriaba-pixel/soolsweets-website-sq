@@ -280,7 +280,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/vintage-cakes/IMG_6128.webp', alt: "עוגת וינטאג' - תמונה 47" },
       { src: '/images/gallery/vintage-cakes/IMG_6161.webp', alt: "עוגת וינטאג' - תמונה 48" },
       { src: '/images/gallery/vintage-cakes/IMG_6166.webp', alt: "עוגת וינטאג' - תמונה 49" },
-      { src: '/images/gallery/vintage-cakes/IMG_6172.webp', alt: "עוגת וינטאג' - תמונה 50" },
+      { src: '/images/gallery/vintage-cakes/IMG_6172.webp', alt: "עוגת וינטא��' - תמונה 50" },
       { src: '/images/gallery/vintage-cakes/IMG_6187.webp', alt: "עו��ת וינטאג' - תמונה 51" },
       { src: '/images/gallery/vintage-cakes/IMG_6280.webp', alt: "עוגת וינטאג' - תמונה 52" },
       { src: '/images/gallery/vintage-cakes/IMG_6353.webp', alt: "עוגת וינטאג' - תמונה 53" },
@@ -320,7 +320,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/mousse-cakes/20240405_140115.webp', alt: 'עוגת מוס - תמונה 6' },
       { src: '/images/gallery/mousse-cakes/20240405_140212.webp', alt: 'עוגת מוס - תמונה 7' },
       { src: '/images/gallery/mousse-cakes/20240421_113623.webp', alt: 'עוגת מוס - תמונה 8' },
-      { src: '/images/gallery/mousse-cakes/IMG_0170.webp', alt: 'עוגת מוס - תמונה 9' },
+  
       { src: '/images/gallery/mousse-cakes/IMG_0182.webp', alt: 'עוגת מוס - תמונה 10' },
       { src: '/images/gallery/mousse-cakes/IMG_4040.webp', alt: 'עוגת מוס - תמונה 11' },
       { src: '/images/gallery/mousse-cakes/IMG_5088.webp', alt: 'עוגת מוס - תמונה 12' },
@@ -362,7 +362,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/bento-cakes/IMG_3404.webp', alt: 'עוגת בנטו - תמונה 23' },
       { src: '/images/gallery/bento-cakes/IMG_3497.webp', alt: 'עוגת בנטו - תמונה 24' },
       { src: '/images/gallery/bento-cakes/IMG_3502.webp', alt: 'עוגת בנטו - תמונה 25' },
-      { src: '/images/gallery/bento-cakes/IMG_3611.webp', alt: 'עוגת בנטו - תמונה 26' },
+      { src: '/images/gallery/bento-cakes/IMG_3611.webp', alt: 'עוגת בנטו - ת��ונה 26' },
       { src: '/images/gallery/bento-cakes/IMG_3672.webp', alt: 'עוגת בנטו - תמונה 27' },
       { src: '/images/gallery/bento-cakes/IMG_3686.webp', alt: 'עוגת בנטו - תמונה 28' },
       { src: '/images/gallery/bento-cakes/IMG_3741.webp', alt: 'עוגת בנטו - תמונה 29' },
@@ -448,7 +448,7 @@ const galleries: GalleryData[] = [
     description:
       'עוגות בעיצוב אלגנטי עם פפיונים מרשימים  מבצק סוכר – שילוב מושלם של יוקרה, עדינות וסטייל.',
     heroImage: '/images/gallery/bow-cakes/IMG_4151.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת פפיון!',
+    whatsappMessage: 'שלום סלעית, אשמח להזמין ע��גת פפיון!',
     images: [
       { src: '/images/gallery/bow-cakes/IMG_4151.webp', alt: 'עוגת פפי��ן - תמונה 1' },
       { src: '/images/gallery/bow-cakes/IMG_6029.webp', alt: 'עוגת פפיון - תמונה 2' },
