@@ -280,7 +280,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/vintage-cakes/IMG_6128.webp', alt: "עוגת וינטאג' - תמונה 47" },
       { src: '/images/gallery/vintage-cakes/IMG_6161.webp', alt: "עוגת וינטאג' - תמונה 48" },
       { src: '/images/gallery/vintage-cakes/IMG_6166.webp', alt: "עוגת וינטאג' - תמונה 49" },
-      { src: '/images/gallery/vintage-cakes/IMG_6172.webp', alt: "עוגת וינטא����������' - תמונה 50" },
+      { src: '/images/gallery/vintage-cakes/IMG_6172.webp', alt: "עוגת וינטא������������' - תמונה 50" },
       { src: '/images/gallery/vintage-cakes/IMG_6187.webp', alt: "עו��ת וינטאג' - תמונה 51" },
       { src: '/images/gallery/vintage-cakes/IMG_6280.webp', alt: "עוגת וינטאג' - תמונה 52" },
       { src: '/images/gallery/vintage-cakes/IMG_6353.webp', alt: "עוגת וינטאג' - תמונה 53" },
@@ -319,7 +319,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/mousse-cakes/20240104_114252.webp', alt: 'עוגת מוס - תמונה 5' },
       { src: '/images/gallery/mousse-cakes/20240405_140115.webp', alt: 'עוגת מוס - תמונה 6' },
   
-      { src: '/images/gallery/mousse-cakes/20240421_113623.webp', alt: 'עוגת מוס - תמונה 8' }
+      { src: '/images/gallery/mousse-cakes/20240421_113623.webp', alt: 'עוגת מוס - תמונה 8' },
       { src: '/images/gallery/mousse-cakes/IMG_0182.webp', alt: 'עוגת מוס - תמונה 10' },
       { src: '/images/gallery/mousse-cakes/IMG_4040.webp', alt: 'עוגת מוס - תמונה 11' },
       { src: '/images/gallery/mousse-cakes/IMG_5088.webp', alt: 'עוגת מוס - תמונה 12' },
