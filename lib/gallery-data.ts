@@ -300,7 +300,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/vintage-cakes/IMG_9003.webp', alt: "עוגת וינטאג' - תמונה 67" },
       { src: '/images/gallery/vintage-cakes/IMG_9427.webp', alt: "עוגת וינטאג' - תמונה 68" },
       { src: '/images/gallery/vintage-cakes/IMG_9757.webp', alt: "עוגת וינטאג' - תמונה 69" },
-      { src: '/images/gallery/vintage-cakes/IMG_9806.webp', alt: "עוגת וינטאג' - תמונה 70" },
+      { src: '/images/gallery/vintage-cakes/IMG_9806.webp', alt: "עוגת וינטאג' - תמ��נה 70" },
       { src: '/images/gallery/vintage-cakes/IMG_9973.webp', alt: "עוגת וי��טאג' - תמונה 71" },
     ],
   },
@@ -516,7 +516,7 @@ const galleries: GalleryData[] = [
     images: [
       { src: '/images/gallery/burn-away-cakes/IMG_0455.webp', alt: 'עוגת דף נשרף - תמונה 1' },
       { src: '/images/gallery/burn-away-cakes/IMG_0954.webp', alt: 'עוגת דף נשרף - תמונה 2' },
-      { src: '/images/gallery/burn-away-cakes/IMG_1140.webp', alt: 'עוגת דף נשרף - תמונה 3' },
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/IMG_1147-dzfJXki9rWjcKJK2Aherg5TUptdKRF.jpg', alt: 'עוגת דף נשרף - תמונה 3' },
       { src: '/images/gallery/burn-away-cakes/IMG_1297.webp', alt: 'עוגת דף נשרף - תמונה 4' },
       { src: '/images/gallery/burn-away-cakes/IMG_2584.webp', alt: 'עוגת דף נשרף - תמונה 5' },
       { src: '/images/gallery/burn-away-cakes/IMG_2620.webp', alt: 'עוגת דף נשרף - תמונה 6' },
