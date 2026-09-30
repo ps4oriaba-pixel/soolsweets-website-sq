@@ -280,7 +280,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/vintage-cakes/IMG_6128.webp', alt: "עוגת וינטאג' - תמונה 47" },
       { src: '/images/gallery/vintage-cakes/IMG_6161.webp', alt: "עוגת וינטאג' - תמונה 48" },
       { src: '/images/gallery/vintage-cakes/IMG_6166.webp', alt: "עוגת וינטאג' - תמונה 49" },
-      { src: '/images/gallery/vintage-cakes/IMG_6172.webp', alt: "עוגת וינטא��' - תמונה 50" },
+      { src: '/images/gallery/vintage-cakes/IMG_6172.webp', alt: "עוגת וינטא����' - תמונה 50" },
       { src: '/images/gallery/vintage-cakes/IMG_6187.webp', alt: "עו��ת וינטאג' - תמונה 51" },
       { src: '/images/gallery/vintage-cakes/IMG_6280.webp', alt: "עוגת וינטאג' - תמונה 52" },
       { src: '/images/gallery/vintage-cakes/IMG_6353.webp', alt: "עוגת וינטאג' - תמונה 53" },
@@ -313,7 +313,7 @@ const galleries: GalleryData[] = [
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת מוס!',
     images: [
       { src: '/images/gallery/mousse-cakes/20221028_144630.webp', alt: 'עוגת מוס - תמונה 1' },
-      { src: '/images/gallery/mousse-cakes/20230128_104117.webp', alt: 'עוגת מוס - תמונה 2' },
+      
       { src: '/images/gallery/mousse-cakes/20230602_093435.webp', alt: 'עוגת מוס - תמונה 3' },
       { src: '/images/gallery/mousse-cakes/20231028_165036.webp', alt: 'עוגת מוס - תמונה 4' },
       { src: '/images/gallery/mousse-cakes/20240104_114252.webp', alt: 'עוגת מוס - תמונה 5' },
