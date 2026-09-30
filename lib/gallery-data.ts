@@ -375,7 +375,7 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'rectangular-cakes',
-    title: 'עוגה מלבנית ��עוצבת',
+    title: 'עוגה מלבנית ����עוצבת',
     subtitle: 'עיצוב מודרני ונקי – אלגנטי לכל שולחן',
     description:
       'מושלמת לאירועים גדולים ולחגיגות משפחתיות – בעיצוב מוקפד ובהתאמה אישית לכל סגנון.',
@@ -615,7 +615,7 @@ const galleries: GalleryData[] = [
     heroImage: '/images/gallery/chocolate-egg/20240304_194842.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין ביצים מתנפצות!',
     images: [
-      { src: '/images/gallery/chocolate-egg/20240304_194842.webp', alt: 'ביצת שוקולד ענקית - תמונה 1' },},
+      { src: '/images/gallery/chocolate-egg/20240304_194842.webp', alt: 'ביצת שוקולד ענקית - תמונה 1' },
       { src: '/images/gallery/chocolate-egg/Screenshot_20240303_212619_Instagram.webp', alt: 'ביצת שוקולד ענקית - תמונה 2' },
     ],
   },
