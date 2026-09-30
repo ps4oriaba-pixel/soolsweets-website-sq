@@ -213,7 +213,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/custom-design/IMG_9348.webp', alt: 'עוגה בעיצוב אישי - תמונה 98' },
       { src: '/images/gallery/custom-design/IMG_9370.webp', alt: 'עוגה בעיצוב אישי - תמונה 99' },
       { src: '/images/gallery/custom-design/IMG_9518.webp', alt: 'עוגה בעיצוב אישי - תמונה 100' },
-      { src: '/images/gallery/custom-design/IMG_9565.webp', alt: 'עוגה בעיצוב אישי - תמונה 101' },
+      { src: '/images/gallery/custom-design/IMG_9565.webp', alt: 'עוגה בעי��וב אישי - תמונה 101' },
       { src: '/images/gallery/custom-design/IMG_9644.webp', alt: 'עוגה בעיצוב אישי - תמונה 102' },
       { src: '/images/gallery/custom-design/IMG_9653.webp', alt: 'עוגה בעיצוב אישי - תמונה 103' },
       { src: '/images/gallery/custom-design/IMG_9666.webp', alt: 'עוגה בעיצוב אישי - תמונה 104' },
@@ -280,7 +280,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/vintage-cakes/IMG_6128.webp', alt: "עוגת וינטאג' - תמונה 47" },
       { src: '/images/gallery/vintage-cakes/IMG_6161.webp', alt: "עוגת וינטאג' - תמונה 48" },
       { src: '/images/gallery/vintage-cakes/IMG_6166.webp', alt: "עוגת וינטאג' - תמונה 49" },
-      { src: '/images/gallery/vintage-cakes/IMG_6172.webp', alt: "עוגת וינטא������������' - תמונה 50" },
+      { src: '/images/gallery/vintage-cakes/IMG_6172.webp', alt: "עוגת וינטא��������������' - תמונה 50" },
       { src: '/images/gallery/vintage-cakes/IMG_6187.webp', alt: "עו��ת וינטאג' - תמונה 51" },
       { src: '/images/gallery/vintage-cakes/IMG_6280.webp', alt: "עוגת וינטאג' - תמונה 52" },
       { src: '/images/gallery/vintage-cakes/IMG_6353.webp', alt: "עוגת וינטאג' - תמונה 53" },
@@ -313,18 +313,16 @@ const galleries: GalleryData[] = [
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת מוס!',
     images: [
       { src: '/images/gallery/mousse-cakes/20221028_144630.webp', alt: 'עוגת מוס - תמונה 1' },
-
-      { src: '/images/gallery/mousse-cakes/20230602_093435.webp', alt: 'עוגת מוס - תמונה 3' },
-      { src: '/images/gallery/mousse-cakes/20231028_165036.webp', alt: 'עוגת מוס - תמונה 4' },
-      { src: '/images/gallery/mousse-cakes/20240104_114252.webp', alt: 'עוגת מוס - תמונה 5' },
-      { src: '/images/gallery/mousse-cakes/20240405_140115.webp', alt: 'עוגת מוס - תמונה 6' },
-  
-      { src: '/images/gallery/mousse-cakes/20240421_113623.webp', alt: 'עוגת מוס - תמונה 8' },
-      { src: '/images/gallery/mousse-cakes/IMG_0182.webp', alt: 'עוגת מוס - תמונה 10' },
-      { src: '/images/gallery/mousse-cakes/IMG_4040.webp', alt: 'עוגת מוס - תמונה 11' },
-      { src: '/images/gallery/mousse-cakes/IMG_5088.webp', alt: 'עוגת מוס - תמונה 12' },
-      { src: '/images/gallery/mousse-cakes/IMG_6211.webp', alt: 'עוגת מוס - תמונה 13' },
-      { src: '/images/gallery/mousse-cakes/IMG_9695.webp', alt: 'עוגת מוס - תמונה 14' },
+      { src: '/images/gallery/mousse-cakes/20230602_093435.webp', alt: 'עוגת מוס - תמונה 2' },
+      { src: '/images/gallery/mousse-cakes/20231028_165036.webp', alt: 'עוגת מוס - תמונה 3' },
+      { src: '/images/gallery/mousse-cakes/20240104_114252.webp', alt: 'עוגת מוס - תמונה 4' },
+      { src: '/images/gallery/mousse-cakes/20240405_140115.webp', alt: 'עוגת מוס - תמונה 5' },  
+      { src: '/images/gallery/mousse-cakes/20240421_113623.webp', alt: 'עוגת מוס - תמונה 6' },
+      { src: '/images/gallery/mousse-cakes/IMG_0182.webp', alt: 'עוגת מוס - תמונה 7' },
+      { src: '/images/gallery/mousse-cakes/IMG_4040.webp', alt: 'עוגת מוס - תמונה 8' },
+      { src: '/images/gallery/mousse-cakes/IMG_5088.webp', alt: 'עוגת מוס - תמונה 9' },
+      { src: '/images/gallery/mousse-cakes/IMG_6211.webp', alt: 'עוגת מוס - תמונה 10' },
+      { src: '/images/gallery/mousse-cakes/IMG_9695.webp', alt: 'עוגת מוס - תמונה 11' },
     ],
   },
   {
@@ -706,7 +704,7 @@ export function getCategoryForSlug(slug: string): { label: string; href: string 
   const dessertsSlugs = ['cup-desserts', 'crumble-desserts', 'dedicated-dessert-boxes']
   const specialSlugs = ['chocolate-ball', 'exploding-candy', 'exploding-egg', 'tiered-cakes', 'burnt-paper-cakes']
 
-  if (boxesSlugs.includes(slug)) return { label: 'מארזים מעוצבים', href: '/category/boxes' }
+  if (boxesSlugs.includes(slug)) return { label: 'מארזים מעו��בים', href: '/category/boxes' }
   if (cakesSlugs.includes(slug)) return { label: 'עוגות מעוצבות', href: '/category/cakes' }
   if (dessertsSlugs.includes(slug)) return { label: 'קינוחים אישיים', href: '/category/desserts' }
   if (specialSlugs.includes(slug)) return { label: 'קולקציית ה-WOW', href: '/category/special' }
