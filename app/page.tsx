@@ -40,14 +40,15 @@ export default function HomePage() {
 
       <main className="flex-1 pt-20">
         {/* Hero */}
-        <section className="relative min-h-[90vh] flex items-center overflow-hidden">
-          <div className="absolute inset-0 z-0">
+        <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#d9c9b8]">
+          <div className="absolute inset-0 z-0 flex items-center justify-center">
             <Image
               src="/images/hero.png"
               alt="עוגות ומארזים מעוצבים של SoolSweets"
               fill
               priority
-              className="object-cover object-center"
+              className="object-contain object-center"
+              sizes="100vw"
             />
             {/* Neutral dark scrim so the photo keeps its own colors and stands out
                 from the pink page background */}
