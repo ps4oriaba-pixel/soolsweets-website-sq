@@ -150,7 +150,7 @@ export default function HomePage() {
                 src="/images/about-owner.png"
                 alt="סדנאות אפייה של SoolSweets"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
               />
             </div>
             <div className="md:w-1/2 p-10 flex flex-col justify-center gap-5">
