@@ -18,11 +18,11 @@ export default function AboutPage() {
         {/* Page Header */}
         <section className="relative h-72 md:h-96 overflow-hidden">
           <Image
-            src="/images/about-hero.png"
+            src="/images/about-owner.png"
             alt="סלעית בסטודיו האפייה"
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-top"
           />
           <div className="absolute inset-0 bg-foreground/45" />
           <div className="absolute inset-0 flex items-center justify-center flex-col gap-3 px-4">
@@ -42,7 +42,7 @@ export default function AboutPage() {
             <div className="md:w-2/5 flex-shrink-0">
               <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-muted relative shadow-md">
                 <Image
-                  src="/images/about-hero.png"
+                  src="/images/about-owner.png"
                   alt="סלעית – בעלת SoolSweets"
                   fill
                   className="object-cover"

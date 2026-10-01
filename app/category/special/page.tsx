@@ -47,7 +47,7 @@ export default function SpecialPage() {
     <CategoryPage
       title="קולקציית ה-WOW"
       subtitle="חוויות שוקולד שלא תשכחו לעולם"
-      heroImage="/images/category-special.png"
+      heroImage="/images/category-special-cover.png"
       heroAlt="קולקציית ה-WOW של SoolSweets"
       description=" מחפשים את אפקט ה”וואו”? כאן תמצאו את היצירות הייחודיות של Soolsweets – כאלה שכולם ידברו עליהן גם אחרי שהאירוע יסתיים. מכדורגל שוקולד, סוכריה מתנפצת, ביצת שוקולד ענקית ועד עוגות קומות ויצירות מתוקות בהתאמה אישית – לחגיגות שרוצות להרשים."
       products={products}

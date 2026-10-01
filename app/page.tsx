@@ -29,7 +29,7 @@ const categories = [
     href: '/category/special',
     title: 'קולקציית ה-WOW',
     description: "לחוויה מתוקה ובלתי נשכחת: כדורי שוקולד מתנפצים, סוכריות ענק מתנפצות, עוגות קומות מרשימות וקינוחים ייחודיים.",
-    image: '/images/category-special.png',
+    image: '/images/category-special-cover.png',
   },
 ]
 
@@ -147,7 +147,7 @@ export default function HomePage() {
             </div>
             <div className="relative h-72 md:h-auto md:w-1/2">
               <Image
-                src="/images/about-hero.png"
+                src="/images/about-owner.png"
                 alt="סדנאות אפייה של SoolSweets"
                 fill
                 className="object-cover"
