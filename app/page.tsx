@@ -40,14 +40,14 @@ export default function HomePage() {
 
       <main className="flex-1 pt-20">
         {/* Hero */}
-        <section className="relative min-h-[90vh] flex items-center overflow-hidden bg-[#d9c9b8]">
-          <div className="absolute inset-0 z-0">
+        <section className="relative min-h-0 md:min-h-[90vh] flex items-center overflow-hidden bg-[#d9c9b8]">
+          <div className="absolute inset-x-0 top-0 z-0 h-[66.6667vw] md:h-full">
             <Image
               src="/images/hero.png"
               alt="עוגות ומארזים מעוצבים של SoolSweets"
               fill
               priority
-              className="object-cover object-center"
+              className="object-contain object-top md:object-cover md:object-center"
               sizes="100vw"
             />
             {/* Neutral dark scrim so the photo keeps its own colors and stands out
@@ -55,7 +55,7 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-foreground/45" />
           </div>
 
-          <div className="relative z-10 max-w-6xl mx-auto px-6 py-24 w-full">
+          <div className="relative z-10 max-w-6xl mx-auto px-6 pt-[66.6667vw] pb-24 md:py-24 w-full">
             <p className="text-secondary font-medium tracking-widest uppercase text-sm mb-4">
               קונדיטורית בוטיק ביתית
             </p>
