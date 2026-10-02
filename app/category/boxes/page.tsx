@@ -15,14 +15,14 @@ const products = [
   {
     title: 'חגים',
     description: 'כי לכל חג מגיע מארז מיוחד. מתוקים מעוצבים לחגים ולאירועים לאורך כל השנה',
-    image: '/images/gallery/gender-reveal-1.png',
-    slug: 'gender-reveal',
+    image: '/images/category-holiday-boxes.png',
+    slug: 'holiday-boxes',
   },
   {
     title: 'עסקים',
     description: 'מארזים מעוצבים בהתאמה אישית לעובדים, לקוחות ושותפים, עם אפשרות למיתוג והתאמה אישית – הדרך המתוקה להוקיר, להפתיע ולהשאיר רושם',
-    image: '/images/box-birthday.png',
-    slug: 'sweet-sixteen',
+    image: '/images/category-business-boxes.png',
+    slug: 'branded-boxes',
   },
   {
     title: 'מארז בהתאמה אישית',

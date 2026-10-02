@@ -80,9 +80,8 @@ const galleries: GalleryData[] = [
     description: 'מיתוג ייחודי לעסק שלכם. מארז שמייצג את הערכים והסגנון של החברה שלכם.',
     heroImage: '/images/category-business-boxes.png',
     whatsappMessage: 'שלום סלעית, אשמח לשמוע על מארזים ממותגים לחברה!',
-    images: [
-      { src: '/images/category-business-boxes.png', alt: 'מארז ממותג' },
-      { src: '/images/gallery/boxes-events-2.png', alt: 'מארז עסקי' },
+  images: [
+  { src: '/images/gallery/boxes-events-2.png', alt: 'מארז עסקי' },
       { src: '/images/gallery/boxes-events-3.png', alt: 'קולקציית מארזים עסקיים' },
       { src: '/images/category-boxes.png', alt: 'מארזים לחברות' },
     ],
@@ -95,9 +94,8 @@ const galleries: GalleryData[] = [
       'מארזים בעיצוב מסורתי ומודרני לכל חגי השנה. שלחו מתנה שתזכרו בה כל השנה.',
     heroImage: '/images/category-holiday-boxes.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז חג!',
-    images: [
-      { src: '/images/category-holiday-boxes.png', alt: 'מארז חג' },
-      { src: '/images/box-birthday.png', alt: 'מארז מיוחד לחג' },
+  images: [
+  { src: '/images/box-birthday.png', alt: 'מארז מיוחד לחג' },
       { src: '/images/gallery/boxes-events-1.png', alt: 'מארז עם קשת' },
       { src: '/images/gallery/boxes-events-2.png', alt: 'מארז חגיגי' },
     ],
@@ -200,10 +198,10 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/custom-design/IMG_8103.webp', alt: 'עוגה בעיצוב אישי - תמונה 89' },
       { src: '/images/gallery/custom-design/IMG_8343.webp', alt: 'עוגה בעיצוב אישי - תמונה 90' },
       { src: '/images/gallery/custom-design/IMG_8393.webp', alt: 'עוגה בעיצוב אישי - תמונה 91' },
-      { src: '/images/gallery/custom-design/IMG_8478.webp', alt: 'עוגה בעיצוב אישי - תמונה 92' },
+      { src: '/images/gallery/custom-design/IMG_8478.webp', alt: 'עוגה בעיצוב ��ישי - תמונה 92' },
       { src: '/images/gallery/custom-design/IMG_8560.webp', alt: 'עוגה בעיצוב אישי - תמונה 93' },
       { src: '/images/gallery/custom-design/IMG_8702.webp', alt: 'עוגה בעיצוב אישי - תמונה 94' },
-      { src: '/images/gallery/custom-design/IMG_8758.webp', alt: 'עוגה בעיצוב אישי - תמונה 95' },
+      { src: '/images/gallery/custom-design/IMG_8758.webp', alt: 'עוג�� בעיצוב אישי - תמונה 95' },
       { src: '/images/gallery/custom-design/IMG_9110.webp', alt: 'עוגה בעיצוב אישי - תמונה 96' },
       { src: '/images/gallery/custom-design/IMG_9126.webp', alt: 'עוגה בעיצוב אישי - תמונה 97' },
       { src: '/images/gallery/custom-design/IMG_9348.webp', alt: 'עוגה בעיצוב אישי - תמונה 98' },
@@ -307,7 +305,7 @@ const galleries: GalleryData[] = [
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת מוס!',
     images: [
       { src: '/images/gallery/mousse-cakes/20221028_144630.webp', alt: 'עוגת מוס - תמונה 1' },
-      { src: '/images/gallery/mousse-cakes/20230602_093435.webp', alt: 'עוגת מוס - תמונה 2' },
+      { src: '/images/gallery/mousse-cakes/20230602_093435.webp', alt: 'עוגת מ��ס - תמונה 2' },
       { src: '/images/gallery/mousse-cakes/20231028_165036.webp', alt: 'עוגת מוס - תמונה 3' },
       { src: '/images/gallery/mousse-cakes/20240104_114252.webp', alt: 'עוגת מוס - תמונה 4' },
       { src: '/images/gallery/mousse-cakes/20240405_140115.webp', alt: 'עוגת מוס - תמונה 5' },  
@@ -564,7 +562,7 @@ const galleries: GalleryData[] = [
     heroImage: '/images/gallery/custom-boxes/IMG_3197.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז קינוח ייעודי!',
     images: [
-      { src: '/images/gallery/custom-boxes/IMG_3197.webp', alt: 'מארז קינוח ייעודי - תמונה 1' },
+      { src: '/images/gallery/custom-boxes/IMG_3197.webp', alt: 'מארז ק��נוח ייעודי - תמונה 1' },
       { src: '/images/gallery/custom-boxes/IMG_3198.webp', alt: 'מארז קינוח ייעודי - תמונה 2' },
       { src: '/images/gallery/custom-boxes/IMG_3769.webp', alt: 'מארז קינוח ייעודי - תמונה 3' },
       { src: '/images/gallery/custom-boxes/IMG_7611.webp', alt: 'מארז קינוח ייעודי - תמונה 4' },
