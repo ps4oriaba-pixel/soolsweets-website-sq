@@ -40,8 +40,8 @@ export default function HomePage() {
 
       <main className="flex-1 pt-20">
         {/* Hero */}
-        <section className="relative min-h-0 md:min-h-[90vh] flex flex-col md:items-center md:justify-center overflow-hidden bg-[#d9c9b8]">
-          <div className="relative z-0 w-full h-[46svh] min-h-[280px] md:absolute md:inset-0 md:h-auto">
+        <section className="relative overflow-hidden bg-[#ead8c8]">
+          <div className="relative z-0 h-[58svh] min-h-[360px] md:h-[72vh]">
             <Image
               src="/images/hero.png"
               alt="עוגות ומארזים מעוצבים של SoolSweets"
@@ -50,37 +50,38 @@ export default function HomePage() {
               className="object-cover object-center"
               sizes="100vw"
             />
-            {/* The photo stays clean on mobile; the dark scrim is only needed
-                behind the overlaid desktop copy. */}
-            <div className="absolute inset-0 bg-foreground/0 md:bg-foreground/45" />
+            {/* Soft overlay keeps the copy readable while preserving the photo. */}
+            <div className="absolute inset-0 bg-gradient-to-b from-foreground/35 via-foreground/10 to-foreground/45" />
+
+            <div className="absolute inset-x-0 bottom-0 z-10 mx-auto w-full max-w-6xl px-6 pb-10 text-background md:pb-20">
+              <p className="text-secondary font-medium tracking-widest uppercase text-sm mb-4">
+                קונדיטורית בוטיק ביתית
+              </p>
+              <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight text-balance">
+                כשטעם ואסתטיקה
+                <br />
+                נפגשים
+              </h1>
+              <p className="mt-5 max-w-lg text-lg leading-relaxed text-background/85 md:text-xl">
+                יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
+              </p>
+            </div>
           </div>
 
-          <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-12 md:py-24 bg-[#d9c9b8] md:bg-transparent md:text-background">
-            <p className="text-primary md:text-secondary font-medium tracking-widest uppercase text-sm mb-4">
-              קונדיטורית בוטיק ביתית
-            </p>
-            <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground md:text-background leading-tight text-balance mb-6">
-              כשטעם ואסתטיקה
-
-              נפגשים
-              <br />
-            </h1>
-            <p className="text-foreground/70 md:text-background/80 text-lg md:text-xl leading-relaxed max-w-lg mb-10">
-              יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
-            </p>
-            {/* Search bar */}
-            <div className="mb-8 w-full max-w-md">
-              <HeroSearch />
-            </div>
-
-            <div className="flex flex-wrap gap-4">
-              <WhatsAppButton message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
-              <Link
-                href="/about"
-                  className="inline-flex items-center gap-2 border border-foreground/40 text-foreground md:border-background md:text-background px-8 py-3 rounded-full text-base font-semibold hover:bg-foreground hover:text-background md:hover:bg-background md:hover:text-foreground transition-colors duration-200"
-              >
-                קצת עליי
-              </Link>
+          <div className="relative z-10 bg-[#ead8c8] px-6 py-8 md:px-6 md:py-10">
+            <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-4">
+              <div className="w-full max-w-md md:mb-0">
+                <HeroSearch />
+              </div>
+              <div className="flex flex-wrap gap-4">
+                <WhatsAppButton message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 border border-foreground/40 text-foreground px-8 py-3 rounded-full text-base font-semibold hover:bg-foreground hover:text-background transition-colors duration-200"
+                >
+                  קצת עליי
+                </Link>
+              </div>
             </div>
           </div>
         </section>
