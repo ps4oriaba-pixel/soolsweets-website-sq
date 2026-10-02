@@ -1,4 +1,4 @@
-export default function WhatsAppButton({ message = '' }: { message?: string }) {
+export default function WhatsAppButton({ message = '', compact = false }: { message?: string; compact?: boolean }) {
   const encodedMessage = encodeURIComponent(message)
   const href = message
     ? `https://wa.me/972545629058?text=${encodedMessage}`
@@ -9,7 +9,7 @@ export default function WhatsAppButton({ message = '' }: { message?: string }) {
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-3 rounded-full text-base font-semibold hover:bg-secondary hover:text-foreground transition-colors duration-200 shadow-md"
+      className={`${compact ? 'gap-2 px-5 py-2.5 text-sm md:px-8 md:py-3 md:text-base' : 'gap-3 px-8 py-3 text-base'} inline-flex items-center bg-primary text-primary-foreground rounded-full font-semibold hover:bg-secondary hover:text-foreground transition-colors duration-200 shadow-md`}
       aria-label="יצירת קשר בוואטסאפ"
     >
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden="true">

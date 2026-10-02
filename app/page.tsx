@@ -54,30 +54,30 @@ export default function HomePage() {
             <div className="absolute inset-0 bg-gradient-to-b from-foreground/35 via-foreground/10 to-foreground/45" />
 
             <div className="absolute inset-x-0 bottom-0 z-10 mx-auto w-full max-w-6xl px-6 pb-10 text-background md:pb-20">
-              <p className="text-secondary font-medium tracking-widest uppercase text-sm mb-4">
+              <p className="text-secondary font-medium tracking-widest uppercase text-xs md:text-sm mb-3 md:mb-4">
                 קונדיטורית בוטיק ביתית
               </p>
-              <h1 className="font-serif text-5xl md:text-7xl font-bold leading-tight text-balance">
+              <h1 className="font-serif text-3xl sm:text-4xl md:text-7xl font-bold leading-tight text-balance">
                 כשטעם ואסתטיקה
                 <br />
                 נפגשים
               </h1>
-              <p className="mt-5 max-w-lg text-lg leading-relaxed text-background/85 md:text-xl">
+              <p className="mt-3 md:mt-5 max-w-lg text-sm sm:text-base leading-relaxed text-background/85 md:text-xl">
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
             </div>
           </div>
 
-          <div className="relative z-10 bg-[#ead8c8] px-6 py-8 md:px-6 md:py-10">
+          <div className="relative z-10 bg-[#f3e2d7] px-5 py-6 md:px-6 md:py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
             <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-4">
               <div className="w-full max-w-md md:mb-0">
                 <HeroSearch />
               </div>
               <div className="flex flex-wrap gap-4">
-                <WhatsAppButton message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
+                <WhatsAppButton compact message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 border border-foreground/40 text-foreground px-8 py-3 rounded-full text-base font-semibold hover:bg-foreground hover:text-background transition-colors duration-200"
+                  className="inline-flex items-center gap-2 border border-foreground/40 text-foreground px-5 py-2.5 md:px-8 md:py-3 rounded-full text-sm md:text-base font-semibold hover:bg-foreground hover:text-background transition-colors duration-200"
                 >
                   קצת עליי
                 </Link>
