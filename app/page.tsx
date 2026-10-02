@@ -40,8 +40,8 @@ export default function HomePage() {
 
       <main className="flex-1 pt-20">
         {/* Hero */}
-        <section className="relative min-h-[calc(100svh-5rem)] md:min-h-[90vh] flex items-center overflow-hidden bg-[#d9c9b8]">
-          <div className="absolute inset-0 z-0">
+        <section className="relative min-h-0 md:min-h-[90vh] flex flex-col md:items-center md:justify-center overflow-hidden bg-[#d9c9b8]">
+          <div className="relative z-0 w-full h-[46svh] min-h-[280px] md:absolute md:inset-0 md:h-auto">
             <Image
               src="/images/hero.png"
               alt="עוגות ומארזים מעוצבים של SoolSweets"
@@ -50,22 +50,22 @@ export default function HomePage() {
               className="object-cover object-center"
               sizes="100vw"
             />
-            {/* Neutral dark scrim so the photo keeps its own colors and stands out
-                from the pink page background */}
-            <div className="absolute inset-0 bg-foreground/45" />
+            {/* The photo stays clean on mobile; the dark scrim is only needed
+                behind the overlaid desktop copy. */}
+            <div className="absolute inset-0 bg-foreground/0 md:bg-foreground/45" />
           </div>
 
-          <div className="relative z-10 max-w-6xl mx-auto px-6 py-16 md:py-24 w-full">
-            <p className="text-secondary font-medium tracking-widest uppercase text-sm mb-4">
+          <div className="relative z-10 w-full max-w-6xl mx-auto px-6 py-12 md:py-24 bg-[#d9c9b8] md:bg-transparent md:text-background">
+            <p className="text-primary md:text-secondary font-medium tracking-widest uppercase text-sm mb-4">
               קונדיטורית בוטיק ביתית
             </p>
-            <h1 className="font-serif text-5xl md:text-7xl font-bold text-background leading-tight text-balance mb-6">
+            <h1 className="font-serif text-5xl md:text-7xl font-bold text-foreground md:text-background leading-tight text-balance mb-6">
               כשטעם ואסתטיקה
 
               נפגשים
               <br />
             </h1>
-            <p className="text-background/80 text-lg md:text-xl leading-relaxed max-w-lg mb-10">
+            <p className="text-foreground/70 md:text-background/80 text-lg md:text-xl leading-relaxed max-w-lg mb-10">
               יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
             </p>
             {/* Search bar */}
@@ -77,7 +77,7 @@ export default function HomePage() {
               <WhatsAppButton message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
               <Link
                 href="/about"
-                className="inline-flex items-center gap-2 border border-background text-background px-8 py-3 rounded-full text-base font-semibold hover:bg-background hover:text-foreground transition-colors duration-200"
+                  className="inline-flex items-center gap-2 border border-foreground/40 text-foreground md:border-background md:text-background px-8 py-3 rounded-full text-base font-semibold hover:bg-foreground hover:text-background md:hover:bg-background md:hover:text-foreground transition-colors duration-200"
               >
                 קצת עליי
               </Link>
