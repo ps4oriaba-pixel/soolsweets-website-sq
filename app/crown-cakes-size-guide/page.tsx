@@ -48,21 +48,21 @@ export default function CrownCakesSizeGuidePage() {
 
         {/* Table */}
         <section className="max-w-2xl mx-auto px-6 py-14">
-          <div className="overflow-x-auto rounded-2xl border border-border shadow-sm">
-            <table className="w-full text-right border-collapse bg-card">
+          <div className="w-full rounded-2xl border border-border shadow-sm overflow-hidden">
+            <table className="w-full table-fixed text-right border-collapse bg-card text-xs sm:text-sm">
               <thead>
                 <tr className="bg-primary text-primary-foreground">
-                  <th className="px-5 py-3 font-semibold text-sm whitespace-nowrap">כמות אנשים</th>
-                  <th className="px-5 py-3 font-semibold text-sm whitespace-nowrap">גודל עוגה מומלץ</th>
+                  <th className="px-5 py-3 font-semibold text-sm whitespace-normal break-words">כמות אנשים</th>
+                  <th className="px-5 py-3 font-semibold text-sm whitespace-normal break-words">גודל עוגה מומלץ</th>
                 </tr>
               </thead>
               <tbody>
                 {rows.map((row, i) => (
                   <tr key={row.guests} className={i % 2 === 0 ? 'bg-card' : 'bg-muted/40'}>
-                    <td className="px-5 py-4 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
+                    <td className="px-5 py-4 font-bold text-foreground whitespace-normal break-words align-top border-t border-border">
                       {row.guests}
                     </td>
-                    <td className="px-5 py-4 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
+                    <td className="px-5 py-4 font-semibold text-primary whitespace-normal break-words align-top border-t border-border">
                       {row.size}
                     </td>
                   </tr>

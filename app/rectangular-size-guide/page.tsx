@@ -48,17 +48,17 @@ export default function RectangularSizeGuidePage() {
         </section>
 
         <section className="max-w-xl mx-auto px-6 py-14">
-          <div className="overflow-x-auto rounded-2xl border border-border shadow-sm">
-            <table className="w-full text-right border-collapse bg-card">
+          <div className="w-full rounded-2xl border border-border shadow-sm overflow-hidden">
+            <table className="w-full table-fixed text-right border-collapse bg-card text-[11px] sm:text-sm">
               <thead>
                 <tr className="bg-primary text-primary-foreground">
-                  <th className="px-3 py-3 font-semibold text-sm whitespace-nowrap">
+                  <th className="px-3 py-3 font-semibold text-sm whitespace-normal break-words">
                     כמות אנשים
                   </th>
-                  <th className="px-3 py-3 font-semibold text-sm whitespace-nowrap">
+                  <th className="px-3 py-3 font-semibold text-sm whitespace-normal break-words">
                     מידות (ס"מ)
                   </th>
-                  <th className="px-3 py-3 font-semibold text-sm whitespace-nowrap">
+                  <th className="px-3 py-3 font-semibold text-sm whitespace-normal break-words">
                     גודל עוגה
                   </th>
                 </tr>
@@ -69,13 +69,13 @@ export default function RectangularSizeGuidePage() {
                     key={row.servings}
                     className={i % 2 === 0 ? 'bg-card' : 'bg-muted/40'}
                   >
-                    <td className="px-3 py-3 font-bold text-foreground whitespace-nowrap align-top border-t border-border">
+                    <td className="px-3 py-3 font-bold text-foreground whitespace-normal break-words align-top border-t border-border">
                       {row.servings}
                     </td>
-                    <td className="px-3 py-3 font-semibold text-foreground whitespace-nowrap align-top border-t border-border">
+                    <td className="px-3 py-3 font-semibold text-foreground whitespace-normal break-words align-top border-t border-border">
                       {row.dimensions}
                     </td>
-                    <td className="px-3 py-3 font-semibold text-primary whitespace-nowrap align-top border-t border-border">
+                    <td className="px-3 py-3 font-semibold text-primary whitespace-normal break-words align-top border-t border-border">
                       {row.size}
                     </td>
                   </tr>
