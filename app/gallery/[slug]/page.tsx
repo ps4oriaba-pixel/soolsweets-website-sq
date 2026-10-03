@@ -38,13 +38,13 @@ export default async function GalleryPage({ params }: PageProps) {
 
       <main className="flex-1 pt-20">
         {/* Hero */}
-        <section className="relative h-64 md:h-80 overflow-hidden">
+        <section className={`relative overflow-hidden ${slug === 'tiered-cakes' ? 'h-[177.78vw] max-h-[600px] md:h-80' : 'h-64 md:h-80'}`}>
           <Image
             src={gallery.heroImage}
             alt={gallery.title}
             fill
             priority
-            className={`${slug === 'tiered-cakes' ? 'object-fill' : 'object-cover object-center'}`}
+            className={`${slug === 'tiered-cakes' ? 'object-contain object-center' : 'object-cover object-center'}`}
           />
           {/* Neutral dark scrim so the photo keeps its own colors */}
           <div className="absolute inset-0 bg-foreground/45" />

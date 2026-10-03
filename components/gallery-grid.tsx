@@ -63,7 +63,7 @@ export default function GalleryGrid({ images, title, fullPhotoLayout = false }: 
           <button
             key={i}
             onClick={() => setLightboxIndex(i)}
-            className={`group relative overflow-hidden rounded-xl bg-card focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${fullPhotoLayout ? 'aspect-[4/5]' : 'aspect-square'}`}
+            className={`group relative overflow-hidden rounded-xl bg-card focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${fullPhotoLayout ? 'aspect-[9/16]' : 'aspect-square'}`}
             aria-label={`פתח תמונה: ${img.alt}`}
           >
             <Image
@@ -71,7 +71,7 @@ export default function GalleryGrid({ images, title, fullPhotoLayout = false }: 
               alt={img.alt}
               fill
               sizes="(max-width: 768px) 50vw, 33vw"
-              className={`${fullPhotoLayout ? 'object-fill' : 'object-cover'} transition-transform duration-500 group-hover:scale-105`}
+              className={`${fullPhotoLayout ? 'object-contain object-center' : 'object-cover'} transition-transform duration-500 group-hover:scale-105`}
             />
             {/* Hover overlay */}
             <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/25 transition-colors duration-300 flex items-center justify-center">
