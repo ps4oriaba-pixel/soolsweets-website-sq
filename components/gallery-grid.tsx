@@ -71,7 +71,7 @@ export default function GalleryGrid({ images, title, fullPhotoLayout = false }: 
               alt={img.alt}
               fill
               sizes="(max-width: 768px) 50vw, 33vw"
-              className={`${fullPhotoLayout ? 'object-contain object-center' : 'object-cover'} transition-transform duration-500 group-hover:scale-105`}
+              className={`${fullPhotoLayout ? 'object-fill' : 'object-cover'} transition-transform duration-500 group-hover:scale-105`}
             />
             {/* Hover overlay */}
             <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/25 transition-colors duration-300 flex items-center justify-center">

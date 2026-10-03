@@ -44,7 +44,7 @@ export default async function GalleryPage({ params }: PageProps) {
             alt={gallery.title}
             fill
             priority
-            className={`${slug === 'tiered-cakes' ? 'object-contain object-center' : 'object-cover object-center'}`}
+            className={`${slug === 'tiered-cakes' ? 'object-fill' : 'object-cover object-center'}`}
           />
           {/* Neutral dark scrim so the photo keeps its own colors */}
           <div className="absolute inset-0 bg-foreground/45" />
