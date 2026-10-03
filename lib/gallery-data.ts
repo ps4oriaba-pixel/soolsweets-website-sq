@@ -373,7 +373,7 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'rectangular-cakes',
-    title: 'עוגה מלבנית ������עוצבת',
+    title: 'עוגה מלבנית מעוצב',
     subtitle: 'עיצוב מודרני ונקי – אלגנטי לכל שולחן',
     description:
       'מושלמת לאירועים גדולים ולחגיגות משפחתיות – בעיצוב מוקפד ובהתאמה אישית לכל סגנון.',
@@ -622,14 +622,12 @@ const galleries: GalleryData[] = [
     subtitle: '',
     description:
       'עוגות קומות מרשימות לחתונות, אירועים גדולים וכל מי שמחפש את ה-WOW האמיתי.',
-    heroImage: '/images/gallery/levels-cakes/20230917_161334.webp',
+    heroImage: '/images/gallery/levels-cakes/user-tiered-1.png',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת קומות!',
     images: [
-      { src: '/images/gallery/levels-cakes/20230917_161334.webp', alt: 'עוגת קומות - תמונה 1' },
-      { src: '/images/gallery/levels-cakes/20230917_191150.webp', alt: 'עוגת קומות - תמונה 2' },
-      { src: '/images/gallery/levels-cakes/20230918_200516.webp', alt: 'עוגת קומות - תמונה 3' },
-      { src: '/images/gallery/levels-cakes/user-tiered-1.png', alt: 'עוגת קומות - תמונה 4' },
-      { src: '/images/gallery/levels-cakes/user-tiered-2.png', alt: 'עוגת קומות - תמונה 5' },
+      { src: '/images/gallery/levels-cakes/20230917_191150.webp', alt: 'עוגת קומות - תמונה 1' },
+      { src: '/images/gallery/levels-cakes/user-tiered-1.png', alt: 'עוגת קומות - תמונה 2' },
+      { src: '/images/gallery/levels-cakes/user-tiered-2.png', alt: 'עוגת קומות - תמונה 3' },
     ],
   },
 ]
