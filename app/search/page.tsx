@@ -67,18 +67,18 @@ function SearchResults() {
             <h1 className="font-serif text-4xl font-bold text-foreground mb-8 text-balance">
               מה אתם מחפשים?
             </h1>
-            <form onSubmit={handleSearch} className="flex gap-3 max-w-xl mx-auto" dir="rtl">
+            <form onSubmit={handleSearch} className="flex flex-col sm:flex-row gap-3 max-w-xl mx-auto w-full" dir="rtl">
               <input
                 type="text"
                 value={inputValue}
                 onChange={(e) => setInputValue(e.target.value)}
                 placeholder="למשל: עוגה לחתונה אינטימית של 15 איש בסגנון וינטאג׳..."
-                className="flex-1 rounded-full border border-border bg-background px-6 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
+                className="min-w-0 w-full flex-1 rounded-full border border-border bg-background px-4 sm:px-6 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary shadow-sm"
               />
               <button
                 type="submit"
                 disabled={status === 'loading' || !inputValue.trim()}
-                className="shrink-0 rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
+                className="w-full sm:w-auto shrink-0 rounded-full bg-primary text-primary-foreground px-6 py-3 text-sm font-semibold hover:opacity-90 transition-opacity disabled:opacity-50"
               >
                 {status === 'loading' ? 'מחפש...' : 'חיפוש'}
               </button>

@@ -44,7 +44,7 @@ export default async function GalleryPage({ params }: PageProps) {
             alt={gallery.title}
             fill
             priority
-            className="object-cover object-center"
+            className={`${slug === 'tiered-cakes' ? 'object-contain object-center' : 'object-cover object-center'}`}
           />
           {/* Neutral dark scrim so the photo keeps its own colors */}
           <div className="absolute inset-0 bg-foreground/45" />
@@ -101,7 +101,7 @@ export default async function GalleryPage({ params }: PageProps) {
 
         {/* Gallery Grid */}
         <section className="max-w-5xl mx-auto px-6 pb-20">
-          <GalleryGrid images={gallery.images} title={gallery.title} />
+          <GalleryGrid images={gallery.images} title={gallery.title} fullPhotoLayout={slug === 'tiered-cakes'} />
         </section>
 
         {/* CTA */}

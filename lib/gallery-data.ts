@@ -373,8 +373,8 @@ const galleries: GalleryData[] = [
   },
   {
     slug: 'rectangular-cakes',
-    title: 'עוגה מלבנית מעוצב',
-    subtitle: 'עיצוב מודרני ונקי – אלגנטי לכל שולחן',
+    title: 'עוגה מלבנית מעוצבת',
+    subtitle: 'עיצוב מודרני ונקי – אלגנטי ��כל שולחן',
     description:
       'מושלמת לאירועים גדולים ולחגיגות משפחתיות – בעיצוב מוקפד ובהתאמה אישית לכל סגנון.',
     heroImage: '/images/gallery/rectangular-cakes/20240119_085307.webp',
