@@ -11,7 +11,7 @@ const PLACEHOLDER_HINTS = [
   'הפתעה עם שוקולד לבת מצווה...',
 ]
 
-export default function HeroSearch() {
+export default function HeroSearch({ variant = 'dark' }: { variant?: 'dark' | 'light' }) {
   const router = useRouter()
   const [query, setQuery] = useState('')
   const [placeholderIndex, setPlaceholderIndex] = useState(0)
@@ -64,7 +64,7 @@ export default function HeroSearch() {
     >
       <div className="relative flex items-center">
         {/* Search icon */}
-        <span className="absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none text-background/60">
+        <span           className={`absolute right-5 top-1/2 -translate-y-1/2 pointer-events-none ${variant === 'light' ? 'text-foreground/50' : 'text-background/60'}`}>
           <svg
             viewBox="0 0 24 24"
             fill="none"
@@ -88,7 +88,7 @@ export default function HeroSearch() {
             }
           }}
           placeholder={displayedPlaceholder || 'מה תרצו להזמין?'}
-          className="w-full rounded-full bg-background/15 backdrop-blur-sm border border-background/30 pr-12 pl-36 py-4 text-sm text-background placeholder:text-background/55 focus:outline-none focus:ring-2 focus:ring-background/40 shadow-lg"
+          className={`w-full rounded-full backdrop-blur-sm border pr-12 pl-36 py-4 text-sm focus:outline-none shadow-lg ${variant === 'light' ? 'bg-muted/50 border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/30' : 'bg-background/15 border-background/30 text-background placeholder:text-background/55 focus:ring-2 focus:ring-background/40'}`}
           aria-label="תיאור הבקשה"
         />
 
@@ -101,7 +101,7 @@ export default function HeroSearch() {
         </button>
       </div>
 
-      <p className="mt-3 text-background/55 text-xs text-center">
+      <p className={`mt-3 text-xs text-center ${variant === 'light' ? 'text-muted-foreground' : 'text-background/55'}`}>
         ציינו: מספר אנשים, סוג האירוע וסגנון מועדף
       </p>
     </form>

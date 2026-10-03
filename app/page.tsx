@@ -53,7 +53,7 @@ export default function HomePage() {
             {/* Soft overlay keeps the copy readable while preserving the photo. */}
             <div className="absolute inset-0 bg-gradient-to-b from-foreground/35 via-foreground/10 to-foreground/45" />
 
-            <div className="absolute inset-x-0 bottom-0 z-10 mx-auto w-full max-w-6xl px-6 pb-10 text-background md:pb-20">
+            <div className="absolute inset-x-0 top-0 z-10 mx-auto w-full max-w-6xl px-6 pt-8 text-background md:pt-16">
               <p className="text-secondary font-medium tracking-widest uppercase text-xs md:text-sm mb-3 md:mb-4">
                 קונדיטורית בוטיק ביתית
               </p>
@@ -68,10 +68,10 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="relative z-10 bg-[#f3e2d7] px-5 py-6 md:px-6 md:py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
+          <div className="relative z-10 bg-background px-5 py-6 md:px-6 md:py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
             <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-4">
               <div className="w-full max-w-md md:mb-0">
-                <HeroSearch />
+                <HeroSearch variant="light" />
               </div>
               <div className="flex flex-wrap gap-4">
                 <WhatsAppButton compact message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
