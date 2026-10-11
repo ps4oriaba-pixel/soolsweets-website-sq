@@ -31,7 +31,7 @@ export default function DessertsPage() {
     <CategoryPage
       title="קינוחים אישיים"
       subtitle="פינוקים קטנים עם נוכחות גדולה"
-      heroImage="/images/category-desserts.png"
+      heroImage="/images/category-personal-desserts-new.png"
       heroAlt="קינוחים אישיים של SoolSweets"
       description="פינוקים אישיים במגוון טעמים ועיצובים – מושלמים לאירוח, לחגיגות ולכל רגע מתוק."
       products={products}

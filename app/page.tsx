@@ -11,7 +11,7 @@ const categories = [
     title: 'עוגות מעוצבות',
     description: `העוגה שתהפוך את החגיגה לבלתי נשכחת.
 עוגות וינטאג׳, מוס, בנטו, מספרים ועיצוב אישי לכל אירוע`,
-    image: '/images/category-cakes-cover.png',
+    image: '/images/category-designed-cakes-new.png',
   },
   {
     href: '/category/boxes',
@@ -23,13 +23,13 @@ const categories = [
     href: '/category/desserts',
     title: 'קינוחים אישיים',
     description: "פינוקים אישיים במגוון טעמים ועיצובים – מושלמים לאירוח, לחגיגות ולכל רגע מתוק.",
-    image: '/images/category-desserts.png',
+    image: '/images/category-personal-desserts-new.png',
   },
   {
     href: '/category/special',
     title: 'קולקציית ה-WOW',
     description: "לחוויה מתוקה ובלתי נשכחת: כדורי שוקולד מתנפצים, סוכריות ענק מתנפצות, עוגות קומות מרשימות וקינוחים ייחודיים.",
-    image: '/images/category-special-cover.png',
+    image: '/images/category-wow-new.png',
   },
 ]
 
@@ -43,7 +43,7 @@ export default function HomePage() {
         <section className="relative overflow-hidden bg-[#ead8c8]">
           <div className="relative z-0 h-[58svh] min-h-[360px] md:h-[72vh]">
             <Image
-              src="/images/hero.png"
+              src="/images/home-hero-new.png"
               alt="עוגות ומארזים מעוצבים של SoolSweets"
               fill
               priority

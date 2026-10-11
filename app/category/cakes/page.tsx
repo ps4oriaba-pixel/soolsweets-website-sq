@@ -75,7 +75,7 @@ export default function CakesPage() {
     <CategoryPage
       title="עוגות מעוצבות"
       subtitle="כל עוגה היא יצירת אומנות שמעוצבת במיוחד עבורכם"
-      heroImage="/images/category-cakes-cover.png"
+      heroImage="/images/category-designed-cakes-new.png"
       heroAlt="עוגות מעוצבות של SoolSweets"
       description=" העוגה שתהפוך את החגיגה לבלתי נשכחת.
 עוגה שתהיה מרכז החגיגה מעיצוב וינטאג’ קלאסי ועד עוגות מוס, בנטו, מספרים ועיצובים בהתאמה אישית – יפות לעין, טעימות בכל ביס, ומדויקות עד הפרט האחרון."
