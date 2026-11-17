@@ -5,6 +5,7 @@ import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import { hasSizeGuide, getSizeGuideUrl } from '@/lib/gallery-data'
 import Breadcrumb from '@/components/breadcrumb'
+import { getImageRatio } from '@/lib/image-ratios'
 
 export interface Product {
   title: string
@@ -76,19 +77,19 @@ export default function CategoryPage({
 
         {/* Products Grid */}
         <section className="max-w-6xl mx-auto px-6 pb-20">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
             {products.map((product) => (
               <div
                 key={product.title}
                 className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col"
               >
-                {/* Clickable image → gallery page. Fixed aspect-[4/5] frame keeps
-                    every card the same size regardless of the photo's own
-                    dimensions; object-cover fills the whole frame edge-to-edge
-                    with no empty margins. */}
+                {/* Clickable image → gallery page. The frame takes the photo's
+                    own aspect ratio (see lib/image-ratios.ts), so the whole
+                    photo is shown: nothing cropped, no empty margins. */}
                 <Link
                   href={`/gallery/${product.slug}`}
-                  className="relative aspect-[4/5] overflow-hidden block group bg-card"
+                  style={{ aspectRatio: getImageRatio(product.image) }}
+                  className="relative overflow-hidden block group bg-card"
                   aria-label={`צפו בגלריה: ${product.title}`}
                 >
                   <Image

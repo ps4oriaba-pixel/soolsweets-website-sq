@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import type { GalleryImage } from '@/lib/gallery-data'
+import { getImageRatio } from '@/lib/image-ratios'
 
 interface GalleryGridProps {
   images: GalleryImage[]
@@ -13,11 +14,29 @@ interface GalleryGridProps {
 const INITIAL_VISIBLE_COUNT = 10
 const LOAD_MORE_COUNT = 10
 
-export default function GalleryGrid({ images, title, fullPhotoLayout = false }: GalleryGridProps) {
+// מספר עמודות: 2 בטלפון, 3 במסך גדול
+function useColumnCount() {
+  const [cols, setCols] = useState(2)
+  useEffect(() => {
+    const mq = window.matchMedia('(min-width: 768px)')
+    const update = () => setCols(mq.matches ? 3 : 2)
+    update()
+    mq.addEventListener('change', update)
+    return () => mq.removeEventListener('change', update)
+  }, [])
+  return cols
+}
+
+export default function GalleryGrid({ images, title }: GalleryGridProps) {
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT)
   const [lightboxIndex, setLightboxIndex] = useState<number | null>(null)
 
   const visibleImages = images.slice(0, visibleCount)
+  const cols = useColumnCount()
+  // חלוקה לעמודות לפי סדר (תמונה 1 לעמודה 1, תמונה 2 לעמודה 2 וכו'),
+  // כך שטעינת תמונות נוספות לא מזיזה את התמונות הקיימות
+  const columns: { img: GalleryImage; index: number }[][] = Array.from({ length: cols }, () => [])
+  visibleImages.forEach((img, index) => columns[index % cols].push({ img, index }))
   const hasMore = visibleCount < images.length
 
   const handleLoadMore = useCallback(() => {
@@ -57,40 +76,45 @@ export default function GalleryGrid({ images, title, fullPhotoLayout = false }: 
 
   return (
     <>
-      {/* Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
-        {visibleImages.map((img, i) => (
-          <button
-            key={i}
-            onClick={() => setLightboxIndex(i)}
-            className={`group relative overflow-hidden rounded-xl bg-card focus:outline-none focus-visible:ring-2 focus-visible:ring-primary ${fullPhotoLayout ? 'aspect-[9/16]' : 'aspect-square'}`}
-            aria-label={`פתח תמונה: ${img.alt}`}
-          >
-            <Image
-              src={img.src}
-              alt={img.alt}
-              fill
-              sizes="(max-width: 768px) 50vw, 33vw"
-              className={`${fullPhotoLayout ? 'object-contain object-center' : 'object-cover'} transition-transform duration-500 group-hover:scale-105`}
-            />
-            {/* Hover overlay */}
-            <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/25 transition-colors duration-300 flex items-center justify-center">
-              <svg
-                className="w-10 h-10 text-background opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-md"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                aria-hidden="true"
+      {/* Grid – כל תמונה מוצגת ביחס המקורי שלה: בלי חיתוך ובלי שוליים */}
+      <div className="flex items-start gap-3 md:gap-4">
+        {columns.map((column, c) => (
+          <div key={c} className="flex min-w-0 flex-1 flex-col gap-3 md:gap-4">
+            {column.map(({ img, index }) => (
+              <button
+                key={index}
+                onClick={() => setLightboxIndex(index)}
+                style={{ aspectRatio: getImageRatio(img.src) }}
+                className="group relative block w-full overflow-hidden rounded-xl bg-card focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+                aria-label={`פתח תמונה: ${img.alt}`}
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth={1.5}
-                  d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16zm0-4v-4m0 0V7m0 4H7m4 0h4"
+                <Image
+                  src={img.src}
+                  alt={img.alt}
+                  fill
+                  sizes="(max-width: 768px) 50vw, 33vw"
+                  className="object-cover transition-transform duration-500 group-hover:scale-105"
                 />
-              </svg>
-            </div>
-          </button>
+                {/* Hover overlay */}
+                <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/25 transition-colors duration-300 flex items-center justify-center">
+                  <svg
+                    className="w-10 h-10 text-background opacity-0 group-hover:opacity-100 transition-opacity duration-300 drop-shadow-md"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={1.5}
+                      d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16zm0-4v-4m0 0V7m0 4H7m4 0h4"
+                    />
+                  </svg>
+                </div>
+              </button>
+            ))}
+          </div>
         ))}
       </div>
 
