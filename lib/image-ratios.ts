@@ -73,3 +73,29 @@ const EXCEPTIONS: Record<string, string> = {
 export function getImageRatio(src: string): string {
   return EXCEPTIONS[src] ?? DEFAULT_RATIO
 }
+
+function ratioToNumber(ratio: string): number {
+  const [w, h] = ratio.split('/').map(Number)
+  return w / h
+}
+
+// המסגרת הנפוצה ביותר בקבוצת תמונות – כל התמונות בגלריה/בעמוד יוצגו באותו גודל מסגרת
+export function getDominantRatio(srcs: string[]): string {
+  const counts = new Map<string, { ratio: string; count: number }>()
+  for (const src of srcs) {
+    const ratio = getImageRatio(src)
+    const key = ratioToNumber(ratio).toFixed(2)
+    const entry = counts.get(key)
+    if (entry) entry.count += 1
+    else counts.set(key, { ratio, count: 1 })
+  }
+  let best = DEFAULT_RATIO
+  let max = 0
+  counts.forEach(({ ratio, count }) => {
+    if (count > max) {
+      max = count
+      best = ratio
+    }
+  })
+  return best
+}

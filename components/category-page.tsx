@@ -5,7 +5,7 @@ import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import { hasSizeGuide, getSizeGuideUrl } from '@/lib/gallery-data'
 import Breadcrumb from '@/components/breadcrumb'
-import { getImageRatio } from '@/lib/image-ratios'
+import { getDominantRatio } from '@/lib/image-ratios'
 
 export interface Product {
   title: string
@@ -36,6 +36,9 @@ export default function CategoryPage({
   whatsappMessage,
   categoryLabel,
 }: CategoryPageProps) {
+  // מסגרת אחידה לכל כרטיסי העמוד (לפי הפורמט הנפוץ בתמונות העמוד)
+  const frame = getDominantRatio(products.map((p) => p.image))
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
@@ -52,7 +55,7 @@ export default function CategoryPage({
           />
           {/* Neutral dark scrim so the photo keeps its own colors and stands out
               from the pink page background (matches the home hero) */}
-          <div className="absolute inset-0 bg-foreground/55" />
+          <div className="absolute inset-0 bg-foreground/45" />
           <div className="absolute inset-0 flex items-center justify-center flex-col gap-3 px-4">
             <p className="text-secondary text-sm font-medium tracking-widest uppercase">
               SoolSweets
@@ -77,18 +80,18 @@ export default function CategoryPage({
 
         {/* Products Grid */}
         <section className="max-w-6xl mx-auto px-6 pb-20">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {products.map((product) => (
               <div
                 key={product.title}
                 className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-md transition-shadow duration-300 flex flex-col"
               >
-                {/* Clickable image → gallery page. The frame takes the photo's
-                    own aspect ratio (see lib/image-ratios.ts), so the whole
-                    photo is shown: nothing cropped, no empty margins. */}
+                {/* Clickable image → gallery page. All cards share one frame size
+                    (the most common photo format on the page), photos fill it
+                    edge to edge. */}
                 <Link
                   href={`/gallery/${product.slug}`}
-                  style={{ aspectRatio: getImageRatio(product.image) }}
+                  style={{ aspectRatio: frame }}
                   className="relative overflow-hidden block group bg-card"
                   aria-label={`צפו בגלריה: ${product.title}`}
                 >
@@ -96,6 +99,7 @@ export default function CategoryPage({
                     src={product.image}
                     alt={product.title}
                     fill
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
                   />
                   {product.note && (
