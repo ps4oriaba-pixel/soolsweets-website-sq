@@ -41,7 +41,7 @@ export default function HomePage() {
       <main className="flex-1 pt-20">
         {/* Hero */}
         <section className="relative overflow-hidden bg-[#ead8c8]">
-          <div className="relative z-0 h-[58svh] min-h-[360px] md:h-[72vh]">
+          <div className="relative z-0 aspect-square min-h-0 md:aspect-auto md:h-[72vh] md:min-h-[360px]">
             <Image
               src="/images/home-hero-new.png"
               alt="עוגות ומארזים מעוצבים של SoolSweets"
@@ -51,9 +51,9 @@ export default function HomePage() {
               sizes="100vw"
             />
             {/* Soft overlay keeps the copy readable while preserving the photo. */}
-            <div className="absolute inset-0 bg-gradient-to-b from-foreground/45 via-foreground/20 to-foreground/55" />
+            <div className="absolute inset-0 hidden bg-gradient-to-b from-foreground/45 via-foreground/20 to-foreground/55 md:block" />
 
-            <div className="absolute inset-x-0 top-0 z-10 mx-auto w-full max-w-6xl px-6 pt-8 text-background md:pt-16">
+            <div className="absolute inset-x-0 top-0 z-10 mx-auto hidden w-full max-w-6xl px-6 pt-8 text-background md:block md:pt-16">
               <p className="text-secondary font-medium tracking-widest uppercase text-xs md:text-sm mb-3 md:mb-4">
                 קונדיטורית בוטיק ביתית
               </p>
@@ -66,6 +66,18 @@ export default function HomePage() {
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
             </div>
+          </div>
+
+          <div className="bg-background px-5 py-7 text-center text-foreground md:hidden">
+            <p className="mb-2 text-sm font-medium tracking-widest text-primary">
+              קונדיטורית בוטיק ביתית
+            </p>
+            <h1 className="font-serif text-3xl font-bold leading-tight text-balance">
+              כשטעם ואסתטיקה נפגשים
+            </h1>
+            <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-foreground/75">
+              יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
+            </p>
           </div>
 
           <div className="relative z-10 bg-background px-5 py-6 md:px-6 md:py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
