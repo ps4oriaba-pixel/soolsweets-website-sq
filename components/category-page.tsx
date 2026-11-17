@@ -52,7 +52,7 @@ export default function CategoryPage({
           />
           {/* Neutral dark scrim so the photo keeps its own colors and stands out
               from the pink page background (matches the home hero) */}
-          <div className="absolute inset-0 bg-foreground/45" />
+          <div className="absolute inset-0 bg-foreground/55" />
           <div className="absolute inset-0 flex items-center justify-center flex-col gap-3 px-4">
             <p className="text-secondary text-sm font-medium tracking-widest uppercase">
               SoolSweets

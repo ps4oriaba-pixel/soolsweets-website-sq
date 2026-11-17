@@ -51,7 +51,7 @@ export default function HomePage() {
               sizes="100vw"
             />
             {/* Soft overlay keeps the copy readable while preserving the photo. */}
-            <div className="absolute inset-0 bg-gradient-to-b from-foreground/35 via-foreground/10 to-foreground/45" />
+            <div className="absolute inset-0 bg-gradient-to-b from-foreground/45 via-foreground/20 to-foreground/55" />
 
             <div className="absolute inset-x-0 top-0 z-10 mx-auto w-full max-w-6xl px-6 pt-8 text-background md:pt-16">
               <p className="text-secondary font-medium tracking-widest uppercase text-xs md:text-sm mb-3 md:mb-4">

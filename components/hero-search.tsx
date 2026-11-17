@@ -4,11 +4,11 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/navigation'
 
 const PLACEHOLDER_HINTS = [
-  'עוגת יום הולדת ל-20 איש בסגנון וינטאג׳...',
-  'מארז גילוי מין העובר מפתיע...',
-  'קינוח לאירוע קטן ואינטימי...',
-  'עוגת חתונה קלאסית לקבוצה גדולה...',
-  'הפתעה עם שוקולד לבת מצווה...',
+  'עוגת יום הולדת ל-20',
+  'מארז גילוי מין מפתיע',
+  'קינוח לאירוע קטן',
+  'עוגת חתונה קלאסית',
+  'שוקולד לבת מצווה',
 ]
 
 export default function HeroSearch({ variant = 'dark' }: { variant?: 'dark' | 'light' }) {
@@ -88,7 +88,7 @@ export default function HeroSearch({ variant = 'dark' }: { variant?: 'dark' | 'l
             }
           }}
           placeholder={displayedPlaceholder || 'מה תרצו להזמין?'}
-          className={`w-full rounded-full backdrop-blur-sm border pr-9 pl-20 sm:pl-36 py-3.5 sm:py-4 text-[10px] sm:text-sm text-right placeholder:text-[10px] sm:placeholder:text-sm focus:outline-none shadow-lg ${variant === 'light' ? 'bg-muted/50 border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/30' : 'bg-background/15 border-background/30 text-background placeholder:text-background/55 focus:ring-2 focus:ring-background/40'}`}
+          className={`w-full rounded-full backdrop-blur-sm border pr-9 pl-20 sm:pl-36 py-3.5 sm:py-4 text-xs sm:text-sm text-right placeholder:text-xs sm:placeholder:text-sm focus:outline-none shadow-lg ${variant === 'light' ? 'bg-muted/50 border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/30' : 'bg-background/15 border-background/30 text-background placeholder:text-background/55 focus:ring-2 focus:ring-background/40'}`}
           aria-label="תיאור הבקשה"
         />
 
