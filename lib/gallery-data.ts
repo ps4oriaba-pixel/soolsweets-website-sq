@@ -117,7 +117,6 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/custom-design/20230806_172936.webp', alt: 'עוגה בעיצוב אישי - תמונה 4' },
       { src: '/images/gallery/custom-design/20230817_155651.webp', alt: 'עוגה בעיצוב אישי - תמונה 5' },
      { src: '/images/gallery/custom-design/20231220_163805.webp', alt: 'עוגה בעיצוב אישי - תמונה 6' },
-      { src: '/images/gallery/custom-design/20231220_163805.webp', alt: 'עוגה בעיצוב אישי - תמונה 8' },
       { src: '/images/gallery/custom-design/20231226_153314.webp', alt: 'עוגה בעיצוב אישי - תמונה 9' },
       { src: '/images/gallery/custom-design/20240125_154351.webp', alt: 'עוגה בעיצוב אישי - תמונה 10' },
       { src: '/images/gallery/custom-design/20240416_110819.webp', alt: 'עוגה בעיצוב אישי - תמונה 11' },
@@ -213,7 +212,6 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/custom-design/IMG_9666.webp', alt: 'עוגה בעיצוב אישי - תמונה 104' },
       { src: '/images/gallery/custom-design/IMG_9829.webp', alt: 'עוגה בעיצוב אישי - תמונה 105' },
       { src: '/images/gallery/custom-design/Screenshot_20230714_112916_Photos.webp', alt: 'עוגה בעיצוב אישי - תמונה 106' },
-      { src: '/images/gallery/custom-design/ab136d40-7a29-43b2-801b-6f316ab464ed.webp', alt: 'עוגה בעיצוב אישי - תמונה 107' },
     ],
   },
 
@@ -486,7 +484,6 @@ const galleries: GalleryData[] = [
     whatsappMessage: 'שלום סלעית, אשמח להזמין ספל שכולו אושר!',
     images: [
       { src: '/images/gallery/cup-cakes/F7580070-3AA8-4BD3-8C5B-8FFE6627552B.webp', alt: 'ספל שכולו אושר - תמונה 1' },
-      { src: '/images/gallery/cup-cakes/IMG_3847.webp', alt: 'ספל שכולו אושר - תמונה 2' },
       { src: '/images/gallery/cup-cakes/IMG_3854.webp', alt: 'ספל שכולו אושר - תמונה 3' },
       { src: '/images/gallery/cup-cakes/IMG_3887.webp', alt: 'ספל שכולו אושר - תמונה 4' },
     ],
@@ -599,7 +596,6 @@ const galleries: GalleryData[] = [
     whatsappMessage: 'שלום סלעית, אשמח להזמין סוכריות מתנפצות!',
     images: [
       { src: '/images/gallery/exploding-candy/20240303_001606.webp', alt: 'סוכריה גדולה ומתוקה - תמונה 1' },
-      { src: '/images/gallery/exploding-candy/20240303_002414.webp', alt: 'סוכריה גדולה ומתוקה - תמונה 2' },
       { src: '/images/gallery/exploding-candy/20240303_144239.webp', alt: 'סוכריה גדולה ומתוקה - תמונה 3' },
     ],
   },
