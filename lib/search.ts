@@ -1,4 +1,5 @@
-import { getAllGalleries } from '@/lib/gallery-data'
+import { getAllGalleries, type GalleryImage } from '@/lib/gallery-data'
+import { IMAGE_TAGS } from '@/lib/image-tags'
 
 export interface SearchResult {
   slug: string
@@ -6,6 +7,7 @@ export interface SearchResult {
   description: string
   category: string
   image: string
+  matchedImages: GalleryImage[]
 }
 
 // Per-item category + Hebrew keyword synonyms used for matching.
@@ -24,6 +26,10 @@ const SEARCH_META: Record<string, SearchMeta> = {
   'gender-reveal': {
     category: 'מארזים מעוצבים',
     keywords: ['מארז', 'מארזים', 'חג', 'חגים', 'ראש השנה', 'פורים', 'פסח', 'חנוכה', 'שבועות', 'ולנטיין', 'יום המשפחה', 'גילוי מין', 'מתנה'],
+  },
+  'holiday-boxes': {
+    category: 'מארזים מעוצבים',
+    keywords: ['מארז', 'מארזים', 'חג', 'חגים', 'ראש השנה', 'פורים', 'פסח', 'חנוכה', 'שבועות', 'מתנה'],
   },
   'sweet-sixteen': {
     category: 'מארזים מעוצבים',
@@ -124,36 +130,97 @@ function normalize(text: string): string {
     .trim()
 }
 
-// Deterministic keyword search — always works, no external dependency.
+const STOP_WORDS = new Set(['ל', 'עם', 'של', 'בשביל', 'אני', 'רוצה'])
+const HEBREW_PREFIXES = ['ה', 'ל', 'ב', 'ו', 'מ', 'כ', 'ש']
+
+function tokenize(text: string): string[] {
+  return normalize(text)
+    .split(' ')
+    .filter((word) => word.length > 0 && !STOP_WORDS.has(word))
+}
+
+function queryForms(word: string): string[] {
+  const forms = new Set([word])
+  if (word.endsWith('ת') && word.length > 2) forms.add(`${word.slice(0, -1)}ה`)
+  const pending = [...forms]
+
+  while (pending.length > 0) {
+    const current = pending.pop()!
+    for (const prefix of HEBREW_PREFIXES) {
+      if (current.startsWith(prefix) && current.length > prefix.length + 1) {
+        const withoutPrefix = current.slice(prefix.length)
+        if (!forms.has(withoutPrefix)) {
+          forms.add(withoutPrefix)
+          pending.push(withoutPrefix)
+        }
+      }
+    }
+  }
+
+  return [...forms]
+}
+
+function scoreWords(queryWords: string[], text: string, exactScore: number, partialScore: number): number {
+  const textWords = tokenize(text)
+  return queryWords.reduce((total, queryWord) => {
+    const forms = queryForms(queryWord)
+    let bestMatch = 0
+
+    for (const form of forms) {
+      for (const textWord of textWords) {
+        if (form === textWord) {
+          bestMatch = Math.max(bestMatch, exactScore)
+        } else if (
+          !/^\d+$/.test(form) &&
+          !/^\d+$/.test(textWord) &&
+          Math.min(form.length, textWord.length) >= 3 &&
+          (form.startsWith(textWord) || textWord.startsWith(form))
+        ) {
+          bestMatch = Math.max(bestMatch, partialScore)
+        }
+      }
+    }
+
+    return total + bestMatch
+  }, 0)
+}
+
+function rankImages(images: GalleryImage[], queryWords: string[]): { image: GalleryImage; score: number }[] {
+  return images
+    .map((image, index) => {
+      const tags = IMAGE_TAGS[image.src]
+      const tagScore = tags ? scoreWords(queryWords, tags.join(' '), 8, 3) : 0
+      const altScore = scoreWords(queryWords, image.alt, 4, 1.5)
+      return { image, score: tagScore + altScore, index }
+    })
+    .sort((a, b) => b.score - a.score || a.index - b.index)
+}
+
+// Deterministic image-aware search — always works without an external dependency.
 export function keywordSearch(query: string, limit = 6): SearchResult[] {
   const galleries = getAllGalleries()
-  const nQuery = normalize(query)
-  const queryWords = nQuery.split(' ').filter((w) => w.length >= 2)
+  const normalizedQuery = normalize(query)
+  const queryWords = tokenize(query)
 
   const scored = galleries.map((gallery) => {
     const meta = SEARCH_META[gallery.slug]
     const category = meta?.category ?? ''
     const keywords = meta?.keywords ?? []
-
-    const nTitle = normalize(gallery.title)
-    const nSubtitle = normalize(gallery.subtitle)
-    const nDesc = normalize(gallery.description)
-    const nCategory = normalize(category)
-    const nKeywords = keywords.map(normalize)
+    const rankedImages = rankImages(gallery.images, queryWords)
 
     let score = 0
 
-    // Whole-phrase hits weigh the most.
-    if (nQuery && nTitle.includes(nQuery)) score += 12
-    if (nQuery && nKeywords.some((k) => k.includes(nQuery) || nQuery.includes(k))) score += 8
+    if (normalizedQuery && normalize(gallery.title).includes(normalizedQuery)) score += 12
+    if (normalizedQuery && keywords.some((keyword) => normalize(keyword).includes(normalizedQuery))) score += 8
 
-    queryWords.forEach((word) => {
-      if (nTitle.includes(word)) score += 5
-      if (nCategory.includes(word)) score += 4
-      if (nKeywords.some((k) => k.includes(word) || word.includes(k))) score += 4
-      if (nSubtitle.includes(word)) score += 2
-      if (nDesc.includes(word)) score += 1
-    })
+    score += scoreWords(queryWords, gallery.title, 5, 2.5)
+    score += scoreWords(queryWords, category, 4, 2)
+    score += scoreWords(queryWords, keywords.join(' '), 6, 2.5)
+    score += scoreWords(queryWords, gallery.subtitle, 2, 1)
+    score += scoreWords(queryWords, gallery.description, 1, 0.5)
+
+    const bestImageScores = rankedImages.slice(0, 3).map(({ score: imageScore }) => imageScore)
+    score += (bestImageScores[0] ?? 0) + (bestImageScores[1] ?? 0) * 0.4 + (bestImageScores[2] ?? 0) * 0.2
 
     return {
       slug: gallery.slug,
@@ -161,6 +228,7 @@ export function keywordSearch(query: string, limit = 6): SearchResult[] {
       description: gallery.description,
       category,
       image: gallery.heroImage,
+      matchedImages: rankedImages.slice(0, 3).map(({ image }) => image),
       score,
     }
   })
@@ -182,18 +250,24 @@ export function buildCatalog(): { slug: string; title: string; category: string;
   }))
 }
 
-export function resultsForSlugs(slugs: string[], limit = 6): SearchResult[] {
+export function resultsForSlugs(slugs: string[], limit = 6, query = ''): SearchResult[] {
   const galleries = getAllGalleries()
+  const queryWords = tokenize(query)
   const results: SearchResult[] = []
+
   for (const slug of slugs) {
-    const g = galleries.find((x) => x.slug === slug)
-    if (g) {
+    const gallery = galleries.find((item) => item.slug === slug)
+    if (gallery) {
+      const matchedImages = rankImages(gallery.images, queryWords)
+        .slice(0, 3)
+        .map(({ image }) => image)
       results.push({
-        slug: g.slug,
-        title: g.title,
-        description: g.description,
-        category: getCategory(g.slug),
-        image: g.heroImage,
+        slug: gallery.slug,
+        title: gallery.title,
+        description: gallery.description,
+        category: getCategory(gallery.slug),
+        image: gallery.heroImage,
+        matchedImages,
       })
     }
     if (results.length >= limit) break

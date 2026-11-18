@@ -18,7 +18,12 @@ export async function POST(req: Request) {
       return Response.json({ error: 'Invalid query' }, { status: 400 })
     }
 
-    // 1) Try smart AI ranking over the catalog.
+    const localResults = keywordSearch(query)
+    if (localResults.length > 0) {
+      return Response.json({ results: localResults, total: localResults.length, mode: 'local' })
+    }
+
+    // Use AI only when the local image-aware search has no matches.
     try {
       const catalog = buildCatalog()
 
@@ -38,19 +43,16 @@ export async function POST(req: Request) {
 
       const validSlugs = new Set(catalog.map((c) => c.slug))
       const slugs = (object.slugs ?? []).filter((s) => validSlugs.has(s))
-      const results = resultsForSlugs(slugs)
+      const results = resultsForSlugs(slugs, 6, query)
 
       if (results.length > 0) {
         return Response.json({ results, total: results.length, mode: 'ai' })
       }
-      // AI returned nothing useful — fall through to keyword search.
-    } catch (aiError) {
-      console.log('[v0] AI search unavailable, falling back to keyword search:', aiError)
+    } catch {
+      return Response.json({ results: localResults, total: localResults.length, mode: 'local' })
     }
 
-    // 2) Deterministic keyword fallback.
-    const results = keywordSearch(query)
-    return Response.json({ results, total: results.length, mode: 'keyword' })
+    return Response.json({ results: localResults, total: localResults.length, mode: 'local' })
   } catch (error) {
     console.log('[v0] Search error:', error)
     return Response.json({ error: 'Search failed' }, { status: 500 })
