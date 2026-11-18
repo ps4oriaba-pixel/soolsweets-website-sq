@@ -10,13 +10,13 @@ const products = [
   {
     title: 'רגעים ששווה לחגוג',
     description: getProductDescription('boxes-events'),
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-04-8bMbHS0J4c9V0o8XJIUeFySPWyYnNl.webp',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-10-hsWZXn0dFlroPcxL315N7p32k9meSg.webp',
     slug: 'boxes-events',
   },
   {
     title: 'חגים',
     description: getProductDescription('holiday-boxes'),
-    image: '/images/category-holiday-boxes.png',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-07-pw9uuWaWfuFk2arHLZsKMvsm8mdWYP.webp',
     slug: 'holiday-boxes',
   },
   {

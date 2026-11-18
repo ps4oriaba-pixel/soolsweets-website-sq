@@ -20,14 +20,9 @@ const galleries: GalleryData[] = [
     title: 'רגעים ששווה לחגוג',
     subtitle: '',
     description: "",
-    heroImage: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-04-8bMbHS0J4c9V0o8XJIUeFySPWyYnNl.webp',
+    heroImage: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-10-hsWZXn0dFlroPcxL315N7p32k9meSg.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לאירוע מיוחד שיש לי בקרוב',
     images: [
-      { src: '/images/gallery/boxes-events-1.png', alt: 'מארז יום הולדת עם מקרון' },
-      { src: '/images/gallery/boxes-events-2.png', alt: 'מארז תודה עם קשת' },
-      { src: '/images/gallery/boxes-events-3.png', alt: 'קולקציית מארזים לאירועים' },
-      { src: '/images/box-birthday.png', alt: 'מארז מיוחד פתוח' },
-      { src: '/images/category-boxes.png', alt: 'מגוון מארזים' },
       { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-10-hsWZXn0dFlroPcxL315N7p32k9meSg.webp', alt: 'מארז מתוקים מעוצב על דשא' },
       { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-09-VzwqWGTuqSDzvdSfhPCH5w6seHyIwO.webp', alt: 'מארז חגיגי על דשא' },
       { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-01-L7AjdaECOGpDeGtVCXknRIBNrq4gXx.webp', alt: 'מארז מתוקים בעיצוב ורוד ותכלת' },
@@ -94,12 +89,11 @@ const galleries: GalleryData[] = [
     subtitle: 'פורים, ראש השנה, פסח ועוד – ממותקים לחג',
     description:
       'מארזים בעיצוב מסורתי ומודרני לכל חגי השנה. שלחו מתנה שתזכרו בה כל השנה.',
-    heroImage: '/images/category-holiday-boxes.png',
+    heroImage: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-07-pw9uuWaWfuFk2arHLZsKMvsm8mdWYP.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז חג!',
-  images: [
-  { src: '/images/box-birthday.png', alt: 'מארז מיוחד לחג' },
-      { src: '/images/gallery/boxes-events-1.png', alt: 'מארז עם קשת' },
-      { src: '/images/gallery/boxes-events-2.png', alt: 'מארז חגיגי' },
+    images: [
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-07-pw9uuWaWfuFk2arHLZsKMvsm8mdWYP.webp', alt: 'מארז כדורי שוקולד חגיגי עם קישוטי חנוכה' },
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-08-N4buCmvc9T7fJ85uiUzjiQTx5KNnkc.webp', alt: 'מארז קינוחי כוסות בטעמים שונים על רקע גינה' },
     ],
   },
 
@@ -374,7 +368,7 @@ const galleries: GalleryData[] = [
   {
     slug: 'rectangular-cakes',
     title: 'עוגה מלבנית מעוצבת',
-    subtitle: 'עיצוב מודרני ונקי – אלגנטי ��כל שולחן',
+    subtitle: 'עיצוב מ��דרני ונקי – אלגנטי ��כל שולחן',
     description:
       'מושלמת לאירועים גדולים ולחגיגות משפחתיות – בעיצוב מוקפד ובהתאמה אישית לכל סגנון.',
     heroImage: '/images/gallery/rectangular-cakes/20240119_085307.webp',
