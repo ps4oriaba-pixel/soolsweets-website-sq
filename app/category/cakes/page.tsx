@@ -1,4 +1,5 @@
 import CategoryPage from '@/components/category-page'
+import { getProductDescription } from '@/lib/product-descriptions'
 
 export const metadata = {
   title: 'עוגות מעוצבות | SoolSweets',
@@ -8,62 +9,62 @@ export const metadata = {
 const products = [
   {
     title: 'עוגות בעיצוב אישי',
-    description: 'העלו כל רעיון – ואני אגשים אותו. עוגה שמספרת את הסיפור שלכם.',
+    description: getProductDescription('custom-cakes'),
     image: '/images/gallery/custom-design/IMG_0136.webp',
     slug: 'custom-cakes',
   },
   {
     title: "עוגות וינטאג'",
-    description: "עיצוב רומנטי ועדין עם זילופי וינטאג', פפיונים, פרחים וגימורים אלגנטיים. מושלם לכל אירוע.",
+    description: getProductDescription('vintage-cakes'),
     image: '/images/gallery/vintage-cakes/20231226_113642.webp',
     slug: 'vintage-cakes',
   },
   {
     title: 'עוגות בנטו',
-    description: 'קטנות בגודל, גדולות ברושם. עוגות אישיות בעיצוב מוקפד – מושלמות למתנה, הפתעה או חגיגה קטנה.',
+    description: getProductDescription('bento-cakes'),
     image: '/images/gallery/bento-cakes/20231222_102551.webp',
     slug: 'bento-cakes',
   },
   {
     title: 'עוגה מלבנית מעוצבת',
-    description: 'מושלמת לאירועים גדולים ולחגיגות משפחתיות – בעיצוב מוקפד ובהתאמה אישית לכל סגנון.',
+    description: getProductDescription('rectangular-cakes'),
     image: '/images/gallery/rectangular-cakes/20240119_085307.webp',
     slug: 'rectangular-cakes',
   },
   {
     title: 'עוגות מספרים',
-    description: 'עוגות מספר או אות מבצק שקדים או עוגת שוקולד אפויה, המעוטרות בקרם מסקרפונה עשיר, שוקולדים ואלמנטים מעוצבים בהתאמה אישית.',
+    description: getProductDescription('number-cakes'),
     image: '/images/gallery/number-cakes/20230420_153709.webp',
     slug: 'number-cakes',
   },
   {
     title: 'עוגת פפיון',
-    description: 'עוגות בעיצוב אלגנטי עם פפיונים מרשימים  מבצק סוכר – שילוב מושלם של יוקרה, עדינות וסטייל.',
+    description: getProductDescription('bow-tie-cakes'),
     image: '/images/gallery/bow-cakes/IMG_4151.webp',
     slug: 'bow-tie-cakes',
   },
   {
     title: 'עוגות כתר',
-    description: 'עוגה בעיצוב מלכותי עם כתר נוצץ, פפיונים ונצנצים שמתפזרים באפקט מרהיב – לחגיגה שכולה זוהר.',
+    description: getProductDescription('crown-cakes'),
     image: '/images/gallery/crown-cakes/IMG_1199.webp',
     slug: 'crown-cakes',
   },
   {
     title: 'עוגות מוס',
-    description: 'שכבות מוס עשירות במגוון טעמים, במרקם קטיפתי ובמראה אלגנטי – חוויה מושלמת בכל ביס',
+    description: getProductDescription('mousse-cakes'),
     image: '/images/gallery/mousse-cakes/20221028_144630.webp',
     slug: 'mousse-cakes',
   },
   {
     title: 'עוגות דף נשרף',
-    description: 'הטרנד שכולם מדברים עליו – שורפים את הדף וחושפים הקדשה, תמונה או הפתעה מרגשת',
+    description: getProductDescription('burnt-paper-cakes'),
     image: '/images/gallery/burn-away-cakes/IMG_0455.webp',
     note: 'וואו-אפקט',
     slug: 'burnt-paper-cakes',
   },
   {
     title: 'ספל שכולו אושר',
-    description: 'עוגת שוקולד/וניל בכוס אישית, עם קצפת, תוספות מתוקות וקישוט לבחירה – הפתעה מושלמת לרגעים ספונטניים.',
+    description: getProductDescription('mug-cakes'),
     image: '/images/gallery/cup-cakes/F7580070-3AA8-4BD3-8C5B-8FFE6627552B.webp',
     note: 'בהתראה קצרה',
     slug: 'mug-cakes',

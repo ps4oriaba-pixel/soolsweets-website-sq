@@ -20,7 +20,7 @@ const galleries: GalleryData[] = [
     title: 'רגעים ששווה לחגוג',
     subtitle: '',
     description: "",
-    heroImage: '/images/gallery/boxes-events-1.png',
+    heroImage: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-04-8bMbHS0J4c9V0o8XJIUeFySPWyYnNl.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לאירוע מיוחד שיש לי בקרוב',
     images: [
       { src: '/images/gallery/boxes-events-1.png', alt: 'מארז יום הולדת עם מקרון' },
@@ -28,6 +28,12 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/boxes-events-3.png', alt: 'קולקציית מארזים לאירועים' },
       { src: '/images/box-birthday.png', alt: 'מארז מיוחד פתוח' },
       { src: '/images/category-boxes.png', alt: 'מגוון מארזים' },
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-10-hsWZXn0dFlroPcxL315N7p32k9meSg.webp', alt: 'מארז מתוקים מעוצב על דשא' },
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-09-VzwqWGTuqSDzvdSfhPCH5w6seHyIwO.webp', alt: 'מארז חגיגי על דשא' },
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-01-L7AjdaECOGpDeGtVCXknRIBNrq4gXx.webp', alt: 'מארז מתוקים בעיצוב ורוד ותכלת' },
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-05-ZwGlWoYAtqXRa5i3wDYZanp2IVzFGu.webp', alt: 'מארז שוקולדים בגווני חום' },
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-03-Bq97rPxtXSLhKhTgidK8s9SIc26hlC.webp', alt: 'מארז מתוקים בגווני שמנת וזהב' },
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-04-8bMbHS0J4c9V0o8XJIUeFySPWyYnNl.webp', alt: 'מארז חגיגי בעיצוב זהב וורוד' },
     ],
   },
   {
@@ -80,11 +86,7 @@ const galleries: GalleryData[] = [
     description: 'מיתוג ייחודי לעסק שלכם. מארז שמייצג את הערכים והסגנון של החברה שלכם.',
     heroImage: '/images/category-business-boxes.png',
     whatsappMessage: 'שלום סלעית, אשמח לשמוע על מארזים ממותגים לחברה!',
-  images: [
-  { src: '/images/gallery/boxes-events-2.png', alt: 'מארז עסקי' },
-      { src: '/images/gallery/boxes-events-3.png', alt: 'קולקציית מארזים עסקיים' },
-      { src: '/images/category-boxes.png', alt: 'מארזים לחברות' },
-    ],
+    images: [],
   },
   {
     slug: 'holiday-boxes',
@@ -515,7 +517,7 @@ const galleries: GalleryData[] = [
     subtitle: 'קינוח אישי מרשים לכל שולחן',
     description:
       'מבחר קינוחי כוסות אישיים במגוון טעמים לבחירה, עם שילובים עשירים ונראות מרשימה לכל אירוע, במגוון טעמים אהובים מלוטוס ואוראו ועד פיסטוק, קינדר, גבינה פירורים, ריבת חלב ועוד',
-    heroImage: '/images/gallery/dessert-cups/20240421_122244.webp',
+    heroImage: '/images/gallery/dessert-cups/IMG_8715.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארזי כוסות!',
     images: [
       { src: '/images/gallery/dessert-cups/20240421_122244.webp', alt: 'מארז כוסות קינוח - תמונה 1' },

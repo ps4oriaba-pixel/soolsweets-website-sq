@@ -1,4 +1,5 @@
 import CategoryPage from '@/components/category-page'
+import { getProductDescription } from '@/lib/product-descriptions'
 
 export const metadata = {
   title: 'קינוחים אישיים | SoolSweets',
@@ -8,19 +9,19 @@ export const metadata = {
 const products = [
   {
     title: 'מארזי כוסות',
-    description: "מבחר קינוחי כוסות אישיים במגוון טעמים לבחירה, עם שילובים עשירים ונראות מרשימה לכל אירוע, במגוון טעמים אהובים מלוטוס ואוראו ועד פיסטוק, קינדר, גבינה פירורים, ריבת חלב ועוד",
-    image: '/images/gallery/dessert-cups/20240421_122244.webp',
+    description: getProductDescription('cup-desserts'),
+    image: '/images/gallery/dessert-cups/IMG_8715.webp',
     slug: 'cup-desserts',
   },
   {
     title: 'מארזי קראמבל',
-    description: "מארזי עוגיות קראמבל, במגוון טעמים מטורף שיגרום לכם להתמכר מהביס הראשון . קינדר, לוטוס, ריבת חלב, פיסטוק, בייגלה, נוטלה, סוכריות צבעוניות, מרשמלו ועוד.",
-    image: '/images/gallery/crumble-cookies/IMG_0579.webp',
+    description: getProductDescription('crumble-desserts'),
+    image: '/images/gallery/crumble-cookies/user-crumble-1.png',
     slug: 'crumble-desserts',
   },
   {
     title: 'קינוחים מסוג אחד',
-    description: 'אוהבים קינוח מסוים? לפעמים אין צורך בשילוב. תוכלו להזמין מארז שלם של קרם ברולה, דונאטס, קאפקייקס, קייק פופ, מגנומים ועוד.',
+    description: getProductDescription('dedicated-dessert-boxes'),
     image: '/images/gallery/custom-boxes/IMG_3197.webp',
     slug: 'dedicated-dessert-boxes',
   },

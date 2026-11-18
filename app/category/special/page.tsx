@@ -1,4 +1,5 @@
 import CategoryPage from '@/components/category-page'
+import { getProductDescription } from '@/lib/product-descriptions'
 
 export const metadata = {
   title: 'קולקציית ה-WOW | SoolSweets',
@@ -8,34 +9,32 @@ export const metadata = {
 const products = [
   {
     title: 'כדורגל שוקולד',
-    description:
-      'קינוח מושלם לחובבי הכדורגל, שבפנים מסתתר אוצר של ממתקים.',
+    description: getProductDescription('chocolate-ball'),
     image: '/images/gallery/exploding-football/IMG_3463.webp',
     note: 'הכי מבוקש!',
     slug: 'chocolate-ball',
   },
   {
     title: 'סוכריה גדולה ומתוקה',
-    description: 'תבנית שוקולד במראה של סוכריה ענקית שמסתירה בתוכה מגוון הפתעות וממתקים.',
+    description: getProductDescription('exploding-candy'),
     image: '/images/gallery/exploding-candy/20240303_001606.webp',
     slug: 'exploding-candy',
   },
   {
     title: 'ביצת שוקולד ענקית',
-    description: 'חוויה מתוקה וייחודית - שוברים את ביצת השוקולד וחושפים שלל ממתקים ושוקולדים.',
+    description: getProductDescription('exploding-egg'),
     image: '/images/gallery/chocolate-egg/20240304_194842.webp',
     slug: 'exploding-egg',
   },
   {
     title: 'עוגות קומות',
-    description:
-      'עוגות קומות מרשימות לחתונות, אירועים גדולים וכל מי שמחפש את ה-WOW האמיתי.',
+    description: getProductDescription('tiered-cakes'),
     image: '/images/gallery/levels-cakes/user-tiered-1.png',
     slug: 'tiered-cakes',
   },
   {
     title: 'עוגות דף נשרף',
-    description: 'הטרנד שכולם מדברים עליו – שורפים את הדף וחושפים הקדשה, תמונה או הפתעה מרגשת.',
+    description: getProductDescription('burnt-paper-cakes'),
     image: '/images/gallery/burn-away-cakes/IMG_0455.webp',
     note: 'וואו-אפקט',
     slug: 'burnt-paper-cakes',

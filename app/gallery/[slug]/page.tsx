@@ -8,6 +8,7 @@ import WhatsAppButton from '@/components/whatsapp-button'
 import GalleryGrid from '@/components/gallery-grid'
 import Breadcrumb from '@/components/breadcrumb'
 import { getGallery, getAllSlugs, hasSizeGuide, getSizeGuideUrl, getCategoryForSlug } from '@/lib/gallery-data'
+import { getProductDescription } from '@/lib/product-descriptions'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -23,7 +24,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   if (!gallery) return {}
   return {
     title: `${gallery.title} | SoolSweets`,
-    description: gallery.description,
+    description: getProductDescription(slug) || gallery.description,
   }
 }
 
@@ -32,19 +33,22 @@ export default async function GalleryPage({ params }: PageProps) {
   const gallery = getGallery(slug)
   if (!gallery) notFound()
 
+  const productDescription = getProductDescription(slug)
+  const galleryDescription = gallery.description.trim()
+
   return (
     <div className="min-h-screen flex flex-col">
       <Navbar />
 
       <main className="flex-1 pt-20">
         {/* Hero */}
-        <section className={`relative overflow-hidden ${slug === 'tiered-cakes' ? 'h-[177.78vw] max-h-[600px] md:h-80' : 'h-64 md:h-80'}`}>
+        <section className={`relative overflow-hidden bg-background ${slug === 'boxes-events' ? 'h-[177.78vw] max-h-[600px] md:h-[600px]' : slug === 'tiered-cakes' ? 'h-[177.78vw] max-h-[600px] md:h-80' : 'h-64 md:h-80'}`}>
           <Image
             src={gallery.heroImage}
             alt={gallery.title}
             fill
             priority
-            className={`${slug === 'tiered-cakes' ? 'object-contain object-center' : 'object-cover object-center'}`}
+            className={`${slug === 'tiered-cakes' || slug === 'boxes-events' ? 'object-contain object-center' : 'object-cover object-center'}`}
           />
           {/* Neutral dark scrim so the photo keeps its own colors */}
           <div className="absolute inset-0 bg-foreground/45" />
@@ -66,7 +70,15 @@ export default async function GalleryPage({ params }: PageProps) {
 
         {/* Description */}
         <section className="max-w-2xl mx-auto px-6 pb-8 text-center">
-          <p className="text-foreground/70 leading-relaxed">{gallery.description}</p>
+          {productDescription && (
+            <p className="text-foreground/70 leading-relaxed">{productDescription}</p>
+          )}
+          {galleryDescription && galleryDescription !== productDescription.trim() && (
+            <p className={`${productDescription ? 'mt-3 ' : ''}text-foreground/70 leading-relaxed`}>
+              {galleryDescription}
+            </p>
+          )}
+          {!productDescription && !galleryDescription && <p className="text-foreground/70 leading-relaxed">{gallery.description}</p>}
           {hasSizeGuide(slug) && (
             <Link
               href={getSizeGuideUrl(slug)}

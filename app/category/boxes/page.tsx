@@ -1,4 +1,5 @@
 import CategoryPage from '@/components/category-page'
+import { getProductDescription } from '@/lib/product-descriptions'
 
 export const metadata = {
   title: 'מארזים מעוצבים | SoolSweets',
@@ -8,25 +9,25 @@ export const metadata = {
 const products = [
   {
     title: 'רגעים ששווה לחגוג',
-    description: 'ימי הולדת, Sweet 16, בר/בת מצווה, גילוי מין העובר, ברית ובריתה, לידה, חתונה ואירוסין, הצעת נישואין, יום נישואין, גיוס ועוד..',
-    image: '/images/gallery/boxes-events-1.png',
+    description: getProductDescription('boxes-events'),
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-04-8bMbHS0J4c9V0o8XJIUeFySPWyYnNl.webp',
     slug: 'boxes-events',
   },
   {
     title: 'חגים',
-    description: 'כי לכל חג מגיע מארז מיוחד. מתוקים מעוצבים לחגים ולאירועים לאורך כל השנה',
+    description: getProductDescription('holiday-boxes'),
     image: '/images/category-holiday-boxes.png',
     slug: 'holiday-boxes',
   },
   {
     title: 'עסקים',
-    description: 'מארזים מעוצבים בהתאמה אישית לעובדים, לקוחות ושותפים, עם אפשרות למיתוג והתאמה אישית – הדרך המתוקה להוקיר, להפתיע ולהשאיר רושם',
+    description: getProductDescription('branded-boxes'),
     image: '/images/category-business-boxes.png',
     slug: 'branded-boxes',
   },
   {
     title: 'מארז בהתאמה אישית',
-    description: 'בחרו את הקינוחים, הצבעים והכיתוב – ואנחנו ניצור עבורכם מארז ייחודי בדיוק כמו שדמיינתם.',
+    description: getProductDescription('bar-bat-mitzvah'),
     image: '/images/category-boxes.png',
     slug: 'bar-bat-mitzvah',
   },
