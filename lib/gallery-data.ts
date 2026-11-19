@@ -136,35 +136,6 @@ const galleries: GalleryData[] = [
     ],
   },
   {
-    slug: 'gender-reveal',
-    title: 'חגים',
-    subtitle: '',
-    description:
-      'כי לכל חג מגיע מארז מיוחד. ',
-    heroImage: '/images/gallery/gender-reveal-1.png',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לחג  ',
-    images: [
-      { src: '/images/gallery/gender-reveal-1.png', alt: 'מארז גילוי מין ורוד' },
-      { src: '/images/gallery/gender-reveal-3.png', alt: 'מארז גילוי מין כחול' },
-      { src: '/images/gallery/gender-reveal-2.png', alt: 'שולחן ממתקים לבת' },
-      { src: '/images/category-boxes.png', alt: 'מארזים בעיצוב מיוחד' },
-    ],
-  },
-  {
-    slug: 'sweet-sixteen',
-    title: 'עסקים',
-    subtitle: '',
-    description: ' הדרך המתוקה להוקיר, להפתיע ולהשאיר רושם',
-    heroImage: '/images/category-business-boxes.png',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז עסקי ',
-    images: [
-      { src: '/images/category-business-boxes.png', alt: 'מארז עסקי' },
-      { src: '/images/gallery/boxes-events-1.png', alt: 'מארז חגיגי' },
-      { src: '/images/gallery/boxes-events-2.png', alt: 'מארז מתנה' },
-      { src: '/images/gallery/boxes-events-3.png', alt: 'קולקציית מארזים' },
-    ],
-  },
-  {
     slug: 'branded-boxes',
     title: 'מארזים ממותגים לחברות',
     subtitle: 'המותג שלכם – במתיקות מושלמת',
@@ -802,7 +773,7 @@ export function getAllGalleries(): GalleryData[] {
 
 // Returns the parent category label + href for breadcrumb navigation
 export function getCategoryForSlug(slug: string): { label: string; href: string } {
-  const boxesSlugs = ['boxes-events', 'gender-reveal', 'sweet-sixteen', 'bar-bat-mitzvah', 'branded-boxes', 'holiday-boxes']
+  const boxesSlugs = ['boxes-events', 'bar-bat-mitzvah', 'branded-boxes', 'holiday-boxes']
   const cakesSlugs = ['custom-cakes', 'vintage-cakes', 'mousse-cakes', 'bento-cakes', 'rectangular-cakes', 'bow-tie-cakes', 'number-cakes', 'crown-cakes', 'mug-cakes', 'burnt-paper-cakes']
   const dessertsSlugs = ['cup-desserts', 'crumble-desserts', 'dedicated-dessert-boxes']
   const specialSlugs = ['chocolate-ball', 'exploding-candy', 'exploding-egg', 'tiered-cakes', 'burnt-paper-cakes']

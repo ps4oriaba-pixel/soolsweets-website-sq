@@ -15,8 +15,6 @@ const categoryMessages: Record<string, string> = {
 const galleryMessages: Record<string, string> = {
   "boxes-events": "שלום סלעית, אשמח להזמין מארז לאירוע מיוחד שיש לי בקרוב",
   "bar-bat-mitzvah": "שלום סלעית, אשמח להזמין מארז בהתאמה אישית!",
-  "gender-reveal": "שלום סלעית, אשמח להזמין מארז לחג",
-  "sweet-sixteen": "שלום סלעית, אשמח להזמין מארז עסקי",
   "branded-boxes": "שלום סלעית, אשמח לשמוע על מארזים ממותגים לחברה!",
   "holiday-boxes": "שלום סלעית, אשמח להזמין מארז חג!",
   "custom-cakes": "שלום סלעית, אשמח להזמין עוגה בעיצוב אישי!",

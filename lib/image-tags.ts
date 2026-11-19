@@ -5,11 +5,7 @@
 // רק בלי הדיוק שתגיות ברמת התמונה נותנות.
 
 export const IMAGE_TAGS: Record<string, string[]> = {
-  '/images/gallery/gender-reveal-1.png': ['מארז', 'גילוי מין', 'ורוד', 'בלונים'],
-  '/images/gallery/gender-reveal-2.png': ['מארז', 'גילוי מין', 'ורוד', 'פרחים', 'שולחן מתוקים'],
-  '/images/gallery/gender-reveal-3.png': ['מארז', 'גילוי מין', 'תכלת', 'דונאטס'],
   '/images/category-boxes.png': ['מארז', 'יום הולדת', '18'],
-  '/images/category-business-boxes.png': ['מארז עסקי', 'כוסות', 'שוקולד', 'זהב', 'חברה', 'לקוחות'],
   '/images/gallery/boxes-events-1.png': ['מארז', 'מקרונים', 'ורוד', 'פפיון'],
   '/images/gallery/boxes-events-2.png': ['מארז', 'דונאטס', 'חום', 'קראפט'],
   '/images/gallery/boxes-events-3.png': ['מארז עסקי', 'פרחים', 'ורוד'],
