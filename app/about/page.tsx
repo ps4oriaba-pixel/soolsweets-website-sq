@@ -2,6 +2,7 @@ import Image from 'next/image'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
+import { BackButton } from '@/components/back-button'
 
 export const metadata = {
   title: 'קצת עליי | SoolSweets',
@@ -27,6 +28,9 @@ export default function AboutPage() {
             className="object-cover object-top"
           />
           <div className="absolute inset-0 bg-foreground/45" />
+          <div className="absolute right-4 top-4 z-20">
+            <BackButton variant="icon" />
+          </div>
           <div className="absolute inset-0 flex items-center justify-center flex-col gap-3 px-4">
             <p className="text-secondary text-sm font-medium tracking-widest uppercase">
               <span dir="ltr" className="font-serif italic font-bold text-[1.25em] leading-none" style={{ color: '#E8857A', letterSpacing: '0.02em' }}>SoolSweets</span>
