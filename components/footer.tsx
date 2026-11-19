@@ -4,14 +4,14 @@ export default function Footer({ flush = false }: { flush?: boolean }) {
   return (
     <footer className={`bg-accent text-accent-foreground ${flush ? '' : 'mt-16'}`}>
       <div className="max-w-6xl mx-auto px-4 py-8 md:py-10">
-        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
-          {/* Brand */}
-          <div className="flex flex-col gap-2 w-full md:w-auto items-center md:items-start">
-            <span dir="ltr" className="font-serif italic font-bold whitespace-nowrap block" style={{ fontSize: '3.2rem', color: '#FFF0ED', letterSpacing: '0.02em' }}>
-              SoolSweets
-            </span>
-          </div>
+        {/* Brand – centered */}
+        <div className="flex justify-center">
+          <span dir="ltr" className="font-serif italic font-bold whitespace-nowrap block" style={{ fontSize: '3.2rem', color: '#FFF0ED', letterSpacing: '0.02em' }}>
+            SoolSweets
+          </span>
+        </div>
 
+        <div className="mt-6 flex flex-col md:flex-row justify-start items-start gap-8 md:gap-16 text-right">
           {/* Quick links */}
           <div className="flex flex-col gap-2">
             <h3 className="text-sm font-semibold uppercase tracking-wider text-accent-foreground/80 mb-1">
@@ -59,7 +59,7 @@ export default function Footer({ flush = false }: { flush?: boolean }) {
           </div>
         </div>
 
-        <div className="border-t border-accent-foreground/20 mt-8 pt-6 text-center text-xs text-accent-foreground/50">
+        <div className="border-t border-accent-foreground/20 mt-8 pt-6 text-right text-xs text-accent-foreground/50">
           &copy; {new Date().getFullYear()} <span dir="ltr" className="font-serif italic font-bold text-[1.25em] leading-none" style={{ color: '#E8857A', letterSpacing: '0.02em' }}>SoolSweets</span>. כל הזכויות שמורות לסלעית.
         </div>
       </div>
