@@ -67,7 +67,7 @@ export default function HomePage() {
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
             </div>
-            <div className="absolute right-0 top-0 z-10 flex w-full flex-col items-start px-5 pt-6 text-right text-white [-webkit-text-stroke:1px_#E8857A] [paint-order:stroke_fill] [text-shadow:0_2px_10px_rgba(232,133,122,0.9)] md:hidden">
+            <div className="absolute right-0 top-0 z-10 flex w-full flex-col items-start px-5 pt-6 text-right text-white [-webkit-text-stroke:1px_#E8857A] [paint-order:stroke_fill] md:hidden">
               <p className="mb-2 text-sm font-semibold tracking-widest">
                 קונדיטורית בוטיק ביתית
               </p>
@@ -183,11 +183,11 @@ export default function HomePage() {
               <p className="text-primary font-medium tracking-widest uppercase text-base">
                 חוויה מיוחדת
               </p>
-              <h2 className="font-serif text-3xl font-bold text-foreground leading-tight text-balance">
+              <h2 className="font-serif text-[1.35rem] sm:text-3xl font-bold text-foreground leading-tight whitespace-nowrap">
                 סדנאות אפייה לקבוצות קטנות
               </h2>
               <p className="text-muted-foreground leading-relaxed">
-                חוויה מעשירה ומהנה שמתאימה לחגיגות פרטיות ואישיות. ביחד נלמד, נצור ונהנה מרגע שלא תשכחו.
+                חוויה מעשירה ומהנה שמתאימה לחגיגות פרטיות ואישיות. ביחד נלמד, ניצור ונהנה מרגעים מתוקים.
               </p>
               <div>
                 <WhatsAppButton message="שלום סלעית, מעוניינת לשמוע על סדנאות האפייה" />

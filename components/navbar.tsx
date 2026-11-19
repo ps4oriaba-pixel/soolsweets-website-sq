@@ -28,9 +28,9 @@ const navLinks: { href: string; label: string; items?: { href: string; label: st
     label: 'מארזים מעוצבים',
     items: [
       { href: '/gallery/boxes-events', label: "רגעים ששווה לחגוג" },
+      { href: '/gallery/bar-bat-mitzvah', label: "מארז בהתאמה אישית" },
       { href: '/gallery/holiday-boxes', label: "חגים" },
       { href: '/gallery/branded-boxes', label: "עסקים" },
-      { href: '/gallery/bar-bat-mitzvah', label: "מארז בהתאמה אישית" },
     ],
   },
   {
@@ -114,14 +114,7 @@ export default function Navbar() {
           {navLinks.map((link) =>
             link.items ? (
               <div key={link.href}>
-                <div className="flex items-center justify-between">
-                  <Link
-                    href={link.href}
-                    className="text-base text-foreground hover:text-primary transition-colors font-medium py-1.5"
-                    onClick={() => setOpen(false)}
-                  >
-                    {link.label}
-                  </Link>
+                <div className="flex items-center gap-1">
                   <button
                     type="button"
                     className="p-2 text-foreground/70"
@@ -131,6 +124,13 @@ export default function Navbar() {
                   >
                     <ChevronDown size={18} className={`transition-transform ${expanded === link.href ? 'rotate-180' : ''}`} />
                   </button>
+                  <Link
+                    href={link.href}
+                    className="text-base text-foreground hover:text-primary transition-colors font-medium py-1.5"
+                    onClick={() => setOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
                 </div>
                 {expanded === link.href && (
                   <div className="flex flex-col pr-4 mr-1 border-r-2 border-primary/40 mb-1">

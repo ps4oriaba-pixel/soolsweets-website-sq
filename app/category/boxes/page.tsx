@@ -14,6 +14,12 @@ const products = [
     slug: 'boxes-events',
   },
   {
+    title: 'מארז בהתאמה אישית',
+    description: getProductDescription('bar-bat-mitzvah'),
+    image: '/images/category-boxes.png',
+    slug: 'bar-bat-mitzvah',
+  },
+  {
     title: 'חגים',
     description: getProductDescription('holiday-boxes'),
     image: '/images/gallery/holiday-boxes/IMG_7157.webp',
@@ -24,12 +30,6 @@ const products = [
     description: getProductDescription('branded-boxes'),
     image: '/images/gallery/branded-boxes/20240302_145422.webp',
     slug: 'branded-boxes',
-  },
-  {
-    title: 'מארז בהתאמה אישית',
-    description: getProductDescription('bar-bat-mitzvah'),
-    image: '/images/category-boxes.png',
-    slug: 'bar-bat-mitzvah',
   },
 ]
 
