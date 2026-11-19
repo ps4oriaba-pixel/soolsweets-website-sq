@@ -28,7 +28,7 @@ const products = [
   {
     title: 'עוגה מלבנית מעוצבת',
     description: getProductDescription('rectangular-cakes'),
-    image: '/images/gallery/rectangular-cakes/20240119_085307.webp',
+    image: '/images/gallery/rectangular-cakes/IMG_9818.webp',
     slug: 'rectangular-cakes',
   },
   {

@@ -41,7 +41,7 @@ export default function HomePage() {
       <main className="flex-1 pt-20">
         {/* Hero */}
         <section className="relative overflow-hidden bg-[#ead8c8]">
-          <div className="relative z-0 aspect-square min-h-0 md:aspect-auto md:h-[72vh] md:min-h-[360px]">
+          <div className="relative z-0 aspect-[4/5] min-h-0 md:aspect-auto md:h-[72vh] md:min-h-[360px]">
             <Image
               src="/images/home-hero-new.png"
               alt="עוגות ומארזים מעוצבים של SoolSweets"
@@ -67,25 +67,31 @@ export default function HomePage() {
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
             </div>
-            <div className="absolute inset-x-0 top-0 z-10 mx-auto flex w-full max-w-3xl flex-col items-center px-5 pt-8 text-center text-background md:hidden">
-              <p className="mb-2 text-sm font-medium tracking-widest text-secondary drop-shadow-md">
+            <div className="absolute right-0 top-0 z-10 flex w-[70%] flex-col items-start px-5 pt-6 text-right text-foreground [text-shadow:0_0_10px_rgba(255,255,255,0.95),0_0_4px_rgba(255,255,255,0.9)] md:hidden">
+              <p className="mb-2 text-xs font-semibold tracking-widest">
                 קונדיטורית בוטיק ביתית
               </p>
-              <h1 className="font-serif text-3xl font-bold leading-tight text-balance drop-shadow-md">
+              <h1 className="font-serif text-3xl font-bold leading-tight text-balance">
                 כשטעם ואסתטיקה
                 <br />
                 נפגשים
               </h1>
-              <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-background/90 drop-shadow-md">
+              <p className="mt-2 text-sm font-medium leading-relaxed">
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
-              <div className="mt-4">
+              <div className="mt-4 flex flex-col items-start gap-2.5 [text-shadow:none]">
                 <WhatsAppButton compact label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
+                <Link
+                  href="/about"
+                  className="inline-flex items-center gap-2 border border-foreground/50 bg-background/85 text-foreground px-5 py-2.5 rounded-full text-sm font-semibold shadow-md"
+                >
+                  קצת עליי
+                </Link>
               </div>
             </div>
           </div>
 
-          <div className="relative z-10 bg-background px-5 py-6 md:px-6 md:py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
+          <div className="relative z-10 bg-background px-5 py-3 md:px-6 md:py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
             <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-4">
               <div className="w-full max-w-md md:mb-0">
                 <HeroSearch variant="light" />
@@ -96,7 +102,7 @@ export default function HomePage() {
                 </div>
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 border border-foreground/40 text-foreground px-5 py-2.5 md:px-8 md:py-3 rounded-full text-sm md:text-base font-semibold hover:bg-foreground hover:text-background transition-colors duration-200"
+                  className="hidden md:inline-flex items-center gap-2 border border-foreground/40 text-foreground px-5 py-2.5 md:px-8 md:py-3 rounded-full text-sm md:text-base font-semibold hover:bg-foreground hover:text-background transition-colors duration-200"
                 >
                   קצת עליי
                 </Link>
@@ -106,8 +112,8 @@ export default function HomePage() {
         </section>
 
         {/* Categories */}
-        <section id="categories" className="scroll-mt-24 max-w-6xl mx-auto px-6 py-20" aria-labelledby="categories-heading">
-          <div className="text-center mb-14">
+        <section id="categories" className="scroll-mt-24 max-w-6xl mx-auto px-6 pt-8 pb-20 md:py-20" aria-labelledby="categories-heading">
+          <div className="text-center mb-8 md:mb-14">
             <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
               הקולקציות שלנו
             </p>
