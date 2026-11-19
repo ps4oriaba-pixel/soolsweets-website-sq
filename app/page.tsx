@@ -74,7 +74,7 @@ export default function HomePage() {
               <h1 className="font-serif text-[1.7rem] font-bold leading-tight whitespace-nowrap">
                 כשטעם ואסתטיקה נפגשים
               </h1>
-              <p className="mt-2 max-w-[80%] text-base font-semibold text-[#E8857A] [-webkit-text-stroke:1px_#fff] leading-relaxed">
+              <p className="mt-2 max-w-[80%] text-base font-bold text-[#C2185B] [-webkit-text-stroke:1.5px_#fff] leading-relaxed">
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
               <div className="mt-4 flex flex-col items-start gap-2.5 [text-shadow:none] [-webkit-text-stroke:0]">
