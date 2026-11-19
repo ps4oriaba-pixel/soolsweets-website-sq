@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Heebo, Cormorant_Garamond } from 'next/font/google'
 import { NavigationTracker } from '@/components/navigation-tracker'
+import FloatingWhatsApp from '@/components/floating-whatsapp'
 import './globals.css'
 
 const heebo = Heebo({
@@ -41,6 +42,7 @@ export default function RootLayout({
       <body className="antialiased font-sans">
         <NavigationTracker />
         {children}
+        <FloatingWhatsApp />
       </body>
     </html>
   )

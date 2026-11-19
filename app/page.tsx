@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
+import TestimonialsCarousel from '@/components/testimonials-carousel'
 import HeroSearch from '@/components/hero-search'
 
 const categories = [
@@ -154,6 +155,9 @@ export default function HomePage() {
             ))}
           </div>
         </section>
+
+        {/* Customer testimonials – auto-sliding */}
+        <TestimonialsCarousel />
 
         {/* Quote Strip */}
         <section className="bg-secondary py-16 px-6">

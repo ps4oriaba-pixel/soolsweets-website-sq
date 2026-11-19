@@ -11,8 +11,8 @@ interface GalleryGridProps {
   fullPhotoLayout?: boolean
 }
 
-const INITIAL_VISIBLE_COUNT = 10
-const LOAD_MORE_COUNT = 10
+const INITIAL_VISIBLE_COUNT = 12
+const LOAD_MORE_COUNT = 12
 
 export default function GalleryGrid({ images, title }: GalleryGridProps) {
   const [visibleCount, setVisibleCount] = useState(INITIAL_VISIBLE_COUNT)
@@ -61,20 +61,20 @@ export default function GalleryGrid({ images, title }: GalleryGridProps) {
   return (
     <>
       {/* Grid – כל התמונות באותו גודל מסגרת. התמונות בגלריות צריכות להיות בפורמט הנפוץ שלה כדי שלא ייחתכו */}
-      <div className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4">
+      <div className="grid grid-cols-3 md:grid-cols-4 gap-2 md:gap-4">
         {visibleImages.map((img, i) => (
           <button
             key={i}
             onClick={() => setLightboxIndex(i)}
             style={{ aspectRatio: frame }}
-            className="group relative block w-full overflow-hidden rounded-xl bg-card focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
+            className="group relative block w-full overflow-hidden rounded-xl md:rounded-2xl bg-muted shadow-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary"
             aria-label={`פתח תמונה: ${img.alt}`}
           >
             <Image
               src={img.src}
               alt={img.alt}
               fill
-              sizes="(max-width: 768px) 50vw, 33vw"
+              sizes="(max-width: 768px) 33vw, 25vw"
               quality={90}
               unoptimized={shouldSkipImageOptimization(img.src)}
               className={shouldSkipImageOptimization(img.src) ? 'object-contain object-center' : 'object-cover object-center'}
