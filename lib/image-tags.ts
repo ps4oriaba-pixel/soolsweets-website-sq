@@ -5,12 +5,6 @@
 // רק בלי הדיוק שתגיות ברמת התמונה נותנות.
 
 export const IMAGE_TAGS: Record<string, string[]> = {
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-10-hsWZXn0dFlroPcxL315N7p32k9meSg.webp': ['מארז', 'קינוחים', 'דונאטס', 'שוקולד', 'דשא', 'חוץ'],
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-09-VzwqWGTuqSDzvdSfhPCH5w6seHyIwO.webp': ['מארז', 'שוקולד', 'דשא', 'חוץ'],
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-01-L7AjdaECOGpDeGtVCXknRIBNrq4gXx.webp': ['מארז', 'דונאטס', 'ורוד', 'תכלת', 'דובי', 'סוכריות'],
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-05-ZwGlWoYAtqXRa5i3wDYZanp2IVzFGu.webp': ['מארז', 'עוגיות', 'שוקולד', 'חום'],
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-03-Bq97rPxtXSLhKhTgidK8s9SIc26hlC.webp': ['מארז', 'עוגיות', 'זהב', 'לבן'],
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-04-8bMbHS0J4c9V0o8XJIUeFySPWyYnNl.webp': ['מארז', 'יום הולדת', '18', 'ורוד', 'זהב', 'עוגיות'],
   '/images/gallery/gender-reveal-1.png': ['מארז', 'גילוי מין', 'ורוד', 'בלונים'],
   '/images/gallery/gender-reveal-2.png': ['מארז', 'גילוי מין', 'ורוד', 'פרחים', 'שולחן מתוקים'],
   '/images/gallery/gender-reveal-3.png': ['מארז', 'גילוי מין', 'תכלת', 'דונאטס'],
@@ -21,8 +15,6 @@ export const IMAGE_TAGS: Record<string, string[]> = {
   '/images/gallery/boxes-events-3.png': ['מארז עסקי', 'פרחים', 'ורוד'],
   '/images/category-custom-boxes.png': ['מארז', 'בר מצווה', 'בת מצווה', 'תכלת', 'ורוד', 'עוגיות'],
   '/images/box-birthday.png': ['מארז', 'פפיון', 'ורוד', 'בר מצווה', 'בת מצווה'],
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-07-pw9uuWaWfuFk2arHLZsKMvsm8mdWYP.webp': ['מארז', 'כדורי שוקולד', 'חנוכה', 'ורוד'],
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/box-new-08-N4buCmvc9T7fJ85uiUzjiQTx5KNnkc.webp': ['מארז', 'קינוחי כוסות', 'גינה', 'חוץ'],
   '/images/gallery/custom-design/20230123_160939.webp': ['עוגה', 'ילדים', 'כחול', 'ים', 'עוגן', 'כוכב ים', 'יום הולדת'],
   '/images/gallery/custom-design/20230310_151956.webp': ['עוגה', 'בקבוק ויסקי', 'יום הולדת', 'גברים'],
   '/images/gallery/custom-design/20230505_094623.webp': ['עוגה', 'גיימינג', 'בנים', 'ירוק', 'קונטרולר'],

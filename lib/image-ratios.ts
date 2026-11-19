@@ -68,21 +68,21 @@ const EXCEPTIONS: Record<string, string> = {
   '/images/gallery/vintage-3.png': '1024/1024',
   '/images/hero.png': '1920/1280',
   '/images/home-hero-new.png': '1254/1254',
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/candy-lollipop-KQ7UPyiGEMIfjdAIf5j7yRjWHMcmB0.webp': '289/385',
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soccer-ball-candies-RnMvHSvVRV3yFnV3HQyVHsEHF08C4N.webp': '289/514',
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tiered-cake-blue-6ZYxx3EVrHM269ixYwTTRtadThmj93.webp': '289/514',
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cake-22-zFJiEZRIDRDfIYUNFfh8LB5LvqIJOb.webp': '532/945',
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bento-cake-white-scw0h9L47UwlRNU79YGH5OsY39Wdmm.webp': '476/846',
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/custom-cake-35-7x6cgchNodn2SXTG7bSyID8bbFW037.webp': '476/846',
+  '/images/gallery/exploding-candy/candy-lollipop.webp': '708/944',
+  '/images/gallery/exploding-football/soccer-ball-candies.webp': '531/944',
+  '/images/gallery/levels-cakes/tiered-cake-blue.webp': '531/944',
+  '/images/gallery/vintage-cakes/cake-22.webp': '531/944',
+  '/images/gallery/bento-cakes/bento-cake-white.webp': '531/944',
+  '/images/gallery/custom-design/custom-cake-35.webp': '531/944',
 }
 
 const ORIGINAL_UPLOADS = new Set([
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/candy-lollipop-KQ7UPyiGEMIfjdAIf5j7yRjWHMcmB0.webp',
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soccer-ball-candies-RnMvHSvVRV3yFnV3HQyVHsEHF08C4N.webp',
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tiered-cake-blue-6ZYxx3EVrHM269ixYwTTRtadThmj93.webp',
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cake-22-zFJiEZRIDRDfIYUNFfh8LB5LvqIJOb.webp',
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bento-cake-white-scw0h9L47UwlRNU79YGH5OsY39Wdmm.webp',
-  'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/custom-cake-35-7x6cgchNodn2SXTG7bSyID8bbFW037.webp',
+  '/images/gallery/exploding-candy/candy-lollipop.webp',
+  '/images/gallery/exploding-football/soccer-ball-candies.webp',
+  '/images/gallery/levels-cakes/tiered-cake-blue.webp',
+  '/images/gallery/vintage-cakes/cake-22.webp',
+  '/images/gallery/bento-cakes/bento-cake-white.webp',
+  '/images/gallery/custom-design/custom-cake-35.webp',
 ])
 
 export function shouldSkipImageOptimization(src: string): boolean {

@@ -10,19 +10,19 @@ const products = [
   {
     title: 'עוגות בעיצוב אישי',
     description: getProductDescription('custom-cakes'),
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/custom-cake-35-7x6cgchNodn2SXTG7bSyID8bbFW037.webp',
+    image: '/images/gallery/custom-design/custom-cake-35.webp',
     slug: 'custom-cakes',
   },
   {
     title: "עוגות וינטאג'",
     description: getProductDescription('vintage-cakes'),
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cake-22-zFJiEZRIDRDfIYUNFfh8LB5LvqIJOb.webp',
+    image: '/images/gallery/vintage-cakes/cake-22.webp',
     slug: 'vintage-cakes',
   },
   {
     title: 'עוגות בנטו',
     description: getProductDescription('bento-cakes'),
-    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bento-cake-white-scw0h9L47UwlRNU79YGH5OsY39Wdmm.webp',
+    image: '/images/gallery/bento-cakes/bento-cake-white.webp',
     slug: 'bento-cakes',
   },
   {
