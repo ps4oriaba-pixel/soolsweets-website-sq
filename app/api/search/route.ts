@@ -1,6 +1,6 @@
 import { generateObject } from 'ai'
 import { z } from 'zod'
-import { buildCatalog, resultsForSlugs, keywordSearch } from '@/lib/search'
+import { buildCatalog, resultsForSlugs, keywordSearchWithRelated } from '@/lib/search'
 
 export const maxDuration = 20
 
@@ -18,9 +18,14 @@ export async function POST(req: Request) {
       return Response.json({ error: 'Invalid query' }, { status: 400 })
     }
 
-    const localResults = keywordSearch(query)
-    if (localResults.length > 0) {
-      return Response.json({ results: localResults, total: localResults.length, mode: 'local' })
+    const localSearch = keywordSearchWithRelated(query)
+    if (localSearch.results.length > 0 || localSearch.relatedResults.length > 0) {
+      return Response.json({
+        results: localSearch.results,
+        relatedResults: localSearch.relatedResults,
+        total: localSearch.results.length,
+        mode: 'local',
+      })
     }
 
     // Use AI only when the local image-aware search has no matches.
@@ -46,13 +51,13 @@ export async function POST(req: Request) {
       const results = resultsForSlugs(slugs, 6, query)
 
       if (results.length > 0) {
-        return Response.json({ results, total: results.length, mode: 'ai' })
+        return Response.json({ results: [], relatedResults: results, total: 0, mode: 'ai' })
       }
     } catch {
-      return Response.json({ results: localResults, total: localResults.length, mode: 'local' })
+      return Response.json({ results: [], relatedResults: [], total: 0, mode: 'local' })
     }
 
-    return Response.json({ results: localResults, total: localResults.length, mode: 'local' })
+    return Response.json({ results: [], relatedResults: [], total: 0, mode: 'local' })
   } catch (error) {
     console.log('[v0] Search error:', error)
     return Response.json({ error: 'Search failed' }, { status: 500 })

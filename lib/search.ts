@@ -1,5 +1,6 @@
 import { getAllGalleries, type GalleryImage } from '@/lib/gallery-data'
 import { IMAGE_TAGS } from '@/lib/image-tags'
+import { ITEM_SIZES } from '@/lib/item-sizes'
 
 export interface SearchResult {
   slug: string
@@ -139,6 +140,45 @@ function tokenize(text: string): string[] {
     .filter((word) => word.length > 0 && !STOP_WORDS.has(word))
 }
 
+interface ServingRequest {
+  min: number
+  max: number
+}
+
+const SERVING_UNITS = new Set(['איש', 'אנשים', 'אורחים', 'מוזמנים', 'סועדים'].map(normalize))
+
+function extractServingRequest(query: string): ServingRequest | null {
+  const numberRanges = [...query.matchAll(/\d{1,3}(?:\s*[-–—]\s*\d{1,3})?/g)]
+
+  for (const match of numberRanges) {
+    const index = match.index ?? 0
+    const before = query.slice(0, index)
+    const after = query.slice(index + match[0].length)
+    const hasForPrefix = /ל\s*[-–—]?\s*$/.test(before)
+    const hasServingUnit = /^\s*(?:איש|אנשים|אורחים|מוזמנים|סועדים)/.test(after)
+    const isOnlyNumber = query.trim() === match[0]
+
+    if (!hasForPrefix && !hasServingUnit && !isOnlyNumber) continue
+
+    const [first, second] = match[0].match(/\d+/g)?.map(Number) ?? []
+    if (!Number.isFinite(first)) continue
+
+    return {
+      min: Math.min(first, second ?? first),
+      max: Math.max(first, second ?? first),
+    }
+  }
+
+  return null
+}
+
+function getQueryWords(query: string): string[] {
+  const words = tokenize(query)
+  if (!extractServingRequest(query)) return words
+
+  return words.filter((word) => !/^\d+$/.test(word) && !SERVING_UNITS.has(word))
+}
+
 function queryForms(word: string): string[] {
   const forms = new Set([word])
   if (word.endsWith('ת') && word.length > 2) forms.add(`${word.slice(0, -1)}ה`)
@@ -197,11 +237,47 @@ function rankImages(images: GalleryImage[], queryWords: string[]): { image: Gall
     .sort((a, b) => b.score - a.score || a.index - b.index)
 }
 
+export interface KeywordSearchResults {
+  results: SearchResult[]
+  relatedResults: SearchResult[]
+}
+
+const MIN_RELEVANCE_RATIO = 0.65
+const MAX_RELATED_RESULTS = 2
+
 // Deterministic image-aware search — always works without an external dependency.
-export function keywordSearch(query: string, limit = 6): SearchResult[] {
+export function keywordSearchWithRelated(query: string, limit = 6): KeywordSearchResults {
   const galleries = getAllGalleries()
-  const normalizedQuery = normalize(query)
-  const queryWords = tokenize(query)
+  const servingRequest = extractServingRequest(query)
+  const normalizedQuery = servingRequest
+    ? normalize(query)
+        .split(' ')
+        .filter((word) => !/^\d+$/.test(word) && !SERVING_UNITS.has(word) && !STOP_WORDS.has(word))
+        .join(' ')
+    : normalize(query)
+  const queryWords = getQueryWords(query)
+  const isHeartQuery = normalizedQuery.includes(normalize('לב'))
+  const sizeOptionsBySlug = new Map(
+    galleries.map((gallery) => [
+      gallery.slug,
+      (ITEM_SIZES[gallery.slug] ?? []).filter((option) => option.variant !== 'heart' || isHeartQuery),
+    ]),
+  )
+  const servingDistance = (slug: string) => {
+    if (!servingRequest) return Number.POSITIVE_INFINITY
+    const options = sizeOptionsBySlug.get(slug) ?? []
+    return options.reduce((closest, option) => {
+      const distance = servingRequest.max < option.minGuests
+        ? option.minGuests - servingRequest.max
+        : servingRequest.min > option.maxGuests
+          ? servingRequest.min - option.maxGuests
+          : 0
+      return Math.min(closest, distance)
+    }, Number.POSITIVE_INFINITY)
+  }
+  const sizeDistances = galleries.map(({ slug }) => servingDistance(slug))
+  const closestServingDistance = Math.min(...sizeDistances)
+  const hasExactServingMatch = servingRequest !== null && closestServingDistance === 0
 
   const scored = galleries.map((gallery) => {
     const meta = SEARCH_META[gallery.slug]
@@ -209,19 +285,29 @@ export function keywordSearch(query: string, limit = 6): SearchResult[] {
     const keywords = meta?.keywords ?? []
     const rankedImages = rankImages(gallery.images, queryWords)
 
-    let score = 0
+    let textScore = 0
 
-    if (normalizedQuery && normalize(gallery.title).includes(normalizedQuery)) score += 12
-    if (normalizedQuery && keywords.some((keyword) => normalize(keyword).includes(normalizedQuery))) score += 8
+    if (normalizedQuery && normalize(gallery.title).includes(normalizedQuery)) textScore += 12
+    if (normalizedQuery && keywords.some((keyword) => normalize(keyword).includes(normalizedQuery))) textScore += 8
 
-    score += scoreWords(queryWords, gallery.title, 5, 2.5)
-    score += scoreWords(queryWords, category, 4, 2)
-    score += scoreWords(queryWords, keywords.join(' '), 6, 2.5)
-    score += scoreWords(queryWords, gallery.subtitle, 2, 1)
-    score += scoreWords(queryWords, gallery.description, 1, 0.5)
+    textScore += scoreWords(queryWords, gallery.title, 5, 2.5)
+    textScore += scoreWords(queryWords, category, 4, 2)
+    textScore += scoreWords(queryWords, keywords.join(' '), 6, 2.5)
+    textScore += scoreWords(queryWords, gallery.subtitle, 2, 1)
+    textScore += scoreWords(queryWords, gallery.description, 1, 0.5)
 
     const bestImageScores = rankedImages.slice(0, 3).map(({ score: imageScore }) => imageScore)
-    score += (bestImageScores[0] ?? 0) + (bestImageScores[1] ?? 0) * 0.4 + (bestImageScores[2] ?? 0) * 0.2
+    textScore += (bestImageScores[0] ?? 0) + (bestImageScores[1] ?? 0) * 0.4 + (bestImageScores[2] ?? 0) * 0.2
+
+    const options = sizeOptionsBySlug.get(gallery.slug) ?? []
+    const servingMatch = servingRequest !== null && options.some(
+      (option) => servingRequest.min <= option.maxGuests && servingRequest.max >= option.minGuests,
+    )
+    const nearestServingMatch =
+      !hasExactServingMatch &&
+      Number.isFinite(closestServingDistance) &&
+      servingDistance(gallery.slug) === closestServingDistance
+    const quantityScore = servingMatch ? 100 : nearestServingMatch ? 0.5 : 0
 
     return {
       slug: gallery.slug,
@@ -230,15 +316,52 @@ export function keywordSearch(query: string, limit = 6): SearchResult[] {
       category,
       image: gallery.heroImage,
       matchedImages: rankedImages.slice(0, 3).map(({ image }) => image),
-      score,
+      score: textScore + quantityScore,
+      textScore,
+      servingMatch,
+      nearestServingMatch,
+      hasSizeData: options.length > 0,
     }
   })
 
-  return scored
+  const ranked = scored
     .filter((item) => item.score > 0)
+    .filter((item) => !servingRequest || queryWords.length === 0 || item.textScore > 0)
     .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map(({ score, ...rest }) => rest)
+  const highestScore = ranked[0]?.score ?? 0
+  const highestTextScore = Math.max(0, ...ranked.map((item) => item.textScore))
+  const relevanceThreshold = (servingRequest ? highestTextScore : highestScore) * MIN_RELEVANCE_RATIO
+  const relevant = ranked.filter((item) => {
+    if (!servingRequest) return item.score >= relevanceThreshold
+    if (item.hasSizeData && !item.servingMatch) return false
+    const strongTextMatch = item.textScore > 0 && item.textScore >= relevanceThreshold
+    const strongServingMatch = item.servingMatch && (queryWords.length === 0 || item.textScore > 0)
+    return strongTextMatch || strongServingMatch
+  })
+  const toSearchResult = (item: typeof ranked[number]): SearchResult => ({
+    slug: item.slug,
+    title: item.title,
+    description: item.description,
+    category: item.category,
+    image: item.image,
+    matchedImages: item.matchedImages,
+  })
+  const results = relevant.slice(0, limit).map(toSearchResult)
+  const nearestResults = servingRequest && !hasExactServingMatch
+    ? ranked.filter((item) => item.nearestServingMatch).slice(0, MAX_RELATED_RESULTS)
+    : []
+  const otherRelatedResults = !servingRequest && relevant.length < 2
+    ? ranked.filter((item) => !relevant.includes(item))
+    : []
+  const relatedResults = [...nearestResults, ...otherRelatedResults]
+    .slice(0, MAX_RELATED_RESULTS)
+    .map(toSearchResult)
+
+  return { results, relatedResults }
+}
+
+export function keywordSearch(query: string, limit = 6): SearchResult[] {
+  return keywordSearchWithRelated(query, limit).results
 }
 
 // Build a compact catalog string for the AI model to reason over.
@@ -253,7 +376,7 @@ export function buildCatalog(): { slug: string; title: string; category: string;
 
 export function resultsForSlugs(slugs: string[], limit = 6, query = ''): SearchResult[] {
   const galleries = getAllGalleries()
-  const queryWords = tokenize(query)
+  const queryWords = getQueryWords(query)
   const results: SearchResult[] = []
 
   for (const slug of slugs) {
