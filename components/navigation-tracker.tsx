@@ -16,8 +16,13 @@ export function NavigationTracker() {
     if (prevPathname.current === pathname) return
     prevPathname.current = pathname
 
-    const raw = window.sessionStorage.getItem(STORAGE_KEY)
-    const stack: string[] = raw ? JSON.parse(raw) : []
+    let stack: string[] = []
+    try {
+      const parsed = JSON.parse(window.sessionStorage.getItem(STORAGE_KEY) ?? '[]')
+      if (Array.isArray(parsed)) stack = parsed.filter((s): s is string => typeof s === 'string' && s.startsWith('/') && !s.startsWith('//'))
+    } catch {
+      stack = []
+    }
 
     const last = stack[stack.length - 1]
 

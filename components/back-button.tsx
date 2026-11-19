@@ -10,7 +10,9 @@ export function BackButton({ variant = 'pill' }: { variant?: 'pill' | 'icon' }) 
     const prev = typeof window !== 'undefined'
       ? window.sessionStorage.getItem('previousUrl')
       : null
-    router.push(prev ?? '/')
+    // רק נתיב פנימי באתר – לא כתובת חיצונית
+    const safe = prev && prev.startsWith('/') && !prev.startsWith('//') ? prev : '/'
+    router.push(safe)
   }
 
   if (variant === 'icon') {
