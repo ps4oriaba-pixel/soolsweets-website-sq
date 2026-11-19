@@ -4,9 +4,9 @@ export default function Footer({ flush = false }: { flush?: boolean }) {
   return (
     <footer className={`bg-accent text-accent-foreground ${flush ? '' : 'mt-16'}`}>
       <div className="max-w-6xl mx-auto px-4 py-8 md:py-10">
-        <div className="flex flex-col md:flex-row justify-between items-start gap-8">
+        <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8">
           {/* Brand */}
-          <div className="flex flex-col gap-2">
+          <div className="flex flex-col gap-2 w-full md:w-auto items-center md:items-start">
             <span dir="ltr" className="font-serif italic font-bold whitespace-nowrap block" style={{ fontSize: '3.2rem', color: '#FFF0ED', letterSpacing: '0.02em' }}>
               SoolSweets
             </span>

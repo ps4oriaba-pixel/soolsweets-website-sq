@@ -21,9 +21,11 @@ export default function FloatingWhatsApp() {
     const rect = ref.current?.getBoundingClientRect()
     const w = rect?.width ?? 56
     const h = rect?.height ?? 56
+    // לא מעל שורת הלוגו (הסרגל העליון), אחרת הכפתור נעלם מאחוריו
+    const minY = (document.querySelector('header')?.getBoundingClientRect().bottom ?? 0) + 4
     return {
       x: Math.min(Math.max(0, x), Math.max(0, window.innerWidth - w)),
-      y: Math.min(Math.max(0, y), Math.max(0, window.innerHeight - h)),
+      y: Math.min(Math.max(minY, y), Math.max(minY, window.innerHeight - h)),
     }
   }, [])
 
