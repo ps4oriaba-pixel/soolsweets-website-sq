@@ -10,7 +10,7 @@ const products = [
   {
     title: 'רגעים ששווה לחגוג',
     description: getProductDescription('boxes-events'),
-    image: '/images/gallery/boxes-events/IMG_2799.webp',
+    image: '/images/gallery/boxes-events/IMG_9596.webp',
     slug: 'boxes-events',
   },
   {
@@ -22,7 +22,7 @@ const products = [
   {
     title: 'עסקים',
     description: getProductDescription('branded-boxes'),
-    image: '/images/gallery/branded-boxes/20240302_145359.webp',
+    image: '/images/gallery/branded-boxes/20240302_145422.webp',
     slug: 'branded-boxes',
   },
   {

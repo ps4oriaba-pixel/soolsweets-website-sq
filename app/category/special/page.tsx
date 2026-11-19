@@ -10,7 +10,7 @@ const products = [
   {
     title: 'כדורגל שוקולד',
     description: getProductDescription('chocolate-ball'),
-    image: '/images/gallery/exploding-football/soccer-ball-candies.webp',
+    image: '/images/gallery/exploding-football/IMG_3471.webp',
     note: 'הכי מבוקש!',
     slug: 'chocolate-ball',
   },

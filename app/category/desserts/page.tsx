@@ -10,19 +10,19 @@ const products = [
   {
     title: 'מארזי כוסות',
     description: getProductDescription('cup-desserts'),
-    image: '/images/gallery/dessert-cups/20240421_122244.webp',
+    image: '/images/gallery/dessert-cups/IMG_6804.webp',
     slug: 'cup-desserts',
   },
   {
     title: 'מארזי קראמבל',
     description: getProductDescription('crumble-desserts'),
-    image: '/images/gallery/crumble-cookies/user-crumble-1.png',
+    image: '/images/gallery/crumble-cookies/user-crumble-2.png',
     slug: 'crumble-desserts',
   },
   {
     title: 'קינוחים מסוג אחד',
     description: getProductDescription('dedicated-dessert-boxes'),
-    image: '/images/gallery/custom-boxes/IMG_3197.webp',
+    image: '/images/gallery/custom-boxes/IMG_8701.webp',
     slug: 'dedicated-dessert-boxes',
   },
 ]

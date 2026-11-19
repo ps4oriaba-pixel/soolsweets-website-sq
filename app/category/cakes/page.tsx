@@ -10,7 +10,7 @@ const products = [
   {
     title: 'עוגות בעיצוב אישי',
     description: getProductDescription('custom-cakes'),
-    image: '/images/gallery/custom-design/custom-cake-35.webp',
+    image: '/images/gallery/custom-design/IMG_0434.webp',
     slug: 'custom-cakes',
   },
   {
@@ -40,7 +40,7 @@ const products = [
   {
     title: 'עוגת פפיון',
     description: getProductDescription('bow-tie-cakes'),
-    image: '/images/gallery/bow-cakes/IMG_4151.webp',
+    image: '/images/gallery/bow-cakes/IMG_6983.webp',
     slug: 'bow-tie-cakes',
   },
   {
@@ -52,7 +52,7 @@ const products = [
   {
     title: 'עוגות מוס',
     description: getProductDescription('mousse-cakes'),
-    image: '/images/gallery/mousse-cakes/20221028_144630.webp',
+    image: '/images/gallery/mousse-cakes/IMG_6211.webp',
     slug: 'mousse-cakes',
   },
   {
