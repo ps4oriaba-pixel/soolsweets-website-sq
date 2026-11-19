@@ -35,10 +35,10 @@ export default function AboutPage() {
             </div>
             {/* בנייד: כיתוב בראש התמונה */}
             <div className="absolute inset-x-0 top-0 z-10 px-5 pt-16 text-right md:hidden">
-              <p className="inline-block rounded-full bg-white/80 px-3 py-1 text-xs font-bold tracking-[0.14em] text-[#E8857A]">
+              <p className="inline-block rounded-full bg-white/80 px-4 py-1.5 text-base font-bold tracking-[0.14em] text-[#E8857A]">
                 הכירו אותי
               </p>
-              <h1 className="mt-2 text-[1.9rem] font-extrabold leading-[1.15] text-white [-webkit-text-stroke:1px_#E8857A] [paint-order:stroke_fill] [text-shadow:0_2px_10px_rgba(232,133,122,0.35)]">
+              <h1 className="mt-3 text-[2.6rem] font-extrabold leading-[1.1] text-white [-webkit-text-stroke:1px_#E8857A] [paint-order:stroke_fill] [text-shadow:0_2px_10px_rgba(232,133,122,0.35)]">
                 קצת עליי
               </h1>
             </div>
@@ -56,8 +56,8 @@ export default function AboutPage() {
 
         {/* About Content */}
         <section className="relative z-10 -mt-8 rounded-t-[2rem] bg-background shadow-[0_-8px_24px_rgba(107,58,52,0.12)] md:mt-0 md:rounded-none md:shadow-none">
-          <div className="mx-auto mt-3 h-1 w-11 rounded-full bg-[#EBA59D] md:hidden" />
-          <div className="max-w-5xl mx-auto px-6 pt-6 pb-12 md:py-12">
+          <div className="mx-auto mt-4 h-1 w-11 rounded-full bg-[#EBA59D] md:hidden" />
+          <div className="max-w-5xl mx-auto px-6 pt-8 pb-12 md:py-12">
           <div className="flex flex-col md:flex-row gap-14 items-start">
             {/* Photo placeholder */}
             <div className="hidden md:block md:w-2/5 flex-shrink-0">
