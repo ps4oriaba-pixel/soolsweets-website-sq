@@ -49,9 +49,10 @@ export default function HomePage() {
               fill
               priority
               quality={90}
-              className="object-cover object-center"
+              className="object-cover object-[28%_50%] md:object-center"
               sizes="100vw"
             />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#FBDAD4]/80 via-[#FBDAD4]/35 via-30% to-transparent to-45% md:hidden" />
             {/* Soft overlay keeps the copy readable while preserving the photo. */}
             <div className="absolute inset-0 hidden bg-gradient-to-b from-foreground/45 via-foreground/20 to-foreground/55 md:block" />
 
@@ -68,29 +69,32 @@ export default function HomePage() {
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
             </div>
-            <div className="absolute right-0 top-0 z-10 flex w-full flex-col items-start px-5 pt-6 text-right text-white [-webkit-text-stroke:1px_#E8857A] [paint-order:stroke_fill] md:hidden">
-              <p className="mb-2 text-sm font-semibold tracking-widest">
+            <div className="absolute inset-x-0 top-0 z-10 w-full px-5 pt-5 text-right md:hidden">
+              <p className="inline-block rounded-full bg-white/80 px-3 py-1 text-xs font-bold tracking-[0.14em] text-[#E8857A]">
                 קונדיטורית בוטיק ביתית
               </p>
-              <h1 className="font-serif text-[1.7rem] font-bold leading-tight whitespace-nowrap">
+              <h1 className="mt-2 font-extrabold text-[1.75rem] leading-[1.15] whitespace-nowrap text-white [-webkit-text-stroke:1px_#E8857A] [paint-order:stroke_fill] [text-shadow:0_2px_10px_rgba(232,133,122,0.35)]">
                 כשטעם ואסתטיקה נפגשים
               </h1>
-              <p className="mt-2 max-w-[80%] text-base font-bold text-[#C2185B] [-webkit-text-stroke:1.5px_#fff] leading-relaxed">
+              <p className="mt-2 max-w-[78%] text-[1.06rem] font-extrabold leading-snug text-[#E8857A] [-webkit-text-stroke:3px_#fff] [paint-order:stroke_fill]">
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
-              <div className="mt-4 flex flex-col items-start gap-2.5 [text-shadow:none] [-webkit-text-stroke:0]">
-                <WhatsAppButton compact translucent label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
-                <Link
-                  href="/about"
-                  className="inline-flex items-center gap-2 border border-foreground/50 bg-background/85 text-foreground px-5 py-2.5 rounded-full text-sm font-semibold shadow-md"
-                >
-                  קצת עליי
-                </Link>
-              </div>
             </div>
           </div>
 
-          <div className="relative z-10 bg-background px-5 py-3 md:px-6 md:py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
+          <div className="relative z-10 -mt-8 rounded-t-[2rem] bg-background px-5 pb-4 pt-3 shadow-[0_-8px_24px_rgba(107,58,52,0.12)] md:mt-0 md:rounded-none md:px-6 md:py-10 md:shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
+            <div className="mx-auto mb-3 h-1 w-11 rounded-full bg-[#EBA59D] md:hidden" />
+            <div className="mx-auto mb-3 flex max-w-6xl gap-2.5 md:hidden">
+              <div className="flex-1 [&>a]:w-full [&>a]:justify-center">
+                <WhatsAppButton compact label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
+              </div>
+              <Link
+                href="/about"
+                className="flex flex-1 items-center justify-center rounded-full border-[1.5px] border-[#E8857A] bg-white px-5 py-2.5 text-sm font-bold text-[#C2185B]"
+              >
+                קצת עליי
+              </Link>
+            </div>
             <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-4">
               <div className="w-full max-w-md md:mb-0">
                 <HeroSearch variant="light" />
