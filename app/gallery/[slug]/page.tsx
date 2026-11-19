@@ -54,17 +54,16 @@ export default async function GalleryPage({ params }: PageProps) {
             className="object-cover object-center"
           />
           {/* Neutral dark scrim so the photo keeps its own colors */}
-          <div className="absolute inset-0 bg-foreground/55" />
+          <div className="absolute inset-0 bg-black/60" />
           <div className="absolute inset-0 flex items-center justify-center flex-col gap-3 px-4">
-            <p className="text-white text-sm font-semibold tracking-widest uppercase [text-shadow:0_1px_6px_rgba(0,0,0,0.8)]">
-              <span dir="ltr" className="font-serif italic font-bold">SoolSweets</span>
-            </p>
-            <h1 className="font-serif text-3xl md:text-5xl font-bold text-white text-center text-balance [text-shadow:0_2px_12px_rgba(0,0,0,0.85),0_0_3px_rgba(0,0,0,0.6)]">
+            <h1 className="font-serif text-3xl md:text-5xl font-extrabold text-white text-center text-balance [text-shadow:0_2px_14px_rgba(0,0,0,1),0_0_4px_rgba(0,0,0,0.9)]">
               {gallery.title}
             </h1>
+            {gallery.subtitle && (
             <p className="text-white text-base md:text-lg font-medium text-center max-w-lg [text-shadow:0_1px_8px_rgba(0,0,0,0.85)]">
               {gallery.subtitle}
             </p>
+            )}
           </div>
         </section>
 
