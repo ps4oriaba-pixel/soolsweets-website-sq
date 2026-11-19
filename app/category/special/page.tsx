@@ -10,14 +10,14 @@ const products = [
   {
     title: 'כדורגל שוקולד',
     description: getProductDescription('chocolate-ball'),
-    image: '/images/gallery/exploding-football/IMG_3463.webp',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soccer-ball-candies-RnMvHSvVRV3yFnV3HQyVHsEHF08C4N.webp',
     note: 'הכי מבוקש!',
     slug: 'chocolate-ball',
   },
   {
     title: 'סוכריה גדולה ומתוקה',
     description: getProductDescription('exploding-candy'),
-    image: '/images/gallery/exploding-candy/20240303_001606.webp',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/candy-lollipop-KQ7UPyiGEMIfjdAIf5j7yRjWHMcmB0.webp',
     slug: 'exploding-candy',
   },
   {
@@ -29,7 +29,7 @@ const products = [
   {
     title: 'עוגות קומות',
     description: getProductDescription('tiered-cakes'),
-    image: '/images/gallery/levels-cakes/user-tiered-1.png',
+    image: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tiered-cake-blue-6ZYxx3EVrHM269ixYwTTRtadThmj93.webp',
     slug: 'tiered-cakes',
   },
   {

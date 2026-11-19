@@ -6,6 +6,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
+import { shouldSkipImageOptimization } from '@/lib/image-ratios'
 
 
 interface SearchResult {
@@ -65,14 +66,16 @@ function SearchResults() {
         {items.map((result, index) => (
           <article key={result.slug} className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col">
             <Link href={`/gallery/${result.slug}`} className="group flex flex-1 flex-col">
-              <div className="relative h-56 overflow-hidden">
+              <div className="relative h-72 sm:h-80 lg:h-96 overflow-hidden bg-muted">
                 <Image
                   src={result.matchedImages?.[0]?.src ?? result.image}
                   alt={result.matchedImages?.[0]?.alt ?? result.title}
                   fill
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                  quality={90}
+                  unoptimized={shouldSkipImageOptimization(result.matchedImages?.[0]?.src ?? result.image)}
                   loading={index === 0 && !related ? 'eager' : 'lazy'}
-                  className="object-cover group-hover:scale-105 transition-transform duration-500"
+                  className={shouldSkipImageOptimization(result.matchedImages?.[0]?.src ?? result.image) ? 'object-contain' : 'object-cover'}
                 />
                 <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/25 transition-colors duration-300" />
                 {related && (
@@ -90,7 +93,7 @@ function SearchResults() {
                   <div className="mt-3 flex gap-2" aria-hidden="true">
                     {result.matchedImages.slice(0, 3).map((image) => (
                       <div key={image.src} className="relative size-12 overflow-hidden rounded-md border border-border">
-                        <Image src={image.src} alt="" fill sizes="48px" className="object-cover" />
+                        <Image src={image.src} alt="" fill sizes="48px" quality={90} unoptimized={shouldSkipImageOptimization(image.src)} className="object-cover" />
                       </div>
                     ))}
                   </div>
@@ -209,14 +212,16 @@ function SearchResults() {
                     className="bg-card rounded-2xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300 flex flex-col"
                   >
                     <Link href={`/gallery/${result.slug}`} className="group flex flex-1 flex-col">
-                    <div className="relative h-56 overflow-hidden">
+                    <div className="relative h-72 sm:h-80 lg:h-96 overflow-hidden bg-muted">
                       <Image
                         src={result.matchedImages?.[0]?.src ?? result.image}
                         alt={result.matchedImages?.[0]?.alt ?? result.title}
                         fill
                         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                        quality={90}
+                        unoptimized={shouldSkipImageOptimization(result.matchedImages?.[0]?.src ?? result.image)}
                         loading={index === 0 ? 'eager' : 'lazy'}
-                        className="object-cover group-hover:scale-105 transition-transform duration-500"
+                        className={shouldSkipImageOptimization(result.matchedImages?.[0]?.src ?? result.image) ? 'object-contain' : 'object-cover'}
                       />
                       <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/25 transition-colors duration-300" />
                     </div>
@@ -231,7 +236,7 @@ function SearchResults() {
                         <div className="mt-3 flex gap-2" aria-hidden="true">
                           {result.matchedImages.slice(0, 3).map((image) => (
                             <div key={image.src} className="relative size-12 overflow-hidden rounded-md border border-border">
-                              <Image src={image.src} alt="" fill sizes="48px" className="object-cover" />
+                              <Image src={image.src} alt="" fill sizes="48px" quality={90} unoptimized={shouldSkipImageOptimization(image.src)} className="object-cover" />
                             </div>
                           ))}
                         </div>

@@ -47,6 +47,7 @@ export default function HomePage() {
               alt="עוגות ומארזים מעוצבים של SoolSweets"
               fill
               priority
+              quality={90}
               className="object-cover object-center"
               sizes="100vw"
             />
@@ -66,18 +67,22 @@ export default function HomePage() {
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
             </div>
-          </div>
-
-          <div className="bg-background px-5 py-7 text-center text-foreground md:hidden">
-            <p className="mb-2 text-sm font-medium tracking-widest text-primary">
-              קונדיטורית בוטיק ביתית
-            </p>
-            <h1 className="font-serif text-3xl font-bold leading-tight text-balance">
-              כשטעם ואסתטיקה נפגשים
-            </h1>
-            <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-foreground/75">
-              יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
-            </p>
+            <div className="absolute inset-x-0 top-0 z-10 mx-auto flex w-full max-w-3xl flex-col items-center px-5 pt-8 text-center text-background md:hidden">
+              <p className="mb-2 text-sm font-medium tracking-widest text-secondary drop-shadow-md">
+                קונדיטורית בוטיק ביתית
+              </p>
+              <h1 className="font-serif text-3xl font-bold leading-tight text-balance drop-shadow-md">
+                כשטעם ואסתטיקה
+                <br />
+                נפגשים
+              </h1>
+              <p className="mx-auto mt-3 max-w-sm text-sm leading-relaxed text-background/90 drop-shadow-md">
+                יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
+              </p>
+              <div className="mt-4">
+                <WhatsAppButton compact label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
+              </div>
+            </div>
           </div>
 
           <div className="relative z-10 bg-background px-5 py-6 md:px-6 md:py-10 shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
@@ -86,7 +91,9 @@ export default function HomePage() {
                 <HeroSearch variant="light" />
               </div>
               <div className="flex flex-wrap gap-4">
-                <WhatsAppButton compact message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
+                <div className="hidden md:block">
+                  <WhatsAppButton compact label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
+                </div>
                 <Link
                   href="/about"
                   className="inline-flex items-center gap-2 border border-foreground/40 text-foreground px-5 py-2.5 md:px-8 md:py-3 rounded-full text-sm md:text-base font-semibold hover:bg-foreground hover:text-background transition-colors duration-200"
@@ -124,7 +131,9 @@ export default function HomePage() {
                     src={cat.image}
                     alt={cat.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-500"
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw"
+                    quality={90}
+                    className="object-cover"
                   />
                 </div>
                 <div className="p-5">
@@ -164,6 +173,8 @@ export default function HomePage() {
                 src="/images/about-owner.png"
                 alt="סדנאות אפייה של SoolSweets"
                 fill
+                sizes="(max-width: 768px) 100vw, 50vw"
+                quality={90}
                 className="object-cover object-top"
               />
             </div>

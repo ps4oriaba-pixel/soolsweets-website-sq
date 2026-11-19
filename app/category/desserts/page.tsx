@@ -10,7 +10,7 @@ const products = [
   {
     title: 'מארזי כוסות',
     description: getProductDescription('cup-desserts'),
-    image: '/images/gallery/dessert-cups/IMG_8715.webp',
+    image: '/images/gallery/dessert-cups/20240421_122244.webp',
     slug: 'cup-desserts',
   },
   {

@@ -9,6 +9,7 @@ import GalleryGrid from '@/components/gallery-grid'
 import Breadcrumb from '@/components/breadcrumb'
 import { getGallery, getAllSlugs, hasSizeGuide, getSizeGuideUrl, getCategoryForSlug } from '@/lib/gallery-data'
 import { getProductDescription } from '@/lib/product-descriptions'
+import { shouldSkipImageOptimization } from '@/lib/image-ratios'
 
 interface PageProps {
   params: Promise<{ slug: string }>
@@ -47,7 +48,10 @@ export default async function GalleryPage({ params }: PageProps) {
             alt={gallery.title}
             fill
             priority
-            className={`${slug === 'tiered-cakes' ? 'object-contain object-center' : 'object-cover object-center'}`}
+            sizes="100vw"
+            quality={90}
+            unoptimized={shouldSkipImageOptimization(gallery.heroImage)}
+            className={slug === 'tiered-cakes' || shouldSkipImageOptimization(gallery.heroImage) ? 'object-contain object-center' : 'object-cover object-center'}
           />
           {/* Neutral dark scrim so the photo keeps its own colors */}
           <div className="absolute inset-0 bg-foreground/45" />

@@ -5,7 +5,7 @@ import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
 import { hasSizeGuide, getSizeGuideUrl } from '@/lib/gallery-data'
 import Breadcrumb from '@/components/breadcrumb'
-import { getDominantRatio } from '@/lib/image-ratios'
+import { getDominantRatio, shouldSkipImageOptimization } from '@/lib/image-ratios'
 
 export interface Product {
   title: string
@@ -51,6 +51,8 @@ export default function CategoryPage({
             alt={heroAlt}
             fill
             priority
+            sizes="100vw"
+            quality={90}
             className="object-cover object-center"
           />
           {/* Neutral dark scrim so the photo keeps its own colors and stands out
@@ -100,7 +102,9 @@ export default function CategoryPage({
                     alt={product.title}
                     fill
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
-                    className="object-cover object-center group-hover:scale-105 transition-transform duration-500"
+                    quality={90}
+                    unoptimized={shouldSkipImageOptimization(product.image)}
+                    className={shouldSkipImageOptimization(product.image) ? 'object-contain object-center' : 'object-cover object-center'}
                   />
                   {product.note && (
                     <span className="absolute top-3 right-3 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full z-10">

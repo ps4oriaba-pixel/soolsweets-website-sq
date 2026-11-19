@@ -22,6 +22,8 @@ export default function AboutPage() {
             alt="סלעית בסטודיו האפייה"
             fill
             priority
+            sizes="100vw"
+            quality={90}
             className="object-cover object-top"
           />
           <div className="absolute inset-0 bg-foreground/45" />
@@ -45,6 +47,8 @@ export default function AboutPage() {
                   src="/images/about-owner.png"
                   alt="סלעית – בעלת SoolSweets"
                   fill
+                  sizes="(max-width: 768px) 100vw, 40vw"
+                  quality={90}
                   className="object-cover"
                 />
                 {/* Placeholder text for when the owner uploads her photo */}

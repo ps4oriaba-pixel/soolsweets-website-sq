@@ -41,8 +41,8 @@ const galleries: GalleryData[] = [
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לחג  ',
     images: [
       { src: '/images/gallery/gender-reveal-1.png', alt: 'מארז גילוי מין ורוד' },
-      { src: '/images/gallery/gender-reveal-2.png', alt: 'שולחן ממתקים לבת' },
       { src: '/images/gallery/gender-reveal-3.png', alt: 'מארז גילוי מין כחול' },
+      { src: '/images/gallery/gender-reveal-2.png', alt: 'שולחן ממתקים לבת' },
       { src: '/images/category-boxes.png', alt: 'מארזים בעיצוב מיוחד' },
     ],
   },
@@ -104,9 +104,10 @@ const galleries: GalleryData[] = [
     subtitle: 'העלו כל רעיון – ואני אגשים אותו',
     description:
       'עוגה שמספרת את הסיפור שלכם. העלו רעיון או תמונה וביחד ניצור משהו שלא קיים עדיין.',
-    heroImage: '/images/gallery/custom-design/IMG_0136.webp',
+    heroImage: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/custom-cake-35-7x6cgchNodn2SXTG7bSyID8bbFW037.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגה בעיצוב אישי!',
     images: [
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/custom-cake-35-7x6cgchNodn2SXTG7bSyID8bbFW037.webp', alt: 'עוגה בעיצוב אישי עם דמות אבא, כלב ותינוק ומספר 35' },
       { src: '/images/gallery/custom-design/20230123_160939.webp', alt: 'עוגה בעיצוב אישי - תמונה 1' },
       { src: '/images/gallery/custom-design/20230310_151956.webp', alt: 'עוגה בעיצוב אישי - תמונה 2' },
       { src: '/images/gallery/custom-design/20230505_094623.webp', alt: 'עוגה בעיצוב אישי - תמונה 3' },
@@ -190,7 +191,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/custom-design/IMG_7820.webp', alt: 'עוגה בעיצוב אישי - תמונה 85' },
  { src: '/images/gallery/custom-design/IMG_7890.webp', alt: 'עוגה בעיצוב אישי - תמונה 86' },
       { src: '/images/gallery/custom-design/IMG_7998.webp', alt: 'עוגה בעיצוב אישי - תמונה 88' },
-      { src: '/images/gallery/custom-design/IMG_8103.webp', alt: 'עוגה בעיצוב אישי - תמונה 89' },
+
       { src: '/images/gallery/custom-design/IMG_8343.webp', alt: 'עוגה בעיצוב אישי - תמונה 90' },
       { src: '/images/gallery/custom-design/IMG_8393.webp', alt: 'עוגה בעיצוב אישי - תמונה 91' },
       { src: '/images/gallery/custom-design/IMG_8478.webp', alt: 'עוגה בעיצוב ��ישי - תמונה 92' },
@@ -216,14 +217,14 @@ const galleries: GalleryData[] = [
     title: 'עוגות וינטאג\'',
     subtitle: 'רומנטיקה, עדינות ואווירה של פעם',
     description: " עיצוב רומנטי ועדין עם זילופי וינטאג’, פפיונים, פרחים וגימורים אלגנטיים. מושלם לכל אירוע .",
-    heroImage: '/images/gallery/vintage-cakes/20231226_113642.webp',
+    heroImage: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cake-22-zFJiEZRIDRDfIYUNFfh8LB5LvqIJOb.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת וינטאג\'!',
     images: [
-      { src: '/images/gallery/vintage-cakes/20231226_113642.webp', alt: "עוגת וינטאג' - תמונה 1" },
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/cake-22-zFJiEZRIDRDfIYUNFfh8LB5LvqIJOb.webp', alt: "עוגת וינטאג' לבנה עם סרטים אדומים ומספר 22" },
       { src: '/images/gallery/vintage-cakes/IMG_0160.webp', alt: "עוגת וינטאג' - תמונה 2" },
       { src: '/images/gallery/vintage-cakes/IMG_0534.webp', alt: "עוגת וינטאג' - תמונה 3" },
       { src: '/images/gallery/vintage-cakes/IMG_0537.webp', alt: "עוגת וינטאג' - תמונה 4" },
-      { src: '/images/gallery/vintage-cakes/IMG_0545.webp', alt: "עוגת וינטאג' - תמונה 5" },
+
   { src: '/images/gallery/vintage-cakes/IMG_0585.webp', alt: "עוגת וינטאג' - תמונה 6" },
       { src: '/images/gallery/vintage-cakes/IMG_0697.webp', alt: "עוגת וינטאג' - תמונה 8" },
       { src: '/images/gallery/vintage-cakes/IMG_0740.webp', alt: "עוגת וינטאג' - תמונה 9" },
@@ -317,9 +318,10 @@ const galleries: GalleryData[] = [
     subtitle: 'עוגה אישית קטנה וחמודה',
     description:
       'קטנות בגודל, גדולות ברושם. עוגות אישיות בעיצוב מוקפד – מושלמות למתנה, הפתעה או חגיגה קטנה.',
-    heroImage: '/images/gallery/bento-cakes/20231222_102551.webp',
+    heroImage: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bento-cake-white-scw0h9L47UwlRNU79YGH5OsY39Wdmm.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת בנטו!',
     images: [
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/bento-cake-white-scw0h9L47UwlRNU79YGH5OsY39Wdmm.webp', alt: 'עוגת בנטו לבנה עם זילופי קרם' },
       { src: '/images/gallery/bento-cakes/20231222_102551.webp', alt: 'עוגת בנטו - תמונה 1' },
       { src: '/images/gallery/bento-cakes/IMG_0029.webp', alt: 'עוגת בנטו - תמונה 2' },
       { src: '/images/gallery/bento-cakes/IMG_0374.webp', alt: 'עוגת בנטו - תמונה 3' },
@@ -511,7 +513,7 @@ const galleries: GalleryData[] = [
     subtitle: 'קינוח אישי מרשים לכל שולחן',
     description:
       'מבחר קינוחי כוסות אישיים במגוון טעמים לבחירה, עם שילובים עשירים ונראות מרשימה לכל אירוע, במגוון טעמים אהובים מלוטוס ואוראו ועד פיסטוק, קינדר, גבינה פירורים, ריבת חלב ועוד',
-    heroImage: '/images/gallery/dessert-cups/IMG_8715.webp',
+    heroImage: '/images/gallery/dessert-cups/20240421_122244.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארזי כוסות!',
     images: [
       { src: '/images/gallery/dessert-cups/20240421_122244.webp', alt: 'מארז כוסות קינוח - תמונה 1' },
@@ -577,6 +579,7 @@ const galleries: GalleryData[] = [
     whatsappMessage: 'שלום סלעית, אשמח להזמין כדורי שוקולד מתנפצים!',
     images: [
       { src: '/images/gallery/exploding-football/IMG_3463.webp', alt: 'כדורגל שוקולד - תמונה 1' },
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/soccer-ball-candies-RnMvHSvVRV3yFnV3HQyVHsEHF08C4N.webp', alt: 'קערת שוקולד עם ממתקים וכדורי סוכריות כדורגל' },
       { src: '/images/gallery/exploding-football/IMG_3465.webp', alt: 'כדורגל שוקולד - תמונה 2' },
       { src: '/images/gallery/exploding-football/IMG_3471.webp', alt: 'כדורגל שוקולד - תמונה 3' },
       { src: '/images/gallery/exploding-football/IMG_3475.webp', alt: 'כדורגל שוקולד - תמונה 4' },
@@ -588,10 +591,10 @@ const galleries: GalleryData[] = [
     subtitle: '',
     description:
       'תבנית שוקולד במראה של סוכריה ענקית שמסתירה בתוכה מגוון הפתעות וממתקים.',
-    heroImage: '/images/gallery/exploding-candy/20240303_001606.webp',
+    heroImage: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/candy-lollipop-KQ7UPyiGEMIfjdAIf5j7yRjWHMcmB0.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין סוכריות מתנפצות!',
     images: [
-      { src: '/images/gallery/exploding-candy/20240303_001606.webp', alt: 'סוכריה גדולה ומתוקה - תמונה 1' },
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/candy-lollipop-KQ7UPyiGEMIfjdAIf5j7yRjWHMcmB0.webp', alt: 'סוכריית שוקולד ורודה עם מקל וסוכריות צבעוניות' },
       { src: '/images/gallery/exploding-candy/20240303_144239.webp', alt: 'סוכריה גדולה ומתוקה - תמונה 3' },
     ],
   },
@@ -614,9 +617,10 @@ const galleries: GalleryData[] = [
     subtitle: '',
     description:
       'עוגות קומות מרשימות לחתונות, אירועים גדולים וכל מי שמחפש את ה-WOW האמיתי.',
-    heroImage: '/images/gallery/levels-cakes/user-tiered-1.png',
+    heroImage: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tiered-cake-blue-6ZYxx3EVrHM269ixYwTTRtadThmj93.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת קומות!',
     images: [
+      { src: 'https://hebbkx1anhila5yf.public.blob.vercel-storage.com/tiered-cake-blue-6ZYxx3EVrHM269ixYwTTRtadThmj93.webp', alt: 'עוגת קומות כחולה עם מכוניות מירוץ' },
       { src: '/images/gallery/levels-cakes/20230917_191150.webp', alt: 'עוגת קומות - תמונה 1' },
       { src: '/images/gallery/levels-cakes/user-tiered-1.png', alt: 'עוגת קומות - תמונה 2' },
       { src: '/images/gallery/levels-cakes/user-tiered-2.png', alt: 'עוגת קומות - תמונה 3' },

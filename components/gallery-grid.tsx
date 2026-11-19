@@ -3,7 +3,7 @@
 import { useState, useEffect, useCallback } from 'react'
 import Image from 'next/image'
 import type { GalleryImage } from '@/lib/gallery-data'
-import { getDominantRatio } from '@/lib/image-ratios'
+import { getDominantRatio, shouldSkipImageOptimization } from '@/lib/image-ratios'
 
 interface GalleryGridProps {
   images: GalleryImage[]
@@ -75,7 +75,9 @@ export default function GalleryGrid({ images, title }: GalleryGridProps) {
               alt={img.alt}
               fill
               sizes="(max-width: 768px) 50vw, 33vw"
-              className="object-cover object-center transition-transform duration-500 group-hover:scale-105"
+              quality={90}
+              unoptimized={shouldSkipImageOptimization(img.src)}
+              className={shouldSkipImageOptimization(img.src) ? 'object-contain object-center' : 'object-cover object-center'}
             />
             {/* Hover overlay */}
             <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/25 transition-colors duration-300 flex items-center justify-center">

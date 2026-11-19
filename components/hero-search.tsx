@@ -102,7 +102,7 @@ export default function HeroSearch({ variant = 'dark' }: { variant?: 'dark' | 'l
       </div>
 
       <p className={`mt-3 text-xs text-center ${variant === 'light' ? 'text-muted-foreground' : 'text-background/55'}`}>
-        ציינו: מספר אנשים, סוג האירוע וסגנון מועדף
+        ציינו את סוג האירוע, סגנון עוגה / מארז מועדף ולכמה אנשים אמור להספיק
       </p>
     </form>
   )
