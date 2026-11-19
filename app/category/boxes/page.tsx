@@ -22,7 +22,7 @@ const products = [
   {
     title: 'עסקים',
     description: getProductDescription('branded-boxes'),
-    image: '/images/category-business-boxes.png',
+    image: '/images/gallery/branded-boxes/20240302_145359.webp',
     slug: 'branded-boxes',
   },
   {
