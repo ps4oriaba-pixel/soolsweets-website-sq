@@ -48,7 +48,7 @@ export default async function GalleryPage({ params }: PageProps) {
 
         {/* Bottom-sheet card */}
         <div className="relative -mt-8 rounded-t-[2rem] bg-card shadow-[0_-6px_20px_rgba(107,58,52,0.12)]">
-          <div className="max-w-5xl mx-auto px-5 md:px-6 pt-6 pb-16">
+          <div className="max-w-5xl mx-auto px-5 md:px-6 pt-6 pb-10">
             <div className="mx-auto mb-4 h-1.5 w-11 rounded-full bg-border" aria-hidden="true" />
 
             <div className="flex items-center justify-between gap-3">
@@ -107,7 +107,7 @@ export default async function GalleryPage({ params }: PageProps) {
         </div>
       </main>
 
-      <Footer />
+      <Footer flush />
     </div>
   )
 }

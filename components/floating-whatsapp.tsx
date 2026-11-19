@@ -1,20 +1,105 @@
 'use client'
 
+import { useCallback, useEffect, useRef, useState } from 'react'
+import type { PointerEvent as ReactPointerEvent } from 'react'
 import { usePathname } from 'next/navigation'
 import { getWhatsAppUrl } from '@/lib/whatsapp-messages'
 
 // כפתור וואטסאפ צף בכל העמודים. ההודעה שנשלחת מותאמת לעמוד שבו המבקר נמצא
 // (דף הבית, קטגוריה או פריט ספציפי).
+const STORAGE_KEY = 'waButtonPos'
+const DRAG_THRESHOLD = 6
+
 export default function FloatingWhatsApp() {
   const pathname = usePathname()
+  const ref = useRef<HTMLAnchorElement>(null)
+  const [pos, setPos] = useState<{ x: number; y: number } | null>(null)
+  const drag = useRef({ active: false, moved: false, startX: 0, startY: 0, offX: 0, offY: 0 })
+
+  // הצמדה לגבולות המסך
+  const clamp = useCallback((x: number, y: number) => {
+    const rect = ref.current?.getBoundingClientRect()
+    const w = rect?.width ?? 56
+    const h = rect?.height ?? 56
+    return {
+      x: Math.min(Math.max(0, x), Math.max(0, window.innerWidth - w)),
+      y: Math.min(Math.max(0, y), Math.max(0, window.innerHeight - h)),
+    }
+  }, [])
+
+  // שחזור המיקום שנשמר ותיקון אחרי שינוי גודל המסך
+  useEffect(() => {
+    try {
+      const raw = window.localStorage.getItem(STORAGE_KEY)
+      if (raw) {
+        const saved = JSON.parse(raw) as { x: number; y: number }
+        setPos(clamp(saved.x, saved.y))
+      }
+    } catch {
+      // אין גישה לאחסון – נשארים במיקום ברירת המחדל
+    }
+    const onResize = () => setPos((p) => (p ? clamp(p.x, p.y) : p))
+    window.addEventListener('resize', onResize)
+    return () => window.removeEventListener('resize', onResize)
+  }, [clamp])
+
+  const onPointerDown = (e: ReactPointerEvent<HTMLAnchorElement>) => {
+    const rect = e.currentTarget.getBoundingClientRect()
+    drag.current = {
+      active: true,
+      moved: false,
+      startX: e.clientX,
+      startY: e.clientY,
+      offX: e.clientX - rect.left,
+      offY: e.clientY - rect.top,
+    }
+    e.currentTarget.setPointerCapture(e.pointerId)
+  }
+
+  const onPointerMove = (e: ReactPointerEvent<HTMLAnchorElement>) => {
+    const d = drag.current
+    if (!d.active) return
+    if (!d.moved && Math.hypot(e.clientX - d.startX, e.clientY - d.startY) < DRAG_THRESHOLD) return
+    d.moved = true
+    setPos(clamp(e.clientX - d.offX, e.clientY - d.offY))
+  }
+
+  const onPointerUp = (e: ReactPointerEvent<HTMLAnchorElement>) => {
+    const d = drag.current
+    d.active = false
+    if (e.currentTarget.hasPointerCapture(e.pointerId)) e.currentTarget.releasePointerCapture(e.pointerId)
+    if (d.moved && pos) {
+      try {
+        window.localStorage.setItem(STORAGE_KEY, JSON.stringify(pos))
+      } catch {
+        // לא קריטי
+      }
+    }
+  }
+
+  // גרירה לא אמורה לפתוח את הוואטסאפ – רק לחיצה רגילה
+  const onClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    if (drag.current.moved) {
+      e.preventDefault()
+      drag.current.moved = false
+    }
+  }
 
   return (
     <a
+      ref={ref}
       href={getWhatsAppUrl(pathname)}
       target="_blank"
       rel="noopener noreferrer"
-      aria-label="שלחו הודעה בוואטסאפ"
-      className="fixed bottom-4 left-4 z-40 flex items-center gap-2 group"
+      aria-label="שלחו הודעה בוואטסאפ (אפשר לגרור כדי להזיז)"
+      draggable={false}
+      onPointerDown={onPointerDown}
+      onPointerMove={onPointerMove}
+      onPointerUp={onPointerUp}
+      onPointerCancel={onPointerUp}
+      onClick={onClick}
+      style={pos ? { left: pos.x, top: pos.y, bottom: 'auto', touchAction: 'none' } : { touchAction: 'none' }}
+      className="fixed bottom-4 left-4 z-40 flex items-center gap-2 group select-none cursor-grab active:cursor-grabbing"
     >
       <span className="relative flex h-14 w-14 items-center justify-center">
         <span className="absolute inset-0 rounded-full bg-[#25D366] opacity-60 animate-ping motion-reduce:animate-none" />

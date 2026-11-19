@@ -1,13 +1,13 @@
 import Link from 'next/link'
 
-export default function Footer() {
+export default function Footer({ flush = false }: { flush?: boolean }) {
   return (
-    <footer className="bg-accent text-accent-foreground mt-16">
-      <div className="max-w-6xl mx-auto px-4 py-10">
+    <footer className={`bg-accent text-accent-foreground ${flush ? '' : 'mt-16'}`}>
+      <div className="max-w-6xl mx-auto px-4 py-8 md:py-10">
         <div className="flex flex-col md:flex-row justify-between items-start gap-8">
           {/* Brand */}
           <div className="flex flex-col gap-2">
-            <span dir="ltr" className="font-serif italic font-bold whitespace-nowrap block" style={{ fontSize: '3.2rem', color: '#E8857A', letterSpacing: '0.02em' }}>
+            <span dir="ltr" className="font-serif italic font-bold whitespace-nowrap block" style={{ fontSize: '3.2rem', color: '#FFF0ED', letterSpacing: '0.02em' }}>
               SoolSweets
             </span>
           </div>
