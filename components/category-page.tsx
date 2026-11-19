@@ -1,3 +1,4 @@
+import type { ReactNode } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
 import Navbar from '@/components/navbar'
@@ -20,7 +21,7 @@ interface CategoryPageProps {
   subtitle: string
   heroImage: string
   heroAlt: string
-  description: string
+  description: ReactNode
   products: Product[]
   whatsappMessage: string
   categoryLabel?: string
@@ -60,7 +61,7 @@ export default function CategoryPage({
           <div className="absolute inset-0 bg-foreground/45" />
           <div className="absolute inset-0 flex items-center justify-center flex-col gap-3 px-4">
             <p className="text-secondary text-sm font-medium tracking-widest uppercase">
-              SoolSweets
+              <span dir="ltr" className="font-serif italic font-bold">SoolSweets</span>
             </p>
             <h1 className="font-serif text-4xl md:text-6xl font-bold text-background text-center text-balance">
               {title}

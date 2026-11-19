@@ -36,7 +36,6 @@ const EXCEPTIONS: Record<string, string> = {
   '/images/gallery/choc-ball-1.png': '1024/1024',
   '/images/gallery/choc-ball-2.png': '1024/1024',
   '/images/gallery/choc-ball-3.png': '1024/1024',
-  '/images/gallery/chocolate-egg/Screenshot_20240303_212619_Instagram.webp': '1080/1025',
   '/images/gallery/cup-cakes/F7580070-3AA8-4BD3-8C5B-8FFE6627552B.webp': '1086/1448',
   '/images/gallery/cup-cakes/IMG_3847.webp': '1920/1080',
   '/images/gallery/cups-1.png': '1024/1024',

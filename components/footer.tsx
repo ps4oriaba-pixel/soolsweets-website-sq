@@ -60,7 +60,7 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-accent-foreground/20 mt-8 pt-6 text-center text-xs text-accent-foreground/50">
-          &copy; {new Date().getFullYear()} SoolSweets. כל הזכויות שמורות לסלעית.
+          &copy; {new Date().getFullYear()} <span dir="ltr" className="font-serif italic font-bold">SoolSweets</span>. כל הזכויות שמורות לסלעית.
         </div>
       </div>
     </footer>

@@ -74,7 +74,7 @@ export default function HomePage() {
               <h1 className="font-serif text-[1.7rem] font-bold leading-tight whitespace-nowrap">
                 כשטעם ואסתטיקה נפגשים
               </h1>
-              <p className="mt-2 max-w-[80%] text-base font-semibold leading-relaxed">
+              <p className="mt-2 max-w-[80%] text-base font-semibold text-[#E8857A] [-webkit-text-stroke:1px_#fff] leading-relaxed">
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
               <div className="mt-4 flex flex-col items-start gap-2.5 [text-shadow:none] [-webkit-text-stroke:0]">
@@ -161,7 +161,7 @@ export default function HomePage() {
             <p className="font-serif text-[1.65rem] md:text-4xl font-bold text-foreground leading-relaxed text-balance mb-6">
               ״כל יצירה נעשית מתוך אהבה גדולה למקצוע, בדגש על חומרי גלם איכותיים. לא רק יופי, אלא גם טעם בלתי נשכח - הטעמים שעושים את ההבדל, עם העיצובים שכולם ידברו עליהם״.
             </p>
-            <p className="text-foreground/60 font-medium mb-8">— סלעית, SoolSweets</p>
+            <p className="text-foreground/60 font-medium mb-8">— סלעית, <span dir="ltr" className="font-serif italic font-bold">SoolSweets</span></p>
             <WhatsAppButton message="היי סלעית, אשמח לשמוע עוד!" />
           </div>
         </section>
