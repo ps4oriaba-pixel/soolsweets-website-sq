@@ -169,7 +169,8 @@ function scoreWords(queryWords: string[], text: string, exactScore: number, part
     for (const form of forms) {
       for (const textWord of textWords) {
         if (form === textWord) {
-          bestMatch = Math.max(bestMatch, exactScore)
+          const numericExactScore = /^\d+$/.test(form) ? exactScore * 20 : exactScore
+          bestMatch = Math.max(bestMatch, numericExactScore)
         } else if (
           !/^\d+$/.test(form) &&
           !/^\d+$/.test(textWord) &&
