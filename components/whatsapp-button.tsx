@@ -1,10 +1,12 @@
 export default function WhatsAppButton({
   message = '',
   compact = false,
+  translucent = false,
   label = 'וואטסאפ',
 }: {
   message?: string
   compact?: boolean
+  translucent?: boolean
   label?: string
 }) {
   const encodedMessage = encodeURIComponent(message)
@@ -17,7 +19,7 @@ export default function WhatsAppButton({
       href={href}
       target="_blank"
       rel="noopener noreferrer"
-      className={`${compact ? 'gap-2 px-5 py-2.5 text-sm md:px-8 md:py-3 md:text-base' : 'gap-3 px-8 py-3 text-base'} inline-flex items-center bg-primary text-primary-foreground rounded-full font-semibold hover:bg-secondary hover:text-foreground transition-colors duration-200 shadow-md`}
+      className={`${compact ? 'gap-2 px-5 py-2.5 text-sm md:px-8 md:py-3 md:text-base' : 'gap-3 px-8 py-3 text-base'} inline-flex items-center ${translucent ? 'bg-primary/55 backdrop-blur-[2px] md:bg-primary' : 'bg-primary'} text-primary-foreground rounded-full font-semibold hover:bg-secondary hover:text-foreground transition-colors duration-200 shadow-md`}
       aria-label={label === 'הזמינו עכשיו' ? 'הזמינו עכשיו בוואטסאפ' : 'יצירת קשר בוואטסאפ'}
     >
       <svg viewBox="0 0 24 24" fill="currentColor" className="w-5 h-5" aria-hidden="true">

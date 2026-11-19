@@ -67,20 +67,18 @@ export default function HomePage() {
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
             </div>
-            <div className="absolute right-0 top-0 z-10 flex w-[70%] flex-col items-start px-5 pt-6 text-right text-foreground [text-shadow:0_0_10px_rgba(255,255,255,0.95),0_0_4px_rgba(255,255,255,0.9)] md:hidden">
+            <div className="absolute right-0 top-0 z-10 flex w-full flex-col items-start px-5 pt-6 text-right text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.65),0_0_2px_rgba(0,0,0,0.5)] md:hidden">
               <p className="mb-2 text-xs font-semibold tracking-widest">
                 קונדיטורית בוטיק ביתית
               </p>
-              <h1 className="font-serif text-3xl font-bold leading-tight text-balance">
-                כשטעם ואסתטיקה
-                <br />
-                נפגשים
+              <h1 className="font-serif text-[1.6rem] font-bold leading-tight whitespace-nowrap">
+                כשטעם ואסתטיקה נפגשים
               </h1>
-              <p className="mt-2 text-sm font-medium leading-relaxed">
+              <p className="mt-2 max-w-[75%] text-sm font-medium leading-relaxed">
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
               <div className="mt-4 flex flex-col items-start gap-2.5 [text-shadow:none]">
-                <WhatsAppButton compact label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
+                <WhatsAppButton compact translucent label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
                 <Link
                   href="/about"
                   className="inline-flex items-center gap-2 border border-foreground/50 bg-background/85 text-foreground px-5 py-2.5 rounded-full text-sm font-semibold shadow-md"
@@ -171,9 +169,6 @@ export default function HomePage() {
         {/* Workshop Promo */}
         <section className="max-w-6xl mx-auto px-6 py-20">
           <div className="bg-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-stretch shadow-md relative">
-            <div className="absolute top-4 right-4 z-10 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-semibold">
-              בקרוב
-            </div>
             <div className="relative h-72 md:h-auto md:w-1/2">
               <Image
                 src="/images/about-owner.png"
