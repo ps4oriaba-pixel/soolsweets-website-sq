@@ -78,7 +78,7 @@ export default function CakesPage() {
       subtitle="כל עוגה היא יצירת אומנות שמעוצבת במיוחד עבורכם"
       heroImage="/images/category-designed-cakes-new.png"
       heroAlt="עוגות מעוצבות של SoolSweets"
-      description=" העוגה שתהפוך את החגיגה לבלתי נשכחת.
+      description="העוגה שתהפוך את החגיגה לבלתי נשכחת.
 עוגה שתהיה מרכז החגיגה מעיצוב וינטאג’ קלאסי ועד עוגות מוס, בנטו, מספרים ועיצובים בהתאמה אישית – יפות לעין, טעימות בכל ביס, ומדויקות עד הפרט האחרון."
       products={products}
       whatsappMessage="שלום סלעית, אשמח להזמין עוגה מעוצבת!"

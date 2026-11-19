@@ -10,9 +10,6 @@ export default function Footer() {
             <span dir="ltr" className="font-serif italic font-bold whitespace-nowrap block" style={{ fontSize: '3.2rem', color: '#E8857A', letterSpacing: '0.02em' }}>
               SoolSweets
             </span>
-            <p className="text-sm text-accent-foreground/70 leading-relaxed max-w-xs">
-              קינוחים ועיצובים מיוחדים בהתאמה אישית – מתוך אהבה לאפייה ביתית.
-            </p>
           </div>
 
           {/* Quick links */}

@@ -76,7 +76,7 @@ export default function CategoryPage({
 
         {/* Intro */}
         <section className="max-w-3xl mx-auto px-6 py-8 text-center">
-          <p className="text-foreground/70 leading-relaxed text-lg">{description}</p>
+          <p className="text-foreground/70 leading-relaxed text-lg whitespace-pre-line">{description}</p>
           <div className="w-12 h-1 bg-primary mx-auto mt-8 rounded-full" />
         </section>
 

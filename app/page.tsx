@@ -16,7 +16,7 @@ const categories = [
   {
     href: '/category/boxes',
     title: 'מארזים מעוצבים',
-    description: " המתנה שתגרום למי שמקבל אותה להתרגש כבר מהרגע הראשון",
+    description: "המתנה שתגרום למי שמקבל אותה להתרגש כבר מהרגע הראשון",
     image: '/images/category-boxes.png',
   },
   {
@@ -67,17 +67,17 @@ export default function HomePage() {
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
             </div>
-            <div className="absolute right-0 top-0 z-10 flex w-full flex-col items-start px-5 pt-6 text-right text-white [text-shadow:0_1px_8px_rgba(0,0,0,0.65),0_0_2px_rgba(0,0,0,0.5)] md:hidden">
-              <p className="mb-2 text-xs font-semibold tracking-widest">
+            <div className="absolute right-0 top-0 z-10 flex w-full flex-col items-start px-5 pt-6 text-right text-white [-webkit-text-stroke:1px_#E8857A] [paint-order:stroke_fill] [text-shadow:0_2px_10px_rgba(232,133,122,0.9)] md:hidden">
+              <p className="mb-2 text-sm font-semibold tracking-widest">
                 קונדיטורית בוטיק ביתית
               </p>
-              <h1 className="font-serif text-[1.6rem] font-bold leading-tight whitespace-nowrap">
+              <h1 className="font-serif text-[1.7rem] font-bold leading-tight whitespace-nowrap">
                 כשטעם ואסתטיקה נפגשים
               </h1>
-              <p className="mt-2 max-w-[75%] text-sm font-medium leading-relaxed">
+              <p className="mt-2 max-w-[80%] text-base font-semibold leading-relaxed">
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
-              <div className="mt-4 flex flex-col items-start gap-2.5 [text-shadow:none]">
+              <div className="mt-4 flex flex-col items-start gap-2.5 [text-shadow:none] [-webkit-text-stroke:0]">
                 <WhatsAppButton compact translucent label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
                 <Link
                   href="/about"
@@ -112,7 +112,7 @@ export default function HomePage() {
         {/* Categories */}
         <section id="categories" className="scroll-mt-24 max-w-6xl mx-auto px-6 pt-8 pb-20 md:py-20" aria-labelledby="categories-heading">
           <div className="text-center mb-8 md:mb-14">
-            <p className="text-primary font-medium tracking-widest uppercase text-sm mb-2">
+            <p className="text-primary font-bold tracking-widest uppercase text-2xl md:text-4xl mb-2">
               הקולקציות שלנו
             </p>
             <h2
@@ -141,11 +141,11 @@ export default function HomePage() {
                   />
                 </div>
                 <div className="p-5">
-                  <h3 className="font-serif text-lg font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
+                  <h3 className="font-serif text-xl font-bold text-foreground mb-2 group-hover:text-primary transition-colors">
                     {cat.title}
                   </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{cat.description}</p>
-                  <span className="inline-block mt-3 text-xs font-semibold text-primary uppercase tracking-wider">
+                  <p className="text-base text-muted-foreground leading-relaxed whitespace-pre-line">{cat.description}</p>
+                  <span className="inline-block mt-3 text-sm font-semibold text-primary uppercase tracking-wider">
                     לקולקציה
                     &larr;
                   </span>
@@ -158,7 +158,7 @@ export default function HomePage() {
         {/* Quote Strip */}
         <section className="bg-secondary py-16 px-6">
           <div className="max-w-3xl mx-auto text-center">
-            <p className="font-serif text-2xl md:text-3xl font-bold text-foreground leading-relaxed text-balance mb-6">
+            <p className="font-serif text-[1.65rem] md:text-4xl font-bold text-foreground leading-relaxed text-balance mb-6">
               ״כל יצירה נעשית מתוך אהבה גדולה למקצוע, בדגש על חומרי גלם איכותיים. לא רק יופי, אלא גם טעם בלתי נשכח - הטעמים שעושים את ההבדל, עם העיצובים שכולם ידברו עליהם״.
             </p>
             <p className="text-foreground/60 font-medium mb-8">— סלעית, SoolSweets</p>
@@ -180,7 +180,7 @@ export default function HomePage() {
               />
             </div>
             <div className="md:w-1/2 p-10 flex flex-col justify-center gap-5">
-              <p className="text-primary font-medium tracking-widest uppercase text-sm">
+              <p className="text-primary font-medium tracking-widest uppercase text-base">
                 חוויה מיוחדת
               </p>
               <h2 className="font-serif text-3xl font-bold text-foreground leading-tight text-balance">
