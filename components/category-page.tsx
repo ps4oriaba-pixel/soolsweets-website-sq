@@ -69,13 +69,13 @@ export default function CategoryPage({
             {/* Quick jump chips */}
             <nav aria-label="דלגו לפריט" className="mt-5 -mx-5 px-5 md:mx-0 md:px-0 flex gap-2 overflow-x-auto pb-1">
               {products.map((product) => (
-                <a
+                <Link
                   key={product.slug}
-                  href={`#${product.slug}`}
+                  href={`/gallery/${product.slug}`}
                   className="shrink-0 rounded-full bg-muted px-4 py-2 text-sm font-semibold text-muted-foreground hover:bg-primary hover:text-primary-foreground transition-colors whitespace-nowrap"
                 >
                   {product.title}
-                </a>
+                </Link>
               ))}
             </nav>
 

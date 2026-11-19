@@ -1,9 +1,9 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import { ChevronLeft } from 'lucide-react'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
-export function BackButton() {
+export function BackButton({ variant = 'pill' }: { variant?: 'pill' | 'icon' }) {
   const router = useRouter()
 
   const handleBack = () => {
@@ -11,6 +11,19 @@ export function BackButton() {
       ? window.sessionStorage.getItem('previousUrl')
       : null
     router.push(prev ?? '/')
+  }
+
+  if (variant === 'icon') {
+    return (
+      <button
+        type="button"
+        onClick={handleBack}
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-card/90 text-foreground shadow-md backdrop-blur-sm transition-colors hover:bg-primary hover:text-primary-foreground"
+        aria-label="חזור לעמוד הקודם"
+      >
+        <ChevronRight className="h-5 w-5" />
+      </button>
+    )
   }
 
   return (

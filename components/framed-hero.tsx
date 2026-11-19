@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import { shouldSkipImageOptimization } from '@/lib/image-ratios'
+import { BackButton } from '@/components/back-button'
 
 interface FramedHeroProps {
   src: string
@@ -27,6 +28,9 @@ export default function FramedHero({ src, alt, variant }: FramedHeroProps) {
         className="object-cover object-center scale-110 blur-[5px] saturate-[1.1]"
       />
       <div className="absolute inset-0 bg-gradient-to-b from-background/0 to-background/30" />
+      <div className="absolute right-4 top-4 z-20">
+        <BackButton variant="icon" />
+      </div>
       <div className="relative z-10 flex justify-center px-4 pt-6 pb-14 md:pt-10 md:pb-16">
         <div className="overflow-hidden rounded-3xl border-[5px] border-card bg-card shadow-2xl">
           <Image
