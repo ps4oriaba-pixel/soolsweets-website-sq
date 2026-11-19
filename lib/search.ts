@@ -197,8 +197,16 @@ function rankImages(images: GalleryImage[], queryWords: string[]): { image: Gall
     .sort((a, b) => b.score - a.score || a.index - b.index)
 }
 
+export interface KeywordSearchResults {
+  results: SearchResult[]
+  relatedResults: SearchResult[]
+}
+
+const MIN_RELEVANCE_RATIO = 0.65
+const MAX_RELATED_RESULTS = 2
+
 // Deterministic image-aware search — always works without an external dependency.
-export function keywordSearch(query: string, limit = 6): SearchResult[] {
+export function keywordSearchWithRelated(query: string, limit = 6): KeywordSearchResults {
   const galleries = getAllGalleries()
   const normalizedQuery = normalize(query)
   const queryWords = tokenize(query)
@@ -234,11 +242,25 @@ export function keywordSearch(query: string, limit = 6): SearchResult[] {
     }
   })
 
-  return scored
+  const ranked = scored
     .filter((item) => item.score > 0)
     .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map(({ score, ...rest }) => rest)
+  const highestScore = ranked[0]?.score ?? 0
+  const relevanceThreshold = highestScore * MIN_RELEVANCE_RATIO
+  const relevant = ranked.filter((item) => item.score >= relevanceThreshold)
+  const results = relevant.slice(0, limit).map(({ score, ...rest }) => rest)
+  const relatedResults = relevant.length < 2
+    ? ranked
+        .filter((item) => item.score < relevanceThreshold)
+        .slice(0, MAX_RELATED_RESULTS)
+        .map(({ score, ...rest }) => rest)
+    : []
+
+  return { results, relatedResults }
+}
+
+export function keywordSearch(query: string, limit = 6): SearchResult[] {
+  return keywordSearchWithRelated(query, limit).results
 }
 
 // Build a compact catalog string for the AI model to reason over.
