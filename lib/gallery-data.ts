@@ -373,7 +373,7 @@ const galleries: GalleryData[] = [
     subtitle: 'עיצוב מ��דרני ונקי – אלגנטי ��כל שולחן',
     description:
       'מושלמת לאירועים גדולים ולחגיגות משפחתיות – בעיצוב מוקפד ובהתאמה אישית לכל סגנון.',
-    heroImage: '/images/gallery/rectangular-cakes/20240119_085307.webp',
+    heroImage: '/images/gallery/rectangular-cakes/IMG_9792.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגה מלבנית!',
     images: [
       { src: '/images/gallery/rectangular-cakes/20240119_085307.webp', alt: 'עוגה מלבנית מעוצבת - תמונה 1' },
