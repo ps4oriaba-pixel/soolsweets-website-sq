@@ -42,7 +42,7 @@ export default async function GalleryPage({ params }: PageProps) {
 
       <main className="flex-1 pt-20">
         {/* Hero */}
-        <section className={`relative overflow-hidden bg-background ${slug === 'tiered-cakes' ? 'h-[177.78vw] max-h-[600px] md:h-80' : 'h-64 md:h-80'}`}>
+        <section className="relative overflow-hidden bg-background h-64 md:h-80">
           <Image
             src={gallery.heroImage}
             alt={gallery.title}
@@ -51,7 +51,7 @@ export default async function GalleryPage({ params }: PageProps) {
             sizes="100vw"
             quality={90}
             unoptimized={shouldSkipImageOptimization(gallery.heroImage)}
-            className={slug === 'tiered-cakes' || shouldSkipImageOptimization(gallery.heroImage) ? 'object-contain object-center' : 'object-cover object-center'}
+            className="object-cover object-center"
           />
           {/* Neutral dark scrim so the photo keeps its own colors */}
           <div className="absolute inset-0 bg-foreground/45" />

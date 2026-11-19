@@ -82,7 +82,7 @@ export default function CategoryPage({
 
         {/* Products Grid */}
         <section className="max-w-6xl mx-auto px-6 pb-20">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-8">
             {products.map((product) => (
               <div
                 key={product.title}
@@ -104,7 +104,7 @@ export default function CategoryPage({
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     quality={90}
                     unoptimized={shouldSkipImageOptimization(product.image)}
-                    className={shouldSkipImageOptimization(product.image) ? 'object-contain object-center' : 'object-cover object-center'}
+                    className="object-cover object-center"
                   />
                   {product.note && (
                     <span className="absolute top-3 right-3 bg-primary text-primary-foreground text-xs font-semibold px-3 py-1 rounded-full z-10">
@@ -119,13 +119,13 @@ export default function CategoryPage({
                   </div>
                 </Link>
 
-                <div className="p-6 flex flex-col flex-1">
+                <div className="p-3 sm:p-6 flex flex-col flex-1">
                   <Link href={`/gallery/${product.slug}`} className="group/title">
-                    <h2 className="font-serif text-xl font-bold text-foreground mb-2 group-hover/title:text-primary transition-colors">
+                    <h2 className="font-serif text-base sm:text-xl font-bold text-foreground mb-1 sm:mb-2 group-hover/title:text-primary transition-colors">
                       {product.title}
                     </h2>
                   </Link>
-                  <p className="text-base text-muted-foreground leading-relaxed mb-4 flex-1">
+                  <p className="text-xs sm:text-base text-muted-foreground leading-relaxed mb-3 sm:mb-4 flex-1 line-clamp-3 sm:line-clamp-none">
                     {product.description}
                   </p>
                   {hasSizeGuide(product.slug) && (
