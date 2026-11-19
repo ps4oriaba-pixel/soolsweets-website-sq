@@ -296,7 +296,7 @@ const galleries: GalleryData[] = [
     title: 'עוגות מוס',
     subtitle: 'שכבות קרמי ועדין בציפוי מושלם',
     description: " שכבות מוס עשירות במגוון טעמים, במרקם קטיפתי ובמראה אלגנטי – חוויה מושלמת בכל ביס",
-    heroImage: '/images/gallery/mousse-cakes/20221028_144630.webp',
+    heroImage: '/images/gallery/mousse-cakes/IMG_6211.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת מוס!',
     images: [
       { src: '/images/gallery/mousse-cakes/20221028_144630.webp', alt: 'עוגת מוס - תמונה 1' },
@@ -427,7 +427,7 @@ const galleries: GalleryData[] = [
     subtitle: "",
     description:
       'עוגות בעיצוב אלגנטי עם פפיונים מרשימים  מבצק סוכר – שילוב מושלם של יוקרה, עדינות וסטייל.',
-    heroImage: '/images/gallery/bow-cakes/IMG_4151.webp',
+    heroImage: '/images/gallery/bow-cakes/IMG_6983.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת פפיון!',
     images: [
  { src: '/images/gallery/bow-cakes/IMG_4151.webp', alt: 'עוגת פפיון - תמונה 1' },
