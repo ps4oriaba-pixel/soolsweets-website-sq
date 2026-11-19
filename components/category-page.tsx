@@ -99,7 +99,7 @@ export default function CategoryPage({
                       alt={product.title}
                       fill
                       sizes="112px"
-                      quality=85
+                      quality={85}
                       unoptimized={shouldSkipImageOptimization(product.image)}
                       className="object-cover object-center"
                     />
