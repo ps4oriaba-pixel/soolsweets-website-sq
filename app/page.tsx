@@ -115,7 +115,7 @@ export default function HomePage() {
         </section>
 
         {/* Categories */}
-        <section id="categories" className="scroll-mt-24 max-w-6xl mx-auto px-6 pt-8 pb-20 md:py-20" aria-labelledby="categories-heading">
+        <section id="categories" className="scroll-mt-24 max-w-6xl mx-auto px-6 pt-8 pb-10 md:pt-20 md:pb-10" aria-labelledby="categories-heading">
           <div className="text-center mb-8 md:mb-14">
             <p className="text-primary font-bold tracking-widest uppercase text-2xl md:text-4xl mb-2">
               הקולקציות שלנו

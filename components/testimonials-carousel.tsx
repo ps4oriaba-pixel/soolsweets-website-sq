@@ -38,7 +38,7 @@ export default function TestimonialsCarousel() {
   const duration = Math.max(24, count * 7)
 
   return (
-    <section className="py-16 md:py-20" aria-labelledby="testimonials-heading">
+    <section className="pt-8 pb-16 md:pt-10 md:pb-20" aria-labelledby="testimonials-heading">
       <div className="text-center px-6 mb-8 md:mb-12">
         <p className="text-primary font-medium tracking-widest uppercase text-base mb-2">
           לקוחות מספרים
