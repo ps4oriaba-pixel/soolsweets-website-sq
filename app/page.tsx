@@ -177,14 +177,14 @@ export default function HomePage() {
         {/* Workshop Promo */}
         <section className="max-w-6xl mx-auto px-6 py-20">
           <div className="bg-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-stretch shadow-md relative">
-            <div className="relative h-72 md:h-auto md:w-1/2">
+            <div className="relative h-80 md:h-auto md:min-h-[26rem] md:w-1/2 bg-[#F3DDD3]">
               <Image
                 src="/images/about-owner.png"
                 alt="סדנאות אפייה של SoolSweets"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 quality={90}
-                className="object-cover object-top"
+                className="object-contain object-center"
               />
             </div>
             <div className="md:w-1/2 p-10 flex flex-col justify-center gap-5">

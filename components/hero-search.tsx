@@ -88,14 +88,14 @@ export default function HeroSearch({ variant = 'dark' }: { variant?: 'dark' | 'l
             }
           }}
           placeholder={displayedPlaceholder || 'מה תרצו להזמין?'}
-          className={`w-full rounded-full backdrop-blur-sm border pr-9 pl-20 sm:pl-36 py-3.5 sm:py-4 text-xs sm:text-sm text-right placeholder:text-xs sm:placeholder:text-sm focus:outline-none shadow-lg ${variant === 'light' ? 'bg-muted/50 border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/30' : 'bg-background/15 border-background/30 text-background placeholder:text-background/55 focus:ring-2 focus:ring-background/40'}`}
+          className={`w-full rounded-full backdrop-blur-sm border pr-9 pl-24 sm:pl-40 py-3.5 sm:py-4 text-xs sm:text-sm text-right placeholder:text-xs sm:placeholder:text-sm focus:outline-none shadow-lg ${variant === 'light' ? 'bg-muted/50 border-border text-foreground placeholder:text-muted-foreground focus:ring-2 focus:ring-primary/30' : 'bg-background/15 border-background/30 text-background placeholder:text-background/55 focus:ring-2 focus:ring-background/40'}`}
           aria-label="תיאור הבקשה"
         />
 
         <button
           type="submit"
           disabled={!query.trim()}
-          className="absolute left-1 top-1/2 -translate-y-1/2 rounded-full bg-primary text-primary-foreground px-2 sm:px-5 py-2 sm:py-2.5 text-[9px] sm:text-xs font-bold hover:opacity-90 transition-opacity disabled:opacity-40 whitespace-nowrap shadow"
+          className="absolute left-1 top-1/2 -translate-y-1/2 rounded-full bg-primary text-primary-foreground px-3.5 sm:px-6 py-2.5 sm:py-3 text-[11px] sm:text-sm font-bold hover:opacity-90 transition-opacity disabled:opacity-40 whitespace-nowrap shadow"
         >
           חפשו לי
         </button>
