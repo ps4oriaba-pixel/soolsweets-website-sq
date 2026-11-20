@@ -24,7 +24,6 @@ const slugToCategory: Record<string, string> = {
   'mug-cakes': 'cakes',
   // boxes
   'boxes-events': 'boxes',
-  'bar-bat-mitzvah': 'boxes',
   'branded-boxes': 'boxes',
   'holiday-boxes': 'boxes',
   // desserts

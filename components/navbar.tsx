@@ -27,8 +27,7 @@ const navLinks: { href: string; label: string; items?: { href: string; label: st
     href: '/category/boxes',
     label: 'מארזים מעוצבים',
     items: [
-      { href: '/gallery/boxes-events', label: "רגעים ששווה לחגוג" },
-      { href: '/gallery/bar-bat-mitzvah', label: "מארז בהתאמה אישית" },
+      { href: '/gallery/boxes-events', label: "רגעים ששווה לחגוג - מארזים בהתאמה אישית" },
       { href: '/gallery/holiday-boxes', label: "חגים" },
       { href: '/gallery/branded-boxes', label: "עסקים" },
     ],

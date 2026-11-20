@@ -8,16 +8,10 @@ export const metadata = {
 
 const products = [
   {
-    title: 'רגעים ששווה לחגוג',
+    title: 'רגעים ששווה לחגוג - מארזים בהתאמה אישית',
     description: getProductDescription('boxes-events'),
     image: '/images/gallery/boxes-events/IMG_9596.webp',
     slug: 'boxes-events',
-  },
-  {
-    title: 'מארז בהתאמה אישית',
-    description: getProductDescription('bar-bat-mitzvah'),
-    image: '/images/category-boxes.png',
-    slug: 'bar-bat-mitzvah',
   },
   {
     title: 'חגים',

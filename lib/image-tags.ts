@@ -6,11 +6,7 @@
 
 export const IMAGE_TAGS: Record<string, string[]> = {
   '/images/category-boxes.png': ['מארז', 'יום הולדת', '18'],
-  '/images/gallery/boxes-events-1.png': ['מארז', 'מקרונים', 'ורוד', 'פפיון'],
   '/images/gallery/boxes-events-2.png': ['מארז', 'דונאטס', 'חום', 'קראפט'],
-  '/images/gallery/boxes-events-3.png': ['מארז עסקי', 'פרחים', 'ורוד'],
-  '/images/category-custom-boxes.png': ['מארז', 'בר מצווה', 'בת מצווה', 'תכלת', 'ורוד', 'עוגיות'],
-  '/images/box-birthday.png': ['מארז', 'פפיון', 'ורוד', 'בר מצווה', 'בת מצווה'],
   '/images/gallery/custom-design/20230123_160939.webp': ['עוגה', 'ילדים', 'כחול', 'ים', 'עוגן', 'כוכב ים', 'יום הולדת'],
   '/images/gallery/custom-design/20230310_151956.webp': ['עוגה', 'בקבוק ויסקי', 'יום הולדת', 'גברים'],
   '/images/gallery/custom-design/20230505_094623.webp': ['עוגה', 'גיימינג', 'בנים', 'ירוק', 'קונטרולר'],

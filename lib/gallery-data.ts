@@ -17,7 +17,7 @@ const galleries: GalleryData[] = [
   // ── מארזים ──────────────────────────────────────────────
   {
     slug: 'boxes-events',
-    title: 'רגעים ששווה לחגוג',
+    title: 'רגעים ששווה לחגוג - מארזים בהתאמה אישית',
     subtitle: '',
     description: "",
     heroImage: '/images/gallery/boxes-events/IMG_9596.webp',
@@ -118,21 +118,6 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/boxes-events/IMG_9532.webp', alt: 'מארז מעוצב לאירוע - תמונה 93' },
       { src: '/images/gallery/boxes-events/IMG_9924.webp', alt: 'מארז מעוצב לאירוע - תמונה 94' },
       { src: '/images/gallery/boxes-events/Screenshot_20240208_144728_WhatsApp.webp', alt: 'מארז מעוצב לאירוע - תמונה 95' },
-    ],
-  },
-  {
-    slug: 'bar-bat-mitzvah',
-    title: 'מארז בהתאמה אישית',
-    subtitle: '',
-    description: "",
-    heroImage: '/images/category-boxes.png',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז בהתאמה אישית!',
-    images: [
-      { src: '/images/category-boxes.png', alt: 'מארז מעוצב' },
-      { src: '/images/category-custom-boxes.png', alt: 'מארז בהתאמה אישית' },
-      { src: '/images/box-birthday.png', alt: 'מארז בת מצווה' },
-      { src: '/images/gallery/boxes-events-1.png', alt: 'מארז חגיגי' },
-      { src: '/images/gallery/boxes-events-3.png', alt: 'קולקציית מארזים' },
     ],
   },
   {
@@ -773,7 +758,7 @@ export function getAllGalleries(): GalleryData[] {
 
 // Returns the parent category label + href for breadcrumb navigation
 export function getCategoryForSlug(slug: string): { label: string; href: string } {
-  const boxesSlugs = ['boxes-events', 'bar-bat-mitzvah', 'branded-boxes', 'holiday-boxes']
+  const boxesSlugs = ['boxes-events', 'branded-boxes', 'holiday-boxes']
   const cakesSlugs = ['custom-cakes', 'vintage-cakes', 'mousse-cakes', 'bento-cakes', 'rectangular-cakes', 'bow-tie-cakes', 'number-cakes', 'crown-cakes', 'mug-cakes', 'burnt-paper-cakes']
   const dessertsSlugs = ['cup-desserts', 'crumble-desserts', 'dedicated-dessert-boxes']
   const specialSlugs = ['chocolate-ball', 'exploding-candy', 'exploding-egg', 'tiered-cakes', 'burnt-paper-cakes']
