@@ -177,15 +177,29 @@ export default function HomePage() {
         {/* Workshop Promo */}
         <section className="max-w-6xl mx-auto px-6 py-20">
           <div className="bg-card rounded-3xl overflow-hidden flex flex-col md:flex-row items-stretch shadow-md relative">
-            <div className="relative h-80 md:h-auto md:min-h-[26rem] md:w-1/2 bg-[#F3DDD3]">
+            <div className="relative h-[22rem] md:h-auto md:min-h-[26rem] md:w-1/2 overflow-hidden bg-[#F3DDD3]">
+              {/* רקע מטושטש של אותה תמונה – ממלא את כל החלון */}
               <Image
                 src="/images/about-owner.png"
-                alt="סדנאות אפייה של SoolSweets"
+                alt=""
+                aria-hidden="true"
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
-                quality={90}
-                className="object-contain object-center"
+                quality={40}
+                className="scale-125 object-cover object-top blur-2xl saturate-[1.1]"
               />
+              <div className="absolute inset-0 bg-[#F3DDD3]/25" />
+              {/* התמונה המלאה לכל גובה החלון, עם קצוות שדועכים לרקע */}
+              <div className="absolute inset-0 [mask-image:linear-gradient(to_right,transparent,#000_16%,#000_84%,transparent)]">
+                <Image
+                  src="/images/about-owner.png"
+                  alt="סדנאות אפייה של SoolSweets"
+                  fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
+                  quality={90}
+                  className="object-contain object-center"
+                />
+              </div>
             </div>
             <div className="md:w-1/2 p-10 flex flex-col justify-center gap-5">
               <p className="text-primary font-medium tracking-widest uppercase text-base">
