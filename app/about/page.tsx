@@ -16,36 +16,51 @@ export default function AboutPage() {
       <Navbar />
 
       <main className="flex-1 pt-20">
-        {/* Page Header */}
-        <section className="relative h-72 md:h-96 overflow-hidden">
-          <Image
-            src="/images/about-owner.png"
-            alt="סלעית בסטודיו האפייה"
-            fill
-            priority
-            sizes="100vw"
-            quality={90}
-            className="object-cover object-top"
-          />
-          <div className="absolute inset-0 bg-foreground/45" />
-          <div className="absolute right-4 top-4 z-20">
-            <BackButton variant="icon" />
-          </div>
-          <div className="absolute inset-0 flex items-center justify-center flex-col gap-3 px-4">
-            <p className="text-secondary text-sm font-medium tracking-widest uppercase">
-              <span dir="ltr" className="font-serif italic font-bold text-[1.25em] leading-none" style={{ color: '#E8857A', letterSpacing: '0.02em' }}>SoolSweets</span>
-            </p>
-            <h1 className="font-serif text-4xl md:text-6xl font-bold text-background text-center text-balance">
-              קצת עליי
-            </h1>
+        {/* Page Header – תמונה מלאה בנייד (בלי חיתוך), כיתוב עליה, וכרטיס תחתון מעוגל */}
+        <section className="relative overflow-hidden bg-[#ead8c8]">
+          <div className="relative aspect-[3/4] md:aspect-auto md:h-96">
+            <Image
+              src="/images/about-owner.png"
+              alt="סלעית בסטודיו האפייה"
+              fill
+              priority
+              sizes="100vw"
+              quality={90}
+              className="object-cover object-top"
+            />
+            <div className="absolute inset-0 bg-gradient-to-b from-[#FBDAD4]/80 via-[#FBDAD4]/35 via-30% to-transparent to-45% md:hidden" />
+            <div className="absolute inset-0 hidden bg-foreground/45 md:block" />
+            <div className="absolute right-4 top-4 z-20">
+              <BackButton variant="icon" />
+            </div>
+            {/* בנייד: כיתוב בראש התמונה */}
+            <div className="absolute inset-x-0 top-0 z-10 px-5 pt-16 text-right md:hidden">
+              <p className="inline-block rounded-full bg-white/80 px-4 py-1.5 text-base font-bold tracking-[0.14em] text-[#E8857A]">
+                הכירו אותי
+              </p>
+              <h1 className="mt-3 text-[2.6rem] font-extrabold leading-[1.1] text-white [-webkit-text-stroke:1px_#E8857A] [paint-order:stroke_fill] [text-shadow:0_2px_10px_rgba(232,133,122,0.35)]">
+                קצת עליי
+              </h1>
+            </div>
+            {/* במחשב: כיתוב במרכז */}
+            <div className="absolute inset-0 hidden flex-col items-center justify-center gap-3 px-4 md:flex">
+              <p className="text-secondary text-sm font-medium tracking-widest uppercase">
+                <span dir="ltr" className="font-serif italic font-bold text-[1.25em] leading-none" style={{ color: '#E8857A', letterSpacing: '0.02em' }}>SoolSweets</span>
+              </p>
+              <h1 className="font-serif text-4xl md:text-6xl font-bold text-background text-center text-balance">
+                קצת עליי
+              </h1>
+            </div>
           </div>
         </section>
 
         {/* About Content */}
-        <section className="max-w-5xl mx-auto px-6 py-12">
+        <section className="relative z-10 -mt-8 rounded-t-[2rem] bg-background shadow-[0_-8px_24px_rgba(107,58,52,0.12)] md:mt-0 md:rounded-none md:shadow-none">
+          <div className="mx-auto mt-4 h-1 w-11 rounded-full bg-[#EBA59D] md:hidden" />
+          <div className="max-w-5xl mx-auto px-6 pt-8 pb-12 md:py-12">
           <div className="flex flex-col md:flex-row gap-14 items-start">
             {/* Photo placeholder */}
-            <div className="md:w-2/5 flex-shrink-0">
+            <div className="hidden md:block md:w-2/5 flex-shrink-0">
               <div className="aspect-[3/4] rounded-3xl overflow-hidden bg-muted relative shadow-md">
                 <Image
                   src="/images/about-owner.png"
@@ -102,12 +117,11 @@ export default function AboutPage() {
               <WhatsAppButton message="שלום סלעית, אשמח לשמוע עוד ולהזמין!" />
             </div>
           </div>
+          </div>
         </section>
-
-
       </main>
 
-      <Footer />
+      <Footer flush />
     </div>
   )
 }
