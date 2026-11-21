@@ -37,9 +37,9 @@
   --radius-xl: calc(var(--radius) * 1.4);
   --radius-2xl: calc(var(--radius) * 1.8);
   --radius-3xl: calc(var(--radius) * 2.2);
-  --font-sans: var(--font-heebo), 'Arial Hebrew', Arial, sans-serif;
-  --font-serif: var(--font-cormorant), var(--font-heebo), 'Cormorant Garamond', Georgia, serif;
-  --font-logo: var(--font-cormorant), var(--font-heebo), 'Cormorant Garamond', Georgia, serif;
+  --font-sans: var(--font-assistant), 'Arial Hebrew', Arial, sans-serif;
+  --font-serif: var(--font-cormorant), var(--font-assistant), 'Cormorant Garamond', Georgia, serif;
+  --font-logo: var(--font-cormorant), var(--font-assistant), 'Cormorant Garamond', Georgia, serif;
 }
 
 :root {
@@ -97,7 +97,7 @@
     @apply bg-background text-foreground;
     overflow-x: hidden;
     direction: rtl;
-    font-family: 'Heebo', 'Arial Hebrew', Arial, sans-serif;
+    font-family: 'Assistant', 'Arial Hebrew', Arial, sans-serif;
   }
 }
 

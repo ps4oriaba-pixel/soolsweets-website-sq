@@ -1,12 +1,12 @@
 import type { Metadata, Viewport } from 'next'
-import { Heebo, Cormorant_Garamond } from 'next/font/google'
+import { Assistant, Cormorant_Garamond } from 'next/font/google'
 import { NavigationTracker } from '@/components/navigation-tracker'
 import FloatingWhatsApp from '@/components/floating-whatsapp'
 import './globals.css'
 
-const heebo = Heebo({
+const assistant = Assistant({
   subsets: ['hebrew', 'latin'],
-  variable: '--font-heebo',
+  variable: '--font-assistant',
   display: 'swap',
 })
 
@@ -38,7 +38,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="he" dir="rtl" className={`${heebo.variable} ${cormorant.variable} bg-background`}>
+    <html lang="he" dir="rtl" className={`${assistant.variable} ${cormorant.variable} bg-background`}>
       <body className="antialiased font-sans">
         <NavigationTracker />
         {children}
