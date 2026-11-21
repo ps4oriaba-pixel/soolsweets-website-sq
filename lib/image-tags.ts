@@ -267,7 +267,7 @@ export const IMAGE_TAGS: Record<string, string[]> = {
   '/images/gallery/exploding-candy/20240303_001606.webp': ['סוכריה מתנפצת', 'ורוד', 'פרחים'],
   '/images/gallery/exploding-candy/20240303_144239.webp': ['סוכריה מתנפצת', 'ורוד', 'עץ'],
   '/images/gallery/chocolate-egg/20240304_194842.webp': ['ביצת שוקולד', 'זהב', '13'],
-  '/images/gallery/levels-cakes/20230917_191150.webp': ['עוגת קומות', 'לבן', '70'],
+  '/images/gallery/levels-cakes/20230918_200345.webp': ['עוגת קומות', 'לבן', '70', 'יום הולדת 70', 'זהב', 'בעל', 'אבא', 'סבא', 'משפחה', 'צלליות', 'שחור', 'שלוש קומות'],
   '/images/gallery/levels-cakes/user-tiered-1.png': ['עוגת קומות', 'ורוד', 'לבן'],
   '/images/gallery/levels-cakes/user-tiered-2.png': ['עוגת קומות', 'ססגוני', 'גיבורי על', '4'],
   '/images/category-designed-cakes-new.png': ['עוגה', 'עוגות מעוצבות', 'ילדים', 'סטיץ׳', 'מלבנית', 'וינטאג׳'],

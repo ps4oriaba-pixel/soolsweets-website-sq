@@ -747,7 +747,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/levels-cakes/tiered-cake-blue.webp', alt: 'עוגת קומות כחולה עם מכוניות מירוץ' },
       { src: '/images/gallery/levels-cakes/user-tiered-1.png', alt: 'עוגת קומות - תמונה 2' },
       { src: '/images/gallery/levels-cakes/user-tiered-2.png', alt: 'עוגת קומות - תמונה 3' },
-      { src: '/images/gallery/levels-cakes/20230917_191150.webp', alt: 'עוגת קומות - תמונה 4' },
+      { src: '/images/gallery/levels-cakes/20230918_200345.webp', alt: 'עוגת קומות - תמונה 4' },
     ],
   },
 ]

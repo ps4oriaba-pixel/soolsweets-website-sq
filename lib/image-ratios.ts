@@ -45,7 +45,7 @@ const EXCEPTIONS: Record<string, string> = {
   '/images/gallery/custom-design/Screenshot_20230714_112916_Photos.webp': '1080/1659',
   '/images/gallery/custom-design/ab136d40-7a29-43b2-801b-6f316ab464ed.webp': '1920/1920',
   '/images/gallery/exploding-candy/20240303_002414.webp': '1920/1270',
-  '/images/gallery/levels-cakes/20230917_191150.webp': '1635/3137',
+  '/images/gallery/levels-cakes/20230918_200345.webp': '1190/2576',
   '/images/gallery/levels-cakes/20230918_200516.webp': '1496/3238',
   '/images/gallery/mousse-cakes/20230128_104117.webp': '1663/3600',
   '/images/gallery/mousse-cakes/20230602_093435.webp': '1848/4000',
