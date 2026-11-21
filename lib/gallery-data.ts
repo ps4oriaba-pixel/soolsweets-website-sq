@@ -137,6 +137,8 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/branded-boxes/IMG_3308.webp', alt: 'מארז ממותג לעסק - תמונה 7' },
       { src: '/images/gallery/branded-boxes/IMG_3313.webp', alt: 'מארז ממותג לעסק - תמונה 8' },
       { src: '/images/gallery/branded-boxes/IMG_3327.webp', alt: 'מארז ממותג לעסק - תמונה 9' },
+      { src: '/images/gallery/branded-boxes/IMG_8298.webp', alt: 'מארז ממותג לעסק - תמונה 10' },
+      { src: '/images/gallery/branded-boxes/IMG_8223.webp', alt: 'מארז ממותג לעסק - תמונה 11' },
     ],
   },
   {

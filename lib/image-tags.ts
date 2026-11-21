@@ -477,4 +477,6 @@ export const IMAGE_TAGS: Record<string, string[]> = {
   '/images/gallery/vintage-cakes/IMG_9806.webp': ['עוגה וינטאג׳', 'לבן', 'אדום', 'סרטים', '14', 'לבבות'],
   '/images/gallery/vintage-cakes/IMG_9973.webp': ['עוגה וינטאג׳', 'לב', 'ורוד', 'סרטים', 'בז׳'],
   '/images/gallery/vintage-cakes/cake-22.webp': ['עוגה וינטאג׳', 'לבן', 'בורדו', '22', 'סרטים'],
+  '/images/gallery/branded-boxes/IMG_8298.webp': ['מארז עסקי', 'מארזים ממותגים', 'ראש השנה', 'עוגת דבש', 'דבש', 'תפוח', 'בראוניז', 'מדבקה', 'לוגו', 'חברה', 'מתנות לעובדים'],
+  '/images/gallery/branded-boxes/IMG_8223.webp': ['מארז עסקי', 'מארזים ממותגים', 'סלעית', 'הכנה', 'ראש השנה', 'עוגת דבש', 'דבש', 'תפוח', 'בראוניז', 'חברה', 'מתנות לעובדים'],
 }
