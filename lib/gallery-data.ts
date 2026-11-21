@@ -703,10 +703,11 @@ const galleries: GalleryData[] = [
     whatsappMessage: 'שלום סלעית, אשמח להזמין כדורי שוקולד מתנפצים!',
     images: [
       { src: '/images/gallery/exploding-football/IMG_3471.webp', alt: 'כדורגל שוקולד - תמונה 1' },
-      { src: '/images/gallery/exploding-football/IMG_3463.webp', alt: 'כדורגל שוקולד - תמונה 2' },
+      { src: '/images/gallery/exploding-football/20240112_183754.webp', alt: 'כדורגל שוקולד - תמונה 2' },
+      { src: '/images/gallery/exploding-football/IMG_3463.webp', alt: 'כדורגל שוקולד - תמונה 3' },
       { src: '/images/gallery/exploding-football/soccer-ball-candies.webp', alt: 'קערת שוקולד עם ממתקים וכדורי סוכריות כדורגל' },
-      { src: '/images/gallery/exploding-football/IMG_3465.webp', alt: 'כדורגל שוקולד - תמונה 4' },
-      { src: '/images/gallery/exploding-football/IMG_3475.webp', alt: 'כדורגל שוקולד - תמונה 5' },
+      { src: '/images/gallery/exploding-football/IMG_3465.webp', alt: 'כדורגל שוקולד - תמונה 5' },
+      { src: '/images/gallery/exploding-football/IMG_3475.webp', alt: 'כדורגל שוקולד - תמונה 6' },
     ],
   },
   {
