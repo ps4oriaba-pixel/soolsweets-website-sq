@@ -142,9 +142,9 @@ const galleries: GalleryData[] = [
   {
     slug: 'holiday-boxes',
     title: 'מארזי חג',
-    subtitle: 'פורים, ראש השנה, פסח ועוד – ממותקים לחג',
+    subtitle: '',
     description:
-      'מארזים בעיצוב מסורתי ומודרני לכל חגי השנה. שלחו מתנה שתזכרו בה כל השנה.',
+      'מארזים מתוקים לחג - כי לכל חג מגיע מארז מיוחד: פורים, ראש השנה, פסח ועוד',
     heroImage: '/images/gallery/holiday-boxes/IMG_7157.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין מארז חג!',
     images: [
@@ -186,9 +186,9 @@ const galleries: GalleryData[] = [
   {
     slug: 'custom-cakes',
     title: 'עוגות בעיצוב אישי',
-    subtitle: 'העלו כל רעיון – ואני אגשים אותו',
+    subtitle: 'עוגה שמספרת את הסיפור שלכם',
     description:
-      'עוגה שמספרת את הסיפור שלכם',
+      'העלו כל רעיון – ואני אגשים אותו',
     heroImage: '/images/gallery/custom-design/IMG_0434.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגה בעיצוב אישי!',
     images: [
