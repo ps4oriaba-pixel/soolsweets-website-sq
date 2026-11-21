@@ -66,7 +66,7 @@ export default function HomePage() {
                 נפגשים
               </h1>
               <p className="mt-1 md:mt-2 max-w-lg text-sm sm:text-base leading-relaxed text-background/90 md:text-xl">
-                יצירות אפייה ביתיות מרהיבות בהתאמה אישית לכל אירוע
+                יצירות אפייה ביתיות מרהיבות בהתאמה<br />אישית לכל אירוע
               </p>
             </div>
             <div className="absolute inset-x-0 top-0 z-10 w-full px-5 pt-5 text-right md:hidden">
@@ -77,7 +77,7 @@ export default function HomePage() {
                 כשטעם ואסתטיקה נפגשים
               </h1>
               <p className="mt-0.5 max-w-[78%] text-[1.02rem] font-bold leading-snug text-[#8A4A42] [text-shadow:0_1px_8px_rgba(255,255,255,0.9),0_0_2px_rgba(255,255,255,0.8)]">
-                יצירות אפייה ביתיות מרהיבות בהתאמה אישית לכל אירוע
+                יצירות אפייה ביתיות מרהיבות בהתאמה<br />אישית לכל אירוע
               </p>
               <div className="mt-1.5">
                 <WhatsAppButton compact label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />

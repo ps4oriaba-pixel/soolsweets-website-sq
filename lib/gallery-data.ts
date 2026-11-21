@@ -188,7 +188,7 @@ const galleries: GalleryData[] = [
     title: 'עוגות בעיצוב אישי',
     subtitle: 'העלו כל רעיון – ואני אגשים אותו',
     description:
-      'עוגה שמספרת את הסיפור שלכם. העלו רעיון או תמונה וביחד ניצור משהו שלא קיים עדיין.',
+      'עוגה שמספרת את הסיפור שלכם',
     heroImage: '/images/gallery/custom-design/IMG_0434.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגה בעיצוב אישי!',
     images: [
@@ -394,7 +394,7 @@ const galleries: GalleryData[] = [
   {
     slug: 'mousse-cakes',
     title: 'עוגות מוס',
-    subtitle: 'שכבות קרמי ועדין בציפוי מושלם',
+    subtitle: '',
     description: " שכבות מוס עשירות במגוון טעמים, במרקם קטיפתי ובמראה אלגנטי – חוויה מושלמת בכל ביס",
     heroImage: '/images/gallery/mousse-cakes/IMG_6211.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת מוס!',
@@ -415,7 +415,7 @@ const galleries: GalleryData[] = [
   {
     slug: 'bento-cakes',
     title: 'עוגות בנטו',
-    subtitle: 'עוגה אישית קטנה וחמודה',
+    subtitle: 'עוגה אישית בקוטר 10 ס"מ, לכל יום הולדת מיוחד – במספר שלו',
     description:
       'קטנות בגודל, גדולות ברושם. עוגות אישיות בעיצוב מוקפד – מושלמות למתנה, הפתעה או חגיגה קטנה.',
     heroImage: '/images/gallery/bento-cakes/bento-cake-white.webp',
@@ -477,11 +477,11 @@ const galleries: GalleryData[] = [
     subtitle: 'עיצוב מודרני ונקי – אלגנטי לכל שולחן',
     description:
       'מושלמת לאירועים גדולים ולחגיגות משפחתיות – בעיצוב מוקפד ובהתאמה אישית לכל סגנון.',
-    heroImage: '/images/gallery/rectangular-cakes/IMG_9818.webp',
+    heroImage: '/images/gallery/rectangular-cakes/IMG_8066.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגה מלבנית!',
     images: [
-      { src: '/images/gallery/rectangular-cakes/IMG_9818.webp', alt: 'עוגה מלבנית מעוצבת - תמונה 1' },
-      { src: '/images/gallery/rectangular-cakes/IMG_8066.webp', alt: 'עוגה מלבנית מעוצבת - תמונה 2' },
+      { src: '/images/gallery/rectangular-cakes/IMG_8066.webp', alt: 'עוגה מלבנית מעוצבת - תמונה 1' },
+      { src: '/images/gallery/rectangular-cakes/IMG_9818.webp', alt: 'עוגה מלבנית מעוצבת - תמונה 2' },
       { src: '/images/gallery/rectangular-cakes/IMG_8444.webp', alt: 'עוגה מלבנית מעוצבת - תמונה 3' },
       { src: '/images/gallery/rectangular-cakes/IMG_8656.webp', alt: 'עוגה מלבנית מעוצבת - תמונה 4' },
       { src: '/images/gallery/rectangular-cakes/skating-bears.webp', alt: 'עוגה מלבנית מעוצבת - תמונה 5' },
@@ -551,9 +551,9 @@ const galleries: GalleryData[] = [
   {
     slug: 'number-cakes',
     title: 'עוגות מספרים',
-    subtitle: 'לכל יום הולדת מיוחד – במספר שלו',
+    subtitle: 'כל יום הולדת והמספר שלו',
     description:
-      'עוגות מספר או אות מבצק שקדים או עוגת שוקולד אפויה, המעוטרות בקרם מסקרפונה עשיר, שוקולדים ואלמנטים מעוצבים בהתאמה אישית.',
+      'עוגה מבצק שקדים או עוגה אפויה, המעוטרת בקרם מסקרפונה עשיר, שוקולדים ואלמנטים מעוצבים בהתאמה אישית',
     heroImage: '/images/gallery/number-cakes/20230420_153709.webp',
     whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת מספרים!',
     images: [
