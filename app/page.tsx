@@ -65,7 +65,7 @@ export default function HomePage() {
                 <br />
                 נפגשים
               </h1>
-              <p className="mt-3 md:mt-5 max-w-lg text-sm sm:text-base leading-relaxed text-background/85 md:text-xl">
+              <p className="mt-1 md:mt-2 max-w-lg text-sm sm:text-base leading-relaxed text-background/90 md:text-xl">
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
             </div>
@@ -73,10 +73,10 @@ export default function HomePage() {
               <p className="inline-block rounded-full bg-white/80 px-3 py-1 text-xs font-bold tracking-[0.14em] text-[#E8857A]">
                 קונדיטורית בוטיק ביתית
               </p>
-              <h1 className="mt-2 font-extrabold text-[1.75rem] leading-[1.15] whitespace-nowrap text-white [-webkit-text-stroke:1px_#E8857A] [paint-order:stroke_fill] [text-shadow:0_2px_10px_rgba(232,133,122,0.35)]">
+              <h1 className="mt-2 font-extrabold text-[1.75rem] leading-[1.1] whitespace-nowrap text-[#6B3A34] [text-shadow:0_1px_10px_rgba(255,255,255,0.75)]">
                 כשטעם ואסתטיקה נפגשים
               </h1>
-              <p className="mt-2 max-w-[78%] text-[1.06rem] font-extrabold leading-snug text-[#E8857A] [-webkit-text-stroke:3px_#fff] [paint-order:stroke_fill]">
+              <p className="mt-0.5 max-w-[78%] text-[1.02rem] font-bold leading-snug text-[#8A4A42] [text-shadow:0_1px_8px_rgba(255,255,255,0.9),0_0_2px_rgba(255,255,255,0.8)]">
                 יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
               </p>
             </div>
