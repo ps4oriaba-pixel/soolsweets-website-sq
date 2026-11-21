@@ -66,28 +66,28 @@ export default function HomePage() {
                 נפגשים
               </h1>
               <p className="mt-1 md:mt-2 max-w-lg text-sm sm:text-base leading-relaxed text-background/90 md:text-xl">
-                יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
+                יצירות אפייה ביתיות מרהיבות בהתאמה אישית לכל אירוע
               </p>
             </div>
             <div className="absolute inset-x-0 top-0 z-10 w-full px-5 pt-5 text-right md:hidden">
               <p className="inline-block rounded-full bg-white/80 px-3 py-1 text-xs font-bold tracking-[0.14em] text-[#E8857A]">
                 קונדיטורית בוטיק ביתית
               </p>
-              <h1 className="mt-2 font-extrabold text-[1.75rem] leading-[1.1] whitespace-nowrap text-[#6B3A34] [text-shadow:0_1px_10px_rgba(255,255,255,0.75)]">
+              <h1 className="mt-2 font-extrabold text-[1.5rem] leading-[1.1] whitespace-nowrap text-[#6B3A34] [text-shadow:0_1px_10px_rgba(255,255,255,0.75)]">
                 כשטעם ואסתטיקה נפגשים
               </h1>
               <p className="mt-0.5 max-w-[78%] text-[1.02rem] font-bold leading-snug text-[#8A4A42] [text-shadow:0_1px_8px_rgba(255,255,255,0.9),0_0_2px_rgba(255,255,255,0.8)]">
-                יצירות אפייה ביתיות מרהיבות – בהתאמה אישית לכל אירוע
+                יצירות אפייה ביתיות מרהיבות בהתאמה אישית לכל אירוע
               </p>
+              <div className="mt-3">
+                <WhatsAppButton compact tone="pink" label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
+              </div>
             </div>
           </div>
 
           <div className="relative z-10 -mt-8 rounded-t-[2rem] bg-background px-5 pb-4 pt-3 shadow-[0_-8px_24px_rgba(107,58,52,0.12)] md:mt-0 md:rounded-none md:px-6 md:py-10 md:shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
             <div className="mx-auto mb-3 h-1 w-11 rounded-full bg-[#EBA59D] md:hidden" />
             <div className="mx-auto mb-3 flex max-w-6xl gap-2.5 md:hidden">
-              <div className="flex-1 [&>a]:w-full [&>a]:justify-center">
-                <WhatsAppButton compact label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
-              </div>
               <Link
                 href="/about"
                 className="flex flex-1 items-center justify-center rounded-full border-[1.5px] border-[#E8857A] bg-white px-5 py-2.5 text-sm font-bold text-[#C2185B]"
