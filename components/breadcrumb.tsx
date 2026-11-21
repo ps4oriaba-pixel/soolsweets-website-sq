@@ -13,7 +13,7 @@ export default function Breadcrumb({ items }: BreadcrumbProps) {
   return (
     <nav
       aria-label="breadcrumb"
-      className="w-full bg-secondary/50 border-b border-border/20"
+      className="sticky top-20 z-40 w-full bg-secondary border-b border-border/20"
     >
       <div className="max-w-6xl mx-auto px-6 py-3 flex justify-start" dir="rtl">
         <ol className="flex flex-nowrap items-center gap-2 whitespace-nowrap text-sm sm:gap-3 sm:text-base">
