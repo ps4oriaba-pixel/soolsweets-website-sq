@@ -175,6 +175,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/holiday-boxes/20230426_095608.webp', alt: 'מארז חג - תמונה 23' },
       { src: '/images/gallery/holiday-boxes/20230426_095752.webp', alt: 'מארז חג - תמונה 24' },
       { src: '/images/gallery/holiday-boxes/20230524_113432.webp', alt: 'מארז חג - תמונה 25' },
+      { src: '/images/gallery/holiday-boxes/IMG_8298.webp', alt: 'מארז חג - תמונה 26' },
     ],
   },
 
