@@ -388,6 +388,78 @@ export function keywordSearchWithRelated(query: string, limit = 6): KeywordSearc
   return { results, relatedResults }
 }
 
+export interface ImageSearchHit {
+  src: string
+  alt: string
+  slug: string
+  title: string
+}
+
+const MAX_IMAGE_HITS = 60
+const IMAGE_RELEVANCE_RATIO = 0.55
+
+// Image-level search: every photo whose tags / alt text match the query, across all items.
+// Serving-size requests ("עוגה ל-15 איש") still pick items first, then show their photos.
+export function searchImages(query: string): ImageSearchHit[] {
+  const galleries = getAllGalleries()
+  const shortTitle = (title: string) => title.split(' - ')[0]
+  const servingRequest = extractServingRequest(query)
+  if (servingRequest) {
+    return keywordSearchWithRelated(query).results.flatMap((result) =>
+      result.matchedImages.map((image) => ({
+        src: image.src,
+        alt: image.alt,
+        slug: result.slug,
+        title: shortTitle(result.title),
+      })),
+    )
+  }
+
+  const queryWords = getQueryWords(query)
+  if (queryWords.length === 0) return []
+  const itemTexts = galleries.map((gallery) => {
+    const meta = SEARCH_META[gallery.slug]
+    return [gallery.title, meta?.category ?? '', (meta?.keywords ?? []).join(' '), gallery.subtitle].join(' ')
+  })
+  const wordHits = new Map(
+    queryWords.map((word) => [word, itemTexts.filter((text) => scoreWords([word], text, 1, 1) > 0).length]),
+  )
+  const allImages = galleries.flatMap((gallery) => gallery.images)
+  const imageText = (image: GalleryImage) => (IMAGE_TAGS[image.src] ?? []).join(' ') + ' ' + image.alt
+  const imageWordHits = new Map(
+    queryWords.map((word) => [word, allImages.filter((image) => scoreWords([word], imageText(image), 1, 1) > 0).length]),
+  )
+  const isGeneric = (word: string) =>
+    (wordHits.get(word) ?? 0) >= galleries.length * 0.4 || (imageWordHits.get(word) ?? 0) >= allImages.length * 0.1
+  const hasSpecificWord = queryWords.some((word) => !isGeneric(word))
+  const weights: WordWeights = new Map(
+    hasSpecificWord ? queryWords.filter(isGeneric).map((word) => [word, 0.4] as [string, number]) : [],
+  )
+
+  const hits: { hit: ImageSearchHit; score: number; order: number }[] = []
+  galleries.forEach((gallery, galleryIndex) => {
+    const itemBonus = scoreWords(queryWords, itemTexts[galleryIndex], 1, 0.5, weights) * 0.1
+    gallery.images.forEach((image, index) => {
+      const tags = IMAGE_TAGS[image.src]
+      const tagScore = tags ? scoreWords(queryWords, tags.join(' '), 8, 3, weights) : 0
+      const altScore = scoreWords(queryWords, image.alt, 4, 1.5, weights)
+      const imageScore = tagScore + altScore
+      if (imageScore <= 0) return
+      hits.push({
+        hit: { src: image.src, alt: image.alt, slug: gallery.slug, title: shortTitle(gallery.title) },
+        score: imageScore + itemBonus,
+        order: index * 100 + galleryIndex,
+      })
+    })
+  })
+  const top = Math.max(0, ...hits.map((h) => h.score))
+  return hits
+    .filter((h) => h.score >= top * IMAGE_RELEVANCE_RATIO)
+    .sort((a, b) => b.score - a.score || a.order - b.order)
+    .slice(0, MAX_IMAGE_HITS)
+    .map((h) => h.hit)
+}
+
 export function keywordSearch(query: string, limit = 6): SearchResult[] {
   return keywordSearchWithRelated(query, limit).results
 }

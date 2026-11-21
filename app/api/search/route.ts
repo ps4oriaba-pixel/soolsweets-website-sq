@@ -1,4 +1,4 @@
-import { keywordSearchWithRelated } from '@/lib/search'
+import { searchImages } from '@/lib/search'
 
 export const maxDuration = 10
 
@@ -27,12 +27,11 @@ export async function POST(req: Request) {
     }
 
     const query = raw.trim().slice(0, MAX_QUERY_LENGTH)
-    const search = keywordSearchWithRelated(query)
+    const images = searchImages(query)
 
     return Response.json({
-      results: search.results,
-      relatedResults: search.relatedResults,
-      total: search.results.length,
+      images,
+      total: images.length,
       mode: 'local',
     })
   } catch {
