@@ -79,7 +79,7 @@ export default function HomePage() {
               <p className="mt-0.5 max-w-[78%] text-[1.02rem] font-bold leading-snug text-[#8A4A42] [text-shadow:0_1px_8px_rgba(255,255,255,0.9),0_0_2px_rgba(255,255,255,0.8)]">
                 יצירות אפייה ביתיות מרהיבות בהתאמה אישית לכל אירוע
               </p>
-              <div className="mt-3">
+              <div className="mt-1.5">
                 <WhatsAppButton compact label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
               </div>
             </div>
