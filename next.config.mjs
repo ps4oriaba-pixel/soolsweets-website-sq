@@ -14,7 +14,10 @@ const nextConfig = {
     return [{ source: '/:path*', headers: securityHeaders }]
   },
   images: {
-    qualities: [75, 90],
+    // Pre-generated variants instead of the Vercel optimizer (works on Cloudflare too) - see lib/image-loader.ts
+    loader: 'custom',
+    loaderFile: './lib/image-loader.ts',
+    qualities: [50, 75, 85, 90],
     remotePatterns: [
       {
         protocol: 'https',
