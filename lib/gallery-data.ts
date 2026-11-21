@@ -596,8 +596,16 @@ const galleries: GalleryData[] = [
     whatsappMessage: 'שלום סלעית, אשמח להזמין ספל שכולו אושר!',
     images: [
       { src: '/images/gallery/cup-cakes/F7580070-3AA8-4BD3-8C5B-8FFE6627552B.webp', alt: 'ספל שכולו אושר - תמונה 1' },
-      { src: '/images/gallery/cup-cakes/IMG_3854.webp', alt: 'ספל שכולו אושר - תמונה 2' },
-      { src: '/images/gallery/cup-cakes/IMG_3887.webp', alt: 'ספל שכולו אושר - תמונה 3' },
+      { src: '/images/gallery/cup-cakes/IMG_3865.webp', alt: 'ספל שכולו אושר - תמונה 2' },
+      { src: '/images/gallery/cup-cakes/IMG_3866.webp', alt: 'ספל שכולו אושר - תמונה 3' },
+      { src: '/images/gallery/cup-cakes/IMG_3877.webp', alt: 'ספל שכולו אושר - תמונה 4' },
+      { src: '/images/gallery/cup-cakes/IMG_3886.webp', alt: 'ספל שכולו אושר - תמונה 5' },
+      { src: '/images/gallery/cup-cakes/IMG_3910.webp', alt: 'ספל שכולו אושר - תמונה 6' },
+      { src: '/images/gallery/cup-cakes/IMG_4765.webp', alt: 'ספל שכולו אושר - תמונה 7' },
+      { src: '/images/gallery/cup-cakes/IMG_4782.webp', alt: 'ספל שכולו אושר - תמונה 8' },
+      { src: '/images/gallery/cup-cakes/IMG_4786.webp', alt: 'ספל שכולו אושר - תמונה 9' },
+      { src: '/images/gallery/cup-cakes/IMG_3854.webp', alt: 'ספל שכולו אושר - תמונה 10' },
+      { src: '/images/gallery/cup-cakes/IMG_3887.webp', alt: 'ספל שכולו אושר - תמונה 11' },
     ],
   },
   {
