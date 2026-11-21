@@ -274,6 +274,7 @@ export const IMAGE_TAGS: Record<string, string[]> = {
   '/images/category-personal-desserts-new.png': ['קינוחים אישיים', 'דונאטס', 'מארז', 'טורקיז', 'שוקולד'],
   '/images/category-wow-new.png': ['WOW', 'ביצת שוקולד', 'סוכריה ענקית', 'כדורגל', 'עוגת קומות', '70'],
   '/images/gallery/bento-cakes/bento-cake-white.webp': ['עוגת בנטו', 'לבן', 'פשוט'],
+  '/images/gallery/boxes-events/IMG_0306.webp': ['מארז גיוס', 'גיוס', 'צבא', 'צהל', 'ירוק', 'בנטו', 'עוגת בנטו', 'נעל צבאית', 'כומתה', 'בראוניז', 'עוגיות', 'כדורי קוקוס', 'מארז מעוצב', 'מארז לאירוע', 'מתנה לחייל'],
   '/images/gallery/boxes-events/20230120_115551.webp': ['מארז', 'תכלת', 'לבן', '13', 'בר מצווה', 'לב', 'עוגיות'],
   '/images/gallery/boxes-events/20230124_163403.webp': ['מארז', 'ורוד', '12', 'לב', 'בת מצווה'],
   '/images/gallery/boxes-events/20230124_165237.webp': ['מארז', 'ורוד', '12', 'בת מצווה', 'לב', 'שוקולד', 'בראוניז'],
