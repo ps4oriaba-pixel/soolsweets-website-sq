@@ -87,14 +87,6 @@ export default function HomePage() {
 
           <div className="relative z-10 -mt-8 rounded-t-[2rem] bg-background px-5 pb-4 pt-3 shadow-[0_-8px_24px_rgba(107,58,52,0.12)] md:mt-0 md:rounded-none md:px-6 md:py-10 md:shadow-[inset_0_1px_0_rgba(255,255,255,0.45)]">
             <div className="mx-auto mb-3 h-1 w-11 rounded-full bg-[#EBA59D] md:hidden" />
-            <div className="mx-auto mb-3 flex max-w-6xl gap-2.5 md:hidden">
-              <Link
-                href="/about"
-                className="flex flex-1 items-center justify-center rounded-full border-[1.5px] border-[#E8857A] bg-white px-5 py-2.5 text-sm font-bold text-[#C2185B]"
-              >
-                קצת עליי
-              </Link>
-            </div>
             <div className="mx-auto flex max-w-6xl flex-wrap items-center gap-4">
               <div className="w-full max-w-md md:mb-0">
                 <HeroSearch variant="light" />
@@ -110,6 +102,14 @@ export default function HomePage() {
                   קצת עליי
                 </Link>
               </div>
+            </div>
+            <div className="mx-auto mt-3 flex max-w-6xl gap-2.5 md:hidden">
+              <Link
+                href="/about"
+                className="flex flex-1 items-center justify-center rounded-full bg-[#FBDAD4] px-5 py-2.5 text-sm font-semibold text-[#6B3A34] shadow-md ring-1 ring-[#E8857A]/40 transition-colors hover:bg-[#F6C6BE]"
+              >
+                קצת עליי
+              </Link>
             </div>
           </div>
         </section>
