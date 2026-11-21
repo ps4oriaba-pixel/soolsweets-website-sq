@@ -198,7 +198,7 @@ const galleries: GalleryData[] = [
       { src: '/images/gallery/custom-design/IMG_9551.webp', alt: 'עוגה בעיצוב אישי - תמונה 4' },
       { src: '/images/gallery/custom-design/IMG_7915.webp', alt: 'עוגה בעיצוב אישי - תמונה 5' },
       { src: '/images/gallery/custom-design/IMG_0256.webp', alt: 'עוגה בעיצוב אישי - תמונה 6' },
-      { src: '/images/gallery/custom-design/IMG_9986.webp', alt: 'עוגה בעיצוב אישי - תמונה 7' },
+      { src: '/images/gallery/custom-design/IMG_9986.webp', alt: 'עוגת בורקס - תמונה 7' },
       { src: '/images/gallery/custom-design/IMG_8143.webp', alt: 'עוגה בעיצוב אישי - תמונה 8' },
       { src: '/images/gallery/custom-design/IMG_6271.webp', alt: 'עוגה בעיצוב אישי - תמונה 9' },
       { src: '/images/gallery/custom-design/IMG_4542.webp', alt: 'עוגה בעיצוב אישי - תמונה 10' },
