@@ -188,7 +188,15 @@ function queryForms(word: string): string[] {
   return [...forms]
 }
 
-function scoreWords(queryWords: string[], text: string, exactScore: number, partialScore: number): number {
+type WordWeights = Map<string, number>
+
+function scoreWords(
+  queryWords: string[],
+  text: string,
+  exactScore: number,
+  partialScore: number,
+  weights?: WordWeights,
+): number {
   const textWords = tokenize(text)
   return queryWords.reduce((total, queryWord) => {
     const forms = queryForms(queryWord)
@@ -210,16 +218,20 @@ function scoreWords(queryWords: string[], text: string, exactScore: number, part
       }
     }
 
-    return total + bestMatch
+    return total + bestMatch * (weights?.get(queryWord) ?? 1)
   }, 0)
 }
 
-function rankImages(images: GalleryImage[], queryWords: string[]): { image: GalleryImage; score: number }[] {
+function rankImages(
+  images: GalleryImage[],
+  queryWords: string[],
+  weights?: WordWeights,
+): { image: GalleryImage; score: number }[] {
   return images
     .map((image, index) => {
       const tags = IMAGE_TAGS[image.src]
-      const tagScore = tags ? scoreWords(queryWords, tags.join(' '), 8, 3) : 0
-      const altScore = scoreWords(queryWords, image.alt, 4, 1.5)
+      const tagScore = tags ? scoreWords(queryWords, tags.join(' '), 8, 3, weights) : 0
+      const altScore = scoreWords(queryWords, image.alt, 4, 1.5, weights)
       return { image, score: tagScore + altScore, index }
     })
     .sort((a, b) => b.score - a.score || a.index - b.index)
@@ -267,22 +279,38 @@ export function keywordSearchWithRelated(query: string, limit = 6): KeywordSearc
   const closestServingDistance = Math.min(...sizeDistances)
   const hasExactServingMatch = servingRequest !== null && closestServingDistance === 0
 
+  // Words that appear in many items (e.g. "עוגה", "מארז") say little about what the person
+  // wants, so when the query also contains a specific word they count for much less.
+  const itemTexts = galleries.map((gallery) => {
+    const meta = SEARCH_META[gallery.slug]
+    return [gallery.title, meta?.category ?? '', (meta?.keywords ?? []).join(' '), gallery.subtitle].join(' ')
+  })
+  const wordHits = new Map(
+    queryWords.map((word) => [word, itemTexts.filter((text) => scoreWords([word], text, 1, 1) > 0).length]),
+  )
+  const isGeneric = (word: string) => (wordHits.get(word) ?? 0) >= galleries.length * 0.4
+  const hasSpecificWord = queryWords.some((word) => !isGeneric(word))
+  const weights: WordWeights = new Map(
+    hasSpecificWord ? queryWords.filter(isGeneric).map((word) => [word, 0.4] as [string, number]) : [],
+  )
+
   const scored = galleries.map((gallery) => {
     const meta = SEARCH_META[gallery.slug]
     const category = meta?.category ?? ''
     const keywords = meta?.keywords ?? []
-    const rankedImages = rankImages(gallery.images, queryWords)
+    const rankedImages = rankImages(gallery.images, queryWords, weights)
+    const imageBacked = (rankedImages[0]?.score ?? 0) > 0
 
     let textScore = 0
 
     if (normalizedQuery && normalize(gallery.title).includes(normalizedQuery)) textScore += 12
     if (normalizedQuery && keywords.some((keyword) => normalize(keyword).includes(normalizedQuery))) textScore += 8
 
-    textScore += scoreWords(queryWords, gallery.title, 5, 2.5)
-    textScore += scoreWords(queryWords, category, 4, 2)
-    textScore += scoreWords(queryWords, keywords.join(' '), 6, 2.5)
-    textScore += scoreWords(queryWords, gallery.subtitle, 2, 1)
-    textScore += scoreWords(queryWords, gallery.description, 1, 0.5)
+    textScore += scoreWords(queryWords, gallery.title, 5, 2.5, weights)
+    textScore += scoreWords(queryWords, category, 4, 2, weights)
+    textScore += scoreWords(queryWords, keywords.join(' '), 6, 2.5, weights)
+    textScore += scoreWords(queryWords, gallery.subtitle, 2, 1, weights)
+    textScore += scoreWords(queryWords, gallery.description, 1, 0.5, weights)
 
     const bestImageScores = rankedImages.slice(0, 3).map(({ score: imageScore }) => imageScore)
     textScore += (bestImageScores[0] ?? 0) + (bestImageScores[1] ?? 0) * 0.4 + (bestImageScores[2] ?? 0) * 0.2
@@ -306,11 +334,23 @@ export function keywordSearchWithRelated(query: string, limit = 6): KeywordSearc
       matchedImages: rankedImages.slice(0, 3).map(({ image }) => image),
       score: textScore + quantityScore,
       textScore,
+      imageBacked,
       servingMatch,
       nearestServingMatch,
       hasSizeData: options.length > 0,
     }
   })
+
+  // A photo that actually matches beats an item that only matches through its keyword list:
+  // the card for the latter would show a cover photo unrelated to the search.
+  if (!servingRequest && scored.some((item) => item.imageBacked)) {
+    for (const item of scored) {
+      if (!item.imageBacked) {
+        item.textScore *= 0.4
+        item.score *= 0.4
+      }
+    }
+  }
 
   const ranked = scored
     .filter((item) => item.score > 0)
