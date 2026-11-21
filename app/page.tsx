@@ -80,7 +80,7 @@ export default function HomePage() {
                 יצירות אפייה ביתיות מרהיבות בהתאמה אישית לכל אירוע
               </p>
               <div className="mt-3">
-                <WhatsAppButton compact tone="pink" label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
+                <WhatsAppButton compact label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
               </div>
             </div>
           </div>
