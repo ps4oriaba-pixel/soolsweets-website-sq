@@ -415,7 +415,7 @@ const galleries: GalleryData[] = [
   {
     slug: 'bento-cakes',
     title: 'עוגות בנטו',
-    subtitle: 'עוגה אישית בקוטר 10 ס"מ, לכל יום הולדת מיוחד – במספר שלו',
+    subtitle: 'עוגה אישית בקוטר 10 ס"מ',
     description:
       'קטנות בגודל, גדולות ברושם. עוגות אישיות בעיצוב מוקפד – מושלמות למתנה, הפתעה או חגיגה קטנה.',
     heroImage: '/images/gallery/bento-cakes/bento-cake-white.webp',
