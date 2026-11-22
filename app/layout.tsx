@@ -37,6 +37,7 @@ const gtagInline = `
 window.dataLayer = window.dataLayer || [];
 function gtag(){dataLayer.push(arguments);}
 gtag('js', new Date());
+gtag('config', 'AW-17408220155');
 function gtag_report_conversion(url) {
   var callback = function () {
     if (typeof(url) != 'undefined') {
@@ -59,7 +60,7 @@ export default function RootLayout({
   return (
     <html lang="he" dir="rtl" className={`${assistant.variable} ${cormorant.variable} bg-background`}>
       <head>
-        <script async src="https://www.googletagmanager.com/gtm.js?id=AW-17408220155"></script>
+        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17408220155"></script>
         <script dangerouslySetInnerHTML={{ __html: gtagInline }} />
       </head>
       <body className="antialiased font-sans">
