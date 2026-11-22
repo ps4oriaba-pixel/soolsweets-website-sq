@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next'
 import { Assistant, Cormorant_Garamond } from 'next/font/google'
 import { NavigationTracker } from '@/components/navigation-tracker'
 import FloatingWhatsApp from '@/components/floating-whatsapp'
+import WhatsAppConversion from '@/components/whatsapp-conversion'
 import './globals.css'
 
 const assistant = Assistant({
@@ -32,6 +33,24 @@ export const viewport: Viewport = {
   initialScale: 1,
 }
 
+const gtagInline = `
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+function gtag_report_conversion(url) {
+  var callback = function () {
+    if (typeof(url) != 'undefined') {
+      window.location = url;
+    }
+  };
+  gtag('event', 'conversion', {
+      'send_to': 'AW-17408220155/vlzfCK6Ewb0dEPu38exA',
+      'event_callback': callback
+  });
+  return false;
+}
+`
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -41,17 +60,13 @@ export default function RootLayout({
     <html lang="he" dir="rtl" className={`${assistant.variable} ${cormorant.variable} bg-background`}>
       <head>
         <script async src="https://www.googletagmanager.com/gtm.js?id=AW-17408220155"></script>
-        <script
-          dangerouslySetInnerHTML={{
-            __html:
-              'window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag(\'js\', new Date());',
-          }}
-        />
+        <script dangerouslySetInnerHTML={{ __html: gtagInline }} />
       </head>
       <body className="antialiased font-sans">
         <NavigationTracker />
         {children}
         <FloatingWhatsApp />
+        <WhatsAppConversion />
       </body>
     </html>
   )
