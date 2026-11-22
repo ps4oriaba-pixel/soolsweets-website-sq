@@ -3,5 +3,5 @@
 export const socialLinks = {
   instagram: 'https://www.instagram.com/soolsweets',
   tiktok: '',
-  facebook: '',
+  facebook: 'https://www.facebook.com/share/1E145Tcy1y/?mibextid=wwXIfr',
 }
