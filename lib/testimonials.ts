@@ -8,4 +8,6 @@ export interface Testimonial {
   alt: string
 }
 
-export const testimonials: Testimonial[] = []
+export const testimonials: Testimonial[] = [
+  { src: '/images/testimonials/rec-1.webp', alt: 'המלצה מלקוחה מרוצה בוואטסאפ' },
+]
