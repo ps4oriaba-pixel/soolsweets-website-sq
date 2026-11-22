@@ -1,4 +1,5 @@
 import CategoryPage from '@/components/category-page'
+import { itemMessage } from '@/lib/whatsapp-messages'
 import { getProductDescription } from '@/lib/product-descriptions'
 
 export const metadata = {
@@ -36,7 +37,7 @@ export default function BoxesPage() {
       heroAlt="מארזים מעוצבים של SoolSweets"
       description=" הרגעים הכי מרגשים מתחילים במארז מוקפד שנוצר בהתאמה אישית בשילוב של עיצוב אלגנטי, חומרי גלם איכותיים ופרטים קטנים שעושים את כל ההבדל, כי יש רגעים שמגיע להם הרבה יותר מ”סתם מתנה”."
       products={products}
-      whatsappMessage="שלום סלעית, אשמח להזמין מארז מעוצב!"
+      whatsappMessage={itemMessage('מארזים מעוצבים')}
     />
   )
 }

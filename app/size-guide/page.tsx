@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
+import { getWhatsAppMessage } from '@/lib/whatsapp-messages'
 import HeartSizeModal from '@/components/heart-size-modal'
 import Breadcrumb from '@/components/breadcrumb'
 
@@ -87,7 +88,7 @@ export default function SizeGuidePage() {
             <p className="text-background/75 leading-relaxed text-sm md:text-base">
               שלחו לי הודעה בוואטסאפ עם מספר האורחים וסוג האירוע, ונתחיל לתכנן.
             </p>
-            <WhatsAppButton message="שלום סלעית, אשמח לעזרה בבחירת גודל עוגה מתאים לאירוע שלי" />
+            <WhatsAppButton message={getWhatsAppMessage('/size-guide')} />
             <Link
               href="/category/cakes"
               className="text-sm font-semibold text-background/80 hover:text-background transition-colors underline underline-offset-4"

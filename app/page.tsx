@@ -170,7 +170,6 @@ export default function HomePage() {
               ״כל יצירה נעשית מתוך אהבה גדולה למקצוע, בדגש על חומרי גלם איכותיים. לא רק יופי, אלא גם טעם בלתי נשכח - הטעמים שעושים את ההבדל, עם העיצובים שכולם ידברו עליהם״.
             </p>
             <p className="text-foreground/60 font-medium mb-8">— סלעית, <span dir="ltr" className="font-serif italic font-bold text-[1.25em] leading-none" style={{ color: '#E8857A', letterSpacing: '0.02em' }}>SoolSweets</span></p>
-            <WhatsAppButton message="היי סלעית, אשמח לשמוע עוד!" />
           </div>
         </section>
 

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import SocialIcons from '@/components/social-icons'
+import { WHATSAPP_NUMBER, GENERAL_MESSAGE } from '@/lib/whatsapp-messages'
 
 export default function Footer({ flush = false }: { flush?: boolean }) {
   return (
@@ -53,7 +54,7 @@ export default function Footer({ flush = false }: { flush?: boolean }) {
               יצירת קשר
             </h3>
             <a
-              href="https://wa.me/972545629058"
+              href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(GENERAL_MESSAGE)}`}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-sm text-accent-foreground/70 hover:text-secondary transition-colors"

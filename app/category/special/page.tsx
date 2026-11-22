@@ -1,4 +1,5 @@
 import CategoryPage from '@/components/category-page'
+import { itemMessage } from '@/lib/whatsapp-messages'
 import { getProductDescription } from '@/lib/product-descriptions'
 
 export const metadata = {
@@ -50,7 +51,7 @@ export default function SpecialPage() {
       heroAlt="קולקציית ה-WOW של SoolSweets"
       description={<>מחפשים את אפקט ה”וואו”? כאן תמצאו את היצירות הייחודיות של <span dir="ltr" className="font-serif italic font-bold text-[1.25em] leading-none" style={{ color: '#E8857A', letterSpacing: '0.02em' }}>SoolSweets</span> – כאלה שכולם ידברו עליהן גם אחרי שהאירוע יסתיים. מכדורגל שוקולד, סוכריה מתנפצת, ביצת שוקולד ענקית ועד עוגות קומות ויצירות מתוקות בהתאמה אישית – לחגיגות שרוצים להרשים.</>}
       products={products}
-      whatsappMessage="שלום סלעית, אשמח לשמוע על קולקציית ה-WOW שלך!"
+      whatsappMessage={itemMessage('קולקציית ה-WOW')}
     />
   )
 }

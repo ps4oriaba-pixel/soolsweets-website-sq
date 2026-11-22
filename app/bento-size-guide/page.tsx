@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
+import { getWhatsAppMessage } from '@/lib/whatsapp-messages'
 import Breadcrumb from '@/components/breadcrumb'
 
 export const metadata = {
@@ -96,7 +97,7 @@ export default function BentoSizeGuidePage() {
             <p className="text-background/75 leading-relaxed text-sm md:text-base">
               בחרו את הגודל ותעדכנו אותי בוואטסאפ. נתחיל לתכנן ביחד.
             </p>
-            <WhatsAppButton message="שלום סלעית, אשמח להזמין עוגת בנטו!" />
+            <WhatsAppButton message={getWhatsAppMessage('/bento-size-guide')} />
             <Link
               href="/gallery/bento-cakes"
               className="text-sm font-semibold text-background/80 hover:text-background transition-colors underline underline-offset-4"

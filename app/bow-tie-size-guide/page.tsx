@@ -1,6 +1,5 @@
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
-import WhatsAppButton from '@/components/whatsapp-button'
 import BowTieSizeGuideContent from '@/components/bow-tie-size-guide-content'
 import Breadcrumb from '@/components/breadcrumb'
 
@@ -22,7 +21,6 @@ export default function BowTieSizeGuidePage() {
       </main>
 
       <Footer />
-      <WhatsAppButton />
     </div>
   )
 }

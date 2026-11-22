@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import { hasSizeGuide, getSizeGuideUrl } from '@/lib/gallery-data'
+import { itemMessage } from '@/lib/whatsapp-messages'
 import Breadcrumb from '@/components/breadcrumb'
 import FramedHero from '@/components/framed-hero'
 import { getDominantRatio, shouldSkipImageOptimization } from '@/lib/image-ratios'
@@ -138,7 +139,7 @@ export default function CategoryPage({
                         לגלריה &larr;
                       </Link>
                       <a
-                        href={`https://wa.me/972545629058?text=${encodeURIComponent(`שלום סלעית, אשמח לשמוע עוד על ${product.title}`)}`}
+                        href={`https://wa.me/972545629058?text=${encodeURIComponent(itemMessage(product.title))}`}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="inline-flex items-center gap-1.5 text-sm font-semibold text-muted-foreground hover:text-primary transition-colors"

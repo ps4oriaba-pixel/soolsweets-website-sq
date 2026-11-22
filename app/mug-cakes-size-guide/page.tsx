@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
+import { getWhatsAppMessage } from '@/lib/whatsapp-messages'
 import Breadcrumb from '@/components/breadcrumb'
 
 export const metadata = {
@@ -86,7 +87,7 @@ export default function MugCakesSizeGuidePage() {
           </div>
 
           <div className="flex justify-center mt-10">
-            <WhatsAppButton message="שלום סלעית, אשמח להזמין ספל שכולו אושר!" />
+            <WhatsAppButton message={getWhatsAppMessage('/mug-cakes-size-guide')} />
           </div>
         </section>
       </main>

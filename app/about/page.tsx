@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
-import WhatsAppButton from '@/components/whatsapp-button'
 import { BackButton } from '@/components/back-button'
 
 export const metadata = {
@@ -114,7 +113,6 @@ export default function AboutPage() {
                 </p>
               </div>
 
-              <WhatsAppButton message="שלום סלעית, אשמח לשמוע עוד ולהזמין!" />
             </div>
           </div>
           </div>

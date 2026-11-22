@@ -1,6 +1,7 @@
 'use client'
 
 import { useSearchParams, useRouter } from 'next/navigation'
+import { WHATSAPP_NUMBER, DIRECT_MESSAGE } from '@/lib/whatsapp-messages'
 import { useEffect, useState, Suspense } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -114,7 +115,7 @@ function SearchResults() {
                 נסו לנסח אחרת, או פנו לסלעית ישירות — היא תשמח לעזור!
               </p>
               <a
-                href="https://wa.me/972545629058"
+                href={`https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(DIRECT_MESSAGE)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 bg-primary text-primary-foreground px-7 py-3 rounded-full text-sm font-semibold hover:opacity-90 transition-opacity"

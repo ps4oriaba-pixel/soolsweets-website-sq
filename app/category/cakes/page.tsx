@@ -1,4 +1,5 @@
 import CategoryPage from '@/components/category-page'
+import { itemMessage } from '@/lib/whatsapp-messages'
 import { getProductDescription } from '@/lib/product-descriptions'
 
 export const metadata = {
@@ -81,7 +82,7 @@ export default function CakesPage() {
       description="העוגה שתהפוך את החגיגה לבלתי נשכחת.
 עוגה שתהיה מרכז החגיגה מעיצוב וינטאג’ קלאסי ועד עוגות מוס, בנטו, מספרים ועיצובים בהתאמה אישית – יפות לעין, טעימות בכל ביס, ומדויקות עד הפרט האחרון."
       products={products}
-      whatsappMessage="שלום סלעית, אשמח להזמין עוגה מעוצבת!"
+      whatsappMessage={itemMessage('עוגות מעוצבות')}
     />
   )
 }

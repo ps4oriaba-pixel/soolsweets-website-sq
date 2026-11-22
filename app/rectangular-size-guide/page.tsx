@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
+import { getWhatsAppMessage } from '@/lib/whatsapp-messages'
 import HeartSizeModal from '@/components/heart-size-modal'
 import Breadcrumb from '@/components/breadcrumb'
 
@@ -104,7 +105,7 @@ export default function RectangularSizeGuidePage() {
             <p className="text-background/75 leading-relaxed text-sm md:text-base">
               בחרו את הגודל ותעדכנו אותי בוואטסאפ עם פרטי העיצוב המיוחד שלכם.
             </p>
-            <WhatsAppButton message="שלום סלעית, אשמח להזמין עוגה מלבנית מעוצבת!" />
+            <WhatsAppButton message={getWhatsAppMessage('/rectangular-size-guide')} />
             <Link
               href="/gallery/rectangular-cakes"
               className="text-sm font-semibold text-background/80 hover:text-background transition-colors underline underline-offset-4"

@@ -1,3 +1,5 @@
+import { getItemMessage } from '@/lib/whatsapp-messages'
+
 export interface GalleryImage {
   src: string
   alt: string
@@ -21,7 +23,7 @@ const galleries: GalleryData[] = [
     subtitle: '',
     description: "",
     heroImage: '/images/gallery/boxes-events/IMG_9596.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז לאירוע מיוחד שיש לי בקרוב',
+    whatsappMessage: getItemMessage('boxes-events'),
     images: [
       { src: '/images/gallery/boxes-events/IMG_9596.webp', alt: 'מארז מעוצב לאירוע - תמונה 1' },
       { src: '/images/gallery/boxes-events/IMG_0306.webp', alt: 'מארז מעוצב לאירוע - תמונה 2' },
@@ -126,7 +128,7 @@ const galleries: GalleryData[] = [
     subtitle: 'המותג שלכם – במתיקות מושלמת',
     description: 'מיתוג ייחודי לעסק שלכם. מארז שמייצג את הערכים והסגנון של החברה שלכם.',
     heroImage: '/images/gallery/branded-boxes/20240302_145422.webp',
-    whatsappMessage: 'שלום סלעית, אשמח לשמוע על מארזים ממותגים לחברה!',
+    whatsappMessage: getItemMessage('branded-boxes'),
     images: [
       { src: '/images/gallery/branded-boxes/20240302_145422.webp', alt: 'מארז ממותג לעסק - תמונה 1' },
       { src: '/images/gallery/branded-boxes/20240302_145359.webp', alt: 'מארז ממותג לעסק - תמונה 2' },
@@ -146,7 +148,7 @@ const galleries: GalleryData[] = [
     description:
       'מארזים מתוקים לחג - כי לכל חג מגיע מארז מיוחד: פורים, ראש השנה, פסח ועוד',
     heroImage: '/images/gallery/holiday-boxes/IMG_7157.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז חג!',
+    whatsappMessage: getItemMessage('holiday-boxes'),
     images: [
       { src: '/images/gallery/holiday-boxes/IMG_7157.webp', alt: 'מארז חג - תמונה 1' },
       { src: '/images/gallery/holiday-boxes/IMG_7697.webp', alt: 'מארז חג - תמונה 2' },
@@ -190,7 +192,7 @@ const galleries: GalleryData[] = [
     description:
       'עוגה שמספרת את הסיפור שלכם. העלו כל רעיון – ואני אגשים אותו',
     heroImage: '/images/gallery/custom-design/IMG_0434.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגה בעיצוב אישי!',
+    whatsappMessage: getItemMessage('custom-cakes'),
     images: [
       { src: '/images/gallery/custom-design/IMG_0434.webp', alt: 'עוגה בעיצוב אישי - תמונה 1' },
       { src: '/images/gallery/custom-design/IMG_8637.webp', alt: 'עוגה בעיצוב אישי - תמונה 2' },
@@ -309,7 +311,7 @@ const galleries: GalleryData[] = [
     subtitle: 'רומנטיקה, עדינות ואווירה של פעם',
     description: " עיצוב רומנטי ועדין עם זילופי וינטאג’, פפיונים, פרחים וגימורים אלגנטיים. מושלם לכל אירוע .",
     heroImage: '/images/gallery/vintage-cakes/cake-22.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת וינטאג\'!',
+    whatsappMessage: getItemMessage('vintage-cakes'),
     images: [
       { src: '/images/gallery/vintage-cakes/cake-22.webp', alt: "עוגת וינטאג' לבנה עם סרטים אדומים ומספר 22" },
       { src: '/images/gallery/vintage-cakes/IMG_6517.webp', alt: "עוגת וינטאג' - תמונה 2" },
@@ -397,7 +399,7 @@ const galleries: GalleryData[] = [
     subtitle: '',
     description: " שכבות מוס עשירות במגוון טעמים, במרקם קטיפתי ובמראה אלגנטי – חוויה מושלמת בכל ביס",
     heroImage: '/images/gallery/mousse-cakes/IMG_6211.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת מוס!',
+    whatsappMessage: getItemMessage('mousse-cakes'),
     images: [
       { src: '/images/gallery/mousse-cakes/IMG_6211.webp', alt: 'עוגת מוס - תמונה 1' },
       { src: '/images/gallery/mousse-cakes/IMG_5088.webp', alt: 'עוגת מוס - תמונה 2' },
@@ -419,7 +421,7 @@ const galleries: GalleryData[] = [
     description:
       'קטנות בגודל, גדולות ברושם. עוגות אישיות בעיצוב מוקפד – מושלמות למתנה, הפתעה או חגיגה קטנה.',
     heroImage: '/images/gallery/bento-cakes/bento-cake-white.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת בנטו!',
+    whatsappMessage: getItemMessage('bento-cakes'),
     images: [
       { src: '/images/gallery/bento-cakes/bento-cake-white.webp', alt: 'עוגת בנטו לבנה עם זילופי קרם' },
       { src: '/images/gallery/bento-cakes/IMG_9396.webp', alt: 'עוגת בנטו - תמונה 2' },
@@ -478,7 +480,7 @@ const galleries: GalleryData[] = [
     description:
       'מושלמת לאירועים גדולים ולחגיגות משפחתיות – בעיצוב מוקפד ובהתאמה אישית לכל סגנון.',
     heroImage: '/images/gallery/rectangular-cakes/IMG_8066.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגה מלבנית!',
+    whatsappMessage: getItemMessage('rectangular-cakes'),
     images: [
       { src: '/images/gallery/rectangular-cakes/IMG_8066.webp', alt: 'עוגה מלבנית מעוצבת - תמונה 1' },
       { src: '/images/gallery/rectangular-cakes/IMG_9818.webp', alt: 'עוגה מלבנית מעוצבת - תמונה 2' },
@@ -537,7 +539,7 @@ const galleries: GalleryData[] = [
     description:
       'עוגות בעיצוב אלגנטי עם פפיונים מרשימים  מבצק סוכר – שילוב מושלם של יוקרה, עדינות וסטייל.',
     heroImage: '/images/gallery/bow-cakes/IMG_6983.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת פפיון!',
+    whatsappMessage: getItemMessage('bow-tie-cakes'),
     images: [
       { src: '/images/gallery/bow-cakes/IMG_6983.webp', alt: 'עוגת פפיון - תמונה 1' },
       { src: '/images/gallery/bow-cakes/IMG_6137.webp', alt: 'עוגת פפיון - תמונה 2' },
@@ -555,7 +557,7 @@ const galleries: GalleryData[] = [
     description:
       'עוגה מבצק שקדים או עוגה אפויה, המעוטרת בקרם מסקרפונה עשיר, שוקולדים ואלמנטים מעוצבים בהתאמה אישית',
     heroImage: '/images/gallery/number-cakes/20230420_153709.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת מספרים!',
+    whatsappMessage: getItemMessage('number-cakes'),
     images: [
       { src: '/images/gallery/number-cakes/20230420_153709.webp', alt: 'עוגת מספרים - תמונה 1' },
       { src: '/images/gallery/number-cakes/20240418_165922.webp', alt: 'עוגת מספרים - תמונה 2' },
@@ -574,7 +576,7 @@ const galleries: GalleryData[] = [
     description:
       'עוגה בעיצוב מלכותי עם כתר נוצץ, פפיונים ונצנצים שמתפזרים באפקט מרהיב – לחגיגה שכולה זוהר.',
     heroImage: '/images/gallery/crown-cakes/IMG_1199.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת כתר!',
+    whatsappMessage: getItemMessage('crown-cakes'),
     images: [
       { src: '/images/gallery/crown-cakes/IMG_1199.webp', alt: 'עוגת כתר - תמונה 1' },
       { src: '/images/gallery/crown-cakes/IMG_5483.webp', alt: 'עוגת כתר - תמונה 2' },
@@ -589,7 +591,7 @@ const galleries: GalleryData[] = [
     description:
       'עוגת שוקולד/וניל בכוס אישית, עם קצפת, תוספות מתוקות וקישוט לבחירה – הפתעה מושלמת לרגעים ספונטניים.',
     heroImage: '/images/gallery/cup-cakes/F7580070-3AA8-4BD3-8C5B-8FFE6627552B.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין ספל שכולו אושר!',
+    whatsappMessage: getItemMessage('mug-cakes'),
     images: [
       { src: '/images/gallery/cup-cakes/F7580070-3AA8-4BD3-8C5B-8FFE6627552B.webp', alt: 'ספל שכולו אושר - תמונה 1' },
       { src: '/images/gallery/cup-cakes/IMG_3866.webp', alt: 'ספל שכולו אושר - תמונה 2' },
@@ -611,7 +613,7 @@ const galleries: GalleryData[] = [
     description:
       'הטרנד שכולם מדברים עליו – שורפים את הדף וחושפים הקדשה, תמונה או הפתעה מרגשת',
     heroImage: '/images/gallery/burn-away-cakes/IMG_0455.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת דף נשרף!',
+    whatsappMessage: getItemMessage('burnt-paper-cakes'),
     images: [
       { src: '/images/gallery/burn-away-cakes/IMG_0455.webp', alt: 'עוגת דף נשרף - תמונה 1' },
       { src: '/images/gallery/burn-away-cakes/IMG_2584.webp', alt: 'עוגת דף נשרף - תמונה 2' },
@@ -634,7 +636,7 @@ const galleries: GalleryData[] = [
     description:
       'מבחר קינוחי כוסות אישיים במגוון טעמים לבחירה, עם שילובים עשירים ונראות מרשימה לכל אירוע, במגוון טעמים אהובים מלוטוס ואוראו ועד פיסטוק, קינדר, גבינה פירורים, ריבת חלב ועוד',
     heroImage: '/images/gallery/dessert-cups/IMG_6804.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין מארזי כוסות!',
+    whatsappMessage: getItemMessage('cup-desserts'),
     images: [
       { src: '/images/gallery/dessert-cups/IMG_6804.webp', alt: 'מארז כוסות קינוח - תמונה 1' },
       { src: '/images/gallery/dessert-cups/IMG_8715.webp', alt: 'מארז כוסות קינוח - תמונה 2' },
@@ -655,7 +657,7 @@ const galleries: GalleryData[] = [
     subtitle: "",
     description: "מארזי עוגיות קראמבל, במגוון טעמים מטורף שיגרום לכם להתמכר מהביס הראשון . קינדר, לוטוס, ריבת חלב, פיסטוק, בייגלה, נוטלה, סוכריות צבעוניות, מרשמלו ועוד.",
     heroImage: '/images/gallery/crumble-cookies/user-crumble-2.png',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין מארזי קראמבל!',
+    whatsappMessage: getItemMessage('crumble-desserts'),
     images: [
       { src: '/images/gallery/crumble-cookies/user-crumble-2.png', alt: 'מארז קראמבל - תמונה 1' },
       { src: '/images/gallery/crumble-cookies/IMG_8015.webp', alt: 'מארז קראמבל - תמונה 2' },
@@ -675,7 +677,7 @@ const galleries: GalleryData[] = [
     description:
       'אוהבים קינוח מסוים? לפעמים אין צורך בשילוב. תוכלו להזמין מארז שלם של קרם ברולה, דונאטס, קאפקייקס, קייק פופ, מגנומים ועוד.',
     heroImage: '/images/gallery/custom-boxes/IMG_8701.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין מארז קינוח ייעודי!',
+    whatsappMessage: getItemMessage('dedicated-dessert-boxes'),
     images: [
       { src: '/images/gallery/custom-boxes/IMG_8701.webp', alt: 'מארז קינוח ייעודי - תמונה 1' },
       { src: '/images/gallery/custom-boxes/IMG_3769.webp', alt: 'מארז קינוח ייעודי - תמונה 2' },
@@ -696,7 +698,7 @@ const galleries: GalleryData[] = [
     description:
       'קינוח מושלם לחובבי הכדורגל, שבפנים מסתתר אוצר של ממתקים.',
     heroImage: '/images/gallery/exploding-football/IMG_3471.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין כדורי שוקולד מתנפצים!',
+    whatsappMessage: getItemMessage('chocolate-ball'),
     images: [
       { src: '/images/gallery/exploding-football/IMG_3471.webp', alt: 'כדורגל שוקולד - תמונה 1' },
       { src: '/images/gallery/exploding-football/20240112_183754.webp', alt: 'כדורגל שוקולד - תמונה 2' },
@@ -713,7 +715,7 @@ const galleries: GalleryData[] = [
     description:
       'תבנית שוקולד במראה של סוכריה ענקית שמסתירה בתוכה מגוון הפתעות וממתקים.',
     heroImage: '/images/gallery/exploding-candy/candy-lollipop.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין סוכריות מתנפצות!',
+    whatsappMessage: getItemMessage('exploding-candy'),
     images: [
       { src: '/images/gallery/exploding-candy/candy-lollipop.webp', alt: 'סוכריית שוקולד ורודה עם מקל וסוכריות צבעוניות' },
       { src: '/images/gallery/exploding-candy/20240303_144239.webp', alt: 'סוכריה גדולה ומתוקה - תמונה 2' },
@@ -726,7 +728,7 @@ const galleries: GalleryData[] = [
     description:
       'חוויה מתוקה וייחודית - שוברים את ביצת השוקולד וחושפים שלל ממתקים ושוקולדים.',
     heroImage: '/images/gallery/chocolate-egg/20240304_194842.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין ביצים מתנפצות!',
+    whatsappMessage: getItemMessage('exploding-egg'),
     images: [
       { src: '/images/gallery/chocolate-egg/20240304_194842.webp', alt: 'ביצת שוקולד ענקית - תמונה 1' },
     ],
@@ -738,7 +740,7 @@ const galleries: GalleryData[] = [
     description:
       'עוגות קומות מרשימות לחתונות, אירועים גדולים וכל מי שמחפש את ה-WOW האמיתי.',
     heroImage: '/images/gallery/levels-cakes/tiered-cake-blue.webp',
-    whatsappMessage: 'שלום סלעית, אשמח להזמין עוגת קומות!',
+    whatsappMessage: getItemMessage('tiered-cakes'),
     images: [
       { src: '/images/gallery/levels-cakes/tiered-cake-blue.webp', alt: 'עוגת קומות כחולה עם מכוניות מירוץ' },
       { src: '/images/gallery/levels-cakes/user-tiered-1.png', alt: 'עוגת קומות - תמונה 2' },

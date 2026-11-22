@@ -1,4 +1,5 @@
 import CategoryPage from '@/components/category-page'
+import { itemMessage } from '@/lib/whatsapp-messages'
 import { getProductDescription } from '@/lib/product-descriptions'
 
 export const metadata = {
@@ -36,7 +37,7 @@ export default function DessertsPage() {
       heroAlt="קינוחים אישיים של SoolSweets"
       description="פינוקים אישיים במגוון טעמים ועיצובים – מושלמים לאירוח, לחגיגות ולכל רגע מתוק."
       products={products}
-      whatsappMessage="שלום סלעית, אשמח להזמין קינוחים אישיים!"
+      whatsappMessage={itemMessage('קינוחים אישיים')}
     />
   )
 }
