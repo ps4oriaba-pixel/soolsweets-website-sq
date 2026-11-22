@@ -67,7 +67,7 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="shrink-0" style={{ direction: 'ltr' }}>
           <span
-            className="font-serif italic font-bold leading-tight whitespace-nowrap text-[2.5rem] min-[400px]:text-[3.2rem]"
+            className="font-logo italic font-bold leading-tight whitespace-nowrap text-[2.5rem] min-[400px]:text-[3.2rem]"
             style={{ color: '#E8857A', letterSpacing: '0.02em' }}
           >
             SoolSweets

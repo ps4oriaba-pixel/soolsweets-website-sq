@@ -8,7 +8,7 @@ export default function Footer({ flush = false }: { flush?: boolean }) {
       <div className="max-w-6xl mx-auto px-4 py-8 md:py-10">
         {/* Brand – centered */}
         <div className="flex justify-center">
-          <span dir="ltr" className="font-serif italic font-bold whitespace-nowrap block" style={{ fontSize: '3.2rem', color: '#FFF0ED', letterSpacing: '0.02em' }}>
+          <span dir="ltr" className="font-logo italic font-bold whitespace-nowrap block" style={{ fontSize: '3.2rem', color: '#FFF0ED', letterSpacing: '0.02em' }}>
             SoolSweets
           </span>
         </div>
@@ -71,7 +71,7 @@ export default function Footer({ flush = false }: { flush?: boolean }) {
         </div>
 
         <div className="border-t border-accent-foreground/20 mt-8 pt-6 text-right text-xs text-accent-foreground/50">
-          &copy; {new Date().getFullYear()} <span dir="ltr" className="font-serif italic font-bold text-[1.25em] leading-none" style={{ color: '#E8857A', letterSpacing: '0.02em' }}>SoolSweets</span>. כל הזכויות שמורות לסלעית.
+          &copy; {new Date().getFullYear()} <span dir="ltr" className="font-logo italic font-bold text-[1.25em] leading-none" style={{ color: '#E8857A', letterSpacing: '0.02em' }}>SoolSweets</span>. כל הזכויות שמורות לסלעית.
         </div>
       </div>
     </footer>

@@ -44,7 +44,7 @@ export default function AboutPage() {
             {/* במחשב: כיתוב במרכז */}
             <div className="absolute inset-0 hidden flex-col items-center justify-center gap-3 px-4 md:flex">
               <p className="text-secondary text-sm font-medium tracking-widest uppercase">
-                <span dir="ltr" className="font-serif italic font-bold text-[1.25em] leading-none" style={{ color: '#E8857A', letterSpacing: '0.02em' }}>SoolSweets</span>
+                <span dir="ltr" className="font-logo italic font-bold text-[1.25em] leading-none" style={{ color: '#E8857A', letterSpacing: '0.02em' }}>SoolSweets</span>
               </p>
               <h1 className="font-serif text-4xl md:text-6xl font-bold text-background text-center text-balance">
                 קצת עליי
@@ -102,7 +102,7 @@ export default function AboutPage() {
                   לחגיגות פרטיות ואישיות.
                 </p>
                 <p className="font-semibold text-foreground">
-                  מוזמנים להצטרף לעולם שלי – <span dir="ltr" className="font-serif italic font-bold text-[1.25em] leading-none" style={{ color: '#E8857A', letterSpacing: '0.02em' }}>SoolSweets</span> – שבו טעם ואסתטיקה נפגשים, ליצירת
+                  מוזמנים להצטרף לעולם שלי – <span dir="ltr" className="font-logo italic font-bold text-[1.25em] leading-none" style={{ color: '#E8857A', letterSpacing: '0.02em' }}>SoolSweets</span> – שבו טעם ואסתטיקה נפגשים, ליצירת
                   רגעים בלתי נשכחים!
                 </p>
               </div>
