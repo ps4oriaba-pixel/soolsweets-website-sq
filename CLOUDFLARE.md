@@ -24,7 +24,4 @@ After adding or replacing any photo under `public/images`, run:
   To make them regular dependencies: run `pnpm add @opennextjs/cloudflare wrangler -D` locally, commit `pnpm-lock.yaml`, and clear the build command.
   (`open-next.config.ts` is excluded in `tsconfig.json` so Vercel builds do not need the adapter.)
 - Static-asset headers live in `public/_headers` (the `headers()` in `next.config.mjs` only covers Worker responses).
-- Two burnt-paper photos in `lib/gallery-data.ts` still load from Vercel Blob URLs; copy them into
-  `public/images/gallery/burn-away-cakes/` and update their paths to remove that dependency.
-
 - Last deploy trigger: 2026-11-21
