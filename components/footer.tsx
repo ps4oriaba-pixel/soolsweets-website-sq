@@ -19,7 +19,7 @@ export default function Footer({ flush = false }: { flush?: boolean }) {
             <span className="block font-semibold">רוצים להכיר יותר?</span>
             <span className="block">הקליקו כדי לעקוב אחריי ברשתות החברתיות</span>
           </p>
-          <SocialIcons size={34} className="gap-3" />
+          <SocialIcons size={40} className="gap-5" />
         </div>
 
         <div className="mt-6 flex flex-col md:flex-row justify-start items-start gap-8 md:gap-16 text-right">

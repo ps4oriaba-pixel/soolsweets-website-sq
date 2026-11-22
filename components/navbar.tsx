@@ -75,7 +75,7 @@ export default function Navbar() {
         </Link>
 
         {/* Social icons – between the logo and the menu; the header is fixed so they stay on screen while scrolling */}
-        <SocialIcons size={22} className="gap-1.5 sm:gap-2 mx-2" />
+        <SocialIcons size={28} className="gap-2.5 sm:gap-3 mx-2" />
 
         {/* Desktop nav – RTL order, appears on right */}
         <nav className="hidden lg:flex items-center gap-3 xl:gap-5" aria-label="ניווט ראשי" dir="rtl">
