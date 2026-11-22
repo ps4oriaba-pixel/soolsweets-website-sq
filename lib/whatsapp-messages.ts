@@ -4,7 +4,7 @@
 export const WHATSAPP_NUMBER = '972545629058'
 
 // הודעה כללית (דף הבית, המספר בתחתית האתר ועמודים ללא פריט מסוים)
-export const GENERAL_MESSAGE = 'שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך'
+export const GENERAL_MESSAGE = 'שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך 💗'
 
 // "פנייה ישירה" – הלקוח משלים בעצמו על מה הוא מתעניין
 export const DIRECT_MESSAGE = 'היי סלעית, אשמח לשמוע פרטים על '
@@ -13,7 +13,7 @@ const ITEM_PREFIX = 'היי, ראיתי את האתר בגוגל אשמח לפר
 
 // "בנוגע ל" + שם הפריט (השם בלי תוספת אחרי המקף)
 export function itemMessage(name: string): string {
-  return ITEM_PREFIX + name.split(' - ')[0]
+  return ITEM_PREFIX + name.split(' - ')[0] + ' 💗'
 }
 
 const categoryNames: Record<string, string> = {

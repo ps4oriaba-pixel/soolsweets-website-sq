@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Navbar from '@/components/navbar'
 import Footer from '@/components/footer'
 import WhatsAppButton from '@/components/whatsapp-button'
+import { GENERAL_MESSAGE } from '@/lib/whatsapp-messages'
 // import TestimonialsCarousel from '@/components/testimonials-carousel' // hidden for now
 import HeroSearch from '@/components/hero-search'
 
@@ -80,7 +81,7 @@ export default function HomePage() {
                 יצירות אפייה ביתיות מרהיבות בהתאמה<br />אישית לכל אירוע
               </p>
               <div className="mt-1.5">
-                <WhatsAppButton compact label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
+                <WhatsAppButton compact label="הזמינו עכשיו" message={GENERAL_MESSAGE} />
               </div>
             </div>
           </div>
@@ -93,7 +94,7 @@ export default function HomePage() {
               </div>
               <div className="flex flex-wrap gap-4">
                 <div className="hidden md:block">
-                  <WhatsAppButton compact label="הזמינו עכשיו" message="שלום סלעית, אשמח לשמוע עוד על העוגות והמארזים שלך" />
+                  <WhatsAppButton compact label="הזמינו עכשיו" message={GENERAL_MESSAGE} />
                 </div>
                 <Link
                   href="/about"
@@ -197,7 +198,7 @@ export default function HomePage() {
                 חוויה מעשירה ומהנה שמתאימה לחגיגות פרטיות ואישיות. ביחד נלמד, ניצור ונהנה מרגעים מתוקים.
               </p>
               <div>
-                <WhatsAppButton message="שלום סלעית, מעוניינת לשמוע על סדנאות האפייה" />
+                <WhatsAppButton message="שלום סלעית, מעוניינת לשמוע על סדנאות האפייה 💗" />
               </div>
             </div>
           </div>
