@@ -12,8 +12,8 @@ const assistant = Assistant({
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
-  weight: ['400', '500', '600', '700'],
-  style: ['normal', 'italic'],
+  weight: '700',
+  style: 'italic',
   variable: '--font-cormorant',
   display: 'swap',
 })
