@@ -69,12 +69,6 @@ export default function AboutPage() {
                   quality={90}
                   className="object-cover"
                 />
-                {/* Placeholder text for when the owner uploads her photo */}
-                <div className="absolute inset-0 flex items-end p-4">
-                  <span className="bg-background/80 text-foreground text-xs px-3 py-1 rounded-full font-medium">
-                    תמונת תדמית תועלה בקרוב
-                  </span>
-                </div>
               </div>
             </div>
 

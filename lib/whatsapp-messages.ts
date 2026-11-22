@@ -78,9 +78,6 @@ export function getWhatsAppMessage(pathname: string | null): string {
   if (parts[0] && sizeGuideGalleries[parts[0]]) {
     return getItemMessage(sizeGuideGalleries[parts[0]])
   }
-  if (parts[0] === 'about') {
-    return 'שלום סלעית, אשמח להכיר ולשמוע עוד!'
-  }
   return GENERAL_MESSAGE
 }
 

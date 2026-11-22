@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { useState } from 'react'
 import { ChevronDown, Menu, X } from 'lucide-react'
 import SocialIcons from '@/components/social-icons'
+import { getWhatsAppUrl } from '@/lib/whatsapp-messages'
 
 const navLinks: { href: string; label: string; items?: { href: string; label: string }[] }[] = [
   { href: '/', label: 'דף הבית' },
@@ -88,7 +89,7 @@ export default function Navbar() {
             </Link>
           ))}
           <a
-            href="https://wa.me/972545629058"
+            href={getWhatsAppUrl('/')}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-secondary hover:text-foreground transition-colors duration-200 whitespace-nowrap"
@@ -162,7 +163,7 @@ export default function Navbar() {
             ),
           )}
           <a
-            href="https://wa.me/972545629058"
+            href={getWhatsAppUrl('/')}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-primary text-primary-foreground text-center px-4 py-3 rounded-full text-sm font-medium mt-2"
