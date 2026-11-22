@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import SocialIcons from '@/components/social-icons'
 
 export default function Footer({ flush = false }: { flush?: boolean }) {
   return (
@@ -9,6 +10,15 @@ export default function Footer({ flush = false }: { flush?: boolean }) {
           <span dir="ltr" className="font-serif italic font-bold whitespace-nowrap block" style={{ fontSize: '3.2rem', color: '#FFF0ED', letterSpacing: '0.02em' }}>
             SoolSweets
           </span>
+        </div>
+
+        {/* Follow us – centered under the logo */}
+        <div className="mt-4 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-5 text-center sm:text-right">
+          <p className="text-sm leading-snug text-accent-foreground/90">
+            <span className="block font-semibold">רוצים להכיר יותר?</span>
+            <span className="block">הקליקו כדי לעקוב אחריי ברשתות החברתיות</span>
+          </p>
+          <SocialIcons size={34} className="gap-3" />
         </div>
 
         <div className="mt-6 flex flex-col md:flex-row justify-start items-start gap-8 md:gap-16 text-right">

@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import { useState } from 'react'
 import { ChevronDown, Menu, X } from 'lucide-react'
+import SocialIcons from '@/components/social-icons'
 
 const navLinks: { href: string; label: string; items?: { href: string; label: string }[] }[] = [
   { href: '/', label: 'דף הבית' },
@@ -65,15 +66,18 @@ export default function Navbar() {
         {/* Logo */}
         <Link href="/" className="shrink-0" style={{ direction: 'ltr' }}>
           <span
-            className="font-serif italic font-bold leading-tight whitespace-nowrap"
-            style={{ fontSize: '3.2rem', color: '#E8857A', letterSpacing: '0.02em' }}
+            className="font-serif italic font-bold leading-tight whitespace-nowrap text-[2.5rem] min-[400px]:text-[3.2rem]"
+            style={{ color: '#E8857A', letterSpacing: '0.02em' }}
           >
             SoolSweets
           </span>
         </Link>
 
+        {/* Social icons – between the logo and the menu; the header is fixed so they stay on screen while scrolling */}
+        <SocialIcons size={22} className="gap-1.5 sm:gap-2 mx-2" />
+
         {/* Desktop nav – RTL order, appears on right */}
-        <nav className="hidden lg:flex items-center gap-5" aria-label="ניווט ראשי" dir="rtl">
+        <nav className="hidden lg:flex items-center gap-3 xl:gap-5" aria-label="ניווט ראשי" dir="rtl">
           {navLinks.map((link) => (
             <Link
               key={link.href}
