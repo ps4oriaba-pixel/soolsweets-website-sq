@@ -39,6 +39,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="he" dir="rtl" className={`${assistant.variable} ${cormorant.variable} bg-background`}>
+      <head>
+        <script async src="https://www.googletagmanager.com/gtm.js?id=AW-17408220155"></script>
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              'window.dataLayer = window.dataLayer || [];\nfunction gtag(){dataLayer.push(arguments);}\ngtag(\'js\', new Date());',
+          }}
+        />
+      </head>
       <body className="antialiased font-sans">
         <NavigationTracker />
         {children}
